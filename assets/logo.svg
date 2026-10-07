@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Elite Frontend Design logo">
+  <rect width="512" height="512" rx="96" fill="#111827"/>
+  <path d="M96 112h224v60H166v54h136v60H166v54h154v60H96V112Z" fill="#F9FAFB"/>
+  <path d="M344 112h72v288h-72V112Z" fill="#22C55E"/>
+</svg>

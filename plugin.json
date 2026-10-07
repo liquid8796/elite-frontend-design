@@ -1,0 +1,44 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "elite-frontend-design",
+  "version": "3.26.0",
+  "description": "Design, implement, redesign, and QA distinctive responsive frontend experiences with profile-routed art direction and evidence-driven verification.",
+  "author": {
+    "name": "Elite Frontend Design"
+  },
+  "license": "MIT",
+  "keywords": [
+    "frontend",
+    "design",
+    "ui",
+    "ux",
+    "qa",
+    "accessibility",
+    "webgl"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Elite Frontend Design",
+        "shortDescription": "Design and QA frontend UI",
+        "longDescription": "Design, implement, redesign, and verify polished frontend experiences. Routes each task to a focused set of art-direction, product-UI, reference-first, motion, immersive-experience, responsive, accessibility, and browser-QA workflows instead of applying one generic visual preset.",
+        "developerName": "Elite Frontend Design",
+        "category": "Developer Tools",
+        "capabilities": [
+          "Design and implement distinctive frontend interfaces",
+          "Distill reusable design intelligence from live reference sites and inspectable frontend source",
+          "Redesign existing product UI without discarding good architecture",
+          "Verify responsive, accessibility, interaction, and rendered visual quality"
+        ],
+        "defaultPrompt": [
+          "Design and implement a polished frontend for this product.",
+          "Redesign this existing UI and verify it on desktop and mobile.",
+          "Audit this frontend for visual, responsive, accessibility, and interaction issues.",
+          "Study these reference sites and distill their transferable design intelligence before designing."
+        ],
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/logo.svg"
+      }
+    }
+  }
+}

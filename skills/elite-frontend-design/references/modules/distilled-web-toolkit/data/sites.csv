@@ -1,0 +1,13 @@
+site_id,name,url,profile,archetype,theme,skin_anchor,core_strengths,toolkit_role
+refokus,Refokus,https://www.refokus.com/,refokus.com.md,creative-agency,light-editorial,creative-agency-editorial,signature-stage;editorial-cases;brand-motion,agency brand/world-building
+resend,Resend,https://resend.com/,resend.com.md,developer-product,dark-developer,developer-infra,code-proof;product-evidence;developer-trust,developer product proof
+rockstar-vi,Rockstar Games VI,https://www.rockstargames.com/VI,rockstargames.com-vi.md,cinematic-launch,dark-cinematic,open-world-cinematic-launch,world-chapters;aspect-art-direction;trailer-proof,franchise launch
+tokenmeter,Tokenmeter,https://tokenmeter.info/,tokenmeter.info.md,data-directory,light-data,evidence-first-data-directory,confidence-ui;density-ladder;comparison,data/reference products
+novaos,NovaOS,https://novaos.framer.website/,novaos.framer.website.md,enterprise-ai,light-enterprise,enterprise-ai-platform-light,operational-pipeline;route-credibility;proof-crop,enterprise AI platform
+powder,Powder,https://powder.framer.website/,powder.framer.website.md,agent-saas,dark-saas,premium-saas-dark,conversation-action;sticky-capability;template-quarantine,AI agent SaaS
+nudge-folio,Nudge Folio,https://nudge-folio.framer.website/,nudge-folio.framer.website.md,portfolio-editorial,light-expressive,creative-agency-editorial,reflective-case;context-rail;playground-isolation,portfolio/agency
+orbai,OrbAI,https://orbai-template.framer.website/,orbai-template.framer.website.md,ai-service,light-service,clean-product-light,commercial-core;trust-satellites;pricing-bridge,AI service/agency
+nexira,Nexira,https://nexira.framer.ai/,nexira.framer.ai.md,game-studio,dark-cinematic,game-studio,cinematic-lightweight;capability-case;sticky-projects,game studio/service
+ten-billion-years,Ten Billion Years,https://cosmos-10-billion-years-opus5.vercel.app/,cosmos-10-billion-years-opus5.vercel.app.md,immersive-scroll-world,dark-immersive,,prompt-compile;shared-progress;event-peaks,interactive scrollytelling
+voxai,VoxAI,https://voxai.framer.ai/,voxai.framer.ai.md,ai-saas-ecosystem,dark-saas,,integration-proof;binding-integrity;operational-scenes,AI SaaS ecosystem
+tobi-mallory,Tobi Mallory,https://tobi-mallory.framer.website/,tobi-mallory.framer.website.md,whimsical-world-portfolio,cream-playful,whimsical-world-portfolio,world-metaphor;taxonomy-physics;mnemonic-cases;quest-services;lightweight-worldbuilding,personal portfolio world system

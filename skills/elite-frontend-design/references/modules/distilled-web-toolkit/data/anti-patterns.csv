@@ -1,0 +1,32 @@
+anti_id,name,sites,symptom,replacement,severity
+spectacle-everywhere,Spectacle Everywhere,refokus|rockstar-vi,Every section competes for maximum visual intensity,Choose one signature stage and calmer supporting sections,medium
+fullpage-webgl-default,Full-Page WebGL by Default,refokus|ten-billion-years,Heavy renderer used when still/media/layout would carry identity,Escalate media cost only when interaction/world continuity needs it,high
+claim-before-proof,Feature Claims Before Proof,resend|powder|novaos|voxai,Marketing adjectives precede concrete code/UI/action evidence,Move truthful product evidence earlier,high
+decorative-code,Decorative or Implausible Code,resend,Code block looks technical but does not represent a believable API,Use syntactically/semantically plausible implementation proof,high
+center-crop-everywhere,One Center Crop Everywhere,rockstar-vi|nexira,Same art crop used for portrait/landscape/ultrawide,Author focal points or asset variants by aspect ratio,high
+autoplay-proof,Autoplay Video as Sole Proof,rockstar-vi|orbai,Important proof depends on ambient autoplay media,Use poster/still + explicit playback/action; content stays understandable,medium
+crushed-comparison,Crushed Comparison Table,tokenmeter,Desktop comparison is scaled until columns/text are unreadable,Contain horizontal density inside component,high
+hidden-caveats,Caveats Hidden in Footer,tokenmeter,Confidence/provenance/freshness is far from the data it qualifies,Place evidence metadata adjacent to claims,high
+generic-ai-glow,Generic Futuristic AI Glow,novaos|orbai|powder|voxai,Purple/blue glow substitutes for product-specific proof,Use operational/product evidence and one restrained accent system,high
+chat-only-agent-proof,Chat Transcript as Final Agent Proof,powder|novaos,AI agent claim stops at conversational response,Show artifact/action/resulting state,high
+sticky-everything,Sticky Everything,powder|nudge-folio|nexira,Multiple sticky owners fight for viewport and scroll,Assign one sticky job or release on narrow screens,high
+template-residue-promotion,Template Residue Promoted as DNA,powder|voxai|orbai|nexira,404/demo/copy/vendor/editor/placeholder artifacts are treated as core design,Account for residue but quarantine from transferable patterns,high
+portfolio-outcomes-only,Portfolio Outcomes Without Reflection,nudge-folio,Case study shows final polish but hides decisions/tradeoffs/learning,Use reflective case arc,medium
+novelty-every-route,Experimental Interaction on Every Route,nudge-folio,Drag/cursor/collage novelty contaminates contact/article/case usability,Isolate play in bounded surface/route,high
+comparison-superiority,Vague Us-vs-Others Superiority,orbai,Comparison makes unverifiable superiority claims,Compare defensible dimensions only,high
+gaming-means-webgl,Gaming Equals WebGL,nexira,Game/studio site adds renderer merely for genre association,Start with still art/crop/type/HUD; earn renderer complexity,high
+hud-over-content,HUD Chrome Over Content,nexira|ten-billion-years,Instrumentation becomes more prominent than story/action,Keep metadata secondary and reduce on mobile,high
+equal-scroll-chapters,Equal Scroll Distance for Unequal Beats,ten-billion-years,Every narrative chapter gets same dwell despite different reading/impact needs,Use weighted timeline and hold windows,high
+independent-story-clocks,Independent Story Clocks,ten-billion-years,Renderer/DOM/HUD/audio each derive state from separate scroll listeners,Use one authoritative progress bus,high
+max-quality-all-devices,Maximum Renderer Quality on All Devices,ten-billion-years,DPR/particle/FX budget ignores runtime capability,Use adaptive renderer budget and semantic fallback,high
+logo-wall-only,Integration Logo Wall as Sole Proof,voxai,Compatibility is claimed but setup/job details are absent,Provide implementation-oriented integration details,high
+cms-record-drift,CMS Record Binding Drift,voxai,Slug/title/H1/body/metrics refer to different records,Run same-record invariants across whole route family,high
+duplicate-slug-content,"Unique Slug, Duplicate Body",voxai,Different article/detail routes silently reuse the same content,Run duplicate-content canary and inspect bindings,high
+mobile-media-overload,Desktop Media Preserved at Mobile Cost,voxai|orbai|rockstar-vi,Heavy desktop video/canvas survives mobile while content is cramped,Drop/reduce media before meaning; preserve semantic proof,high
+same-density-all-routes,Same Density on Every Route,tokenmeter|novaos|voxai|powder,"Home, detail, pricing, legal, contact all use identical information density",Use route-family density ladder,high
+stale-legal-template,Stale Legal/Placeholder Content,voxai|orbai|powder,"Old domains, unresolved jurisdiction/currency variables or template text stay public",Treat legal routes as release-critical content,high
+mascot-over-proof,Mascot Over Proof,tobi-mallory,"cute creature/object identity becomes more prominent than client, scope, problem or result",Mnemonic Case-Study Encoding layered on conventional professional metadata,high
+metaphor-obscures-job,Metaphor Obscures the User Job,tobi-mallory,"visitors cannot tell whether a world term means portfolio, service, category or contact",Metaphor Translation Contract with visible conventional cues and accessible names,high
+hover-only-collection,Hover-Only Collection Meaning,tobi-mallory,project/category/action information exists only on pointer hover or card back,touch/focus reveal plus always-visible critical identity/action,high
+canonical-host-drift,Canonical Host Drift,tobi-mallory,"public browsing host differs from canonical, sitemap and robots-advertised host","choose one public host, update canonical/sitemap/robots and verify redirects/share metadata",high
+visual-title-without-h1,Visual Title Without Semantic H1,tobi-mallory,detail/article route uses a visually dominant H2 but exposes no meaningful H1,retain visual styling while restoring one route-specific H1 in semantic hierarchy,medium
