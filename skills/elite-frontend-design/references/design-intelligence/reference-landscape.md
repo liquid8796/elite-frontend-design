@@ -28,6 +28,7 @@ Audited profiles currently include:
 - **Ten Billion Years (Opus 5)** -> `sites/cosmos-10-billion-years-opus5.vercel.app.md`
 - **VoxAI (Framer template)** -> `sites/voxai.framer.ai.md`
 - **Tobi Mallory (Framer portfolio)** -> `sites/tobi-mallory.framer.website.md`
+- **Indiex (Framer template)** -> `sites/indiex.framer.ai.md`
 
 Everything else below is a landscape reference until audited.
 
@@ -66,6 +67,7 @@ Representative candidates:
 - Refokus - **audited**
 - Nudge Folio (Framer template) - **audited**
 - Nexira (Framer template) - **audited**
+- Indiex (Framer template) - **audited**
 - Ten Billion Years (Opus 5) - **audited**
 - OrbAI (Framer template) - **audited**
 - Tobi Mallory (Framer portfolio) - **audited**
@@ -121,6 +123,7 @@ Representative candidates from the breadth research:
 
 - GTA VI - **audited**
 - Nexira (Framer template) - **audited**
+- Indiex (Framer template) - **audited**
 - Cyberpunk 2077
 - Wuthering Waves
 - Zenless Zone Zero

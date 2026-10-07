@@ -475,6 +475,31 @@ def validate() -> list[str]:
             if phrase not in profile_text:
                 errors.append(f"Tobi Mallory design-intelligence profile missing phrase: {phrase}")
 
+    indiex_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "indiex.framer.ai.md"
+    if not indiex_profile.is_file():
+        errors.append("Missing Indiex full-site design-intelligence profile")
+    else:
+        profile_text = indiex_profile.read_text(encoding="utf-8-sig")
+        for phrase in (
+            "https://indiex.framer.ai/",
+            "Coverage: 2/2 sitemap URLs",
+            "Framer befeeaf",
+            "Oswald",
+            "Inter Display",
+            "#0b121d",
+            "#94cb53",
+            "1440x900",
+            "390x844",
+            "2 video",
+            "Template Residue Firewall",
+            "One-Page Studio Conversion Spine",
+            "Sticky Game Selector",
+            "HTTP 404",
+            "gym/fitness",
+            "tabindex=0",
+        ):
+            if phrase not in profile_text:
+                errors.append(f"Indiex design-intelligence profile missing phrase: {phrase}")
     landscape = SKILL_ROOT / "references" / "design-intelligence" / "reference-landscape.md"
     if not landscape.is_file():
         errors.append("Missing design-intelligence reference landscape")
@@ -562,19 +587,19 @@ def validate() -> list[str]:
 
     toolkit_data = toolkit_root / "data"
     toolkit_counts = {
-        "sites.csv": 12,
+        "sites.csv": 13,
         "patterns.csv": 70,
         "route-recipes.csv": 20,
         "motion-recipes.csv": 15,
         "responsive-recipes.csv": 20,
         "anti-patterns.csv": 20,
-        "live-audit-2026-10-07.csv": 12,
-        "design-profiles.csv": 12,
-        "color-systems.csv": 12,
-        "typography-systems.csv": 12,
-        "component-recipes.csv": 36,
-        "ux-guidelines.csv": 24,
-        "design-primitives-live-2026-10-07.csv": 12,
+        "live-audit-2026-10-07.csv": 13,
+        "design-profiles.csv": 13,
+        "color-systems.csv": 13,
+        "typography-systems.csv": 13,
+        "component-recipes.csv": 39,
+        "ux-guidelines.csv": 26,
+        "design-primitives-live-2026-10-07.csv": 13,
     }
     for filename, minimum in toolkit_counts.items():
         path = toolkit_data / filename
@@ -610,8 +635,8 @@ def validate() -> list[str]:
             errors.append(f"Distilled toolkit search missing capability: {phrase}")
 
     toolkit_specs = toolkit_root / "specs"
-    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 12:
-        errors.append("Distilled web toolkit must contain exactly 12 standardized site specs")
+    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 13:
+        errors.append("Distilled web toolkit must contain exactly 13 standardized site specs")
 
     version = str(manifest.get("version", ""))
     assembly = str(manifest.get("assemblyVersion", ""))

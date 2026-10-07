@@ -1366,6 +1366,49 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         ).read_text(encoding="utf-8")
         self.assertIn("Tobi Mallory (Framer portfolio) - **audited**", landscape)
 
+    def test_design_intelligence_indiex_full_site_contract(self) -> None:
+        profile = (
+            SKILL_ROOT
+            / "references"
+            / "design-intelligence"
+            / "sites"
+            / "indiex.framer.ai.md"
+        ).read_text(encoding="utf-8-sig")
+        for phrase in (
+            "Indiex",
+            "https://indiex.framer.ai/",
+            "Coverage: 2/2 sitemap URLs",
+            "Framer befeeaf",
+            "Oswald",
+            "Inter Display",
+            "#0b121d",
+            "#94cb53",
+            "1440x900",
+            "390x844",
+            "One-Page Studio Conversion Spine",
+            "Sticky Game Selector",
+            "Template Residue Firewall",
+            "gym/fitness",
+            "tabindex=0",
+        ):
+            self.assertIn(phrase, profile)
+
+        spec = (
+            SKILL_ROOT
+            / "references"
+            / "modules"
+            / "distilled-web-toolkit"
+            / "specs"
+            / "indiex.md"
+        ).read_text(encoding="utf-8-sig")
+        self.assertIn("15-section one-page system", spec)
+        self.assertIn("Framer befeeaf", spec)
+        self.assertIn("Template Residue Firewall", spec)
+
+        landscape = (
+            SKILL_ROOT / "references" / "design-intelligence" / "reference-landscape.md"
+        ).read_text(encoding="utf-8")
+        self.assertIn("Indiex (Framer template) - **audited**", landscape)
     def test_distilled_web_toolkit_contract(self) -> None:
         import csv
         import subprocess
@@ -1415,22 +1458,22 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         with (data_root / "design-primitives-live-2026-10-07.csv").open(encoding="utf-8-sig", newline="") as f:
             design_live = list(csv.DictReader(f))
 
-        self.assertEqual(len(sites), 12)
-        self.assertEqual(len(live), 12)
+        self.assertEqual(len(sites), 13)
+        self.assertEqual(len(live), 13)
         self.assertGreaterEqual(len(patterns), 70)
         self.assertGreaterEqual(len(routes), 20)
         self.assertGreaterEqual(len(motions), 15)
         self.assertGreaterEqual(len(responsive), 20)
         self.assertGreaterEqual(len(anti), 20)
-        self.assertEqual(len(design_profiles), 12)
-        self.assertEqual(len(color_systems), 12)
-        self.assertEqual(len(typography_systems), 12)
-        self.assertEqual(len(components), 36)
-        self.assertEqual(len(ux_guidelines), 24)
-        self.assertEqual(len(design_live), 12)
+        self.assertEqual(len(design_profiles), 13)
+        self.assertEqual(len(color_systems), 13)
+        self.assertEqual(len(typography_systems), 13)
+        self.assertEqual(len(components), 39)
+        self.assertEqual(len(ux_guidelines), 26)
+        self.assertEqual(len(design_live), 13)
 
         specs = sorted((module_root / "specs").glob("*.md"))
-        self.assertEqual(len(specs), 12)
+        self.assertEqual(len(specs), 13)
 
         expected_ids = {
             "refokus",
@@ -1445,6 +1488,7 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
             "ten-billion-years",
             "voxai",
             "tobi-mallory",
+            "indiex",
         }
         self.assertEqual({row["site_id"] for row in sites}, expected_ids)
         self.assertEqual({row["site_id"] for row in live}, expected_ids)
@@ -1489,6 +1533,21 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         self.assertIn("Commit Mono", result.stdout)
 
         result = subprocess.run(
+            [sys.executable, str(search_script), "compact one page game studio", "--site", "indiex", "--json"],
+            cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True,
+        )
+        self.assertIn("One-Page Studio Conversion Spine", result.stdout)
+        self.assertIn("Sticky Game Selector", result.stdout)
+
+        result = subprocess.run(
+            [sys.executable, str(search_script), "compact game studio service", "--site", "indiex", "--design-system", "--json"],
+            cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True,
+        )
+        self.assertIn('"source_site": "indiex"', result.stdout)
+        self.assertIn("#0B121D", result.stdout)
+        self.assertIn("Oswald", result.stdout)
+
+        result = subprocess.run(
             [sys.executable, str(search_script), "comparison table data", "--domain", "component", "--site", "tokenmeter", "--json"],
             cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True,
         )
@@ -1506,6 +1565,21 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         )
         self.assertIn('"source_site": "resend"', result.stdout)
         self.assertIn("Commit Mono", result.stdout)
+
+        result = subprocess.run(
+            [sys.executable, str(search_script), "compact one page game studio", "--site", "indiex", "--json"],
+            cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True,
+        )
+        self.assertIn("One-Page Studio Conversion Spine", result.stdout)
+        self.assertIn("Sticky Game Selector", result.stdout)
+
+        result = subprocess.run(
+            [sys.executable, str(search_script), "compact game studio service", "--site", "indiex", "--design-system", "--json"],
+            cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True,
+        )
+        self.assertIn('"source_site": "indiex"', result.stdout)
+        self.assertIn("#0B121D", result.stdout)
+        self.assertIn("Oswald", result.stdout)
 
 
 if __name__ == "__main__":

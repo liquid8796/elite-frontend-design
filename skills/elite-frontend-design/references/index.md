@@ -53,6 +53,7 @@ Use `design-intelligence/reference-landscape.md` when the task starts from a bro
 | Ten Billion Years (Opus 5) | Single-route audited scroll world, prompt-to-experience compilation, weighted narrative timeline, shared progress bus, procedural WebGL/audio, adaptive renderer quality | design-intelligence/sites/cosmos-10-billion-years-opus5.vercel.app.md |
 | VoxAI | Full-site dark AI/SaaS system, operational micro-scenes, integration implementation proof, route-family binding integrity, CMS/template residue QA, responsive media substitution | design-intelligence/sites/voxai.framer.ai.md |
 | Tobi Mallory | Full-site whimsical portfolio world, creature/collection information architecture, category visual physics, mnemonic case-study proof, quest/service translation | design-intelligence/sites/tobi-mallory.framer.website.md |
+| Indiex | Full-site compact one-page game-studio funnel, sticky game selector, poster-first media, late-funnel proof sequence, template-residue firewall | design-intelligence/sites/indiex.framer.ai.md |
 
 ## Loading rule
 

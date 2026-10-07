@@ -2,7 +2,7 @@
 
 A portable ChatGPT + Codex plugin containing one profile-routed frontend design skill focused on one outcome: ship frontend work that is distinctive, useful, responsive, and visually verified after render.
 
-Current version: 3.26.0
+Current version: 3.27.0
 
 ## Plugin packaging
 
@@ -23,7 +23,7 @@ Build the upload archive:
 python scripts/package_plugin.py
 ~~~
 
-Upload the resulting `dist/elite-frontend-design-3.26.0.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
+Upload the resulting `dist/elite-frontend-design-3.27.0.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
 
 For public distribution, the same package can be submitted to the universal plugin directory. Public submission still requires the publisher to complete verified developer identity and policy attestations in the OpenAI submission flow.
 
@@ -33,6 +33,19 @@ Codex discovers plugin skills from the package `skills/` directory. For local de
 
 ## What this version changes
 
+Version 3.27 deep-audits the complete Indiex Framer game-studio template rather than treating its hero as the site. The public topology is intentionally compact: **2/2 sitemap URLs** (`/` and `/404`) plus the complete **15-section anchor-driven homepage**.
+
+Version 3.27 adds:
+
+- `references/design-intelligence/sites/indiex.framer.ai.md` with full homepage, `/404`, desktop/mobile, media, form, interaction-semantic, SEO and content-integrity coverage;
+- Indiex as the **13th audited website** while keeping the deterministic baseline at **13 skins** because it strengthens the existing `game-studio` family rather than creating a redundant skin;
+- **One-Page Studio Conversion Spine**, **Sticky Game Selector**, **Poster-First Media Interlude**, **Proof -> Objection -> People -> Contact**, and **Template Residue Firewall** as new evidence-backed mechanisms;
+- explicit QA evidence for mixed Indiex/Nexira/ThemeForest identity, gym/fitness FAQ residue, conflicting contact data, dead service links, GET-to-self placeholder forms and focusable DIV controls without role/state semantics;
+- live evidence of a 1425x11401 desktop home and 390x17793 mobile home with **0 canvas**, **2 video elements**, desktop sticky game selection that releases on mobile, and no mobile document-level horizontal overflow;
+- 6 reusable patterns, 2 route recipes, 1 motion recipe, 2 responsive recipes and 4 anti-patterns;
+- the audited design-system layer now covers **13 design profiles, 13 color systems, 13 typography systems, 39 component recipes and 26 UX guidelines**.
+
+The router remains at **17 modules** and the baseline remains **13 skins**. The audited toolkit corpus now contains **13 sites, 95 patterns, 36 route recipes, 21 motion recipes, 30 responsive recipes and 35 anti-patterns**.
 Version 3.26 revisits all **12 audited websites live through Chrome** and upgrades the Distilled Web Toolkit from a provenance-backed pattern library into a broader audited design recommendation engine.
 
 Version 3.26 adds:

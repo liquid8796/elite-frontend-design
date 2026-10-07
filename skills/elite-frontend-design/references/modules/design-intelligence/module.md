@@ -135,6 +135,30 @@ Quarantine workflow:
 
 Whole-site distillation means **complete accounting plus selective weighting**, not copying every routable artifact.
 
+## One-Page Studio Conversion Spine
+
+A compact studio or service business can deliberately compress the full commercial decision journey into one anchor-driven route when separate route families would be thin.
+
+A strong sequence is:
+
+`identity -> credibility -> capabilities -> work/product proof -> world/media proof -> social proof -> objections -> people -> contact -> final reassurance`
+
+Use this only when each section has a distinct decision job. Split into dedicated routes when service/search intent, deep case evidence, or content scale requires its own information architecture.
+
+On mobile, preserve the decision order but release desktop mechanics such as sticky project selectors, wide proof panels, and nonessential ambient motion.
+
+## Cross-Section Identity Integrity
+
+Template residue can break a single-page site even when no dynamic route family exists. Treat the page as one bound record and verify the same product/business identity across:
+
+- logo/site name and hero copy;
+- metrics, testimonials, project/game names and team;
+- FAQ and vertical-specific terminology;
+- contact details and form destinations;
+- footer, social/legal links and vendor chrome;
+- title, description, OG/Twitter data and 404.
+
+A polished visual shell is not evidence that the content is coherently bound. Mixed brands, unrelated vertical copy, conflicting contact data, dead card links, and placeholder GET-to-self forms are release blockers, not harmless demo details.
 ## Route-Family Binding Integrity
 
 A page template can look polished in isolation while the **route family is semantically broken**. Whole-site audits must verify that every dynamic/CMS route binds one coherent record across all visible and machine-readable surfaces.

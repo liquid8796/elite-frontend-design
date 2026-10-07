@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.27.0 - 2026-10-07
+
+- Deep-audited Indiex across 2/2 sitemap URLs, the full 15-section homepage, every public anchor job and the `/404` recovery route.
+- Added a whole-site Indiex design-intelligence profile and standardized toolkit spec with desktop/mobile runtime, typography, color, media, form, SEO, accessibility and content-integrity evidence.
+- Added 6 patterns, 2 route recipes, 1 motion recipe, 2 responsive recipes and 4 anti-patterns for compact one-page game-studio composition, sticky game selection, poster-first media, late-funnel proof and template residue.
+- Added Indiex to all audited design-system datasets: 13 design profiles, 13 color systems, 13 typography systems, 39 component recipes and 26 UX guidelines.
+- Kept the baseline at 13 skins because Indiex strengthens the existing `game-studio` family rather than creating a redundant visual preset.
+- Recorded production-critical residue including mixed Indiex/Nexira/ThemeForest identity, gym/fitness FAQ copy, conflicting contacts, dead service links, placeholder GET forms and focusable DIV controls without role/state semantics.
+- Synchronized plugin, Codex fallback, root skill and assembly metadata to 3.27.0 / 3.27.0.0.
 ## 3.26.0 - 2026-10-07
 
 - Revisited all 12 distilled reference sites live through Chrome at desktop and mobile widths to extract design-system primitives beyond route/pattern structure.

@@ -1,6 +1,6 @@
 ---
 name: distilled-web-toolkit
-description: "Searchable audited design recommendation toolkit distilled from 12 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
+description: "Searchable audited design recommendation toolkit distilled from 13 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
 ---
 
 # Distilled Web Toolkit
@@ -100,19 +100,19 @@ When they differ:
 
 ## Dataset Map
 
-- `data/sites.csv` ? 12 reference identities and archetypes.
+- `data/sites.csv` ? 13 reference identities and archetypes.
 - `data/live-audit-2026-10-07.csv` ? standardized live desktop/mobile snapshot.
 - `data/patterns.csv` ? reusable audited patterns.
 - `data/route-recipes.csv` ? route and route-family structures.
 - `data/motion-recipes.csv` ? motion/media choreography patterns.
 - `data/responsive-recipes.csv` ? responsive substitutions and transformations.
 - `data/anti-patterns.csv` ? failure modes and residue to avoid.
-- `data/design-profiles.csv` ? 12 audited style/product profiles with dials, fit, performance and accessibility watches.
+- `data/design-profiles.csv` ? 13 audited style/product profiles with dials, fit, performance and accessibility watches.
 - `data/color-systems.csv` ? semantic color-role strategies with transfer constraints.
 - `data/typography-systems.csv` ? audited display/heading/body/utility type-role systems and responsive scales.
 - `data/component-recipes.csv` ? Component Recipes with job, anatomy, interaction, responsive and accessibility contracts.
 - `data/ux-guidelines.csv` ? site-derived UX rules expressed as do/don't guidance.
-- `data/design-primitives-live-2026-10-07.csv` ? live desktop/mobile primitive ledger for the 12-site corpus.
+- `data/design-primitives-live-2026-10-07.csv` ? live desktop/mobile primitive ledger for the 13-site corpus.
 - `specs/*.md` ? one standardized implementation-oriented spec per audited site.
 
 ## Retrieval Workflow
