@@ -159,6 +159,37 @@ Template residue can break a single-page site even when no dynamic route family 
 - title, description, OG/Twitter data and 404.
 
 A polished visual shell is not evidence that the content is coherently bound. Mixed brands, unrelated vertical copy, conflicting contact data, dead card links, and placeholder GET-to-self forms are release blockers, not harmless demo details.
+## Telemetry as Narrative UI
+
+Compact metadata can carry world identity when every field answers a real contextual question. Coordinates, sector/mission IDs, UTC, archive dates, figure/build/platform labels and explicit uncertainty can bridge large media chapters without becoming decorative HUD noise.
+
+Rules:
+- one coherent vocabulary, not random terminal strings;
+- metadata stays subordinate to primary content;
+- context/provenance must be truthful when it describes real product evidence;
+- responsive layouts reduce density, not all identity-bearing metadata.
+
+## Pinned Spatial Survey
+
+A sticky horizontal sequence is justified only when the horizontal axis represents meaningful exploration of places/stages.
+
+Desktop contract:
+- one sticky viewport and one bounded track;
+- explicit start/end and one summary state;
+- no competing sticky owner;
+- every panel remains semantically readable.
+
+Mobile/reduced-motion contract:
+- release sticky ownership;
+- restore vertical flow;
+- preserve the complete place sequence and facts;
+- never require horizontal scrub or pointer precision for core meaning.
+
+## Exact Campaign Destination Integrity
+
+High-intent labels must resolve to the exact intended resource. A platform root is not an acceptable final destination for a wishlist, trailer, community profile, press kit or legal action.
+
+Before release, verify each CTA by user job, destination identity and expected landing state. Placeholder/example URLs and anonymous press quotes remain quarantined from production proof.
 ## Route-Family Binding Integrity
 
 A page template can look polished in isolation while the **route family is semantically broken**. Whole-site audits must verify that every dynamic/CMS route binds one coherent record across all visible and machine-readable surfaces.

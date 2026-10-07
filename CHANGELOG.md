@@ -1,5 +1,16 @@
 # Changelog
 
+## 3.28.0 - 2026-10-07
+
+- Deep-audited Echoes of Mars across its complete 1/1 sitemap topology plus every authored campaign chapter, anchor job and generic 404 recovery behavior.
+- Added a full-site design-intelligence profile and standardized toolkit spec with desktop/mobile geometry, world-scroll behavior, typography, color, image/loading/alt evidence, conversion destinations, SEO and semantic QA.
+- Promoted Telemetry as Narrative UI, Pinned Sector Survey, Recovered Footage Proof, Numbered Field-Report Chapters and Mechanics Survey Rows.
+- Added 5 patterns, 1 route recipe, 1 motion recipe, 2 responsive recipes and 5 anti-patterns; toolkit totals are now 14 sites, 100 patterns, 37 route recipes, 22 motion recipes, 32 responsive recipes and 40 anti-patterns.
+- Added Echoes of Mars to the audited design-system datasets: 14 design profiles, 14 color systems, 14 typography systems, 43 component recipes and 29 UX guidelines.
+- Made Echoes of Mars the first full-site audited anchor for the existing `cinematic-game` skin; the deterministic baseline remains 13 skins.
+- Recorded mobile substitution from a pinned ~5320px desktop sector track to normal vertical flow, with zero mobile document-level horizontal overflow.
+- Recorded production QA failures for empty language metadata, repeated mechanic H1s, pointer-only instruction copy on touch, anonymous press proof and root/example placeholder CTA destinations.
+- Synchronized plugin, Codex fallback, root skill and assembly metadata to 3.28.0 / 3.28.0.0.
 ## 3.27.0 - 2026-10-07
 
 - Deep-audited Indiex across 2/2 sitemap URLs, the full 15-section homepage, every public anchor job and the `/404` recovery route.

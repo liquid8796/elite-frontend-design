@@ -2,6 +2,8 @@
 
 Generic game / entertainment marketing baseline.
 
+Audited evidence anchor: `../sites/ready-material-053719.framer.app.md` (Echoes of Mars). Use its field-report telemetry, pinned sector survey, still-image campaign pacing, recovered-footage proof, and mobile vertical substitution as mechanism evidence only.
+
 This skin is for game-adjacent and entertainment marketing that needs strong genre identity, world-aware art direction, and cinematic pacing without assuming either a full studio/service information architecture or a flagship franchise launch campaign.
 
 Use game-studio.md when the organization sells game-development capabilities and needs services, cases, team, about, editorial, and contact as a coherent proof ecosystem.

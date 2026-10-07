@@ -9,7 +9,7 @@ The root SKILL.md is the only entrypoint. Modules are references loaded on deman
 | elite-core | Product grounding, design dials, design contract, anti-slop, implementation discipline | modules/elite-core/module.md |
 | reference-first | Screenshot/image/video/reference analysis and faithful design-to-code handoff | modules/reference-first/module.md |
 | design-intelligence | Distill reusable design DNA, motion/interaction mechanisms, responsive brand payload and technical lessons from strong reference sites without cloning | modules/design-intelligence/module.md |
-| distilled-web-toolkit | Searchable audited patterns, route recipes, motion/media, responsive transforms and anti-patterns distilled from 11 live references with provenance | modules/distilled-web-toolkit/module.md |
+| distilled-web-toolkit | Searchable audited patterns, route recipes, motion/media, responsive transforms and anti-patterns distilled from 14 live references with provenance | modules/distilled-web-toolkit/module.md |
 | visual-qa | Specialist rendered visual evidence: screenshot review, responsive geometry, reference parity and refinement loops | modules/visual-qa/module.md |
 | frontend-qa | Full QA director: target/state proof, functional journeys, navigation/cross-channel parity, responsive accessibility, performance/regression gates, trace evidence and release signoff | modules/frontend-qa/module.md |
 | motion-direction | Motion levels, interaction motion, GSAP-style cinematic choreography with restraint | modules/motion-direction/module.md |
@@ -54,6 +54,7 @@ Use `design-intelligence/reference-landscape.md` when the task starts from a bro
 | VoxAI | Full-site dark AI/SaaS system, operational micro-scenes, integration implementation proof, route-family binding integrity, CMS/template residue QA, responsive media substitution | design-intelligence/sites/voxai.framer.ai.md |
 | Tobi Mallory | Full-site whimsical portfolio world, creature/collection information architecture, category visual physics, mnemonic case-study proof, quest/service translation | design-intelligence/sites/tobi-mallory.framer.website.md |
 | Indiex | Full-site compact one-page game-studio funnel, sticky game selector, poster-first media, late-funnel proof sequence, template-residue firewall | design-intelligence/sites/indiex.framer.ai.md |
+| Echoes of Mars | Full-site single-title cinematic game campaign, field-report telemetry, pinned sector survey, recovered-footage proof, mobile spatial substitution | design-intelligence/sites/ready-material-053719.framer.app.md |
 
 ## Loading rule
 

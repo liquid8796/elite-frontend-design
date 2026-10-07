@@ -14,7 +14,7 @@ Use **1 archetype + 1 skin + 1 composition grammar**. Do not mix multiple skins 
 | `creative-agency-editorial.md` | agency/portfolio/editorial storytelling | Refokus + Nudge Folio audited anchors |
 | `luxury-editorial.md` | luxury/culture/architecture/brand | curated baseline |
 | `bento-product.md` | parallel product capability comparison | curated baseline + firewall constrained |
-| `cinematic-game.md` | generic game/entertainment cinematic marketing | curated baseline + promoted design-intelligence patterns |
+| `cinematic-game.md` | generic game/entertainment cinematic marketing | Echoes of Mars full-site audited evidence anchor |
 | `game-studio.md` | game studios/outsourcing/services/portfolio | Nexira full-site audited template anchor |
 | `open-world-cinematic-launch.md` | open-world/franchise world-launch campaigns | Rockstar Games VI audited evidence anchor |
 | `evidence-first-data-directory.md` | directories/comparison/reference products | Tokenmeter full-site audited evidence anchor |
@@ -42,7 +42,7 @@ Use the **Task Complexity Score** and **Design Preflight** from the design-intel
 - `clean-product-light.md` uses `../sites/orbai-template.framer.website.md` as a full-site audited template evidence anchor.
 - `developer-infra.md` uses `../sites/resend.com.md` as an audited evidence anchor.
 - `game-studio.md` uses `../sites/nexira.framer.ai.md` as a full-site audited game-studio template evidence anchor.
-- `cinematic-game.md` is the generic game/entertainment baseline and intentionally has no single-site ownership.
+- `cinematic-game.md` uses `../sites/ready-material-053719.framer.app.md` (Echoes of Mars) as a full-site audited single-title cinematic-game evidence anchor.
 - `creative-agency-editorial.md` uses `../sites/refokus.com.md` as an audited evidence anchor.
 - `creative-agency-editorial.md` also uses `../sites/nudge-folio.framer.website.md` as a full-site audited portfolio-template evidence anchor.
 - `open-world-cinematic-launch.md` uses `../sites/rockstargames.com-vi.md` as an audited evidence anchor.

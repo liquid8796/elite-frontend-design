@@ -1409,6 +1409,53 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
             SKILL_ROOT / "references" / "design-intelligence" / "reference-landscape.md"
         ).read_text(encoding="utf-8")
         self.assertIn("Indiex (Framer template) - **audited**", landscape)
+    def test_design_intelligence_echoes_of_mars_full_site_contract(self) -> None:
+        profile = (
+            SKILL_ROOT
+            / "references"
+            / "design-intelligence"
+            / "sites"
+            / "ready-material-053719.framer.app.md"
+        ).read_text(encoding="utf-8-sig")
+        for phrase in (
+            "Echoes of Mars",
+            "https://ready-material-053719.framer.app/",
+            "Coverage: 1/1 sitemap URL",
+            "Framer c9b3949",
+            "Saira Variable",
+            "Datatype Variable",
+            "#0B0A09",
+            "#C9743F",
+            "Pinned Sector Survey",
+            "Telemetry as Narrative UI",
+            "Recovered Footage Proof",
+            "47 images",
+            "0 video",
+            "0 canvas",
+            "HOVER TO SURVEY",
+        ):
+            self.assertIn(phrase, profile)
+
+        spec = (
+            SKILL_ROOT
+            / "references"
+            / "modules"
+            / "distilled-web-toolkit"
+            / "specs"
+            / "echoes-of-mars.md"
+        ).read_text(encoding="utf-8-sig")
+        self.assertIn("1/1 sitemap URL", spec)
+        self.assertIn("Pinned Sector Survey", spec)
+        self.assertIn("Telemetry as Narrative UI", spec)
+
+        skin = (
+            SKILL_ROOT
+            / "references"
+            / "design-intelligence"
+            / "skins"
+            / "cinematic-game.md"
+        ).read_text(encoding="utf-8-sig")
+        self.assertIn("ready-material-053719.framer.app.md", skin)
     def test_distilled_web_toolkit_contract(self) -> None:
         import csv
         import subprocess
@@ -1458,22 +1505,22 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         with (data_root / "design-primitives-live-2026-10-07.csv").open(encoding="utf-8-sig", newline="") as f:
             design_live = list(csv.DictReader(f))
 
-        self.assertEqual(len(sites), 13)
-        self.assertEqual(len(live), 13)
+        self.assertEqual(len(sites), 14)
+        self.assertEqual(len(live), 14)
         self.assertGreaterEqual(len(patterns), 70)
         self.assertGreaterEqual(len(routes), 20)
         self.assertGreaterEqual(len(motions), 15)
         self.assertGreaterEqual(len(responsive), 20)
         self.assertGreaterEqual(len(anti), 20)
-        self.assertEqual(len(design_profiles), 13)
-        self.assertEqual(len(color_systems), 13)
-        self.assertEqual(len(typography_systems), 13)
-        self.assertEqual(len(components), 39)
-        self.assertEqual(len(ux_guidelines), 26)
-        self.assertEqual(len(design_live), 13)
+        self.assertEqual(len(design_profiles), 14)
+        self.assertEqual(len(color_systems), 14)
+        self.assertEqual(len(typography_systems), 14)
+        self.assertEqual(len(components), 43)
+        self.assertEqual(len(ux_guidelines), 29)
+        self.assertEqual(len(design_live), 14)
 
         specs = sorted((module_root / "specs").glob("*.md"))
-        self.assertEqual(len(specs), 13)
+        self.assertEqual(len(specs), 14)
 
         expected_ids = {
             "refokus",
@@ -1489,6 +1536,7 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
             "voxai",
             "tobi-mallory",
             "indiex",
+            "echoes-of-mars",
         }
         self.assertEqual({row["site_id"] for row in sites}, expected_ids)
         self.assertEqual({row["site_id"] for row in live}, expected_ids)
@@ -1547,6 +1595,20 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         self.assertIn("#0B121D", result.stdout)
         self.assertIn("Oswald", result.stdout)
 
+        result = subprocess.run(
+            [sys.executable, str(search_script), "atmospheric game telemetry sector survey", "--site", "echoes-of-mars", "--json"],
+            cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True,
+        )
+        self.assertIn("Telemetry as Narrative UI", result.stdout)
+        self.assertIn("Pinned Sector Survey", result.stdout)
+
+        result = subprocess.run(
+            [sys.executable, str(search_script), "atmospheric cinematic narrative game", "--site", "echoes-of-mars", "--design-system", "--json"],
+            cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True,
+        )
+        self.assertIn('"source_site": "echoes-of-mars"', result.stdout)
+        self.assertIn("#0B0A09", result.stdout)
+        self.assertIn("Datatype Variable", result.stdout)
         result = subprocess.run(
             [sys.executable, str(search_script), "comparison table data", "--domain", "component", "--site", "tokenmeter", "--json"],
             cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True,

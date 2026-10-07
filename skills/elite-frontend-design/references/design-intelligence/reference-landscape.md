@@ -29,6 +29,7 @@ Audited profiles currently include:
 - **VoxAI (Framer template)** -> `sites/voxai.framer.ai.md`
 - **Tobi Mallory (Framer portfolio)** -> `sites/tobi-mallory.framer.website.md`
 - **Indiex (Framer template)** -> `sites/indiex.framer.ai.md`
+- **Echoes of Mars (Framer campaign)** -> `sites/ready-material-053719.framer.app.md`
 
 Everything else below is a landscape reference until audited.
 
@@ -124,6 +125,7 @@ Representative candidates from the breadth research:
 - GTA VI - **audited**
 - Nexira (Framer template) - **audited**
 - Indiex (Framer template) - **audited**
+- Echoes of Mars (Framer campaign) - **audited**
 - Cyberpunk 2077
 - Wuthering Waves
 - Zenless Zone Zero

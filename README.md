@@ -2,7 +2,7 @@
 
 A portable ChatGPT + Codex plugin containing one profile-routed frontend design skill focused on one outcome: ship frontend work that is distinctive, useful, responsive, and visually verified after render.
 
-Current version: 3.27.0
+Current version: 3.28.0
 
 ## Plugin packaging
 
@@ -23,7 +23,7 @@ Build the upload archive:
 python scripts/package_plugin.py
 ~~~
 
-Upload the resulting `dist/elite-frontend-design-3.27.0.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
+Upload the resulting `dist/elite-frontend-design-3.28.0.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
 
 For public distribution, the same package can be submitted to the universal plugin directory. Public submission still requires the publisher to complete verified developer identity and policy attestations in the OpenAI submission flow.
 
@@ -33,6 +33,20 @@ Codex discovers plugin skills from the package `skills/` directory. For local de
 
 ## What this version changes
 
+Version 3.28 deep-audits the complete Echoes of Mars Framer campaign at `ready-material-053719.framer.app`. Its public topology is intentionally one indexable route, so the audit covers the full chapter system, anchor jobs, custom world-survey runtime, desktop/mobile substitution, external conversion integrity and generic 404 rather than pretending the site has hidden route families.
+
+Version 3.28 adds:
+
+- `references/design-intelligence/sites/ready-material-053719.framer.app.md` with complete 1/1 sitemap coverage plus hero, trailer, premise, world, story, gameplay, systems, media, character, sound, release, press, final conversion and 404 evidence;
+- Echoes of Mars as the **14th audited website** while keeping the baseline at **13 skins**; it becomes the first full-site audited anchor for the existing `cinematic-game` skin;
+- **Telemetry as Narrative UI**, **Pinned Sector Survey**, **Recovered Footage Proof**, **Numbered Field-Report Chapters** and **Mechanics Survey Rows**;
+- desktop evidence for a ~5320px world track inside one pinned viewport, with the complete spatial sequence transformed to normal vertical flow on 390px mobile;
+- live evidence of a ~1425x18690 desktop campaign and 390x17608 mobile campaign with **47 images, 0 HTML video, 0 canvas**, and zero mobile document-level overflow;
+- QA evidence for empty home language metadata, repeated mechanic H1s, touch-inappropriate `HOVER TO SURVEY` copy, anonymous press proof and high-intent actions that resolve only to platform roots/example domains;
+- 5 reusable patterns, 1 route recipe, 1 motion recipe, 2 responsive recipes and 5 anti-patterns;
+- the design-system layer now covers **14 design profiles, 14 color systems, 14 typography systems, 43 component recipes and 29 UX guidelines**.
+
+The router remains at **17 modules** and the baseline remains **13 skins**. The audited toolkit corpus now contains **14 sites, 100 patterns, 37 route recipes, 22 motion recipes, 32 responsive recipes and 40 anti-patterns**.
 Version 3.27 deep-audits the complete Indiex Framer game-studio template rather than treating its hero as the site. The public topology is intentionally compact: **2/2 sitemap URLs** (`/` and `/404`) plus the complete **15-section anchor-driven homepage**.
 
 Version 3.27 adds:
