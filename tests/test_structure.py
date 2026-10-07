@@ -219,25 +219,43 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         for phrase in (
             "Refokus",
             "https://www.refokus.com/",
-            "2026-10-05",
+            "2026-10-08",
             "Featuredeck",
-            "Generalsans Variable",
+            "General Sans Variable",
             "WebGLRenderer",
             "ScrollTrigger",
             "SplitText",
             "EffectComposer",
             "pixel ratio",
-            "one signature stage",
-            "quiet shell",
-            "vivid project worlds",
-            "sound",
             "mobile",
+            "Coverage: 121/121",
+            "Service Narrative Landing System",
+            "Evidence-Dependent Case Depth",
+            "Refokus Webflow Tools",
+            "Canonical/Language Route Invariant",
         ):
             self.assertIn(phrase, profile)
 
         index = (SKILL_ROOT / "references" / "index.md").read_text(encoding="utf-8")
         self.assertIn("design-intelligence", index)
         self.assertIn("refokus.com.md", index)
+        self.assertIn("webflow-tools.refokus.com.md", index)
+
+        tools_profile = (
+            SKILL_ROOT
+            / "references"
+            / "design-intelligence"
+            / "sites"
+            / "webflow-tools.refokus.com.md"
+        ).read_text(encoding="utf-8-sig")
+        for phrase in (
+            "19/19 sitemap URLs",
+            "Copy -> Configure -> Verify Documentation",
+            "Public Implementation Styleguide as Product Trust",
+            "Manrope",
+            "IBM Plex Mono",
+        ):
+            self.assertIn(phrase, tools_profile)
 
     def test_design_intelligence_resend_contract(self) -> None:
         module = (
@@ -1505,25 +1523,26 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         with (data_root / "design-primitives-live-2026-10-07.csv").open(encoding="utf-8-sig", newline="") as f:
             design_live = list(csv.DictReader(f))
 
-        self.assertEqual(len(sites), 14)
-        self.assertEqual(len(live), 14)
+        self.assertEqual(len(sites), 15)
+        self.assertEqual(len(live), 15)
         self.assertGreaterEqual(len(patterns), 70)
         self.assertGreaterEqual(len(routes), 20)
         self.assertGreaterEqual(len(motions), 15)
         self.assertGreaterEqual(len(responsive), 20)
         self.assertGreaterEqual(len(anti), 20)
-        self.assertEqual(len(design_profiles), 14)
-        self.assertEqual(len(color_systems), 14)
-        self.assertEqual(len(typography_systems), 14)
-        self.assertEqual(len(components), 43)
-        self.assertEqual(len(ux_guidelines), 29)
-        self.assertEqual(len(design_live), 14)
+        self.assertEqual(len(design_profiles), 15)
+        self.assertEqual(len(color_systems), 15)
+        self.assertEqual(len(typography_systems), 15)
+        self.assertEqual(len(components), 50)
+        self.assertEqual(len(ux_guidelines), 34)
+        self.assertEqual(len(design_live), 15)
 
         specs = sorted((module_root / "specs").glob("*.md"))
-        self.assertEqual(len(specs), 14)
+        self.assertEqual(len(specs), 15)
 
         expected_ids = {
             "refokus",
+            "refokus-tools",
             "resend",
             "rockstar-vi",
             "tokenmeter",
@@ -1594,6 +1613,21 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         self.assertIn('"source_site": "indiex"', result.stdout)
         self.assertIn("#0B121D", result.stdout)
         self.assertIn("Oswald", result.stdout)
+
+        result = subprocess.run(
+            [sys.executable, str(search_script), "service audience case depth", "--site", "refokus", "--json"],
+            cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True,
+        )
+        self.assertIn("Service Narrative Landing System", result.stdout)
+        self.assertIn("Evidence-Dependent Case Depth", result.stdout)
+
+        result = subprocess.run(
+            [sys.executable, str(search_script), "install tool verify docs", "--site", "refokus-tools", "--design-system", "--json"],
+            cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True,
+        )
+        self.assertIn('"source_site": "refokus-tools"', result.stdout)
+        self.assertIn("Manrope", result.stdout)
+        self.assertIn("#1C1C1C", result.stdout)
 
         result = subprocess.run(
             [sys.executable, str(search_script), "atmospheric game telemetry sector survey", "--site", "echoes-of-mars", "--json"],

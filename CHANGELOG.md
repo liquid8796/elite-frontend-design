@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.29.0 - 2026-10-08
+
+- Re-audited Refokus across 102 main-site sitemap URLs plus the 19-route Webflow Tools companion sitemap: 121/121 declared URLs returned HTTP 200.
+- Replaced the homepage-only Refokus profile with whole-site service/audience/work/project/news/career/resource/contact evidence and added a separate companion Tools profile/spec.
+- Re-verified the home WebGL2/Three/GLTF runtime, model.glb, EffectComposer, GSAP/ScrollTrigger/SplitText/CustomEase and bounded immersive ownership.
+- Added 8 patterns, 6 route recipes, 1 motion recipe, 3 responsive recipes and 4 anti-patterns.
+- Added 7 component recipes and 5 UX guidelines; totals are now 15 design profiles, 15 color systems, 15 typography systems, 50 components and 34 UX guidelines.
+- Recorded /startups canonical mismatch, missing canonical on work/categories/Tools, empty Tools document language and multi-H1 fragmentation.
+- Bumped plugin, Codex fallback and root skill metadata to 3.29.0 / 3.29.0.0. Baseline remains 13 skins.
 ## 3.28.0 - 2026-10-07
 
 - Deep-audited Echoes of Mars across its complete 1/1 sitemap topology plus every authored campaign chapter, anchor job and generic 404 recovery behavior.

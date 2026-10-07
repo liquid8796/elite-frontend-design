@@ -1,307 +1,294 @@
-# Refokus - distilled design intelligence
+# Refokus — whole-site re-audited design intelligence
 
 Source: https://www.refokus.com/
-Audit date: 2026-10-05
-Audit surface: live homepage in the user's Chrome, desktop 1920?889 and mobile 390?844, accessibility tree, computed styles, runtime animation state, network-loaded experience assets, and readable client-side JavaScript.
+Companion surface: https://www.webflow-tools.refokus.com/
+Re-audit date: 2026-10-08
+Coverage: 121/121 declared sitemap URLs across two Refokus-advertised sitemaps + both-host 404 recovery
+
+This supersedes the 2026-10-05 homepage-only read. The earlier hero/runtime findings were re-verified, but Refokus is now modeled as a route-complete agency/content/product ecosystem rather than one signature landing page.
+
+## Coverage topology
+
+`robots.txt` advertises:
+- `https://www.refokus.com/sitemap.xml` — 102 public URLs;
+- `https://www.webflow-tools.refokus.com/sitemap.xml` — 19 public URLs.
+
+All 121 declared URLs returned HTTP 200. Missing paths on both hosts return HTTP 404.
+
+Main-site families:
+- home 1; About 1;
+- Branding, Websites, Brand Marketing service landings;
+- Startups, Enterprise Websites, Venture Capital Websites, Webflow Agency audience/authority landings;
+- Work 1 + 46 project details;
+- News 1 + 34 article details + 3 category archives;
+- Careers 1 + 5 career details;
+- resource 1; Contact 1.
+
+Companion Tools:
+- home 1;
+- public styleguide 1;
+- tool documentation details 17.
+
+## What the earlier distillation missed
+
+The original profile correctly captured the immersive hero, editorial shell, typography contrast and bounded WebGL principle. It under-modeled the route system.
+
+Newly confirmed:
+- reusable service narrative grammar;
+- audience-specific persuasion and proof binding;
+- deep Webflow authority route;
+- media-dense Work directory connected to 46 cases;
+- case depth that varies with available evidence;
+- News/categories/long-form articles with desktop sticky outlines;
+- careers index/details and sticky desktop application UI;
+- resource lead-magnet route;
+- distinct Webflow Tools product/docs/styleguide surface;
+- route-level canonical, language and heading defects invisible from homepage-only review.
 
-This profile records reusable mechanisms, not a recipe for cloning Refokus. Do not copy its proprietary logo/model, copywriting, exact project artwork, exact palette, or branded type choices into unrelated work.
+## Main-site visual system
 
-## Executive DNA
+- body `#FFFFFF`; ink `#0F1215`;
+- General Sans Variable owns navigation, body, utility and long-form;
+- Featuredeck owns editorial identity;
+- dark proof/media bands use near-black + white;
+- accent remains sparse and project-dependent.
 
-Refokus combines a **quiet shell** with a **one signature stage**: a technically ambitious WebGL hero carries the strongest identity, while later sections rely more on typography, proof, editorial grids, large media, and project-specific color worlds.
+Desktop type evidence:
+- homepage signature Featuredeck 88px;
+- homepage semantic H1 20.8px;
+- service H1 88px;
+- audience/news/careers H1 up to 128px;
+- project title 128px; article H1 72px.
 
-The site feels premium not because every section is animated equally, but because ambition is allocated asymmetrically:
+Mobile:
+- signature 35.2px; homepage H1 17.6px;
+- project/careers ~48px;
+- service ~35.2px; article 24px.
 
-- the hero owns live 3D, lighting, post-processing, pointer response, and optional sound;
-- editorial narrative uses large type, blur/focus, opacity, and controlled whitespace;
-- proof appears before the loudest portfolio showcase;
-- case studies behave like editorial spreads instead of a generic card grid;
-- each featured project can enter its own vivid project world while global chrome remains restrained;
-- mobile preserves the identity-bearing hero and type contrast rather than replacing them with a generic mobile template.
+Transfer the role contrast, not the exact fonts.
 
-## Evidence Confidence
+## Signature hero runtime — re-verified
 
-### Source-confirmed
+Current evidence:
+- one `c-hero-canvas` with a real WebGL2 context;
+- dynamic `https://js.refokus.com/main.js`;
+- GSAP, ScrollTrigger, SplitText, CustomEase and Three internals;
+- WebGLRenderer, GLTFLoader, PerspectiveCamera, EffectComposer, ShaderPass, FilmPass, FXAAShader;
+- runtime request for `https://js.refokus.com/model.glb` plus environment/diffuse/normal textures;
+- renderer pixel ratio 1.5;
+- scroll and pointer interpolation state.
 
-- Webflow owns the primary site shell/content structure.
-- GSAP and ScrollTrigger are active at runtime; approximately sixty ScrollTrigger instances were present during the desktop audit.
-- SplitText and CustomEase are bundled and used by the experience JavaScript.
-- The hero uses Three.js-style WebGL architecture with `WebGLRenderer`, `GLTFLoader`, perspective camera, scene lights, and a loaded `model.glb`.
-- Hero texture assets include environment, diffuse, and normal textures.
-- Post-processing uses `EffectComposer` with render, FXAA, film, and output passes.
-- Renderer pixel ratio is explicitly bounded to 1.5 instead of blindly following high-DPR hardware.
-- Pointer coordinates are stored and interpolated before they affect the rendered world.
-- The expensive hero render step is bounded by scroll relevance rather than running as the active visual engine through the full document.
-- Optional audio is user-gated through a visible sound-enable interaction; Howler-compatible audio support is present.
-- Section-aware navigation theming is driven from real section state through ScrollTrigger.
+This validates **Bounded Immersive Rendering**: premium rendering belongs to one identity stage, not every route.
 
-### Observed
+## Homepage
 
-- Desktop starts as a dark purple/navy immersive stage with sparse top chrome, a central 3D brand object, vertical light-like texture, and floating service language.
-- The first long scroll transition changes from spectacle to narrative focus: prominent copy becomes readable while future lines remain dimmed/blurred.
-- A restrained social-proof interval follows, using moving/stacked client logos and testimonial content rather than another major spectacle.
-- A large serif manifesto establishes a thesis before portfolio projects.
-- Portfolio work shifts into saturated, project-owned visual worlds with title, summary, capabilities, geography, and large media separated on an editorial grid.
-- Menu/contact chrome stays compact and control-like; content itself is largely open rather than cardified.
-- Mobile retains the live/signature visual character, the editorial display role, the global dark shell, and the narrative sequence without horizontal overflow.
+Desktop 1440x900 -> ~1440x6965; 82 images, 8 videos, 1 WebGL canvas, 1 form; fixed 64px nav; tall sticky hero; zero positive overflow.
 
-### Inferred
+Mobile 390x844 -> ~390x5926; zero outer overflow; desktop sticky hero ownership releases.
 
-- The design intentionally uses contrast between one expensive signature moment and calmer supporting sections to make the hero feel more valuable.
-- Proof placement before portfolio spectacle is partly a trust-building strategy for an agency selling high-consideration creative work.
-- Project-owned color worlds help demonstrate range while the dark global shell keeps the agency itself coherent.
+Sequence:
+1. identity stage;
+2. founder testimonials;
+3. agency thesis;
+4. named case proof;
+5. recognition;
+6. footer/contact.
 
-## Design DNA
+Useful rule: **identity -> credibility -> thesis -> named proof**.
 
-### Composition
+## Service Narrative Landing System
 
-**Desktop**
+Branding, Websites and Brand Marketing share:
+1. sticky editorial thesis hero;
+2. problem/context;
+3. strategic questions/process;
+4. capabilities;
+5. differentiation;
+6. testimonials/proof;
+7. relevant case;
+8. FAQ;
+9. contact continuation.
 
-- Global chrome is nearly edge-to-edge: menu left, monogram centered, contact right.
-- The hero spends a large vertical scroll budget rather than behaving like a conventional one-screen hero.
-- Copy is not constantly centered; narrative text uses left/offset anchors and deliberately large empty fields.
-- Later manifesto and project layouts use asymmetric editorial grids rather than a repeated component template.
-- Large media is allowed to dominate project sections; metadata occupies small, precise columns.
+Geometry:
+- Branding ~1440x10611 / ~390x11766;
+- Websites ~1440x11949;
+- Brand Marketing ~1440x5889.
 
-**Reusable rule**
+Branding releases its desktop sticky hero on mobile while preserving content.
 
-If a premium marketing site earns a long first chapter, the scroll distance must expose a changing idea?not merely extend a static hero. Use spatial or typographic state change to justify the extra height.
+## Audience-Specific Proof Binding
 
-### Typography
+Startups, Enterprise and Venture Capital are real audience routes, not thin SEO pages:
+1. audience promise;
+2. audience-framed proof;
+3. category/problem thesis;
+4. why the agency model fits;
+5. relevant case;
+6. ways to work;
+7. audience FAQ.
 
-Observed/source-visible roles:
+Startups and Enterprise use 128px Featuredeck H1s. VC currently exposes two H1 elements.
 
-- `Featuredeck` acts as an expressive editorial/display face.
-- `Generalsans Variable` acts as the quieter product/UI/body face.
-- Desktop hero/display type reaches roughly 117 px in the inspected state; the main manifesto reaches roughly 96 px.
-- Mobile scales the main editorial hero role to roughly 35 px and the manifesto role to roughly 24 px while keeping the family contrast.
-- UI/project metadata remains compact and neutral.
+Transfer stable brand voice + context-bound evidence, not keyword substitution.
 
-**Reusable rule**
+## Webflow authority route
 
-Use type-role contrast, not random font variety. An expressive editorial face can own thesis/memory while a neutral variable sans owns interface, service language, metadata, and explanatory copy.
+`/webflow-agency` is ~1440x18301 with 136 images, 9 videos and 17 sections. It combines platform expertise, proof of pushing Webflow, community/event evidence, Refokus Tools promotion, client examples, FAQ and conversion.
 
-**Do not copy**
+Authority pages may be deeper than service pages when there is real ecosystem proof.
 
-Do not treat Featuredeck itself as the lesson. The transferable lesson is the role separation and proportional contrast.
+## Work — Media-Dense Proof Directory
 
-### Color + Material
+`/work` desktop: ~1440x10862; 141 images; 37 videos; 3 forms; zero positive overflow.
+Mobile: ~390x12839; zero outer overflow.
 
-- Global experience begins in a near-black/navy-purple shell.
-- The signature hero uses directional purple lighting/material cues rather than a flat gradient pasted behind ordinary UI.
-- Later projects can occupy saturated section colors that belong to the individual project; one inspected project becomes a vivid orange field.
-- Neutral/white typography provides continuity through color-world changes.
-- Small navigation controls use subtle translucent/blurred chrome without turning the whole page into glassmorphism.
-
-**Reusable rule: quiet shell - vivid project worlds**
-
-For portfolio/agency/editorial work, keep global identity restrained enough that case studies can own strong colors. Do not smear one global accent over every project and call that cohesion.
-
-### Media + Rendering
-
-The hero is a hybrid DOM + WebGL stage:
-
-- `WebGLRenderer` owns the live canvas;
-- GLTF geometry supplies a branded 3D subject;
-- texture maps provide environment/diffuse/normal character;
-- explicit lights create directional material depth;
-- `EffectComposer` adds FXAA and restrained film treatment;
-- DOM text/navigation remains semantic and separate from the renderer.
-
-Outside the hero, portfolio media is delivered through regular media/video/DOM instead of forcing the WebGL renderer to become the entire site architecture.
-
-**Reusable rule: Bounded Immersive Rendering**
-
-Invest in a sophisticated renderer only for the region that actually needs it. Keep the remainder of the information architecture in semantic DOM unless another section genuinely requires a renderer.
-
-### Motion
-
-Runtime evidence showed many triggered animations but relatively few continuously scrubbed relationships.
-
-Important mechanisms:
-
-- ScrollTrigger drives entry/focus/state timing.
-- SplitText enables line/character-level control where typography is the experience.
-- Blur + opacity produce depth/focus transitions, not only translation.
-- The hero maintains continuous rendering while relevant; ordinary content does not inherit the same cost.
-- Some scroll-linked relationships use scrubbing, but continuous scrub is not the default for every section.
-
-**Reusable rule**
-
-A premium motion system may have many authored triggers yet only a few continuous control loops. Reserve scrub for relationships that truly need continuous causality. Use discrete reveals for the rest.
-
-### Interaction + Input Grammar
-
-- Pointer movement feeds the 3D subject/world through interpolated state rather than raw jitter.
-- Scroll is both navigation through content and an input signal for the signature chapter.
-- Click can change material/state in the rendered subject.
-- Sound is optional and gated; visual/story comprehension does not depend on autoplay audio.
-- Menu/contact remain conventional controls even when the surrounding visual world is experimental.
-
-**Reusable rule**
-
-Pointer input should add materiality, orientation, parallax, or world response?not become cursor theatre across every component.
-
-### Narrative + Proof
-
-The homepage reads as a persuasion sequence rather than a shuffled set of sections:
-
-1. establish the brand/website gap;
-2. clarify why the old story no longer fits the company;
-3. show recognizable client proof/testimonials;
-4. state the agency thesis;
-5. demonstrate work through large case-study evidence;
-6. reinforce taste/recognition/awards;
-7. convert through project/contact paths.
-
-**Reusable rule: proof before fireworks**
-
-For high-consideration creative/technical services, establish credibility before asking the visitor to interpret ambitious showcase work as proof of capability.
-
-### Case Studies
-
-Observed project presentation avoids the default rounded-card gallery.
-
-A project section can separate:
-
-- project title;
-- narrative/result statement;
-- service/capability list;
-- location/context metadata;
-- multiple large media frames;
-- project-owned background/surface world.
-
-**Reusable rule: editorial case studies, not card grids**
-
-When the work itself is the product, allow each project to become a temporary page/world. Card containment is optional, not default.
-
-## Responsive Brand Payload
-
-Mobile viewport audited at 390?844 with no horizontal overflow.
-
-What survived:
-
-- the dark/purple world;
-- the 3D signature mark/world;
-- serif editorial display role;
-- compact menu/contact chrome;
-- core agency statement;
-- the same high-level narrative sequence.
-
-What compressed:
-
-- display type scale;
-- later section heights;
-- proof density;
-- overall document length relative to desktop;
-- supporting complexity around the signature stage.
-
-This is a strong example of **Responsive Brand Payload**: preserve the identity-bearing mechanism and reduce secondary complexity first.
-
-Do not interpret this as a mandate to keep expensive 3D on every mobile project. Preserve the identity by the cheapest equivalent mechanism that meets performance, accessibility, and product constraints.
-
-## Technical Architecture Lessons
-
-### 1. Bounded renderer lifecycle
-
-The hero application tracks scroll and steps its expensive render pipeline only while the experience is within the relevant initial region. This is stronger than merely hiding a canvas with CSS while its loop continues to spend CPU/GPU.
+It combines filters, named projects, service/category metadata, previews and testimonials.
 
 Transfer:
-- create an explicit active/visible state for expensive scenes;
-- idle or stop frame work outside the active region;
-- resume deterministically when returning.
+- filters serve a selection job;
+- project identity/action remains readable without playback;
+- defer/pause preview media;
+- mobile cannot depend on hover;
+- enforce a media budget.
 
-### 2. Deliberate pixel ratio
+## Project details — Evidence-Dependent Case Depth
 
-The renderer uses an explicit pixel ratio of 1.5 in the audited source.
+The 46 project URLs do not force identical length.
 
-Transfer:
-- treat pixel ratio as a quality/performance dial;
-- cap it on costly experiences;
-- do not equate maximum DPR with premium quality.
+`/projects/jungle`:
+- ~1440x7209; 41 images, 2 videos, 9 sections;
+- hero facts -> video -> sticky zoom stage -> mobile-marquee substitute -> highlights -> testimonial/outcome -> related cases;
+- mobile releases desktop sticky zoom ownership.
 
-### 3. Pointer interpolation
+`/projects/spotify`:
+- ~1440x2760; 21 images, 2 videos;
+- much shorter: hero/context + related cases.
 
-Raw pointer state is separated from interpolated pointer state before being consumed by the 3D experience.
+Let available proof determine route depth; do not pad weak cases.
 
-Transfer:
-- smooth high-frequency input at the world/material layer;
-- keep UI click/hover semantics immediate where latency would hurt usability.
+## News and articles
 
-### 4. Post-processing as finishing, not concept
+`/news`: ~1440x11837, sticky desktop category filter, 34 article destinations.
 
-The pipeline uses `EffectComposer`, FXAA, a mild film pass, and output processing. The memorable result still comes from geometry, lighting, material, composition, and timing?not from post-processing alone.
+Representative article:
+- ~1440x11902 desktop / ~390x16021 mobile;
+- Featuredeck H1 72px -> 24px;
+- desktop sticky article outline ~272px;
+- mobile releases the outline;
+- related articles continue the journey.
 
-Transfer:
-- establish form/lighting/composition first;
-- use post FX to finish a world, not to rescue generic geometry.
+Transfer **Long-Form Outline -> Flow**.
 
-### 5. Section-aware chrome
+## Careers, resource and contact
 
-Navigation theme responds to the section currently governing the viewport.
+Careers index: ~1440x5275 / ~390x5553; culture -> principles -> roles -> benefits.
+Career detail: ~1440x3873; role -> expectations -> benefits; desktop can use sticky application UI.
 
-Transfer:
-- derive chrome state from the actual visible section/system state;
-- avoid hand-authored timers or disconnected scroll guesses.
+Resource `/resources/visual-brand-archetypes`: value -> what you get -> why -> how -> community -> download, with sticky desktop form.
 
-### 6. Optional sensory enhancement
+Contact `/contact`: compact ~1440x1942, project form + proof + practical FAQ. Conversion routes should not replay the portfolio.
 
-The visible sound gate proves audio is an enhancement rather than a hidden requirement.
+## Companion — Refokus Webflow Tools
 
-Transfer:
-- never rely on autoplay sound for essential meaning;
-- expose explicit opt-in and a stable mute state;
-- make the muted experience complete.
+Main Refokus robots advertises this sitemap, so it is part of the discoverable ecosystem.
 
-## Adopt / Adapt / Avoid Matrix
+19 URLs:
+- home;
+- styleguide;
+- 17 tool docs: API Filler, Automatic Tabs, Bionic Reading, CMS Filters, CMS Load More, CMS Prev/Next, CMS Tabs, Copy to Clipboard, Form Validator, Image Magnifier, Masonry Layout, Page Transitions, Preview Links, Rich Text Enhancer, Slider Generator, Social Share, Time to Read.
 
-| Pattern | Default decision | Why |
-|---|---|---|
-| One signature stage | Adopt for premium narrative/marketing work | Concentrates ambition and avoids spectacle fatigue. |
-| Quiet shell - vivid project worlds | Adapt | Excellent for portfolios/case studies; less suitable for a single-product SaaS UI. |
-| Editorial serif + neutral variable sans roles | Adapt | Transfer the role contrast, not the exact fonts. |
-| WebGL hero with branded 3D subject | Adapt only when product/brand earns it | Expensive and highly context dependent. |
-| Bounded renderer + explicit pixel ratio | Adopt for expensive rendering | Durable performance principle. |
-| Blur/opacity focus choreography | Adapt | Strong for narrative text, wrong for dense product flows if it harms legibility. |
-| Social proof before portfolio showcase | Adapt | Strong for high-consideration services, not universal. |
-| Editorial project spreads | Adopt for portfolio-heavy surfaces | Avoids generic cardification and gives work visual authority. |
-| Exact purple world / exact orange project color | Avoid | Branded/signature-specific. |
-| Exact 3D monogram/model | Avoid | Proprietary identity, not transferable system intelligence. |
-| Exact copy/award structure | Avoid | Context-specific content. |
+Distinct system:
+- background `#1C1C1C`; raised `#2C2C2C` / `#2F2F2F`;
+- white foreground;
+- purple accents around `#7443FF` / `#9E7BFF`; sparse mint;
+- Manrope product/display/body;
+- Consolas / IBM Plex Mono technical roles;
+- no Three/GSAP signature runtime required.
 
-## Best-fit Briefs
+Toolkit models it separately as `refokus-tools`.
 
-Use this profile as inspiration for:
+### Tools home
 
-- premium creative/technical agencies;
-- venture/technology portfolios where the work must feel authored rather than templated;
-- brand refreshes that need a memorable signature moment;
-- high-end B2B technology storytelling with complex products and strong proof;
-- sites where a single WebGL/3D stage can materially increase perceived craft;
-- editorial portfolio structures that need to escape rounded-card sameness.
+Desktop ~1425x5488; 98 images, 3 videos, 3 forms; fixed nav + transition layer + sticky filter band. Visual H1 fragments “Up / Your / Game” at 180px.
 
-## Weak-fit Briefs
+Mobile ~390x4703; fragments 64px; zero outer overflow.
 
-Do not let this profile dominate:
+### Tool detail family
 
-- admin/settings/operations screens;
-- dense dashboards where scan speed is the primary job;
-- transactional commerce paths where spectacle adds friction;
-- low-end hardware contexts with no viable fallback;
-- products whose trust language requires conservative motion and minimal rendering complexity.
+All 17 tools repeat:
 
-## Regression Questions
+`tool promise -> copy script -> place script -> configure attributes -> publish staging -> verify -> demo/clonable -> project CTA`
 
-When a future design claims to apply Refokus-derived intelligence, ask:
+CMS Filters: ~1425x4791 desktop / ~390x5143 mobile; H1 80px -> 36px; sticky context band.
 
-- Is there one clear signature stage, or did spectacle leak everywhere?
-- Does typography have role contrast, or merely multiple trendy fonts?
-- Are case studies/content worlds distinct because their content differs, or are colors arbitrary?
-- Did proof appear at the right point in the persuasion sequence?
-- Is continuous animation bounded to where it creates value?
-- Is pointer response smoothed and meaningful rather than decorative cursor chasing?
-- Can the experience communicate fully with sound disabled?
-- On mobile, what exact Responsive Brand Payload survived?
-- Does the result belong to the new brand, or is Refokus still visibly recognizable in assets/colors/composition?
+This is **Copy -> Configure -> Verify Documentation**.
 
-Pass only when the transferable mechanism survives while the source site's proprietary identity does not.
+### Public styleguide
+
+`/styleguide` is ~1425x7802 and exposes class conventions, component/child/modifier rules, naming practices, layout hierarchy, sections/containers and sticky examples.
+
+This is **Public Implementation Styleguide as Product Trust**.
+
+## Responsive system
+
+Main:
+- all tested 390px routes held zero outer overflow;
+- sticky hero/article/case ownership commonly releases;
+- Featuredeck scales aggressively while General Sans stays readable;
+- fixed nav persists; overlay menu expands to viewport;
+- media proof remains available without hover.
+
+Tools:
+- 180px home display -> 64px;
+- 80px docs heading -> ~36px;
+- sticky context bands stay compact;
+- zero document-level overflow at 390px.
+
+## Performance and media policy
+
+Muted looping previews commonly use `preload=none` or metadata; sampled offscreen previews were usually paused.
+
+Extremes:
+- home 82 images / 8 videos / 1 canvas;
+- Webflow authority 136 images / 9 videos;
+- Work 141 images / 37 videos.
+
+Transfer conditional media density: defer bytes, pause offscreen, preserve labels/actions without playback, bound WebGL, measure mobile cost.
+
+## SEO / semantic QA deltas
+
+Whole-site audit exposed:
+- `/startups` canonical -> `/startup`;
+- `/work` lacks canonical;
+- all 3 blog-category pages lack canonical;
+- all 19 Tools sitemap pages lack canonical;
+- Tools rendered pages have empty `html lang`;
+- Tools home visually splits one hero across four H1 elements;
+- VC landing exposes two H1 elements;
+- both hosts return HTTP 404 for missing paths.
+
+Promote **Canonical/Language Route Invariant**.
+
+## Transferable principles
+
+1. Signature Stage, Calm System.
+2. Service Narrative Landing System.
+3. Audience-Specific Proof Binding.
+4. Evidence-Dependent Case Depth.
+5. Media-Dense Proof Directory.
+6. Long-Form Outline -> Flow.
+7. Copy -> Configure -> Verify Documentation.
+8. Public Styleguide as Trust.
+9. One Brand, Multiple Product Surfaces.
+10. Route-Level SEO Integrity.
+
+## Do not transfer
+
+Do not copy Refokus/client identities, proprietary case media, awards/testimonials, exact fonts/palettes, model.glb/textures/shaders/runtime code, DPR 1.5 as a universal target, the exact “Up Your Game” composition, tool code/content, or route-level SEO defects.
+
+## Distilled role after re-audit
+
+- `refokus`: full agency ecosystem — signature stage, service/audience landings, work/cases, knowledge, careers, resource and contact.
+- `refokus-tools`: companion developer-tool discovery/docs/styleguide surface.
+
+Refokus is not “a homepage with a great WebGL hero.” It is a route-complete agency/content/product ecosystem where the signature stage is one layer of a broader reusable system.

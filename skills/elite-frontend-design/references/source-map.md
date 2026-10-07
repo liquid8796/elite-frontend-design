@@ -634,10 +634,11 @@ No external repo is copied wholesale into the root prompt. The router continues 
 
 ## Local audited website corpus ? Distilled Web Toolkit
 
-The local `distilled-web-toolkit` is built from fourteen live website/reference audits already present in this plugin. These are not external package dependencies; they are evidence sources whose transferable mechanisms are normalized into searchable local data with provenance.
+The local `distilled-web-toolkit` is built from fifteen live website/reference audits already present in this plugin. These are not external package dependencies; they are evidence sources whose transferable mechanisms are normalized into searchable local data with provenance.
 
 Audited reference corpus:
 - https://www.refokus.com/
+- https://www.webflow-tools.refokus.com/
 - https://resend.com/
 - https://www.rockstargames.com/VI
 - https://tokenmeter.info/
@@ -654,7 +655,7 @@ Audited reference corpus:
 
 2026-10-07 live re-audit method:
 - connected to Chrome through the local browser MCP;
-- revisited all fourteen live references;
+- revisited all fifteen live references;
 - attempted a common desktop/mobile resize pass and recorded the viewport actually observed;
 - checked current sitemap availability/count, rendered document dimensions, outer overflow, major type roles, media/canvas counts, fixed/sticky ownership, and runtime/platform signals;
 - compared those live snapshots against the deeper historical site profiles already stored under `references/design-intelligence/sites/`;

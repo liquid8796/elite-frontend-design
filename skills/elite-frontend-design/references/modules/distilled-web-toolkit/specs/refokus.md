@@ -1,37 +1,45 @@
-# Refokus ? Toolkit Spec
+# Refokus — Toolkit Spec
 
 Source: https://www.refokus.com/
+Companion: https://www.webflow-tools.refokus.com/
 Deep profile: `../../../design-intelligence/sites/refokus.com.md`
 Archetype: creative-agency
 Primary skin anchor: `creative-agency-editorial`
 
-## Live Snapshot ? 2026-10-07
-- Sitemap: 102 `<loc>` entries; materially broader than the historical deep profile scope.
-- Desktop target: 1440x900; document ~1440x5973; zero outer overflow.
-- Mobile target: 390x844; document ~390x5598; zero outer overflow.
-- Runtime: 1 canvas, 8 video elements, 82 images, multiple fixed/sticky surfaces.
-- Type roles observed live: Generalsans Variable + Featuredeck.
-- Current homepage positioning: B2B tech startup branding/web design agency.
+## Re-Audit Snapshot — 2026-10-08
+- Two advertised sitemaps: 102 main URLs + 19 Tools URLs = 121 public URLs.
+- Main: 46 projects, 34 articles, 5 careers, 3 categories plus service/audience/authority/work/resource/contact routes.
+- Home ~1440x6965 desktop / ~390x5926 mobile; zero outer mobile overflow.
+- 82 images, 8 videos, 1 WebGL2 canvas.
+- Three/GLTF + model.glb + EffectComposer + GSAP/ScrollTrigger/SplitText/CustomEase re-verified.
+- Featuredeck + General Sans Variable.
+- Companion Tools is modeled separately as `refokus-tools`.
 
-## Composition Grammar
-- Keep one dominant signature stage rather than making every section theatrical.
-- Editorial case storytelling and service capability sections carry the commercial proof.
-- Large media and deliberate whitespace should reset attention between dense brand moments.
+## Whole-Site Grammar
+Home: identity -> founder proof -> thesis -> named case -> recognition.
+Service: sticky thesis -> context -> process/capability -> proof -> case -> FAQ.
+Audience: audience promise -> social proof -> thesis -> fit -> relevant case -> ways to work -> FAQ.
+Work: filters -> media-dense project directory -> testimonials.
+Project: facts -> authored evidence -> outcome -> related cases, with depth proportional to evidence.
+News: featured thinking -> archive; article -> long-form + optional desktop outline -> related content.
+Careers: culture -> roles -> benefits; detail -> expectations + application.
+Resource: value -> contents -> sticky conversion.
+Contact: compact conversion + proof + FAQ.
 
-## Proof Grammar
-- Named work/process/outcomes before or alongside spectacle.
-- Case studies read as authored stories, not uniform cards.
+## Runtime
+Keep one bounded immersive stage. WebGL is identity infrastructure, not a site-wide requirement.
 
-## Motion / Media
-- High-cost immersive effects belong to bounded stages.
-- Motion should direct focus; pause or simplify offscreen/under reduced motion.
+## Patterns
+Existing: `refokus-signature-stage`, `refokus-bounded-immersive`, `refokus-motion-focus`, `refokus-responsive-brand-payload`, `refokus-proof-before-fireworks`, `refokus-editorial-case`, `refokus-type-contrast`.
 
-## Responsive Contract
-- Preserve identity-bearing type/media cue while simplifying overlap, canvas, or video behavior.
-- Restore straightforward reading order on mobile.
+Added: `refokus-service-narrative`, `refokus-audience-proof-binding`, `refokus-evidence-dependent-case-depth`, `refokus-media-proof-directory`, `refokus-longform-outline-flow`.
 
-## Toolkit Patterns
-`refokus-signature-stage`, `refokus-bounded-immersive`, `refokus-motion-focus`, `refokus-responsive-brand-payload`, `refokus-proof-before-fireworks`, `refokus-editorial-case`, `refokus-type-contrast`.
+## QA
+Release blockers:
+- `/startups` canonical -> `/startup`;
+- `/work` and 3 category routes lack canonical;
+- companion Tools routes lack canonical and document language;
+- VC and Tools home contain multi-H1 patterns.
 
 ## Do Not Transfer
-Exact branding, client work, copy, proprietary imagery/video, or live route count as a general rule.
+Identity, client proof, proprietary media, awards, exact fonts/palette, WebGL assets/code or route-level SEO defects.

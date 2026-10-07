@@ -2,7 +2,7 @@
 
 A portable ChatGPT + Codex plugin containing one profile-routed frontend design skill focused on one outcome: ship frontend work that is distinctive, useful, responsive, and visually verified after render.
 
-Current version: 3.28.0
+Current version: 3.29.0
 
 ## Plugin packaging
 
@@ -23,7 +23,7 @@ Build the upload archive:
 python scripts/package_plugin.py
 ~~~
 
-Upload the resulting `dist/elite-frontend-design-3.28.0.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
+Upload the resulting `dist/elite-frontend-design-3.29.0.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
 
 For public distribution, the same package can be submitted to the universal plugin directory. Public submission still requires the publisher to complete verified developer identity and policy attestations in the OpenAI submission flow.
 
@@ -33,6 +33,20 @@ Codex discovers plugin skills from the package `skills/` directory. For local de
 
 ## What this version changes
 
+Version 3.29 re-audits Refokus as a complete ecosystem rather than a homepage reference. The audit covers 102 main-site sitemap URLs plus the 19-route Webflow Tools companion sitemap advertised from Refokus robots.txt: 121 declared public URLs in total.
+
+Version 3.29 adds:
+
+- full route-family evidence for service, audience, authority, work/project, news/article, careers, resource, contact and 404 surfaces;
+- Refokus Webflow Tools as the 15th audited site/profile while the deterministic baseline remains 13 skins;
+- re-verification of the WebGL2/Three/GLTF hero, model.glb, postprocessing, GSAP/ScrollTrigger/SplitText/CustomEase and DPR 1.5 runtime;
+- Service Narrative Landing System, Audience-Specific Proof Binding, Evidence-Dependent Case Depth, Media-Dense Proof Directory and Long-Form Outline -> Flow;
+- Copy -> Configure -> Verify Documentation, Public Implementation Styleguide as Product Trust and Sticky Technical Context Band;
+- route-level QA for canonical mismatch/missing canonical, missing document language and multi-H1 fragmentation;
+- toolkit totals of 15 sites, 108 patterns, 43 route recipes, 23 motion recipes, 35 responsive recipes and 44 anti-patterns;
+- design-system totals of 15 profiles, 15 color systems, 15 typography systems, 50 component recipes and 34 UX guidelines.
+
+The router remains at 17 modules and the baseline remains 13 skins.
 Version 3.28 deep-audits the complete Echoes of Mars Framer campaign at `ready-material-053719.framer.app`. Its public topology is intentionally one indexable route, so the audit covers the full chapter system, anchor jobs, custom world-survey runtime, desktop/mobile substitution, external conversion integrity and generic 404 rather than pretending the site has hidden route families.
 
 Version 3.28 adds:

@@ -135,6 +135,19 @@ Quarantine workflow:
 
 Whole-site distillation means **complete accounting plus selective weighting**, not copying every routable artifact.
 
+## Route-Complete Agency Ecosystems
+
+Do not judge an agency reference only by its home hero. Audit service landings, audience landings, work index, current and legacy case studies, editorial/news routes, careers, resources, contact and declared companion products. Transfer route jobs and proof-binding logic, not agency identity.
+
+**Evidence-Dependent Case Depth**: allow strong cases to expand when process/outcome evidence exists and keep legacy/thin cases concise instead of forcing a uniform scroll length.
+
+**Audience-Specific Proof Binding**: preserve one brand voice while changing objections, testimonials, cases and offers to match visitor context.
+
+## Companion Product Surface Integrity
+
+When a parent brand advertises a separate sitemap/product surface, treat it as its own audited design system if typography, color, route grammar or runtime materially differ. Preserve provenance between surfaces without forcing one skin across both.
+
+For technical documentation, prefer **Copy -> Configure -> Verify**: every install recipe should end in a concrete testable state.
 ## One-Page Studio Conversion Spine
 
 A compact studio or service business can deliberately compress the full commercial decision journey into one anchor-driven route when separate route families would be thin.

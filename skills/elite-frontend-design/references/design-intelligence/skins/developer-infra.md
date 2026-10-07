@@ -6,6 +6,8 @@ Use when APIs, infrastructure, developer tools, observability, deployment, data,
 ## Evidence Anchor
 `../sites/resend.com.md` is an **audited evidence anchor** for this skin. Transfer mechanisms, not Resend branding, exact cube, exact fonts, copy, or page order.
 
+`../sites/webflow-tools.refokus.com.md` adds audited evidence for small developer-tool libraries, copy/configure/verify docs, sticky technical context bands, and public implementation styleguides.
+
 ## Deterministic Design Scaffold
 Use **Product Evidence Before Feature Claims**, **Code as Product Proof**, and **Responsive Fidelity Substitution** where they fit.
 

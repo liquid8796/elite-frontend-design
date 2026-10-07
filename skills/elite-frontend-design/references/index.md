@@ -9,7 +9,7 @@ The root SKILL.md is the only entrypoint. Modules are references loaded on deman
 | elite-core | Product grounding, design dials, design contract, anti-slop, implementation discipline | modules/elite-core/module.md |
 | reference-first | Screenshot/image/video/reference analysis and faithful design-to-code handoff | modules/reference-first/module.md |
 | design-intelligence | Distill reusable design DNA, motion/interaction mechanisms, responsive brand payload and technical lessons from strong reference sites without cloning | modules/design-intelligence/module.md |
-| distilled-web-toolkit | Searchable audited patterns, route recipes, motion/media, responsive transforms and anti-patterns distilled from 14 live references with provenance | modules/distilled-web-toolkit/module.md |
+| distilled-web-toolkit | Searchable audited patterns, route recipes, motion/media, responsive transforms and anti-patterns distilled from 15 live references with provenance | modules/distilled-web-toolkit/module.md |
 | visual-qa | Specialist rendered visual evidence: screenshot review, responsive geometry, reference parity and refinement loops | modules/visual-qa/module.md |
 | frontend-qa | Full QA director: target/state proof, functional journeys, navigation/cross-channel parity, responsive accessibility, performance/regression gates, trace evidence and release signoff | modules/frontend-qa/module.md |
 | motion-direction | Motion levels, interaction motion, GSAP-style cinematic choreography with restraint | modules/motion-direction/module.md |
@@ -42,6 +42,7 @@ Use `design-intelligence/reference-landscape.md` when the task starts from a bro
 | Site | Useful for | Profile |
 |---|---|---|
 | Refokus | Premium B2B/agency storytelling, one-signature-stage allocation, editorial case studies, bounded WebGL, motion-as-focus, responsive brand payload | design-intelligence/sites/refokus.com.md |
+| Refokus Webflow Tools | Companion 19-route developer-tool library, install docs and public implementation styleguide | design-intelligence/sites/webflow-tools.refokus.com.md |
 | Resend | Developer-product storytelling, code/product evidence, functional ecosystem tabs, restrained material systems, responsive fidelity substitution | design-intelligence/sites/resend.com.md |
 | Rockstar Games VI | World-led game launch campaigns, aspect-ratio art direction, trailer/media choreography, chapter ownership, responsive cinematic payload | design-intelligence/sites/rockstargames.com-vi.md |
 | Tokenmeter | Whole-site data/reference systems, route-family density, confidence/provenance UI, comparison tables, machine-readable parity | design-intelligence/sites/tokenmeter.info.md |

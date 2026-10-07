@@ -170,15 +170,35 @@ def validate() -> list[str]:
         profile_text = design_profile.read_text(encoding="utf-8")
         for phrase in (
             "https://www.refokus.com/",
-            "one signature stage",
-            "quiet shell",
-            "vivid project worlds",
+            "Coverage: 121/121",
+            "46 project",
+            "34 article",
             "WebGLRenderer",
             "EffectComposer",
-            "Responsive Brand Payload",
+            "Service Narrative Landing System",
+            "Evidence-Dependent Case Depth",
+            "Refokus Webflow Tools",
+            "Canonical/Language Route Invariant",
         ):
             if phrase not in profile_text:
                 errors.append(f"Refokus design-intelligence profile missing phrase: {phrase}")
+
+    tools_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "webflow-tools.refokus.com.md"
+    if not tools_profile.is_file():
+        errors.append("Missing Refokus Webflow Tools design-intelligence profile")
+    else:
+        tools_text = tools_profile.read_text(encoding="utf-8-sig")
+        for phrase in (
+            "19/19 sitemap URLs",
+            "Copy -> Configure -> Verify Documentation",
+            "Public Implementation Styleguide as Product Trust",
+            "Manrope",
+            "IBM Plex Mono",
+            "canonical",
+            "html lang",
+        ):
+            if phrase not in tools_text:
+                errors.append(f"Refokus Tools design-intelligence profile missing phrase: {phrase}")
 
     resend_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "resend.com.md"
     if not resend_profile.is_file():
@@ -613,19 +633,19 @@ def validate() -> list[str]:
 
     toolkit_data = toolkit_root / "data"
     toolkit_counts = {
-        "sites.csv": 14,
+        "sites.csv": 15,
         "patterns.csv": 70,
         "route-recipes.csv": 20,
         "motion-recipes.csv": 15,
         "responsive-recipes.csv": 20,
         "anti-patterns.csv": 20,
-        "live-audit-2026-10-07.csv": 14,
-        "design-profiles.csv": 14,
-        "color-systems.csv": 14,
-        "typography-systems.csv": 14,
-        "component-recipes.csv": 43,
-        "ux-guidelines.csv": 29,
-        "design-primitives-live-2026-10-07.csv": 14,
+        "live-audit-2026-10-07.csv": 15,
+        "design-profiles.csv": 15,
+        "color-systems.csv": 15,
+        "typography-systems.csv": 15,
+        "component-recipes.csv": 50,
+        "ux-guidelines.csv": 34,
+        "design-primitives-live-2026-10-07.csv": 15,
     }
     for filename, minimum in toolkit_counts.items():
         path = toolkit_data / filename
@@ -661,8 +681,8 @@ def validate() -> list[str]:
             errors.append(f"Distilled toolkit search missing capability: {phrase}")
 
     toolkit_specs = toolkit_root / "specs"
-    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 14:
-        errors.append("Distilled web toolkit must contain exactly 14 standardized site specs")
+    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 15:
+        errors.append("Distilled web toolkit must contain exactly 15 standardized site specs")
 
     version = str(manifest.get("version", ""))
     assembly = str(manifest.get("assemblyVersion", ""))

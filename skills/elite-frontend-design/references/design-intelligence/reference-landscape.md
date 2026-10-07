@@ -17,6 +17,7 @@ Treat entries in this registry as **candidates** by default.
 Audited profiles currently include:
 
 - **Refokus** -> `sites/refokus.com.md`
+- **Refokus Webflow Tools** -> `sites/webflow-tools.refokus.com.md`
 - **Resend** -> `sites/resend.com.md`
 - **Rockstar Games VI** -> `sites/rockstargames.com-vi.md`
 - **Tokenmeter** -> `sites/tokenmeter.info.md`
@@ -65,7 +66,7 @@ Use for portfolio, studio, creative technology, campaign, high-motion, 3D/WebGL,
 
 Representative candidates:
 
-- Refokus - **audited**
+- Refokus - **full-site re-audited**
 - Nudge Folio (Framer template) - **audited**
 - Nexira (Framer template) - **audited**
 - Indiex (Framer template) - **audited**

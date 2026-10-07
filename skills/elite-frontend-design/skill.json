@@ -2,8 +2,8 @@
   "name": "elite-frontend-design",
   "displayName": "Elite Frontend Design",
   "description": "Profile-routed frontend design, reference-derived design intelligence, implementation, and QA skill combining distinctive art direction, practical product UI, high-ambition experience engineering, evidence-driven inspiration distillation, responsive accessibility, performance/regression gates, and browser verification.",
-  "version": "3.28.0",
-  "assemblyVersion": "3.28.0.0",
+  "version": "3.29.0",
+  "assemblyVersion": "3.29.0.0",
   "sourceVersion": "2.13.0",
   "architecture": "profile-router-plus-visual-loop",
   "entrypoint": "SKILL.md",
@@ -58,6 +58,7 @@
     "https://voxai.framer.ai/",
     "https://tobi-mallory.framer.website/",
     "https://indiex.framer.ai/",
-    "https://ready-material-053719.framer.app/"
+    "https://ready-material-053719.framer.app/",
+    "https://www.webflow-tools.refokus.com/"
   ]
 }

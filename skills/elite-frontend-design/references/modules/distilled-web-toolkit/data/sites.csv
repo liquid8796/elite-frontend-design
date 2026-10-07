@@ -1,5 +1,5 @@
 site_id,name,url,profile,archetype,theme,skin_anchor,core_strengths,toolkit_role
-refokus,Refokus,https://www.refokus.com/,refokus.com.md,creative-agency,light-editorial,creative-agency-editorial,signature-stage;editorial-cases;brand-motion,agency brand/world-building
+refokus,Refokus,https://www.refokus.com/,refokus.com.md,creative-agency,light-editorial,creative-agency-editorial,signature-stage;service-narrative;audience-proof;case-depth;media-directory;knowledge-system,full agency/content ecosystem
 resend,Resend,https://resend.com/,resend.com.md,developer-product,dark-developer,developer-infra,code-proof;product-evidence;developer-trust,developer product proof
 rockstar-vi,Rockstar Games VI,https://www.rockstargames.com/VI,rockstargames.com-vi.md,cinematic-launch,dark-cinematic,open-world-cinematic-launch,world-chapters;aspect-art-direction;trailer-proof,franchise launch
 tokenmeter,Tokenmeter,https://tokenmeter.info/,tokenmeter.info.md,data-directory,light-data,evidence-first-data-directory,confidence-ui;density-ladder;comparison,data/reference products
@@ -13,3 +13,4 @@ voxai,VoxAI,https://voxai.framer.ai/,voxai.framer.ai.md,ai-saas-ecosystem,dark-s
 tobi-mallory,Tobi Mallory,https://tobi-mallory.framer.website/,tobi-mallory.framer.website.md,whimsical-world-portfolio,cream-playful,whimsical-world-portfolio,world-metaphor;taxonomy-physics;mnemonic-cases;quest-services;lightweight-worldbuilding,personal portfolio world system
 indiex,Indiex,https://indiex.framer.ai/,indiex.framer.ai.md,game-studio,dark-cinematic,game-studio,one-page-spine;sticky-game-selector;poster-media;template-residue,compact one-page game studio/service
 echoes-of-mars,Echoes of Mars,https://ready-material-053719.framer.app/,ready-material-053719.framer.app.md,cinematic-game,dark-atmospheric,cinematic-game,telemetry-narrative;pinned-sector-survey;recovered-footage;field-report-chapters;still-image-cinema,single-title atmospheric game launch
+refokus-tools,Refokus Webflow Tools,https://www.webflow-tools.refokus.com/,webflow-tools.refokus.com.md,developer-tool,dark-utility,developer-infra,tool-discovery;copy-configure-verify;public-styleguide;sticky-context,companion developer-tool docs ecosystem

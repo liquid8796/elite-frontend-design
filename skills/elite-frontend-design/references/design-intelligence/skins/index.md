@@ -41,9 +41,10 @@ Use the **Task Complexity Score** and **Design Preflight** from the design-intel
 - `premium-saas-dark.md` uses `../sites/powder.framer.website.md` as a full-site audited template evidence anchor.
 - `clean-product-light.md` uses `../sites/orbai-template.framer.website.md` as a full-site audited template evidence anchor.
 - `developer-infra.md` uses `../sites/resend.com.md` as an audited evidence anchor.
+- `developer-infra.md` also uses `../sites/webflow-tools.refokus.com.md` as an audited small-tool/docs companion anchor.
 - `game-studio.md` uses `../sites/nexira.framer.ai.md` as a full-site audited game-studio template evidence anchor.
 - `cinematic-game.md` uses `../sites/ready-material-053719.framer.app.md` (Echoes of Mars) as a full-site audited single-title cinematic-game evidence anchor.
-- `creative-agency-editorial.md` uses `../sites/refokus.com.md` as an audited evidence anchor.
+- `creative-agency-editorial.md` uses `../sites/refokus.com.md` as a full-site re-audited evidence anchor.
 - `creative-agency-editorial.md` also uses `../sites/nudge-folio.framer.website.md` as a full-site audited portfolio-template evidence anchor.
 - `open-world-cinematic-launch.md` uses `../sites/rockstargames.com-vi.md` as an audited evidence anchor.
 - `evidence-first-data-directory.md` uses `../sites/tokenmeter.info.md` as a full-site audited evidence anchor.
