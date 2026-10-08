@@ -169,20 +169,6 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         ):
             self.assertIn(phrase, module)
 
-        benchmark = (
-            SKILL_ROOT / "references" / "benchmarks" / "cosmos-gpt56-case-study.md"
-        ).read_text(encoding="utf-8")
-        self.assertIn("GPU versus CPU morphing", benchmark)
-        self.assertIn("Deterministic composition", benchmark)
-        self.assertIn("Claude Desktop / Opus 5 result", benchmark)
-        self.assertIn("Story physics", benchmark)
-        self.assertIn("Experience Director", benchmark)
-        self.assertIn("Adaptive runtime quality", benchmark)
-        self.assertIn("Rebuilt ChatGPT Web result with Elite v3.6", benchmark)
-        self.assertIn("Timeline/layout desynchronization", benchmark)
-        self.assertIn("Responsive accessibility regression", benchmark)
-        self.assertIn("HUD says chapter X", benchmark)
-        self.assertIn("Skill changes derived from this case", benchmark)
 
     def test_design_intelligence_refokus_contract(self) -> None:
         manifest = json.loads((SKILL_ROOT / "skill.json").read_text(encoding="utf-8"))

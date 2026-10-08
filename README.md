@@ -2,7 +2,7 @@
 
 A portable ChatGPT + Codex plugin containing one profile-routed frontend design skill focused on one outcome: ship frontend work that is distinctive, useful, responsive, and visually verified after render.
 
-Current version: 3.31.0
+Current version: 3.31.1
 
 ## Resend whole-site audit (3.30.0)
 
@@ -37,7 +37,7 @@ Build the upload archive:
 python scripts/package_plugin.py
 ~~~
 
-Upload the resulting `dist/elite-frontend-design-3.31.0.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
+Upload the resulting `dist/elite-frontend-design-3.31.1.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
 
 For public distribution, the same package can be submitted to the universal plugin directory. Public submission still requires the publisher to complete verified developer identity and policy attestations in the OpenAI submission flow.
 
@@ -431,8 +431,6 @@ elite-frontend-design/
 │       └── references/
 │           ├── index.md
 │           ├── source-map.md
-│           ├── benchmarks/
-│           │   └── cosmos-gpt56-case-study.md
 │           └── modules/
 │               └── ... 15 routed modules
 ├── scripts/
@@ -529,7 +527,8 @@ The root skill intentionally balances three forces:
 
 The local synthesis was informed by public work from Anthropic frontend-design/webapp-testing, OpenAI frontend and Playwright guidance, Codex frontend-design port, Image-first Frontend, UI/UX Pro Max, Superdesign, Meng To Skills, Taste Skill, multiple Frontend Visual QA projects, Practica Frontend Testing, Playwright QA/visual-regression guidance, and oso95/scroll-world.
 
-See references/source-map.md for the exact files deep-read and what was adopted or intentionally rejected. See references/source-snapshots.md for pinned upstream review commits. See references/benchmarks/cosmos-gpt56-case-study.md for the local Cosmos regression case that informed versions 3.4–3.5 and the rebuilt Cosmos synchronization regression that informed v3.7; the QA synthesis for 3.6 is documented in the source map.
+
+See references/source-map.md for upstream source decisions and references/source-snapshots.md for pinned review commits. Historical QA lessons remain encoded in the modules.
 
 The external projects are inspirations/references; this folder does not require their CLIs or hosted services.
 

@@ -969,28 +969,6 @@ def validate() -> list[str]:
         if source not in snapshots or commit not in snapshots:
             errors.append(f"source-snapshots.md missing pinned QA review source: {source}")
 
-    benchmark_path = SKILL_ROOT / "references" / "benchmarks" / "cosmos-gpt56-case-study.md"
-    if not benchmark_path.is_file():
-        errors.append("Missing Cosmos GPT-5.6 regression benchmark")
-    else:
-        benchmark = benchmark_path.read_text(encoding="utf-8")
-        for phrase in (
-            "GPU versus CPU morphing",
-            "Deterministic composition",
-            "Experience specification before implementation",
-            "Claude Desktop / Opus 5 result",
-            "Story physics",
-            "Analytic state synthesis",
-            "Experience Director",
-            "Adaptive runtime quality",
-            "Rebuilt ChatGPT Web result with Elite v3.6",
-            "Timeline/layout desynchronization",
-            "Responsive accessibility regression",
-            "HUD says chapter X",
-            "Skill changes derived from this case",
-        ):
-            if phrase not in benchmark:
-                errors.append(f"Cosmos regression benchmark missing phrase: {phrase}")
 
     return errors
 

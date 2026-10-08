@@ -368,9 +368,6 @@ Useful principles adopted from that snapshot:
 
 ## Local three-way regression — "Ten Billion Years"
 
-Case-study document:
-`references/benchmarks/cosmos-gpt56-case-study.md`
-
 Three local implementations of the same high-ambition prompt were inspected source-by-source:
 
 1. an earlier ChatGPT Web / elite-skill result;

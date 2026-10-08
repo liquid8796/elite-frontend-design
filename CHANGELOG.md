@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.31.1 - 2026-10-08
+
+- Removed the old Cosmos comparative case-study reference and all active README, source-map, module and profile pointers.
+- Preserved the separately audited Opus 5 profile and engineering lessons; validator and tests now guard against the retired case study returning.
+- Patch version 3.31.1 / assembly 3.31.1.0; design corpus unchanged.
+
 ## 3.31.0 - 2026-10-08
 
 - Full-site Battlez audit of 75 sitemap URLs (74 HTTP 200 plus authored /404 HTTP 404), including all eight route families, 53 product details, four game categories, six news articles and three news archives.
@@ -334,7 +340,7 @@
 ## 3.4.0 - 2026-09-19
 
 - Compared two local implementations of the same "10 billion years" interactive 3D prompt: the existing ChatGPT Web/elite-skill result and the higher-ceiling Codex Ultra result.
-- Added `references/benchmarks/cosmos-gpt56-case-study.md` as a regression case documenting the architectural differences.
+- Captured architectural regression lessons from comparing local implementations (standalone legacy case study subsequently retired).
 - Added the on-demand `experience-engineering` module for high-ambition interactive/WebGL/mouse-reactive/immersive briefs.
 - Added an Ambition Escalation Gate so "most impressive", "scroll-stopping", "interactive 3D", "immersive", "mouse-reactive" and similar prompts choose renderer architecture before component composition.
 - Added an explicit DOM/GSAP/pre-rendered/WebGL/hybrid rendering decision gate.

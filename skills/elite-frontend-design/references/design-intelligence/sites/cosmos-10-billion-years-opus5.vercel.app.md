@@ -602,13 +602,9 @@ payoff first -> explanation/replay second
 
 Do not place a CTA, share row, footer, or navigation cluster on top of the exact frame intended to land emotionally.
 
-## Existing benchmark relationship
+## Live reference scope
 
-The plugin already contains references/benchmarks/cosmos-gpt56-case-study.md.
-
-That benchmark compares multiple implementations of the same prompt and previously extracted engineering lessons from this Opus 5 result.
-
-This profile has a different job:
+This standalone Opus 5 live design profile documents:
 - current live-site coverage;
 - current runtime/source corroboration;
 - transferable design intelligence;

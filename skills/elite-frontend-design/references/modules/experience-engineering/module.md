@@ -1215,7 +1215,7 @@ This is why browser integration parity is required in addition to pure timeline 
 
 ## 22. Cosmos Regression Lessons
 
-The local Cosmos benchmark in `references/benchmarks/cosmos-gpt56-case-study.md` exists to prevent regression toward a lower-ceiling implementation.
+The following hardening principles are maintained in this module without relying on an obsolete standalone comparison.
 
 The main lessons combine engineering discipline with world authorship:
 
