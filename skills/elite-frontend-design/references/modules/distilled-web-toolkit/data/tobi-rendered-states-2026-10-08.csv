@@ -1,0 +1,31 @@
+mode,path,status,viewport_width,document_width,document_height,outer_overflow,visible_headings,images,video,canvas,forms
+desktop,/,200,1440,1440,13742,0,H1:Tobi Mallory | H2:Every craft has a partner. | H2:The Fieldbook | H2:Watch one hatch. | H2:Six types. One for each craft. | H2:Projects evolve too. | H2:The Isles | H2:Tobi’s stats | H2:Seals earned | H2:Open quests | H2:How an idea hatches. | H2:,11,0,0,0
+desktop,/fieldbook,200,1440,1440,3464,0,H1:The Fieldbook | H2:Save your progress. | H3:hello@tobimallory.com,7,0,0,0
+desktop,/fieldbook/bezzle,200,1440,1440,3275,0,H2:Bezzle | H3:The brief | H3:What hatched | H3:Result | H2:More from the Fieldbook | H3:hello@tobimallory.com,4,0,0,0
+desktop,/fieldbook/curvix,200,1440,1440,3275,0,H2:Curvix | H3:The brief | H3:What hatched | H3:Result | H2:More from the Fieldbook | H3:hello@tobimallory.com,4,0,0,0
+desktop,/types,200,1440,1440,3118,0,H1:Six types | H3:Brand | H3:Web | H3:Motion | H3:3D | H3:Research | H3:Product | H2:Save your progress. | H3:hello@tobimallory.com,0,0,0,0
+desktop,/types/ink,200,1440,1440,1759,0,H1:Brand | H3:hello@tobimallory.com,0,0,0,0
+desktop,/isles,200,1440,1440,3069,0,H1:The Isles | H2:Where to land | H3:hello@tobimallory.com,0,0,0,0
+desktop,/quests,200,1440,1440,4632,0,H1:Open quests | H2:How every quest runs. | H2:Ask the guide | H2:Save your progress. | H3:hello@tobimallory.com,0,0,0,0
+desktop,/quests/identity-quest,200,1440,1440,2508,0,H1:Identity quest | H3:You get | H2:Ask the guide | H3:hello@tobimallory.com,0,0,0,0
+desktop,/about,200,1440,1440,4385,0,"H1:Hi, I’m Tobi. | H2:Tobi’s stats | H2:Seals earned | H2:The party | H2:Save your progress. | H3:hello@tobimallory.com",1,0,0,0
+desktop,/journal,200,1440,1440,3630,0,H1:Logbook | H3:Why every project is a creature | H3:Designing for the first five minutes | H3:A week of motion loops | H3:Listening before drawing | H2:Save your progress. | H3:hello@tobimallory.com,4,0,0,0
+desktop,/journal/a-week-of-motion-loops,200,1440,1440,3371,0,H2:A week of motion loops | H2:More from the logbook | H3:Why every project is a creature | H3:Designing for the first five minutes | H3:A week of motion loops | H3:Listening before drawing | H3:hello@tobimallory.com,5,0,0,0
+desktop,/contact,200,1440,1440,2616,0,H1:Say hi. | H3:hello@tobimallory.com | H2:Before you write | H3:hello@tobimallory.com,0,0,0,1
+desktop,/legal,200,1440,1440,2376,0,H1:Privacy and terms | H3:Who I am | H3:What I collect | H3:Analytics | H3:Your rights | H3:Creatures and content | H3:hello@tobimallory.com,0,0,0,0
+desktop,/404,404,1440,1440,1889,0,H1:404 | H3:This route isn’t on the map. | H3:hello@tobimallory.com,0,0,0,0
+mobile,/,200,390,390,13716,0,H1:Tobi Mallory | H2:Every craft has a partner. | H2:The Fieldbook | H2:Watch one hatch. | H2:Six types. One for each craft. | H2:Projects evolve too. | H2:The Isles | H2:Tobi’s stats | H2:Seals earned | H2:Open quests | H2:How an idea hatches. | H2:,11,0,0,0
+mobile,/fieldbook,200,390,390,5746,0,H1:The Fieldbook | H2:Save your progress. | H3:hello@tobimallory.com,7,0,0,0
+mobile,/fieldbook/bezzle,200,390,390,4383,0,H2:Bezzle | H3:The brief | H3:What hatched | H3:Result | H2:More from the Fieldbook | H3:hello@tobimallory.com,4,0,0,0
+mobile,/fieldbook/curvix,200,390,390,4407,0,H2:Curvix | H3:The brief | H3:What hatched | H3:Result | H2:More from the Fieldbook | H3:hello@tobimallory.com,4,0,0,0
+mobile,/types,200,390,390,4057,0,H1:Six types | H3:Brand | H3:Web | H3:Motion | H3:3D | H3:Research | H3:Product | H2:Save your progress. | H3:hello@tobimallory.com,0,0,0,0
+mobile,/types/ink,200,390,390,1948,0,H1:Brand | H3:hello@tobimallory.com,0,0,0,0
+mobile,/isles,200,390,390,2927,0,H1:The Isles | H2:Where to land | H3:hello@tobimallory.com,0,0,0,0
+mobile,/quests,200,390,390,5558,0,H1:Open quests | H2:How every quest runs. | H2:Ask the guide | H2:Save your progress. | H3:hello@tobimallory.com,0,0,0,0
+mobile,/quests/identity-quest,200,390,390,3157,0,H1:Identity quest | H3:You get | H2:Ask the guide | H3:hello@tobimallory.com,0,0,0,0
+mobile,/about,200,390,390,4516,0,"H1:Hi, I’m Tobi. | H2:Tobi’s stats | H2:Seals earned | H2:The party | H2:Save your progress. | H3:hello@tobimallory.com",1,0,0,0
+mobile,/journal,200,390,390,4069,0,H1:Logbook | H3:Why every project is a creature | H3:Designing for the first five minutes | H3:A week of motion loops | H3:Listening before drawing | H2:Save your progress. | H3:hello@tobimallory.com,4,0,0,0
+mobile,/journal/a-week-of-motion-loops,200,390,390,3826,0,H2:A week of motion loops | H2:More from the logbook | H3:Why every project is a creature | H3:Designing for the first five minutes | H3:A week of motion loops | H3:Listening before drawing | H3:hello@tobimallory.com,5,0,0,0
+mobile,/contact,200,390,390,3159,0,H1:Say hi. | H3:hello@tobimallory.com | H2:Before you write | H3:hello@tobimallory.com,0,0,0,1
+mobile,/legal,200,390,390,2524,0,H1:Privacy and terms | H3:Who I am | H3:What I collect | H3:Analytics | H3:Your rights | H3:Creatures and content | H3:hello@tobimallory.com,0,0,0,0
+mobile,/404,404,390,390,1751,0,H1:404 | H3:This route isn’t on the map. | H3:hello@tobimallory.com,0,0,0,0

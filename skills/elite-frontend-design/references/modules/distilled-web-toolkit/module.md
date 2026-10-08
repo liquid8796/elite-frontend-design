@@ -171,3 +171,9 @@ Audit (2026-10-08): 43/43 declared sitemap routes returned HTTP 200: home+9 core
 Reusable logic includes financial confidence supported by dashboard evidence, partner directory -> scoped integration detail, related finance apps -> verified download target, tier pricing and feature matrix, financial editorial as topical community continuity, team/careers content integrity and separating Framer template-vendor checkout from end-user fintech conversion.
 
 The most severe source QA failure: all four job detail URLs display the same Product Designer H1 despite correct differing titles. A separate SEO problem affects 21 of 43 declared URLs with one generic template document title. Neither real finance APIs, security claims, store apps nor billing transactions were independently verified.
+
+## Tobi Mallory Quest-to-Contact Re-Audit — 2026-10-08
+
+The full original Tobi Mallory route taxonomy was reconfirmed: 30 declared sitemap paths, 29 HTTP 200 content and an authored /404 with actual HTTP 404 on both browsed and advertised canonical hosts. All 30 canonicals on tobi-mallory.framer.website point to eternal-fade-087901.framer.app, and the public sitemap incorrectly includes /404. Representative Chrome rendered 15 desktop and 15 mobile routes with no positive horizontal document overflow. Saved in data/tobi-dual-host-routes-2026-10-08.csv and data/tobi-rendered-states-2026-10-08.csv.
+
+New conversion recipe: Quest-to-Contact Intent Continuity. Chrome clicked all three detail CTA links: Identity -> Contact preselect Identity (correct), Website -> Contact preselect Identity (wrong), Motion -> Contact preselect Identity (wrong). Implement query/route context propagation and matching form select. See data/tobi-quest-contact-state-2026-10-08.csv. Six icon-only type links have aria-label and are a positive semantics example, not a broken control.

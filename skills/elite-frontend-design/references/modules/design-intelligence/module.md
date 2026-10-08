@@ -1219,3 +1219,9 @@ The 2026-10-08 Ten Billion Years full-site re-audit confirmed a nine-stage seman
 Fizens full-site audit (2026-10-08) illustrates a business-critical route ecosystem beyond the homepage: light financial product value -> actual UI proof -> pricing matrix -> partner directory and detail -> app portfolio download -> educational long form -> team and career records -> legal/release routes. Audit every CMS route even when featured cards seem polished. Check slug, metadata and visible H1/body/apply details individually.
 
 Do not treat Framer template purchase surfaces, placeholder finance security/wealth claims, app-store category links or explanatory integration partner pages as proven fintech capabilities. Confirm user financial claims and provider connection flows independently before production.
+
+## Service Intent Continuity in Playful Worlds
+
+The 2026-10-08 Tobi Mallory full-site re-audit found a distinct conversion flaw hidden behind otherwise coherent world metaphor navigation: Website quest and Motion quest service CTAs both open generic Contact with Identity quest preselected. The navigation succeeds yet silently loses the user's prior commercial choice.
+
+For service/productized-package detail routes, the destination lead form must preselect or otherwise retain the exact service the visitor chose. Propagate a typed service key via query/state, map it to a labelled select option, preserve across refresh and allow manual override. Test every service-to-contact path, not only the default first one. The homepage/types icon-only navigation already has properly labelled aria-label alternatives; retain this accessibility good practice.

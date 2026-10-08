@@ -1,0 +1,63 @@
+host,path,declared_sitemap,route_family,http_status,canonical,title,server_h1_count,response_bytes
+https://tobi-mallory.framer.website,/,true,home,200,https://eternal-fade-087901.framer.app/,Tobi Mallory Â· Designer and developer,1,815476
+https://eternal-fade-087901.framer.app,/,true,home,200,https://eternal-fade-087901.framer.app/,Tobi Mallory Â· Designer and developer,1,815476
+https://tobi-mallory.framer.website,/fieldbook,true,core-fieldbook,200,https://eternal-fade-087901.framer.app/fieldbook,The Fieldbook Â· Tobi Mallory,1,381254
+https://eternal-fade-087901.framer.app,/fieldbook,true,core-fieldbook,200,https://eternal-fade-087901.framer.app/fieldbook,The Fieldbook Â· Tobi Mallory,1,381254
+https://tobi-mallory.framer.website,/types,true,core-types,200,https://eternal-fade-087901.framer.app/types,Types Â· Tobi Mallory,1,361786
+https://eternal-fade-087901.framer.app,/types,true,core-types,200,https://eternal-fade-087901.framer.app/types,Types Â· Tobi Mallory,1,361786
+https://tobi-mallory.framer.website,/isles,true,core-isles,200,https://eternal-fade-087901.framer.app/isles,The Isles Â· Tobi Mallory,1,405069
+https://eternal-fade-087901.framer.app,/isles,true,core-isles,200,https://eternal-fade-087901.framer.app/isles,The Isles Â· Tobi Mallory,1,405069
+https://tobi-mallory.framer.website,/about,true,core-about,200,https://eternal-fade-087901.framer.app/about,About Â· Tobi Mallory,1,356705
+https://eternal-fade-087901.framer.app,/about,true,core-about,200,https://eternal-fade-087901.framer.app/about,About Â· Tobi Mallory,1,356705
+https://tobi-mallory.framer.website,/journal,true,core-journal,200,https://eternal-fade-087901.framer.app/journal,Logbook Â· Tobi Mallory,1,344762
+https://eternal-fade-087901.framer.app,/journal,true,core-journal,200,https://eternal-fade-087901.framer.app/journal,Logbook Â· Tobi Mallory,1,344762
+https://tobi-mallory.framer.website,/contact,true,core-contact,200,https://eternal-fade-087901.framer.app/contact,Contact Â· Tobi Mallory,1,324045
+https://eternal-fade-087901.framer.app,/contact,true,core-contact,200,https://eternal-fade-087901.framer.app/contact,Contact Â· Tobi Mallory,1,324045
+https://tobi-mallory.framer.website,/legal,true,core-legal,200,https://eternal-fade-087901.framer.app/legal,Privacy and terms Â· Tobi Mallory,1,272413
+https://eternal-fade-087901.framer.app,/legal,true,core-legal,200,https://eternal-fade-087901.framer.app/legal,Privacy and terms Â· Tobi Mallory,1,272413
+https://tobi-mallory.framer.website,/quests,true,core-quests,200,https://eternal-fade-087901.framer.app/quests,Quests Â· Tobi Mallory,1,370434
+https://eternal-fade-087901.framer.app,/quests,true,core-quests,200,https://eternal-fade-087901.framer.app/quests,Quests Â· Tobi Mallory,1,370434
+https://tobi-mallory.framer.website,/404,true,core-404,404,https://eternal-fade-087901.framer.app/404,Off the map Â· Tobi Mallory,1,268983
+https://eternal-fade-087901.framer.app,/404,true,core-404,404,https://eternal-fade-087901.framer.app/404,Off the map Â· Tobi Mallory,1,268983
+https://tobi-mallory.framer.website,/journal/why-every-project-is-a-creature,true,journal-detail,200,https://eternal-fade-087901.framer.app/journal/why-every-project-is-a-creature,Why every project is a creature Â· Tobi Mallory,0,340290
+https://eternal-fade-087901.framer.app,/journal/why-every-project-is-a-creature,true,journal-detail,200,https://eternal-fade-087901.framer.app/journal/why-every-project-is-a-creature,Why every project is a creature Â· Tobi Mallory,0,340290
+https://tobi-mallory.framer.website,/journal/designing-for-the-first-five-minutes,true,journal-detail,200,https://eternal-fade-087901.framer.app/journal/designing-for-the-first-five-minutes,Designing for the first five minutes Â· Tobi Mallory,0,336588
+https://eternal-fade-087901.framer.app,/journal/designing-for-the-first-five-minutes,true,journal-detail,200,https://eternal-fade-087901.framer.app/journal/designing-for-the-first-five-minutes,Designing for the first five minutes Â· Tobi Mallory,0,336588
+https://tobi-mallory.framer.website,/journal/a-week-of-motion-loops,true,journal-detail,200,https://eternal-fade-087901.framer.app/journal/a-week-of-motion-loops,A week of motion loops Â· Tobi Mallory,0,337997
+https://eternal-fade-087901.framer.app,/journal/a-week-of-motion-loops,true,journal-detail,200,https://eternal-fade-087901.framer.app/journal/a-week-of-motion-loops,A week of motion loops Â· Tobi Mallory,0,337997
+https://tobi-mallory.framer.website,/journal/listening-before-drawing,true,journal-detail,200,https://eternal-fade-087901.framer.app/journal/listening-before-drawing,Listening before drawing Â· Tobi Mallory,0,338070
+https://eternal-fade-087901.framer.app,/journal/listening-before-drawing,true,journal-detail,200,https://eternal-fade-087901.framer.app/journal/listening-before-drawing,Listening before drawing Â· Tobi Mallory,0,338070
+https://tobi-mallory.framer.website,/types/ink,true,type-detail,200,https://eternal-fade-087901.framer.app/types/ink,Ink type Â· Tobi Mallory,1,275434
+https://eternal-fade-087901.framer.app,/types/ink,true,type-detail,200,https://eternal-fade-087901.framer.app/types/ink,Ink type Â· Tobi Mallory,1,275434
+https://tobi-mallory.framer.website,/types/grid,true,type-detail,200,https://eternal-fade-087901.framer.app/types/grid,Grid type Â· Tobi Mallory,1,275898
+https://eternal-fade-087901.framer.app,/types/grid,true,type-detail,200,https://eternal-fade-087901.framer.app/types/grid,Grid type Â· Tobi Mallory,1,275898
+https://tobi-mallory.framer.website,/types/spark,true,type-detail,200,https://eternal-fade-087901.framer.app/types/spark,Spark type Â· Tobi Mallory,1,274076
+https://eternal-fade-087901.framer.app,/types/spark,true,type-detail,200,https://eternal-fade-087901.framer.app/types/spark,Spark type Â· Tobi Mallory,1,274076
+https://tobi-mallory.framer.website,/types/clay,true,type-detail,200,https://eternal-fade-087901.framer.app/types/clay,Clay type Â· Tobi Mallory,1,274418
+https://eternal-fade-087901.framer.app,/types/clay,true,type-detail,200,https://eternal-fade-087901.framer.app/types/clay,Clay type Â· Tobi Mallory,1,274418
+https://tobi-mallory.framer.website,/types/echo,true,type-detail,200,https://eternal-fade-087901.framer.app/types/echo,Echo type Â· Tobi Mallory,1,274103
+https://eternal-fade-087901.framer.app,/types/echo,true,type-detail,200,https://eternal-fade-087901.framer.app/types/echo,Echo type Â· Tobi Mallory,1,274103
+https://tobi-mallory.framer.website,/types/signal,true,type-detail,200,https://eternal-fade-087901.framer.app/types/signal,Signal type Â· Tobi Mallory,1,272286
+https://eternal-fade-087901.framer.app,/types/signal,true,type-detail,200,https://eternal-fade-087901.framer.app/types/signal,Signal type Â· Tobi Mallory,1,272286
+https://tobi-mallory.framer.website,/quests/identity-quest,true,quest-detail,200,https://eternal-fade-087901.framer.app/quests/identity-quest,Identity quest Â· Tobi Mallory,1,313916
+https://eternal-fade-087901.framer.app,/quests/identity-quest,true,quest-detail,200,https://eternal-fade-087901.framer.app/quests/identity-quest,Identity quest Â· Tobi Mallory,1,313916
+https://tobi-mallory.framer.website,/quests/website-quest,true,quest-detail,200,https://eternal-fade-087901.framer.app/quests/website-quest,Website quest Â· Tobi Mallory,1,314094
+https://eternal-fade-087901.framer.app,/quests/website-quest,true,quest-detail,200,https://eternal-fade-087901.framer.app/quests/website-quest,Website quest Â· Tobi Mallory,1,314094
+https://tobi-mallory.framer.website,/quests/motion-quest,true,quest-detail,200,https://eternal-fade-087901.framer.app/quests/motion-quest,Motion quest Â· Tobi Mallory,1,312081
+https://eternal-fade-087901.framer.app,/quests/motion-quest,true,quest-detail,200,https://eternal-fade-087901.framer.app/quests/motion-quest,Motion quest Â· Tobi Mallory,1,312081
+https://tobi-mallory.framer.website,/fieldbook/bezzle,true,fieldbook-detail,200,https://eternal-fade-087901.framer.app/fieldbook/bezzle,Bezzle Â· Halden identity Â· Tobi Mallory,0,330379
+https://eternal-fade-087901.framer.app,/fieldbook/bezzle,true,fieldbook-detail,200,https://eternal-fade-087901.framer.app/fieldbook/bezzle,Bezzle Â· Halden identity Â· Tobi Mallory,0,330379
+https://tobi-mallory.framer.website,/fieldbook/curvix,true,fieldbook-detail,200,https://eternal-fade-087901.framer.app/fieldbook/curvix,Curvix Â· Halden relaunch Â· Tobi Mallory,0,332783
+https://eternal-fade-087901.framer.app,/fieldbook/curvix,true,fieldbook-detail,200,https://eternal-fade-087901.framer.app/fieldbook/curvix,Curvix Â· Halden relaunch Â· Tobi Mallory,0,332783
+https://tobi-mallory.framer.website,/fieldbook/pixit,true,fieldbook-detail,200,https://eternal-fade-087901.framer.app/fieldbook/pixit,Pixit Â· Larder web build Â· Tobi Mallory,0,330437
+https://eternal-fade-087901.framer.app,/fieldbook/pixit,true,fieldbook-detail,200,https://eternal-fade-087901.framer.app/fieldbook/pixit,Pixit Â· Larder web build Â· Tobi Mallory,0,330437
+https://tobi-mallory.framer.website,/fieldbook/mote,true,fieldbook-detail,200,https://eternal-fade-087901.framer.app/fieldbook/mote,Mote Â· Kite motion system Â· Tobi Mallory,0,328664
+https://eternal-fade-087901.framer.app,/fieldbook/mote,true,fieldbook-detail,200,https://eternal-fade-087901.framer.app/fieldbook/mote,Mote Â· Kite motion system Â· Tobi Mallory,0,328664
+https://tobi-mallory.framer.website,/fieldbook/lumpkin,true,fieldbook-detail,200,https://eternal-fade-087901.framer.app/fieldbook/lumpkin,Lumpkin Â· Pebble 3D product Â· Tobi Mallory,0,328679
+https://eternal-fade-087901.framer.app,/fieldbook/lumpkin,true,fieldbook-detail,200,https://eternal-fade-087901.framer.app/fieldbook/lumpkin,Lumpkin Â· Pebble 3D product Â· Tobi Mallory,0,328679
+https://tobi-mallory.framer.website,/fieldbook/hum,true,fieldbook-detail,200,https://eternal-fade-087901.framer.app/fieldbook/hum,Hum Â· Tally research sprint Â· Tobi Mallory,0,328357
+https://eternal-fade-087901.framer.app,/fieldbook/hum,true,fieldbook-detail,200,https://eternal-fade-087901.framer.app/fieldbook/hum,Hum Â· Tally research sprint Â· Tobi Mallory,0,328357
+https://tobi-mallory.framer.website,/fieldbook/dart,true,fieldbook-detail,200,https://eternal-fade-087901.framer.app/fieldbook/dart,Dart Â· Courier launch Â· Tobi Mallory,0,326439
+https://eternal-fade-087901.framer.app,/fieldbook/dart,true,fieldbook-detail,200,https://eternal-fade-087901.framer.app/fieldbook/dart,Dart Â· Courier launch Â· Tobi Mallory,0,326439
+https://tobi-mallory.framer.website,/nonexistent-audit-20261008,false,core-nonexistent-audit-20261008,404,https://eternal-fade-087901.framer.app/404,Off the map Â· Tobi Mallory,1,268983
+https://eternal-fade-087901.framer.app,/nonexistent-audit-20261008,false,core-nonexistent-audit-20261008,404,https://eternal-fade-087901.framer.app/404,Off the map Â· Tobi Mallory,1,268983

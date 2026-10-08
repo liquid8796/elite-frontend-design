@@ -347,3 +347,7 @@ Before signoff verify:
 - no source creature names/artwork/copy/metrics were copied.
 
 Pass only when the world layer improves memory and navigation while professional proof remains stronger than the gimmick.
+
+## Quest preselection audit (2026-10-08)
+
+The complete Tobi Mallory source still represents 30 routes and six taxonomy types. Re-audit adds an important commercial interaction test: every service detail has an Accept this quest CTA, but Website and Motion still open Contact with Identity quest selected. Keep the world-language mnemonic in the UI while passing a meaningful source-service identifier to the lead form and preselecting the corresponding real offering. Canonicals for all 30 source paths point to the older Framer host; the sitemap also lists the authored 404 path. See ../sites/tobi-mallory.framer.website.md for reproducible full-site data.

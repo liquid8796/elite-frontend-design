@@ -200,3 +200,13 @@ Do not transfer:
 - source project/client claims or metrics;
 - Framer platform chrome;
 - staging/publish host metadata.
+
+## Full Public Site Re-Audit Delta — 2026-10-08
+
+30 sitemap paths audited on both public and canonical source host (60 declared route HTTP requests): 29 HTML 200 plus /404 HTTP 404 per host. Extra invalid path HTTP 404 per host. All 30 public-host canonicals point to eternal-fade-087901.framer.app. The sitemap itself contains /404; remove it from a production SEO sitemap.
+
+Chrome inspected 15 route templates desktop 1440x900 and 15 matching mobile 390x844 with zero outer overflow. Home H1 168->80px, interior H1 112->54px, major H2 92->46px. All route families remain authored and accessible without WebGL.
+
+**New conversion defect:** all three Quest service detail CTAs navigate to ../contact but the Quest dropdown defaults to Identity quest. Website and Motion quest intent is lost (2 of 3). Add pattern tobi-quest-intent-continuity: pass service slug in contact query/state and preselect correct offer, retaining after reload. Six Types icon-only links DO have aria-label, a positive accessible fallback. Detail/article main headings H2 without H1 and empty homepage lang persist.
+
+Evidence: data/tobi-dual-host-routes-2026-10-08.csv; data/tobi-rendered-states-2026-10-08.csv; data/tobi-quest-contact-state-2026-10-08.csv.

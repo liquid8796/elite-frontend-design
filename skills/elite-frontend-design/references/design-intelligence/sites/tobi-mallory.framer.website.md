@@ -769,3 +769,61 @@ Weak:
 - Is the new implementation transferring the mechanism rather than cloning Tobi Mallory?
 
 Pass only when the world model improves memory/navigation/proof while remaining understandable to a first-time visitor.
+
+## Complete-Site Re-Audit — 2026-10-08
+
+The original 30-route full-site profile remains valid. This fresh audit validates all 30 sitemap paths on both the browsed host https://tobi-mallory.framer.website/ and canonical host https://eternal-fade-087901.framer.app/. The public site's robots.txt advertises the canonical host sitemap, and the sitemap document itself contains **30 loc entries pointing to that other host**.
+
+- All **29 content routes return HTTP 200** on both hosts; the sitemap-listed /404 route returns proper HTTP **404** on both; one extra nonexistent URL also returns 404.
+- All **30/30 canonical links on browsed host point to eternal-fade-087901.framer.app**, not the browsed hostname. Canonical drift is site-wide, not homepage-only.
+- Public sitemap includes /404 even though it is a real 404. Exclude invalid routes from public sitemaps.
+- Families: 10 core/utility including /404, 7 Fieldbook details, 6 Types, 4 Journal, 3 Quests.
+- Two-host HTTP record: modules/distilled-web-toolkit/data/tobi-dual-host-routes-2026-10-08.csv (62 rows).
+
+### Independent desktop/mobile render audit
+
+Installed Chrome headless rendered **15 distinct route types on desktop (1440x900) and mobile (390x844)**: home, Fieldbook index+Bezzle+Curvix, Types index+Ink, Isles, Quests index+Identity, About, Journal index+detail, Contact, Legal and /404. 30/30 tested UI states had **zero positive outer document overflow**.
+
+| Route | Desktop document height | Mobile document height |
+| --- | ---: | ---: |
+| Home | 13742 | 13716 |
+| Fieldbook | 3464 | 5746 |
+| Fieldbook Bezzle | 3275 | 4383 |
+| Types | 3118 | 4057 |
+| Types Ink | 1759 | 1948 |
+| Isles | 3069 | 2927 |
+| Quests | 4632 | 5558 |
+| Identity quest | 2508 | 3157 |
+| About | 4385 | 4516 |
+| Journal | 3630 | 4069 |
+| Journal detail | 3371 | 3826 |
+| Contact | 2616 | 3159 |
+| Legal | 2376 | 2524 |
+| 404 | 1889 | 1751 |
+
+Computed type scale: homepage H1 **168px desktop -> 80px mobile**; interior H1 **112 -> 54px**; H2 **92 -> 46px**; H3 **40 -> 28px**. Cream #FFF6E8 and plum #1E1838 remain; Bricolage Grotesque and Space Mono roles. Home had 11 images, 0 HTML videos, 0 canvas and 0 forms. Contact one real form. Source snapshot in modules/distilled-web-toolkit/data/tobi-rendered-states-2026-10-08.csv.
+
+### NEW: Quest CTA loses selected service context
+
+All three named service detail CTAs **Accept this quest** were clicked in Chrome:
+- /quests/identity-quest -> ../contact -> contact Quest select = Identity quest (correct).
+- /quests/website-quest -> ../contact -> Quest select = Identity quest (WRONG; should be Website quest).
+- /quests/motion-quest -> ../contact -> Quest select = Identity quest (WRONG; should be Motion quest).
+
+Thus 2 of 3 productized service routes silently misclassify commercial interest. Contact dropdown contains Identity quest, Website quest, Motion quest and Something custom. Name, Email and Message are required, Quest optional. Actual form submissions were NOT sent.
+
+**Quest-to-Contact Intent Continuity:** preserve selected offering via an explicit query such as /contact?quest=website-quest or equivalent application state, decode into the selected form value, and keep it after refresh/navigation. A default is fine on generic Contact entry but not after the visitor explicitly chooses another service. Match visual label and accessible select semantics. Evidence: modules/distilled-web-toolkit/data/tobi-quest-contact-state-2026-10-08.csv.
+
+### Semantics and interaction QA
+
+- The six visual icon-only links to Types are **correctly labelled with accessible aria-labels** such as Ink type: Brand and Grid type: Web, while six conventional description cards also expose readable text. Preserve this good pattern.
+- A homepage button is accessibly named Next line and the dialog uses aria-live=polite. One click during sampled runtime didn't alter line text, but sequencing/timing were not exhaustively exercised; do NOT claim a confirmed broken carousel.
+- Fieldbook and Journal detail primary titles remain H2 without route-specific H1, as previously recorded.
+- Homepage html lang remains empty. Specify the actual document language when building production sites.
+- The playful branded /404 correctly returns 404, even though it should not be included in sitemap.
+- Real template service prices: Identity from $8k / 6-8 weeks; Website from $6k / 4-6 weeks; Motion from $5k / 3-5 weeks. These are source fixtures, not transfer-ready pricing.
+- Full runtime is DOM/Framer illustration (no observed homepage 3D engine).
+
+### Transfer and validation rules
+
+Original eight Tobi patterns, profile archetype and 13 base skins remain intact; **do not duplicate** them. The meaningful new rule is cross-route service intent retention. Adopt a negative QA for mismatched service -> contact field and positive keyboard-labelled icon taxonomy. Align the site-wide canonical/sitemap/robots/OG/redirect host; do not invent additional content routes. No forms were submitted, finances exchanged or external accounts accessed.

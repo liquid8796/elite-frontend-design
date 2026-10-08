@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.33.1 - 2026-10-08
+
+- Re-audited the full 30-path Tobi Mallory sitemap on both browsed and canonical Framer hosts. 29 content routes HTTP 200, sitemap-listed /404 HTTP 404 per host, plus extra invalid 404 route; all 30 browsed canonical tags target the other host.
+- Rendered 15 desktop and 15 mobile representative routes in Chrome with zero outer overflow; preserved all Fieldbook/Type/Isles/Quest/Journal/Contact/Legal/404 families and original whimsical portfolio design DNA.
+- Clicked all three service Quest CTAs and verified two wrong contact-field defaults for Website and Motion; retained correct aria-labels on six icon-only Type links.
+- Added one Quest-to-Contact Intent Continuity pattern, two anti-patterns (lost selected service and sitemap-listed 404), one component recipe and one UX guideline, plus three dated machine-readable evidence tables.
+- Version 3.33.1 / assembly 3.33.1.0. Corpus: 18 sites, 140 patterns, 70 route, 25 motion, 45 responsive, 63 anti-patterns, 70 components, 54 UX guidelines. No new skins/modules.
+
 ## 3.33.0 - 2026-10-08
 
 - Full sitemap census of Fizens: 43/43 URLs HTTP 200; four extra paths HTTP 404; inspected 17 desktop and 15 mobile representative Chrome states.

@@ -1,0 +1,4 @@
+origin_path,origin_title,cta_href,destination_path,destination_default_quest,expected_quest,preserved
+/quests/identity-quest,Identity quest,../contact,/contact,Identity quest,Identity quest,true
+/quests/website-quest,Website quest,../contact,/contact,Identity quest,Website quest,false
+/quests/motion-quest,Motion quest,../contact,/contact,Identity quest,Motion quest,false

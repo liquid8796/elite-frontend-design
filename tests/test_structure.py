@@ -402,6 +402,36 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         spec = (toolkit / "specs" / "fizens.md").read_text(encoding="utf-8")
         self.assertIn("fizens-finance-benefit-proof", spec)
 
+    def test_tobi_full_site_dual_host_and_quest_handoff_reaudit(self) -> None:
+        import csv
+        source = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
+        def records(file):
+            with (source / file).open(encoding="utf-8", newline="") as f:
+                return list(csv.DictReader(f))
+        census = records("tobi-dual-host-routes-2026-10-08.csv")
+        self.assertEqual(len(census), 62)
+        declared = [r for r in census if r["declared_sitemap"] == "true"]
+        self.assertEqual(len(declared), 60)
+        self.assertEqual(sum(r["http_status"] == "200" for r in declared), 58)
+        self.assertEqual(sum(r["http_status"] == "404" for r in declared), 2)
+        original = [r for r in declared if r["host"] == "https://tobi-mallory.framer.website"]
+        self.assertEqual(len(original), 30)
+        self.assertTrue(all(r["canonical"].startswith("https://eternal-fade-087901.framer.app/") for r in original))
+        self.assertTrue(any(r["path"] == "/404" and r["http_status"] == "404" for r in original))
+        states = records("tobi-rendered-states-2026-10-08.csv")
+        self.assertEqual(len(states), 30)
+        self.assertEqual(sum(r["mode"] == "desktop" for r in states), 15)
+        self.assertEqual(sum(r["mode"] == "mobile" for r in states), 15)
+        self.assertTrue(all(int(r["outer_overflow"]) <= 0 for r in states))
+        intent = records("tobi-quest-contact-state-2026-10-08.csv")
+        self.assertEqual(len(intent), 3)
+        self.assertEqual(sum(r["preserved"] == "false" for r in intent), 2)
+        self.assertEqual({r["destination_default_quest"] for r in intent}, {"Identity quest"})
+        profile = (SKILL_ROOT / "references" / "design-intelligence" / "sites" / "tobi-mallory.framer.website.md").read_text(encoding="utf-8")
+        self.assertIn("Quest-to-Contact Intent Continuity", profile)
+        spec = (SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "specs" / "tobi-mallory.md").read_text(encoding="utf-8")
+        self.assertIn("tobi-quest-intent-continuity", spec)
+
     def test_design_intelligence_landscape_contract(self) -> None:
         module = (
             SKILL_ROOT
@@ -1658,8 +1688,8 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         self.assertEqual(len(design_profiles), 18)
         self.assertEqual(len(color_systems), 18)
         self.assertEqual(len(typography_systems), 18)
-        self.assertEqual(len(components), 69)
-        self.assertEqual(len(ux_guidelines), 53)
+        self.assertEqual(len(components), 70)
+        self.assertEqual(len(ux_guidelines), 54)
         self.assertEqual(len(design_live), 18)
 
         specs = sorted((module_root / "specs").glob("*.md"))
@@ -1770,6 +1800,11 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         self.assertIn('"source_site": "fizens"', result.stdout)
         self.assertIn("#0040C1", result.stdout)
 
+        result = subprocess.run(
+            [sys.executable, str(search_script), "service intent contact", "--site", "tobi-mallory", "--json"],
+            cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True,
+        )
+        self.assertIn("Quest-to-Contact Service Intent Preservation", result.stdout)
         result = subprocess.run(
             [sys.executable, str(search_script), "developer api code", "--domain", "typography", "--json"],
             cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True,

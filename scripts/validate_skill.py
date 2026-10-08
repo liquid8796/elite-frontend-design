@@ -331,6 +331,31 @@ def validate() -> list[str]:
         if len(fizens_jobs) != 4 or sum(x["mismatch"] == "true" for x in fizens_jobs) != 3:
             errors.append("Fizens career identity QA expected 3 mismatches among 4 job routes")
 
+    tobi_data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
+    tobi_routes_path = tobi_data / "tobi-dual-host-routes-2026-10-08.csv"
+    tobi_rendered_path = tobi_data / "tobi-rendered-states-2026-10-08.csv"
+    tobi_quests_path = tobi_data / "tobi-quest-contact-state-2026-10-08.csv"
+    if not all(p.is_file() for p in (tobi_routes_path, tobi_rendered_path, tobi_quests_path)):
+        errors.append("Missing Tobi Mallory full-site dual-host/rendered/service-intent evidence")
+    else:
+        with tobi_routes_path.open(encoding="utf-8", newline="") as f:
+            tobi_routes = list(csv.DictReader(f))
+        with tobi_rendered_path.open(encoding="utf-8", newline="") as f:
+            tobi_rendered = list(csv.DictReader(f))
+        with tobi_quests_path.open(encoding="utf-8", newline="") as f:
+            tobi_quests = list(csv.DictReader(f))
+        declared = [x for x in tobi_routes if x["declared_sitemap"] == "true"]
+        if len(tobi_routes) != 62 or len(declared) != 60:
+            errors.append("Tobi dual-host census requires 60 sitemap and 2 extra invalid HTTP checks")
+        if sum(x["http_status"] == "200" for x in declared) != 58 or sum(x["http_status"] == "404" for x in declared) != 2:
+            errors.append("Tobi census requires 29 content 200 and one authored 404 per host")
+        if sum(x["host"] == "https://tobi-mallory.framer.website" and x["canonical"].startswith("https://eternal-fade-087901.framer.app") for x in declared) != 30:
+            errors.append("Tobi all 30 browsed-host canonicals must be recorded as source-host drift")
+        if len(tobi_rendered) != 30 or any(int(x["outer_overflow"]) > 0 for x in tobi_rendered):
+            errors.append("Tobi Chrome render evidence requires 30 overflow-free route states")
+        if len(tobi_quests) != 3 or sum(x["preserved"] == "false" for x in tobi_quests) != 2:
+            errors.append("Tobi commercial CTA evidence requires 2 of 3 lost-service cases")
+
     rockstar_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "rockstargames.com-vi.md"
     if not rockstar_profile.is_file():
         errors.append("Missing Rockstar Games VI design-intelligence profile")
@@ -786,17 +811,17 @@ def validate() -> list[str]:
     toolkit_data = toolkit_root / "data"
     toolkit_counts = {
         "sites.csv": 18,
-        "patterns.csv": 139,
+        "patterns.csv": 140,
         "route-recipes.csv": 70,
         "motion-recipes.csv": 25,
         "responsive-recipes.csv": 45,
-        "anti-patterns.csv": 61,
+        "anti-patterns.csv": 63,
         "live-audit-2026-10-07.csv": 18,
         "design-profiles.csv": 18,
         "color-systems.csv": 18,
         "typography-systems.csv": 18,
-        "component-recipes.csv": 69,
-        "ux-guidelines.csv": 53,
+        "component-recipes.csv": 70,
+        "ux-guidelines.csv": 54,
         "design-primitives-live-2026-10-07.csv": 18,
     }
     for filename, minimum in toolkit_counts.items():
