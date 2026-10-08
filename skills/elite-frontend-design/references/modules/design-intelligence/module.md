@@ -1179,3 +1179,15 @@ Examples:
 - if using Bounded Immersive Rendering, verify the heavy loop stops or idles outside its active region.
 
 A successful distillation should produce a site that belongs unmistakably to the new product while benefiting from stronger design judgment learned from the reference.
+
+## Route-Complete Developer Product Ecosystems
+
+Do not infer the whole product design from one cinematic homepage. Use sitemap-index recursion and classify route jobs: product/features, stack-specific integration, migration bridge, API reference, dashboard task docs, knowledge base/provider guides, changelog, blog, customers, public operating handbook, human attribution, security/legal and independent campaigns.
+
+**Three-Rail Documentation Reader:** fixed global header + left route tree + an independently scrollable article + right outline are a distinct scroll-ownership system. Verify keyboard focus, anchors, internal overflow and small-screen behavior, not only document scrollWidth.
+
+**Migration Converter Bridge:** real competitor-to-product mappings and code transformation reduce switching friction more than slogans.
+
+**Public Operating System as Trust Proof:** publish genuine engineering/design practices and people contributions when safe. Do not replace product proof with superficial culture photography.
+
+**Sitemap Status Parity:** a route declared in an XML sitemap still needs live status and semantic validation. Do not confuse a sitemap index count with the count of underlying URLs.

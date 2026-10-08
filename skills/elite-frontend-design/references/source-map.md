@@ -676,3 +676,4 @@ Toolkit outputs:
 
 Design principle: provenance before prescription. The toolkit is a retrieval/composition layer over audited evidence, not a clone library.
 
+- Resend 2026-10-08 whole-site re-audit: 11 nested sitemaps -> 1,015 public URL entries. Machine-readable evidence: modules/distilled-web-toolkit/data/resend-route-inventory-2026-10-08.csv; 1,014 returned HTTP 200 and /shop returned HTTP 404. The 2026-10-05 profile was homepage-only; the 2026-10-07 11-URL statement counted sitemaps, not pages.

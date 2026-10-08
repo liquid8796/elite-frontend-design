@@ -363,3 +363,123 @@ When future work claims to apply Resend-derived intelligence, ask:
 - Does the result belong to the new product, or is Resend visibly recognizable in its cube, palette, copy, or page order?
 
 Pass only when the mechanisms improve credibility and clarity while the source site's proprietary identity disappears.
+
+## Whole-Site Re-Audit — 2026-10-08
+
+**Scope correction.** The original 2026-10-05 research was homepage-deep; the 2026-10-07 toolkit snapshot recorded 11 URLs, which were actually 11 child sitemaps in a sitemap index, not the number of pages. This 2026-10-08 re-audit inventoried and requested **1,015/1,015 sitemap-declared URLs**. 1,014 returned HTTP 200 and the declared /shop URL returned HTTP 404. The audit additionally used actual Chrome rendered states across the major route families, with representative desktop and 390x844 mobile checks. Individual document interaction flows were sampled, not exhaustively replayed on each of the 1,015 pages.
+
+### Eleven sitemap surfaces / 1,015 declared URLs
+
+| Surface | URLs | Route job |
+| --- | ---: | --- |
+| docs | 413 | search/browse API reference, dashboard tasks, webhooks, troubleshooting and guides |
+| blog | 176 | company/engineering/editorial knowledge |
+| changelog | 111 | chronological product trust and release evidence |
+| other | 124 | core marketing, 11 feature landings, 3 product landings, pricing, enterprise, language/platform integrations, migration index, careers, brand, launches and events |
+| handbook | 65 | operating culture, design process, engineering, people, marketing and sales |
+| humans | 59 | people attribution, authored work and team identity |
+| customers | 46 | named customer proof |
+| legal | 7 | compliance/policy |
+| clubs | 6 | team-curated culture collections |
+| migrate | 5 | competitor-specific migration bridges |
+| security | 3 | dedicated trust/compliance |
+| **Total** | **1,015** | **1,014 200 + 1 sitemap 404** |
+
+The machine-readable per-route census lives at references/modules/distilled-web-toolkit/data/resend-route-inventory-2026-10-08.csv. It records sitemap group, URL, HTTP status, title and H1 count for each declared URL. Counts are a dated sitemap snapshot, not timeless constants.
+
+### Marketing and product route grammar
+
+Homepage identity and original design DNA remain accurate: black/near-black background, Domaine editorial headline, aBCFavorit product explanatory headings, CommitMono code, responsive live Spline cube vs mobile video fallback, and truthful product evidence.
+
+But the product expands into many separate buyer jobs:
+- /products/transactional-emails — identity -> SDK proof -> API observability -> event/webhook evidence -> use cases -> trust. Representative 1910x8364 desktop, 390x mobile without document overflow.
+- /products/marketing-emails — audience management -> subscribe/unsubscribe API -> performance visualization -> all-in-one product bridge. Desktop ~1910x9679; mobile ~390x12572, zero outer overflow.
+- /features/email-api — framework fit -> log/event/webhook observability -> special capabilities -> idempotency/reliability. Desktop ~1910x7573; mobile ~390x9025.
+- /features/inbound — received-message event model -> attachments -> structured data -> setup steps.
+- /features/automations — trigger/events -> condition/wait/delay diagram -> run observability -> recipes.
+- /features/templates — templates library -> collaboration -> drafts -> version history.
+- /enterprise — enterprise concerns -> named scale proof -> compliance -> implementation -> contact form.
+- /pricing — plans -> pay-as-you-go -> add-ons -> feature-category comparison, not one simple price list.
+
+**Capability-as-Inspectable-State** applies across these routes: the art direction is consistent, but the proof surface changes to show the actual product job. Avoid generic feature-page clones.
+
+### Integration-specific landing adapters
+
+Dozens of top-level language, framework, platform, AI-agent and integration routes (for example /nodejs, /nextjs, /python, /cloudflare, /codex) use a repeatable job:
+stack-specific promise -> recognizable code/SDK fit -> minimal setup -> general platform benefits -> CTA.
+Rendered /nodejs is ~1910x4273 with a selectable code surface. This turns broad developer infrastructure into stack-specific entry points without changing the core technical identity.
+
+### Migration Converter Bridge
+
+/migrate has five competitor destinations. /migrate/sendgrid is ~1910x13438 desktop and ~390x15146 mobile with zero outer overflow. It combines:
+competitor-specific promise -> code converter -> conceptual comparison -> SDK/send API/SMTP/webhook mappings -> security/idempotency considerations -> migration CTA.
+A migration route must reduce actual switch cost, not only attack a competitor or repeat landing-page claims. Code conversion is a proof interaction; implementation guides remain selectable textual content.
+
+### Dedicated docs reader — three context rails
+
+413 declared docs routes span:
+- 143 API reference paths;
+- 69 dashboard task paths;
+- 55 knowledge-base paths;
+- 44 webhook paths;
+- 19 explicit guides, plus integration/tutorial entry points.
+
+Rendered docs are materially different from marketing pages. At desktop the shell has a fixed header, left navigation, a contained **main scroll viewport**, and a sticky right page outline. On 390x844 the document root remains 390x844 with **main clientHeight ~714px** and its own multi-thousand-pixel scrollHeight; outer horizontal overflow is zero. This is **Three-Rail Documentation Reader / Scroll Ownership Contract**, not a full-page scroll layout.
+
+Representative observations:
+- /docs/introduction — quickstart and framework entry; ~3551px main scroll content at 390.
+- /docs/api-reference/emails/send-email — parameter/header reference and 23 preformatted code blocks; ~7100px main scroll content at 390.
+- /docs/dashboard/automations/create-automation — task/action guidance with dashboard and API branches; ~9014px internal main content desktop.
+- /docs/knowledge-base/audience-hygiene — explanatory troubleshooting/operational guidance.
+- /docs/guides/dns/godaddy — provider-specific illustrated operational steps; ~9153px internal main content desktop.
+- /docs/webhooks/introduction — event model, requirements and quickstart.
+
+Important distinctions: API reference pages need parameter tables/request-response code; dashboard instructions need UI/action sequences; DNS guides need provider-specific screenshots; knowledge-base routes need plain-language failure diagnosis. They share reading chrome, not identical content structure.
+
+### Knowledge and release lifecycle
+
+Blog index is a featured + latest-post archive (176 details; desktop ~1910x23432 with many image nodes). Representative /blog/email-verification-api is a technical article with section headings, code and some video. Mobile article remains readable with no outer overflow.
+
+Changelog has **111 details** and a very deep index (~1910x68260 / 390x54602), with **sticky dates and chronology markers**. Individual updates pair the change description with concrete API / UI proof and related product destinations. Use **Sticky Release Chronology** but cap initial DOM/render cost and provide navigation/filtering; a 68k-pixel document and 273 image nodes are a performance warning, not a default pattern.
+
+### Customer proof and public operating system
+
+Customers directory (46 stories) is a visual named-proof hub; the individual case /customers/basedash is intentionally concise (~1910x1519) rather than padded. Use **Evidence-Scaled Customer Stories**.
+
+The public handbook is a separate editorial experience:
+- root /handbook uses an oversized expressive H1 (~450px desktop -> ~156px mobile), then seven departments (Company, People, Engineering, Design, Success, Marketing, Sales);
+- 65 handbook details;
+- /handbook/design/how-we-think-about-design uses an ~80px heading, compact policy headings and persistent departmental wayfinding.
+
+Humans is a people index with 59 profile routes. /humans/zeno-rocha connects the individual to authored articles, product releases and company history; this **Human Attribution Graph** turns content authorship into inspectable credibility rather than an anonymous corporate blog. Clubs (6 pages) are curated real-human interests with themed lists; they contribute culture signals rather than direct conversion.
+
+This family promotes **Public Operating System as Trust Proof**: company process, people and published engineering/design methods reinforce product credibility. Do not clone private biographies or treat culture collections as a replacement for product proof.
+
+### Event and brand subsystems
+
+/forward is an event microsite with its own fixed full-viewport 4-canvas composition, rather than the standard dark marketing shell; /forward/agenda and /forward/faq are related destinations. /brand exposes naming, logo and screenshot guidance. /careers and /security have dedicated trust/recruiting narratives. Keep campaign worlds isolated from day-to-day product/documentation runtime.
+
+### Responsive contracts and QA
+
+At 390x844, tested representative homepage, feature, product, pricing, migration, docs, article, changelog, handbook, people, clubs and careers routes had **zero document-level horizontal overflow**. Homepage retains the existing Spline desktop -> video mobile substitution (desktop 1 canvas and 5 videos; mobile 0 canvas and 5 videos). Product display H1 commonly scales from ~76.8px to 64px, section H2 from ~56px to 48px. Docs instead uses H1 ~36px desktop / 30px mobile with internal main scrolling.
+
+Full census: **1,014 HTTP 200, 1 HTTP 404** at /shop. The 404 is a stale sitemap entry, not a deliberate product experience. 20 sitemap-backed 200 pages in the diverse 'other' surface lacked an H1 in the HTML response (notably private deal/confirmation/campaign variants), and some pages expose multiple H1s (/migrate, selected product/docs/handbook routes); heading semantics need route-specific QA.
+
+QA rule: **Sitemap -> HTTP Status -> Semantic Route Parity**. Do not assume a route exists just because the sitemap declares it. Do not assume a decorative visual title is a valid H1. For internally scrolling docs, test scroll ownership, focus, anchor navigation and mobile viewport keyboard accessibility — a zero outer overflow reading alone does not guarantee that inner interaction works.
+
+### Newly promoted transfer mechanisms
+
+1. Route-Complete Developer Product Ecosystem — segment by actual visitor job, not one beautiful homepage.
+2. Capability-as-Inspectable-State — demo UI/code/logs/effects appropriate to the capability.
+3. Stack-Specific Integration Adapter — credible stack-specific entry and code.
+4. Migration Converter Bridge — reduce effort to migrate via concrete mappings.
+5. Three-Rail Documentation Reader — distinct side navigation, internal document scroll and right outline.
+6. Sticky Release Chronology — treat dated shipped work as a proof stream.
+7. Public Operating System as Trust Proof — handbook + people + authorship reinforce product reliability.
+8. Human Attribution Graph — link makers to work and thinking.
+9. Evidence-Scaled Customer Stories — case length follows available facts.
+10. Content Lifecycle Lattice — docs/changelog/blog/customers cross-link product learning and trust.
+
+### Non-transferable / caveats
+
+Do not copy Resend's proprietary code, SDK examples as generic API fixtures, team profiles, editorial copy, brand assets, exact fonts, cube/film, or event canvas assets. Any numerical geometry and page counts above are observations from the 2026-10-08 audit. Full HTTP census != deep interaction audit of 1,015 individual pages.

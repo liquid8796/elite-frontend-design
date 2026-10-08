@@ -294,11 +294,37 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
             "test mode",
             "functional tabs",
             "mobile",
+            "Whole-Site Re-Audit",
+            "1,015",
+            "Three-Rail Documentation Reader",
+            "Migration Converter Bridge",
+            "Public Operating System as Trust Proof",
         ):
             self.assertIn(phrase, profile)
 
         index = (SKILL_ROOT / "references" / "index.md").read_text(encoding="utf-8")
         self.assertIn("resend.com.md", index)
+
+    def test_resend_1015_route_census_contract(self) -> None:
+        import csv
+        root = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit"
+        with (root / "data" / "resend-route-inventory-2026-10-08.csv").open(encoding="utf-8", newline="") as f:
+            rows = list(csv.DictReader(f))
+        self.assertEqual(len(rows), 1015)
+        self.assertEqual(sum(row["http_status"] == "200" for row in rows), 1014)
+        self.assertEqual(sum(row["http_status"] == "404" for row in rows), 1)
+        self.assertIn(("https://resend.com/shop", "404"), {(r["url"], r["http_status"]) for r in rows})
+        by_family = {}
+        for row in rows:
+            by_family[row["sitemap_group"]] = by_family.get(row["sitemap_group"], 0) + 1
+        self.assertEqual(by_family["docs"], 413)
+        self.assertEqual(by_family["blog"], 176)
+        self.assertEqual(by_family["changelog"], 111)
+        self.assertEqual(by_family["handbook"], 65)
+        spec = (root / "specs" / "resend.md").read_text(encoding="utf-8")
+        self.assertIn("1,015", spec)
+        for pattern in ("resend-three-rail-docs", "resend-migration-converter", "resend-public-operating-system"):
+            self.assertIn(pattern, spec)
 
     def test_design_intelligence_landscape_contract(self) -> None:
         module = (
@@ -1533,8 +1559,8 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         self.assertEqual(len(design_profiles), 15)
         self.assertEqual(len(color_systems), 15)
         self.assertEqual(len(typography_systems), 15)
-        self.assertEqual(len(components), 50)
-        self.assertEqual(len(ux_guidelines), 34)
+        self.assertEqual(len(components), 56)
+        self.assertEqual(len(ux_guidelines), 38)
         self.assertEqual(len(design_live), 15)
 
         specs = sorted((module_root / "specs").glob("*.md"))
@@ -1591,6 +1617,13 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
             cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True,
         )
         self.assertIn("World Metaphor as Information Architecture", result.stdout)
+
+        result = subprocess.run(
+            [sys.executable, str(search_script), "documentation three rail migration converter", "--site", "resend", "--json"],
+            cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True,
+        )
+        self.assertIn("Three-Rail Documentation Reader", result.stdout)
+        self.assertIn("Migration Converter Bridge", result.stdout)
 
         result = subprocess.run(
             [sys.executable, str(search_script), "developer api code", "--domain", "typography", "--json"],

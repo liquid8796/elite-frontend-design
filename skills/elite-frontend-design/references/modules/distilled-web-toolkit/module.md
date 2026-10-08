@@ -132,3 +132,9 @@ When they differ:
 `contextual` ? useful only within a narrow archetype or campaign.
 
 Do not promote contextual evidence into a universal default.
+
+## Whole-Site Route Census Evidence
+
+For Resend, the audit from 2026-10-08 recurses 11 child sitemaps into 1,015 declared routes. The per-route metadata inventory is stored at data/resend-route-inventory-2026-10-08.csv (1,014 HTTP 200 and /shop HTTP 404 in that dated snapshot).
+
+Use route-job recipes alongside aesthetic patterns: products/features, integrations, migration, docs with internal scroll, changelog, blog, customer proof, handbook and people. The inventory is a full HTTP census, not a claim of detailed interaction tests on all 1,015 routes.

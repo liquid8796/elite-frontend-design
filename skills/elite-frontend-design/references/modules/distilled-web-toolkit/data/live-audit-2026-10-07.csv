@@ -1,6 +1,6 @@
 site_id,live_sitemap_loc_count,desktop_target,desktop_document,desktop_overflow_px,mobile_target,mobile_document,mobile_overflow_px,canvas_count_desktop,video_count_desktop,image_count_desktop,fixed_sticky_count_desktop,font_roles,body_background,notes
 refokus,102 + 19 companion,1440x900,1440x6965,0,390x844,390x5926,0,1,8,82,6,Generalsans Variable|Featuredeck,white,2026-10-08 re-audit: 102 main URLs plus robots-advertised 19-url Tools companion; WebGL2/Three hero re-verified; full route families audited
-resend,11,1440x900,1430x12319,-10,390x844,390x14146,0,1,5,73,4,Domaine|Inter|ABC Favorit,black,desktop H1 96px; mobile 64px centered
+resend,1015 (11 nested sitemap files),1920x889,1910x12308,-10,390x844,390x14146,0,1,5,73,4,Domaine|aBCFavorit|CommitMono|Inter,"rgb(0,0,0)",2026-10-08 whole-site: 1014 HTTP 200 + /shop HTTP 404; docs nested scroll; 11 sitemap families
 rockstar-vi,0,1440x900,1440x11870,0,390x844,390x10578,0,3,2,33,10,ArtDeco family,"rgb(12,13,27)",campaign has no sitemap; canvas/media-led
 tokenmeter,0,1440x900,1425x2502,-15,495x1072,495x2705,0,0,0,0,9,Archivo Variable|JetBrains Mono Variable,"rgb(251,250,247)",Astro v7.0.7 live; sitemap endpoint 200 without loc entries
 novaos,23,1440x900,1425x7548,-15,390x844,390x10531,0,0,0,82,3,DM Sans Variable|Geist,"rgb(247,247,247)",Framer 95da0c7; Lenis live

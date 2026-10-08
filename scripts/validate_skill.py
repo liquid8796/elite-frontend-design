@@ -213,9 +213,27 @@ def validate() -> list[str]:
             "Code as Product Proof",
             "Responsive Fidelity Substitution",
             "Functional Tabs as Persuasion",
+            "Whole-Site Re-Audit",
+            "1,015",
+            "Three-Rail Documentation Reader",
+            "Migration Converter Bridge",
+            "Public Operating System as Trust Proof",
         ):
             if phrase not in profile_text:
                 errors.append(f"Resend design-intelligence profile missing phrase: {phrase}")
+
+    resend_inventory = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data" / "resend-route-inventory-2026-10-08.csv"
+    if not resend_inventory.is_file():
+        errors.append("Missing complete Resend route inventory")
+    else:
+        with resend_inventory.open(encoding="utf-8", newline="") as f:
+            resend_rows = list(csv.DictReader(f))
+        if len(resend_rows) != 1015:
+            errors.append(f"Resend inventory expected 1015 sitemap URLs, found {len(resend_rows)}")
+        if sum(r["http_status"] == "200" for r in resend_rows) != 1014:
+            errors.append("Resend inventory expected 1014 HTTP 200 routes")
+        if not any(r["url"] == "https://resend.com/shop" and r["http_status"] == "404" for r in resend_rows):
+            errors.append("Resend inventory missing the observed /shop 404 regression")
 
     rockstar_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "rockstargames.com-vi.md"
     if not rockstar_profile.is_file():
@@ -634,17 +652,17 @@ def validate() -> list[str]:
     toolkit_data = toolkit_root / "data"
     toolkit_counts = {
         "sites.csv": 15,
-        "patterns.csv": 70,
-        "route-recipes.csv": 20,
-        "motion-recipes.csv": 15,
-        "responsive-recipes.csv": 20,
-        "anti-patterns.csv": 20,
+        "patterns.csv": 118,
+        "route-recipes.csv": 51,
+        "motion-recipes.csv": 24,
+        "responsive-recipes.csv": 38,
+        "anti-patterns.csv": 47,
         "live-audit-2026-10-07.csv": 15,
         "design-profiles.csv": 15,
         "color-systems.csv": 15,
         "typography-systems.csv": 15,
-        "component-recipes.csv": 50,
-        "ux-guidelines.csv": 34,
+        "component-recipes.csv": 56,
+        "ux-guidelines.csv": 38,
         "design-primitives-live-2026-10-07.csv": 15,
     }
     for filename, minimum in toolkit_counts.items():

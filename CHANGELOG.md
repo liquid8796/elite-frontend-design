@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.30.0 - 2026-10-08
+
+- Re-audited Resend across 11 child sitemaps / 1,015 distinct URLs (1,014 HTTP 200, /shop HTTP 404); corrected prior mistaken 11-URL snapshot.
+- Preserved homepage Spline/live-code evidence while adding product, feature, integration, migration converter, API/dashboard/knowledge-base docs, blog, changelog, customer, handbook, people, club, event, security and legal surfaces.
+- Added complete 1,015-row route inventory; 10 patterns, 8 route recipes, 1 motion recipe, 3 responsive recipes, 3 anti-patterns, 6 components, 4 UX guidelines.
+- New transferable mechanisms: Three-Rail Documentation Reader, Migration Converter Bridge, Sticky Release Chronology, Public Operating System as Trust Proof, Human Attribution Graph.
+- Corpus totals: 15 sites, 118 patterns, 51 route recipes, 24 motion, 38 responsive, 47 anti-patterns, 56 components, 38 UX guidelines. Version 3.30.0 / 3.30.0.0; 17 modules and 13 skins unchanged.
+
 ## 3.29.0 - 2026-10-08
 
 - Re-audited Refokus across 102 main-site sitemap URLs plus the 19-route Webflow Tools companion sitemap: 121/121 declared URLs returned HTTP 200.

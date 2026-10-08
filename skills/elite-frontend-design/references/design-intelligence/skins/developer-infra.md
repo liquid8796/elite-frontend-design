@@ -38,3 +38,5 @@ No fake terminal wallpaper, meaningless code, or generic purple glow as a substi
 
 ## QA Rubric
 Verify code authenticity, product-state credibility, semantic color use, functional tabs, mobile readability, and proof hierarchy.
+
+The 2026-10-08 full-site Resend audit expands this evidence anchor to 1,015 declared routes and adds integration/migration adapter, three-rail docs reader, release chronology and public operating-handbook patterns. Keep the existing code-as-proof identity but avoid turning every route into a homepage clone.
