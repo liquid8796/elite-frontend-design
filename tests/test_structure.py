@@ -1522,6 +1522,29 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
             / "cinematic-game.md"
         ).read_text(encoding="utf-8-sig")
         self.assertIn("ready-material-053719.framer.app.md", skin)
+    def test_echoes_three_mode_breakpoint_reaudit(self) -> None:
+        import csv
+        toolkit = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit"
+        with (toolkit / "data" / "echoes-survey-breakpoints-2026-10-08.csv").open(encoding="utf-8", newline="") as f:
+            rows = list(csv.DictReader(f))
+        self.assertEqual(len(rows), 9)
+        normal = {int(r["viewport_width"]): r for r in rows if r["reduced_motion"] == "no-preference"}
+        self.assertEqual(normal[809]["viewport_position"], "relative")
+        self.assertEqual(normal[809]["mode"], "vertical")
+        self.assertEqual(normal[810]["viewport_position"], "sticky")
+        self.assertEqual(normal[810]["track_width"], "4280")
+        self.assertEqual(normal[1199]["track_width"], "4280")
+        self.assertEqual(normal[1200]["track_width"], "5320")
+        self.assertEqual(normal[1200]["world_height"], "3780")
+        self.assertTrue(all(int(r["root_scroll_width"]) == int(r["viewport_width"]) for r in rows))
+        reduced = [r for r in rows if r["reduced_motion"] == "reduce"]
+        self.assertEqual(len(reduced), 1)
+        self.assertEqual(reduced[0]["viewport_position"], "sticky")
+        self.assertEqual(reduced[0]["mode"], "wide-horizontal")
+        profile = (SKILL_ROOT / "references" / "design-intelligence" / "sites" / "ready-material-053719.framer.app.md").read_text(encoding="utf-8")
+        self.assertIn("Whole-Site Re-Audit", profile)
+        self.assertIn("not evidence that the site implements it", profile)
+
     def test_distilled_web_toolkit_contract(self) -> None:
         import csv
         import subprocess
@@ -1582,7 +1605,7 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         self.assertEqual(len(color_systems), 17)
         self.assertEqual(len(typography_systems), 17)
         self.assertEqual(len(components), 64)
-        self.assertEqual(len(ux_guidelines), 46)
+        self.assertEqual(len(ux_guidelines), 47)
         self.assertEqual(len(design_live), 17)
 
         specs = sorted((module_root / "specs").glob("*.md"))

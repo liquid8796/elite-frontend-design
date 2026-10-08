@@ -154,3 +154,7 @@ The Nouva audit (2026-10-08) covers 8/8 sitemap URLs (HTTP 200) and an extra foo
 The differentiator is **marketing-to-contact conversion plus a separate branded passwordless auth quartet** (sign-up, sign-in, OTP and account). Homepage metrics are scroll-triggered and initially render zero placeholders. All pricing CTA routes lead to contact. The Yearly 20% billing selector was not observed changing prices after a sampled click; preserve this as a QA obligation, not a functioning design feature.
 
 Template claims/metrics, FrameAuth backend security, actual email delivery and signup or contact submission are not verified by this UI audit. Preserve transferable route grammar and accessible semantics only.
+
+## Echoes of Mars Three-Mode Breakpoint Re-Audit
+
+The 2026-10-08 Chrome runtime re-audit of the original 1-route, 13-chapter Echoes of Mars campaign records exact survey layout breakpoints in data/echoes-survey-breakpoints-2026-10-08.csv. A horizontal track switches from vertical <=809px, to compact 4280px at 810–1199px, to 5320px at >=1200px. prefers-reduced-motion: reduce still gives the full sticky/horizontal transform, a documented source accessibility shortfall. Implement a static ordered escape rather than assuming motion settings are automatically honored. No new site, route or skin was created.

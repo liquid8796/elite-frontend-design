@@ -2,7 +2,7 @@
 name: elite-frontend-design
 description: "Elite frontend design, implementation, and full-spectrum QA orchestration for landing pages, product UIs, dashboards, immersive interactive/WebGL experiences, redesigns, screenshot/image-to-code work, and release verification. Combines brief-specific art direction, practical product structure, high-ambition experience engineering, one-progress-domain synchronization, reference-first design, reference-derived design intelligence, functional browser journeys, cross-channel rendered evidence, responsive accessibility, performance/regression QA, and evidence-driven signoff while avoiding generic AI UI."
 metadata:
-  version: "3.32.0"
+  version: "3.32.1"
   architecture: "profile-router-plus-visual-loop"
 ---
 

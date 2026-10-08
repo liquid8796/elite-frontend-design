@@ -54,3 +54,13 @@ Release blockers in the live demo include:
 
 ## Do Not Transfer
 Echoes of Mars identity/lore, exact art/assets, Saira/Datatype as mandatory fonts, exact rust palette, fictional claims/press quotes/build/platform data, placeholder URLs, Framer chrome, repeated-H1 semantics or pointer-only instructions.
+
+## Re-Audit Delta — 2026-10-08
+
+Sitemap still declares only home /; 13 authored chapters unchanged. Generic /404 and invalid routes return HTTP 404.
+
+Three measured responsive modes: <=809px normal vertical survey with viewport-relative track; 810–1199px sticky 4280px horizontal track, world height 3600px; >=1200px sticky 5320px track, world height 3780px. Both boundaries verified at adjacent widths, and zero outer document overflow observed.
+
+At 1440px actual world scroll transform goes ~0 -> -1019.76 -> -2038.96 -> -3312.97 -> -3880px. Crucially, at prefers-reduced-motion: reduce the source STILL uses sticky world viewport and travels to -3880px. Previously documented reduced-motion vertical presentation is RECOMMENDED implementation behavior, not observed in the live template. Implement a static, accessible six-sector sequence for reduced motion.
+
+Chrome headless validated desktop/tablet/mobile (Chrome extension disconnected) while preserving date-bound source observations. Data: data/echoes-survey-breakpoints-2026-10-08.csv; full details in original deep profile. Content, placeholders, semantic QA and 47-image/no-video/no-canvas findings otherwise unchanged.

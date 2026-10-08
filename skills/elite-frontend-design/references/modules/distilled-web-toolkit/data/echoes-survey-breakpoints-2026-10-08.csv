@@ -1,0 +1,10 @@
+viewport_width,viewport_height,reduced_motion,viewport_position,track_width,world_height,root_scroll_width,document_height,mode
+390,844,no-preference,relative,390,3354,390,17550,vertical
+768,1024,no-preference,relative,768,3295,768,18080,vertical
+809,900,no-preference,relative,809,3295,809,17311,vertical
+810,900,no-preference,sticky,4280,3600,810,19563,compact-horizontal
+1024,900,no-preference,sticky,4280,3600,1024,19535,compact-horizontal
+1199,900,no-preference,sticky,4280,3600,1199,19507,compact-horizontal
+1200,900,no-preference,sticky,5320,3780,1200,18690,wide-horizontal
+1440,900,no-preference,sticky,5320,3780,1440,18690,wide-horizontal
+1440,900,reduce,sticky,5320,3780,1440,18690,wide-horizontal

@@ -1205,3 +1205,7 @@ Select **cinematic-game** for the genre identity and **premium-ecommerce** conve
 When a marketing site links to account-related routes, audit the full declared public system: homepage/anchors, lead/contact, sign-up, sign-in, OTP, account, terms, privacy and 404. Distinguish real checkout/trial from **contact-first lead conversion**. Sample pricing interaction and reduced-motion metric states; visible static pricing and social proof are not evidence of genuine billing or successful customer outcomes.
 
 FrameAuth- or vendor-powered screens are useful evidence of **branded auth shell continuity** but do not establish secure session guards, rate limits, code delivery or token handling. Keep interaction/security claims clearly labeled observed vs not tested.
+
+## Three-Mode Spatial Survey Breakpoint Audit
+
+The Echoes of Mars 2026-10-08 re-audit verifies real changes at 809->810px and 1199->1200px: vertical relative mode, compact 4280px pinned track, expanded 5320px pinned track. When adopting spatial scroll experiences, test both sides of each author-defined breakpoint (not only laptop versus phone). Respect reduced-motion by offering an ordered stationary reading path. On the source reduced-motion did NOT disable full pinned x-axis scrubbing; distinguish observed failure from desired accessible behavior.

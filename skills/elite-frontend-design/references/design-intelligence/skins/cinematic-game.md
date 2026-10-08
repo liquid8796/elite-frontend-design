@@ -278,3 +278,7 @@ Pass only if:
 ## Battlez (full-site 75-route audit)
 
 See ../sites/battlez-template.framer.website.md for an audited hybrid game-commerce application of this skin. Use the deep-navy genre shell and bounded media as art-direction evidence, with **premium-ecommerce** patterns for product cards, category destinations, quantity/cart actions and pricing clarity. Avoid CMS fixtures outside game taxonomy, generic site-wide meta titles and template license overlays.
+
+### 2026-10-08 three-mode survey re-audit
+
+The Echoes of Mars live reference has three proven width modes: below 810px vertical, 810–1199px compact pinned 4280px survey, and from 1200px expanded 5320px pinned survey. At reduced-motion preference the live desktop source still performs the full -3880px horizontal transform; provide a static vertical sector fallback when implementing accessible reduced-motion experiences. The original recommendation was not a source-confirmed feature.

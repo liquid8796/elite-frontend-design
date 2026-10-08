@@ -419,3 +419,37 @@ Primary contributions:
 - semantic H1/lang QA.
 
 It strengthens the existing cinematic-game family rather than creating a new skin.
+
+## Whole-Site Re-Audit — 2026-10-08
+
+A fresh sitemap request still lists exactly one authored URL (/). Both /404 and an arbitrary invalid path return Framer generic HTTP 404. The 13 complete author-chapter IDs remain: hero, trailer, premise, world, story, gameplay, mechanics, media, characters, audio, release, press, wishlist. No genuine extra content routes, storefront, checkout or application were found.
+
+The remote Chrome extension was disconnected for this session; an independent installed Chrome headless browser on the user's Windows machine was used for live rendered inspection (not HTML alone). Viewports: desktop 1440x900, tablet 768x1024, mobile 390x844, and 1440x900 with reduced_motion=reduce. Fine resizing probes confirmed exact transitions at 809->810px and 1199->1200px.
+
+### Three real pinned-survey modes
+
+| Width | World viewport position | Track width | World height | Behavior |
+| --- | --- | --- | --- | --- |
+| <=809px | relative | viewport width | ~3295–3354px | complete vertical sector sequence |
+| 810–1199px | sticky | 4280px | 3600px | compact horizontal sector survey |
+| >=1200px | sticky | 5320px | 3780px | expanded horizontal sector survey |
+
+This is finer-grained than the previous desktop-horizontal -> mobile-vertical model. In particular, 768px is vertical but 810px and 1024px are horizontally pinned. Both breakpoints were checked at their adjacent pixels. No positive document-level horizontal overflow was found in sampled widths.
+
+At 1440x900 the world has height 3780px and its track is 5320px wide. Transform snapshots during actual scrolling: ~0 at beginning, -1019.76px at 20%, -2038.96px at 40%, -3312.97px at 65%, and clamped -3880px by 90% of section travel. This is verified runtime movement, not a layout-only inference.
+
+### Reduced motion — observation versus guidance
+
+With prefers-reduced-motion: reduce at 1440x900, the authored page **still keeps the sticky survey** and translates the 5320px track through the full -3880px distance. Earlier toolkit text recommending a static vertical reduced-motion fallback was a **design recommendation**, not evidence that the site implements it. Do not repeat that mistaken attribution.
+
+Recommended implementation: if the user requests reduced motion, provide an ordered static/vertical sequence of all six sectors and survey conclusion, release sticky ownership, and preserve headings, metadata, links, reading/focus order and contextual meaning. This is a recommended inclusive design response to the source's long scroll-linked motion, not an assertion that all scroll animation is intrinsically inaccessible.
+
+### Other source facts reconfirmed
+
+Desktop document measured 1440x18690, tablet 768x18080 and mobile 390x17550 in these headless contexts; earlier small height/scrollbar-width differences are browser-context and timing dependent. Source still has 47 img tags, no HTML video, canvas or forms. All images carry alt attributes (12 nonempty, 35 empty decorative alt); headline type still Saira Variable and metadata Datatype Variable. Homepage html lang is still empty. Mechanics still include four large indexed rows (Signal, Oxygen, Light, Memory) and HOVER TO SURVEY persists on narrow layouts. Repeated H1 semantics remain.
+
+Link destinations are still placeholders: wishlist -> Steam root, trailer -> YouTube root, soundtrack/press/legal -> example.com, and social links -> platform roots. Press/source claims, game release/platform claims and provenance are not independently verified. Generic Framer footer badge remains part of template chrome. All original full-site content chapter analysis and non-transfer rules remain applicable.
+
+### Reproducibility and transfer
+
+Recorded runtime breakpoint modes, viewports, track dimensions and reduced-motion mismatch in data/echoes-survey-breakpoints-2026-10-08.csv. This is a dated source-observation snapshot; no new route family or arbitrary new skin is introduced. Recommended three-mode responsive survey and reduced-motion escape complement the original Pinned Sector Survey pattern without duplicating it.

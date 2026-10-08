@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.32.1 - 2026-10-08
+
+- Re-audited the complete Echoes of Mars one-route/13-chapter cinematic campaign using installed Chrome; confirmed no missing sitemap routes.
+- Verified three discrete sector-survey modes at the 809->810px and 1199->1200px responsive boundaries (vertical, compact 4280px pinned, expanded 5320px pinned); captured scroll transform to -3880px.
+- Discovered the live source retains the full pinned horizontal scroll even with reduced-motion preferred; separated observed behavior from earlier recommendation and documented static-fallback requirements.
+- Added a dated nine-row breakpoint inventory, one responsive recipe, one anti-pattern and one UX guideline without adding redundant skins or patterns.
+- Version 3.32.1 / 3.32.1.0. Totals: 17 sites, 132 patterns, 62 routes, 25 motion, 43 responsive, 55 anti-patterns, 64 components, 47 UX guidelines.
+
 ## 3.32.0 - 2026-10-08
 
 - Audited Nouva across eight sitemap routes (all HTTP 200) and footer-linked /404 (HTTP 404), including nine Chrome desktop/mobile rendered states and all homepage anchors.

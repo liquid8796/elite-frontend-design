@@ -620,9 +620,27 @@ def validate() -> list[str]:
             "0 canvas",
             "HOVER TO SURVEY",
             "HTTP 404",
+            "Whole-Site Re-Audit",
+            "810–1199px",
+            "5320px",
+            "reduced_motion=reduce",
         ):
             if phrase not in profile_text:
                 errors.append(f"Echoes of Mars design-intelligence profile missing phrase: {phrase}")
+    echoes_breakpoints = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data" / "echoes-survey-breakpoints-2026-10-08.csv"
+    if not echoes_breakpoints.is_file():
+        errors.append("Missing Echoes of Mars three-mode breakpoint evidence")
+    else:
+        with echoes_breakpoints.open(encoding="utf-8", newline="") as f:
+            echo_rows = list(csv.DictReader(f))
+        if len(echo_rows) != 9:
+            errors.append(f"Echoes viewport census expected 9 states, got {len(echo_rows)}")
+        mode_by_width = {int(x["viewport_width"]): x["mode"] for x in echo_rows if x["reduced_motion"] == "no-preference"}
+        if mode_by_width.get(809) != "vertical" or mode_by_width.get(810) != "compact-horizontal" or mode_by_width.get(1199) != "compact-horizontal" or mode_by_width.get(1200) != "wide-horizontal":
+            errors.append("Echoes responsive mode breakpoints do not match runtime audit")
+        if not any(x["reduced_motion"] == "reduce" and x["viewport_position"] == "sticky" and x["track_width"] == "5320" for x in echo_rows):
+            errors.append("Echoes reduced-motion source behavior snapshot missing")
+
     landscape = SKILL_ROOT / "references" / "design-intelligence" / "reference-landscape.md"
     if not landscape.is_file():
         errors.append("Missing design-intelligence reference landscape")
@@ -714,14 +732,14 @@ def validate() -> list[str]:
         "patterns.csv": 132,
         "route-recipes.csv": 62,
         "motion-recipes.csv": 25,
-        "responsive-recipes.csv": 42,
-        "anti-patterns.csv": 54,
+        "responsive-recipes.csv": 43,
+        "anti-patterns.csv": 55,
         "live-audit-2026-10-07.csv": 17,
         "design-profiles.csv": 17,
         "color-systems.csv": 17,
         "typography-systems.csv": 17,
         "component-recipes.csv": 64,
-        "ux-guidelines.csv": 46,
+        "ux-guidelines.csv": 47,
         "design-primitives-live-2026-10-07.csv": 17,
     }
     for filename, minimum in toolkit_counts.items():
