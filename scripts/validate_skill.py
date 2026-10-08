@@ -497,6 +497,9 @@ def validate() -> list[str]:
             "390x844",
             "no document-level horizontal overflow",
             "prefers-reduced-motion",
+            "Full-Site Browser Re-Audit",
+            "aria-current",
+            "Begin again",
         ):
             if phrase not in profile_text:
                 errors.append(f"Ten Billion Years profile missing phrase: {phrase}")
@@ -641,6 +644,23 @@ def validate() -> list[str]:
         if not any(x["reduced_motion"] == "reduce" and x["viewport_position"] == "sticky" and x["track_width"] == "5320" for x in echo_rows):
             errors.append("Echoes reduced-motion source behavior snapshot missing")
 
+    cosmos_data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
+    routes = cosmos_data / "cosmos-route-census-2026-10-08.csv"
+    samples = cosmos_data / "cosmos-runtime-checkpoints-2026-10-08.csv"
+    if not routes.is_file() or not samples.is_file():
+        errors.append("Missing Ten Billion Years full-site route or runtime audit evidence")
+    else:
+        with routes.open(encoding="utf-8", newline="") as f:
+            cosmos_routes = list(csv.DictReader(f))
+        with samples.open(encoding="utf-8", newline="") as f:
+            cosmos_samples = list(csv.DictReader(f))
+        if len(cosmos_routes) != 8 or len(cosmos_samples) != 11:
+            errors.append("Ten Billion Years audit evidence requires 8 route and 11 timeline rows")
+        if sum(x["http_status"] == "200" for x in cosmos_routes) != 1:
+            errors.append("Ten Billion Years audit root is sole confirmed HTTP 200 route")
+        if not any(x["viewport"] == "390x844" and x["hud_chapter"] == "The Swelling" for x in cosmos_samples):
+            errors.append("Ten Billion Years mobile runtime milestone missing")
+
     landscape = SKILL_ROOT / "references" / "design-intelligence" / "reference-landscape.md"
     if not landscape.is_file():
         errors.append("Missing design-intelligence reference landscape")
@@ -733,13 +753,13 @@ def validate() -> list[str]:
         "route-recipes.csv": 62,
         "motion-recipes.csv": 25,
         "responsive-recipes.csv": 43,
-        "anti-patterns.csv": 55,
+        "anti-patterns.csv": 56,
         "live-audit-2026-10-07.csv": 17,
         "design-profiles.csv": 17,
         "color-systems.csv": 17,
         "typography-systems.csv": 17,
         "component-recipes.csv": 64,
-        "ux-guidelines.csv": 47,
+        "ux-guidelines.csv": 48,
         "design-primitives-live-2026-10-07.csv": 17,
     }
     for filename, minimum in toolkit_counts.items():

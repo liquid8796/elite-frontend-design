@@ -348,6 +348,28 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         spec = (toolkit / "specs" / "nouva.md").read_text(encoding="utf-8")
         self.assertIn("nouva-contact-first-conversion", spec)
 
+    def test_cosmos_opus5_full_runtime_reaudit(self) -> None:
+        import csv
+        data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
+        with (data / "cosmos-route-census-2026-10-08.csv").open(encoding="utf-8", newline="") as f:
+            routes = list(csv.DictReader(f))
+        self.assertEqual(len(routes), 8)
+        self.assertEqual(sum(x["http_status"] == "200" for x in routes), 1)
+        self.assertIn(("/", "200"), {(x["path"], x["http_status"]) for x in routes})
+        self.assertIn(("/sitemap.xml", "404"), {(x["path"], x["http_status"]) for x in routes})
+        with (data / "cosmos-runtime-checkpoints-2026-10-08.csv").open(encoding="utf-8", newline="") as f:
+            samples = list(csv.DictReader(f))
+        self.assertEqual(len(samples), 11)
+        self.assertEqual(samples[0]["hud_chapter"], "Before")
+        self.assertEqual(samples[0]["sampled_elapsed_years"], "0")
+        self.assertIn("Supernova", {s["hud_chapter"] for s in samples})
+        self.assertIn("The Swelling", {s["hud_chapter"] for s in samples})
+        self.assertTrue(any(x["reduced_motion"] == "reduce" for x in samples))
+        profile = (SKILL_ROOT / "references" / "design-intelligence" / "sites" / "cosmos-10-billion-years-opus5.vercel.app.md").read_text(encoding="utf-8")
+        self.assertIn("Full-Site Browser Re-Audit", profile)
+        self.assertIn("aria-current", profile)
+        self.assertNotIn("Do not delete the benchmark", profile)
+
     def test_design_intelligence_landscape_contract(self) -> None:
         module = (
             SKILL_ROOT
@@ -1605,7 +1627,7 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         self.assertEqual(len(color_systems), 17)
         self.assertEqual(len(typography_systems), 17)
         self.assertEqual(len(components), 64)
-        self.assertEqual(len(ux_guidelines), 47)
+        self.assertEqual(len(ux_guidelines), 48)
         self.assertEqual(len(design_live), 17)
 
         specs = sorted((module_root / "specs").glob("*.md"))

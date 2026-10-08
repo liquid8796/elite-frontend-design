@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.32.2 - 2026-10-08
+
+- Re-audited the complete Ten Billion Years (Cosmos Opus 5) nine-chapter/single-route interactive experience in desktop, mobile and reduced-motion Chrome.
+- Verified root route HTTP 200 plus 7 unbuilt paths returning HTTP 404; captured two machine-readable route/runtime inventories.
+- Exercised sound-optional entry, continuous semantic HUD/year clock, a chapter-rail jump and endcap Begin again.
+- Promoted one anti-pattern and accessibility UX guideline: use semantic aria-current alongside CSS is-active chapter navigation, not just visual state.
+- Removed stale dependency wording about the deliberately retired GPT-5.6 comparative benchmark; differentiated historic code-derived particle tiers from measured runtime.
+- Patch version 3.32.2 / assembly 3.32.2.0. Totals: 17 sites, 132 patterns, 62 routes, 25 motion, 43 responsive, 56 anti-patterns, 64 components, 48 UX guidelines.
+
 ## 3.32.1 - 2026-10-08
 
 - Re-audited the complete Echoes of Mars one-route/13-chapter cinematic campaign using installed Chrome; confirmed no missing sitemap routes.

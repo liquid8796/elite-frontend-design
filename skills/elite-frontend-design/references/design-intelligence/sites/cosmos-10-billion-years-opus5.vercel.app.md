@@ -377,14 +377,14 @@ Benefits:
 - particle identity persists through the story;
 - continuity feels physical rather than like scene replacement.
 
-## Existing local-source benchmark particle tiers
+## Historical source-derived particle-tier observations
 
-The plugin's pre-existing Opus 5 source benchmark records approximately:
+Historical code-inspection notes recorded approximately:
 - 220,000 particles for desktop/high tier;
 - 110,000 for lower-core tier;
 - 70,000 for mobile/reduced tier.
 
-These values come from the existing local source review of the same Opus 5 deployment lineage, not DOM inspection alone.
+Those values came from an earlier code inspection and were not remeasured from GPU buffers in the current live audit.
 
 Do not copy these counts as universal targets.
 
@@ -548,14 +548,14 @@ Reduced mode:
 - disables fullscreen flash;
 - disables HUD/gate/cue decorative CSS animations;
 - collapses transitions to near-instant;
-- uses a reduced particle/runtime tier according to the existing source benchmark;
+- uses a reduced particle/runtime tier according to earlier source-inspection notes, not new GPU measurements;
 - keeps all narrative copy and controls.
 
 Reduced motion is a different rendering mode, not the same ride at higher speed.
 
 ## Typography roles
 
-Existing source benchmark and loaded implementation identify:
+Historical source notes and loaded implementation identify:
 - Instrument Serif -> narrative/display;
 - Inter -> body/readability;
 - JetBrains Mono -> HUD/instrumentation/meta.
@@ -611,7 +611,7 @@ This standalone Opus 5 live design profile documents:
 - scroll-world routing anchor;
 - prompt -> experience mapping.
 
-Do not delete the benchmark; it remains model/implementation-comparison evidence.
+The former comparative Cosmos GPT-5.6 benchmark file was retired on user request; this standalone live profile must not depend on it.
 
 ## What to adopt
 
@@ -701,3 +701,38 @@ Weak fit:
 - Could the experience still be explained as one authored system rather than a pile of effects?
 
 Pass only when the result transfers the authored system and prompt-compilation reasoning, not the literal cosmic skin.
+
+## Full-Site Browser Re-Audit — 2026-10-08
+
+The prior full-site audit remains correctly scoped to **one interactive route and nine chapter states**. The root returned HTTP 200; /404, /chapters, /about, /sitemap.xml, /robots.txt, /sitemap-index.xml and /llms.txt all returned 404. There are no navigational same-origin links to other authored content routes. Nine chapters are stages of one world, not separate pages.
+
+Re-audited with connected Chrome on the user's desktop and installed headless Chrome via Playwright, at 1440x900 desktop, 768x1024 tablet, 390x844 mobile and desktop with prefers-reduced-motion: reduce. Chrome reported a single live canvas, fixed story/HUD overlays, nine section nodes, and zero HTML image, video, audio and form elements.
+
+### Observed responsive and runtime state
+
+| Context | Root document | Observed |
+| --- | --- | --- |
+| Desktop 1440x900 | 1440x9261 | complete chapter rail / HUD / canvas and scrolling timeline |
+| Tablet 768x1024 | 768x10537 | condensed interface; all chapter section nodes retained |
+| Phone 390x844 | 390x8685 | zero outer overflow, after silent entry scrolling halfway reaches The Swelling |
+| Reduced motion 1440x900 | 1440x9261 | all chapter sections retained, halfway also reaches The Swelling |
+
+After selecting Continue in Silence, the desktop HUD reported: at 0% Before / 0 years; 12% The Cloud / 711,889,285 years; 25% The Collapse / 1,359,741,918; 38% The Galaxy / 2,807,737,345; 50% First Light / 3,601,934,912; 63% The Last Fuel / 4,579,451,380; 76% Supernova / 5,673,857,140; 88% You / 6,806,388,589; 99% You / 9,097,665,843. These are sampled moments, NOT exact chapter thresholds. The Swelling stage exists and was separately observed on both mobile and reduced-motion halfway through travel.
+
+Actual chapter-button interaction: clicking The Galaxy moved to scrollY about 2790 and updated the HUD and visual active rail button. At the ending the Begin again button appeared. Clicking it initiated a return from scrollY 8361 toward the opening with HUD back to Before. The gate supports an optional sound branch and a complete silent reading branch; the latter sets SOUND OFF and provides Unmute the score button semantics. The score's acoustics and source-derived particle tiers were not re-measured.
+
+### New actionable accessibility finding
+
+The nine chapter rail buttons visually mark the current chapter via class rail__tick is-active. None has aria-current or aria-pressed to identify the active chapter for assistive technology. Implement semantic current-step state (e.g. aria-current=step) on the active rail button and synchronize it with the existing authoritative progress bus. The existing sound toggle already has aria-pressed and contextual accessible names. Avoid noisy live-announcements for rapidly changing elapsed years.
+
+Inactive chapter sections have computed visibility hidden, not merely opacity zero; this limits hidden text from being presented as active visible content. Mobile and reduced-motion retain the complete nine-stage semantic story.
+
+### Audit caveats and legacy reference cleanup
+
+One experimental headless test with forced software GPU arguments reported a Converting circular structure to JSON pageerror. It was not reproduced in normal Chrome contexts and must NOT be called a verified production bug.
+
+The old Cosmos GPT-5.6 comparative case study was intentionally deleted from the repository. Historical code-derived implementation quantities in earlier sections of this profile remain historical notes, not newly observed GPU buffer counts, and no obsolete benchmark-file dependency should be restored.
+
+Evidence stored in modules/distilled-web-toolkit/data/cosmos-route-census-2026-10-08.csv and cosmos-runtime-checkpoints-2026-10-08.csv.
+
+No new base design pattern or skin is warranted: prompt-to-experience compilation, shared progress, weighted timeline, one particle world, optional procedural score and payoff-first replay were already distilled.

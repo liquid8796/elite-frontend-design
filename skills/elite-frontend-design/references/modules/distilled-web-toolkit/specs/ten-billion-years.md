@@ -31,3 +31,11 @@ Primary modules: `experience-engineering` + `scroll-world`
 
 ## Do Not Transfer
 Cosmic nebula/particle skin, exact 1029vh duration, exact particle counts, font trio, supernova effect, or audio architecture unless the new narrative earns them.
+
+## Live Whole-Site Re-Audit — 2026-10-08
+
+Confirmed one route and nine chapters, no additional public route family. Root HTTP 200; tested /404, /chapters, /about, /sitemap.xml, /robots.txt, /sitemap-index.xml and /llms.txt all 404. All desktop/mobile/reduced-motion chapter sections remain accessible in the timeline. Runtime documents: desktop 1440x9261, phone 390x8685 without overflow and tablet 768x10537.
+
+Silent entry, chronological HUD + elapsed counter, The Galaxy chapter-rail jump, and endcap Begin again were exercised in Chrome. New QA: active chapter rail button has CSS is-active but no aria-current or aria-pressed; synchronize semantic current chapter on the same shared progress bus. Audio toggle already supplies changing aria-pressed and accessible label.
+
+The historical GPT-5.6 benchmark file was removed earlier; particle counts are historical code notes, not re-measured GPU facts. Source snapshots: data/cosmos-route-census-2026-10-08.csv and data/cosmos-runtime-checkpoints-2026-10-08.csv.

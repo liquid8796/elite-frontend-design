@@ -158,3 +158,7 @@ Template claims/metrics, FrameAuth backend security, actual email delivery and s
 ## Echoes of Mars Three-Mode Breakpoint Re-Audit
 
 The 2026-10-08 Chrome runtime re-audit of the original 1-route, 13-chapter Echoes of Mars campaign records exact survey layout breakpoints in data/echoes-survey-breakpoints-2026-10-08.csv. A horizontal track switches from vertical <=809px, to compact 4280px at 810–1199px, to 5320px at >=1200px. prefers-reduced-motion: reduce still gives the full sticky/horizontal transform, a documented source accessibility shortfall. Implement a static ordered escape rather than assuming motion settings are automatically honored. No new site, route or skin was created.
+
+## Ten Billion Years Runtime Census — 2026-10-08
+
+One authored root route, nine chapter sections, a scroll-driven HUD/world and endcap replay, not nine pages. All eight sampled public paths/statuses appear in data/cosmos-route-census-2026-10-08.csv; time-scoped HUD chapter/year samples and mobile/reduced-motion checkpoints are stored in data/cosmos-runtime-checkpoints-2026-10-08.csv. Root is HTTP 200, while sitemap/robots and nonroot candidate paths return HTTP 404. The browser confirms silent audio choice and interactive Galaxy chapter jump. New accessibility guidance covers CSS-only active chapter states without aria-current. Historical source-derived particle tiers are not new GPU measurements.

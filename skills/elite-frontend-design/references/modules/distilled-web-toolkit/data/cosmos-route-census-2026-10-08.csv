@@ -1,0 +1,9 @@
+path,http_status,role
+/,200,one complete 9-chapter interactive world
+/404,404,generic Next.js not-found
+/chapters,404,not authored as separate chapter route
+/about,404,no company route
+/sitemap.xml,404,no sitemap XML
+/robots.txt,404,no robots route
+/sitemap-index.xml,404,no sitemap index
+/llms.txt,404,no llms metadata
