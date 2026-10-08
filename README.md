@@ -2,7 +2,7 @@
 
 A portable ChatGPT + Codex plugin containing one profile-routed frontend design skill focused on one outcome: ship frontend work that is distinctive, useful, responsive, and visually verified after render.
 
-Current version: 3.32.2
+Current version: 3.33.0
 
 ## Resend whole-site audit (3.30.0)
 
@@ -36,6 +36,12 @@ Re-verified all nine semantic chapters inside the single authored route with con
 
 Promoted one focused accessibility anti-pattern and UX guideline for the current chapter rail (visual is-active without aria-current). Removed misleading dependency on the retired Cosmos GPT-5.6 comparison benchmark and marked old particle counts as historical source notes rather than live GPU measurements. No redundant design patterns or skins added. Toolkit totals: **17 audited sites, 132 patterns, 62 route recipes, 25 motion recipes, 43 responsive recipes, 56 anti-patterns, 64 components and 48 UX guidelines**. 13 skins and 17 modules unchanged.
 
+## Fizens whole-site distillation (3.33.0)
+
+Fizens contributes the **43/43-URL light fintech SaaS template ecosystem**: finance homepage/feature proof, pricing comparison, nine integration detail routes, three related finance apps on Download, ten financial articles, eight staff profiles, four jobs, changelog, policies, contact and a separate vendor /overview. Desktop/mobile Chrome checked 32 representative rendered states and found no outer mobile overflow.
+
+Added **7 patterns, 8 route recipes, 2 responsive, 5 anti-patterns, 5 components and 5 UX guidelines**; motion remains unchanged because no new specialized motion system was demonstrated. Source QA flags: 21/43 generic SEO titles; 4/4 job H1 hardcoded Product Designer; multiple H1 and generic app stores. Toolkit totals **18 sites, 139 patterns, 70 route recipes, 25 motion, 45 responsive, 61 anti-patterns, 69 components, 53 UX guidelines**. Baseline 13 skins and 17 modules unchanged.
+
 ## Plugin packaging
 
 Version 3.8 converts the standalone skill folder into the current OpenAI plugin package shape:
@@ -55,7 +61,7 @@ Build the upload archive:
 python scripts/package_plugin.py
 ~~~
 
-Upload the resulting `dist/elite-frontend-design-3.32.2.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
+Upload the resulting `dist/elite-frontend-design-3.33.0.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
 
 For public distribution, the same package can be submitted to the universal plugin directory. Public submission still requires the publisher to complete verified developer identity and policy attestations in the OpenAI submission flow.
 

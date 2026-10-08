@@ -9,7 +9,7 @@ The root SKILL.md is the only entrypoint. Modules are references loaded on deman
 | elite-core | Product grounding, design dials, design contract, anti-slop, implementation discipline | modules/elite-core/module.md |
 | reference-first | Screenshot/image/video/reference analysis and faithful design-to-code handoff | modules/reference-first/module.md |
 | design-intelligence | Distill reusable design DNA, motion/interaction mechanisms, responsive brand payload and technical lessons from strong reference sites without cloning | modules/design-intelligence/module.md |
-| distilled-web-toolkit | Searchable audited patterns, route recipes, motion/media, responsive transforms and anti-patterns distilled from 17 live references with provenance | modules/distilled-web-toolkit/module.md |
+| distilled-web-toolkit | Searchable audited patterns, route recipes, motion/media, responsive transforms and anti-patterns distilled from 18 live references with provenance | modules/distilled-web-toolkit/module.md |
 | visual-qa | Specialist rendered visual evidence: screenshot review, responsive geometry, reference parity and refinement loops | modules/visual-qa/module.md |
 | frontend-qa | Full QA director: target/state proof, functional journeys, navigation/cross-channel parity, responsive accessibility, performance/regression gates, trace evidence and release signoff | modules/frontend-qa/module.md |
 | motion-direction | Motion levels, interaction motion, GSAP-style cinematic choreography with restraint | modules/motion-direction/module.md |
@@ -47,6 +47,7 @@ Use `design-intelligence/reference-landscape.md` when the task starts from a bro
 | Rockstar Games VI | World-led game launch campaigns, aspect-ratio art direction, trailer/media choreography, chapter ownership, responsive cinematic payload | design-intelligence/sites/rockstargames.com-vi.md |
 | Tokenmeter | Whole-site data/reference systems, route-family density, confidence/provenance UI, comparison tables, machine-readable parity | design-intelligence/sites/tokenmeter.info.md |
 | NovaOS | Full-site enterprise AI SaaS template system, operational pipeline proof, mobile proof cropping, trust-route ecosystem, Framer responsive/runtime discipline | design-intelligence/sites/novaos.framer.website.md |
+| Fizens | All 43 pages of a light finance SaaS template: product UI/proof, 9 partner details, 10 finance posts, 8 team profiles, 4 career details, app download and vendor overview firewall | design-intelligence/sites/fizens.framer.ai.md |
 | Nouva | Complete dark AI content SaaS: 8 sitemap pages + /404, scroll counter proof, contact-first tier pricing, FrameAuth signup/sign-in/OTP/account and legal route system | design-intelligence/sites/nouva-template.framer.website.md |
 | Powder | Full-site dark AI/SaaS template system, conversation-to-action proof, sticky capability storytelling, template-residue quarantine, responsive release | design-intelligence/sites/powder.framer.website.md |
 | Nudge Folio | Full-site portfolio template system, reflective case-study narrative, persistent context rails, isolated experimental playground, expressive type roles | design-intelligence/sites/nudge-folio.framer.website.md |

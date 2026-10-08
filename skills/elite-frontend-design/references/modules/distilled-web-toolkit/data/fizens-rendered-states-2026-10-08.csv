@@ -1,0 +1,33 @@
+viewport_mode,path,http_status,viewport_width,document_width,document_height,outer_overflow,visible_h1,image_nodes,video_nodes,canvas_nodes,form_nodes
+desktop,/,200,1440,1440,14316,0,Start Managing | Your Finance | With Our Tool,98,0,0,1
+desktop,/features,200,1440,1440,8373,0,Your Finance Solutions,32,0,0,1
+desktop,/about,200,1440,1440,7364,0,The Fizens Journey,65,4,0,1
+desktop,/integration,200,1440,1440,2006,0,Smart Integrations that work for you,12,0,0,1
+desktop,/integration/chainly,200,1440,1440,3658,0,Connect with | Chainly,8,0,0,3
+desktop,/download,200,1440,1440,2218,0,Download Your Apps,9,0,0,1
+desktop,/contact,200,1440,1440,1860,0,Ready to connect?,3,0,0,2
+desktop,/changelog,200,1440,1440,2020,0,Latest Updates?,3,0,0,1
+desktop,/pricing,200,1440,1440,4339,0,Pricing Plans | $0 | $20 | $40,6,0,0,1
+desktop,/articles,200,1440,1440,2800,0,Articles by Professionals,10,0,0,1
+desktop,/articles/buy-low-sell-high,200,1440,1440,4584,0,"“Buy Low, Sell High”",7,0,0,1
+desktop,/team-member/sarah-jane,200,1440,1440,2085,0,Sarah Jane,3,0,0,1
+desktop,/jobs/ios-developer,200,1440,1440,2899,0,Product Designer,1,0,0,1
+desktop,/overview,200,1440,1440,8215,0,Modern Financial SaaS Template for Framer | What's included in Fizens Template? | Explore Main Pages | Purchase Fizens Today!,31,0,0,1
+desktop,/term-and-conditions,200,1440,1440,2662,0,Terms and Conditions,12,0,0,3
+desktop,/privacy-policy,200,1440,1440,3292,0,Privacy Policy,9,0,0,3
+desktop,/404,404,1440,1440,1452,0,,3,0,0,1
+mobile,/,200,390,390,19177,0,Start Managing | Your Finance | With Our Tool,243,0,0,1
+mobile,/features,200,390,390,11642,0,Your Finance Solutions,35,0,0,1
+mobile,/about,200,390,390,10240,0,The Fizens Journey,210,4,0,1
+mobile,/integration,200,390,390,4944,0,Smart Integrations that work for you,11,0,0,1
+mobile,/integration/chainly,200,390,390,6138,0,Connect with | Chainly,7,0,0,1
+mobile,/download,200,390,390,3951,0,Download Your Apps,8,0,0,1
+mobile,/contact,200,390,390,2574,0,Ready to connect?,2,0,0,2
+mobile,/changelog,200,390,390,2379,0,Latest Updates?,2,0,0,1
+mobile,/pricing,200,390,390,5797,0,Pricing Plans | $0 | $20 | $40,5,0,0,1
+mobile,/articles,200,390,390,4834,0,Articles by Professionals,9,0,0,1
+mobile,/articles/buy-low-sell-high,200,390,390,6167,0,"“Buy Low, Sell High”",6,0,0,1
+mobile,/team-member/sarah-jane,200,390,390,3138,0,Sarah Jane,2,0,0,1
+mobile,/jobs/ios-developer,200,390,390,3920,0,Product Designer,0,0,0,1
+mobile,/overview,200,390,390,10579,0,Modern Financial SaaS Template for Framer | What's included in Fizens Template? | Explore Main Pages | Purchase Fizens Today!,30,0,0,1
+mobile,/404,404,390,390,2059,0,,2,0,0,1

@@ -431,3 +431,7 @@ Pass only if:
 - document-level overflow remains controlled;
 - ambient media is bounded and non-essential;
 - the result still feels intentional after removing OrbAI’s exact fonts, purple, video, copy, pricing, metrics, and AI iconography.
+
+## Fizens finance SaaS full-site anchor
+
+See ../sites/fizens.framer.ai.md for a 43-route light financial SaaS template with bright white surfaces, deep-blue #0040C1 headings and readable dashboard proof, tier comparison, partner hub/details, app family download, finance articles, people/careers and legal/utility routes. Borrow the confidence-to-UI evidence relationship, not template people, bank-connection claims or published app status. Distinguish the Framer vendor /overview template sales page from a real finance product route.

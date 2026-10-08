@@ -1213,3 +1213,9 @@ The Echoes of Mars 2026-10-08 re-audit verifies real changes at 809->810px and 1
 ## Current-Step Semantics in Immersive Story Rails
 
 The 2026-10-08 Ten Billion Years full-site re-audit confirmed a nine-stage semantic timeline and active rail navigation on the single authored route. The currently active chapter is represented by CSS class is-active but has no aria-current or aria-pressed. For a chapter-navigation button list, update semantic current-step state alongside the authoritative progress bus. Keep aria-live announcements restrained: constantly changing numeric years should not generate screen-reader chatter. Audio toggle is already accessible via aria-pressed and changing label.
+
+## Finance SaaS Evidence and Template Boundaries
+
+Fizens full-site audit (2026-10-08) illustrates a business-critical route ecosystem beyond the homepage: light financial product value -> actual UI proof -> pricing matrix -> partner directory and detail -> app portfolio download -> educational long form -> team and career records -> legal/release routes. Audit every CMS route even when featured cards seem polished. Check slug, metadata and visible H1/body/apply details individually.
+
+Do not treat Framer template purchase surfaces, placeholder finance security/wealth claims, app-store category links or explanatory integration partner pages as proven fintech capabilities. Confirm user financial claims and provider connection flows independently before production.

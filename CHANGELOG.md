@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.33.0 - 2026-10-08
+
+- Full sitemap census of Fizens: 43/43 URLs HTTP 200; four extra paths HTTP 404; inspected 17 desktop and 15 mobile representative Chrome states.
+- Registered the new light-finance-saas archetype using clean-product-light; authored deep profile, complete dated 47-path inventory and route spec for finance product, 9 integration details, 8 people, 4 jobs, 10 articles, contact, download, pricing, changelog, legal and vendor template overview.
+- Added 7 patterns, 8 route recipes, 2 responsive recipes, 5 anti-patterns, 5 component recipes and 5 UX guidelines, no unsupported motion recipe.
+- Logged 21/43 generic document titles, four job routes with wrongly repeated Product Designer H1, multiple H1 hero/pricing semantics, generic store badge URLs and unverified financial/partner claims.
+- v3.33.0 / assembly 3.33.0.0. Totals: 18 audited sites, 139 patterns, 70 routes, 25 motion, 45 responsive, 61 anti-patterns, 69 components and 53 UX guidelines. 13 skins, 17 modules retained.
+
 ## 3.32.2 - 2026-10-08
 
 - Re-audited the complete Ten Billion Years (Cosmos Opus 5) nine-chapter/single-route interactive experience in desktop, mobile and reduced-motion Chrome.

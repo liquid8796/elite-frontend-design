@@ -40,6 +40,7 @@ Use the **Task Complexity Score** and **Design Preflight** from the design-intel
 
 - `premium-saas-dark.md` uses `../sites/powder.framer.website.md` as a full-site audited template evidence anchor.
 - `premium-saas-dark.md` also uses `../sites/nouva-template.framer.website.md` for a contact-first AI productivity SaaS with public authentication/form/legal routes.
+- `clean-product-light.md` also uses `../sites/fizens.framer.ai.md` for a light finance SaaS 43-route CMS/marketing ecosystem.
 - `clean-product-light.md` uses `../sites/orbai-template.framer.website.md` as a full-site audited template evidence anchor.
 - `developer-infra.md` uses `../sites/resend.com.md` as an audited evidence anchor.
 - `developer-infra.md` also uses `../sites/webflow-tools.refokus.com.md` as an audited small-tool/docs companion anchor.

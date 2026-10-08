@@ -370,6 +370,38 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         self.assertIn("aria-current", profile)
         self.assertNotIn("Do not delete the benchmark", profile)
 
+    def test_fizens_complete_finance_saas_corpus(self) -> None:
+        import csv
+        toolkit = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit"
+        data = toolkit / "data"
+        def read(filename):
+            with (data / filename).open(encoding="utf-8", newline="") as f:
+                return list(csv.DictReader(f))
+        routes = read("fizens-route-inventory-2026-10-08.csv")
+        self.assertEqual(len(routes), 47)
+        declared = [r for r in routes if r["sitemap_declared"] == "true"]
+        self.assertEqual(len(declared), 43)
+        self.assertTrue(all(r["http_status"] == "200" for r in declared))
+        self.assertEqual(sum(r["http_status"] == "404" for r in routes), 4)
+        self.assertEqual(sum(r["family"] == "integration-detail" for r in declared), 9)
+        self.assertEqual(sum(r["family"] == "team-detail" for r in declared), 8)
+        self.assertEqual(sum(r["family"] == "job-detail" for r in declared), 4)
+        self.assertEqual(sum(r["family"] == "article-detail" for r in declared), 10)
+        self.assertEqual(sum("Ultimate Finance SAAS Framer Template" in r["title"] for r in declared), 21)
+        self.assertTrue(all(r["canonical"] for r in declared))
+        rendered = read("fizens-rendered-states-2026-10-08.csv")
+        self.assertEqual(len(rendered), 32)
+        self.assertTrue(all(int(r["outer_overflow"]) <= 0 for r in rendered))
+        self.assertIn("390", [r["viewport_width"] for r in rendered])
+        jobs = read("fizens-career-title-audit-2026-10-08.csv")
+        self.assertEqual(len(jobs), 4)
+        self.assertEqual({r["rendered_h1"] for r in jobs}, {"Product Designer"})
+        self.assertEqual(sum(r["mismatch"] == "true" for r in jobs), 3)
+        profile = (SKILL_ROOT / "references" / "design-intelligence" / "sites" / "fizens.framer.ai.md").read_text(encoding="utf-8")
+        self.assertIn("43/43 sitemap URLs", profile)
+        spec = (toolkit / "specs" / "fizens.md").read_text(encoding="utf-8")
+        self.assertIn("fizens-finance-benefit-proof", spec)
+
     def test_design_intelligence_landscape_contract(self) -> None:
         module = (
             SKILL_ROOT
@@ -1616,22 +1648,22 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         with (data_root / "design-primitives-live-2026-10-07.csv").open(encoding="utf-8-sig", newline="") as f:
             design_live = list(csv.DictReader(f))
 
-        self.assertEqual(len(sites), 17)
-        self.assertEqual(len(live), 17)
+        self.assertEqual(len(sites), 18)
+        self.assertEqual(len(live), 18)
         self.assertGreaterEqual(len(patterns), 70)
         self.assertGreaterEqual(len(routes), 20)
         self.assertGreaterEqual(len(motions), 15)
         self.assertGreaterEqual(len(responsive), 20)
         self.assertGreaterEqual(len(anti), 20)
-        self.assertEqual(len(design_profiles), 17)
-        self.assertEqual(len(color_systems), 17)
-        self.assertEqual(len(typography_systems), 17)
-        self.assertEqual(len(components), 64)
-        self.assertEqual(len(ux_guidelines), 48)
-        self.assertEqual(len(design_live), 17)
+        self.assertEqual(len(design_profiles), 18)
+        self.assertEqual(len(color_systems), 18)
+        self.assertEqual(len(typography_systems), 18)
+        self.assertEqual(len(components), 69)
+        self.assertEqual(len(ux_guidelines), 53)
+        self.assertEqual(len(design_live), 18)
 
         specs = sorted((module_root / "specs").glob("*.md"))
-        self.assertEqual(len(specs), 17)
+        self.assertEqual(len(specs), 18)
 
         expected_ids = {
             "refokus",
@@ -1651,6 +1683,7 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
             "echoes-of-mars",
             "battlez",
             "nouva",
+            "fizens",
         }
         self.assertEqual({row["site_id"] for row in sites}, expected_ids)
         self.assertEqual({row["site_id"] for row in live}, expected_ids)
@@ -1724,6 +1757,18 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         )
         self.assertIn('"source_site": "nouva"', result.stdout)
         self.assertIn("#080C12", result.stdout)
+
+        result = subprocess.run(
+            [sys.executable, str(search_script), "financial dashboard evidence", "--site", "fizens", "--json"],
+            cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True,
+        )
+        self.assertIn("Financial Confidence to Dashboard Evidence", result.stdout)
+        result = subprocess.run(
+            [sys.executable, str(search_script), "finance saas product blue", "--site", "fizens", "--design-system", "--json"],
+            cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True,
+        )
+        self.assertIn('"source_site": "fizens"', result.stdout)
+        self.assertIn("#0040C1", result.stdout)
 
         result = subprocess.run(
             [sys.executable, str(search_script), "developer api code", "--domain", "typography", "--json"],

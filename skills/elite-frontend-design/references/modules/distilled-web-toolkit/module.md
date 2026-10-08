@@ -1,6 +1,6 @@
 ---
 name: distilled-web-toolkit
-description: "Searchable audited design recommendation toolkit distilled from 17 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
+description: "Searchable audited design recommendation toolkit distilled from 18 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
 ---
 
 # Distilled Web Toolkit
@@ -100,19 +100,19 @@ When they differ:
 
 ## Dataset Map
 
-- `data/sites.csv` ? 17 reference identities and archetypes.
+- `data/sites.csv` ? 18 reference identities and archetypes.
 - `data/live-audit-2026-10-07.csv` ? standardized live desktop/mobile snapshot.
 - `data/patterns.csv` ? reusable audited patterns.
 - `data/route-recipes.csv` ? route and route-family structures.
 - `data/motion-recipes.csv` ? motion/media choreography patterns.
 - `data/responsive-recipes.csv` ? responsive substitutions and transformations.
 - `data/anti-patterns.csv` ? failure modes and residue to avoid.
-- `data/design-profiles.csv` ? 17 audited style/product profiles with dials, fit, performance and accessibility watches.
+- `data/design-profiles.csv` ? 18 audited style/product profiles with dials, fit, performance and accessibility watches.
 - `data/color-systems.csv` ? semantic color-role strategies with transfer constraints.
 - `data/typography-systems.csv` ? audited display/heading/body/utility type-role systems and responsive scales.
 - `data/component-recipes.csv` ? Component Recipes with job, anatomy, interaction, responsive and accessibility contracts.
 - `data/ux-guidelines.csv` ? site-derived UX rules expressed as do/don't guidance.
-- `data/design-primitives-live-2026-10-07.csv` ? live desktop/mobile primitive ledger for the 17-site corpus.
+- `data/design-primitives-live-2026-10-07.csv` ? live desktop/mobile primitive ledger for the 18-site corpus.
 - `specs/*.md` ? one standardized implementation-oriented spec per audited site.
 
 ## Retrieval Workflow
@@ -162,3 +162,12 @@ The 2026-10-08 Chrome runtime re-audit of the original 1-route, 13-chapter Echoe
 ## Ten Billion Years Runtime Census — 2026-10-08
 
 One authored root route, nine chapter sections, a scroll-driven HUD/world and endcap replay, not nine pages. All eight sampled public paths/statuses appear in data/cosmos-route-census-2026-10-08.csv; time-scoped HUD chapter/year samples and mobile/reduced-motion checkpoints are stored in data/cosmos-runtime-checkpoints-2026-10-08.csv. Root is HTTP 200, while sitemap/robots and nonroot candidate paths return HTTP 404. The browser confirms silent audio choice and interactive Galaxy chapter jump. New accessibility guidance covers CSS-only active chapter states without aria-current. Historical source-derived particle tiers are not new GPU measurements.
+
+
+## Fizens Finance SaaS Whole-Site System
+
+Audit (2026-10-08): 43/43 declared sitemap routes returned HTTP 200: home+9 core marketing/utility, 2 legal, 9 integrations, 8 people, 4 jobs and 10 editorial. Four extra paths returned HTTP 404. Inspected 17 desktop and 15 mobile representative route states. Inventory: data/fizens-route-inventory-2026-10-08.csv.
+
+Reusable logic includes financial confidence supported by dashboard evidence, partner directory -> scoped integration detail, related finance apps -> verified download target, tier pricing and feature matrix, financial editorial as topical community continuity, team/careers content integrity and separating Framer template-vendor checkout from end-user fintech conversion.
+
+The most severe source QA failure: all four job detail URLs display the same Product Designer H1 despite correct differing titles. A separate SEO problem affects 21 of 43 declared URLs with one generic template document title. Neither real finance APIs, security claims, store apps nor billing transactions were independently verified.

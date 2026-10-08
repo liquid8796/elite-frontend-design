@@ -1,0 +1,5 @@
+route,http_status,seo_title,rendered_h1,mismatch
+/jobs/bussiness-analyst,200,Fizens Careers | Bussiness Analyst Position,Product Designer,true
+/jobs/marketing-manager,200,Fizens Careers | Marketing Manager Position,Product Designer,true
+/jobs/ios-developer,200,Fizens Careers | iOS Developer Position,Product Designer,true
+/jobs/product-designer,200,Fizens Careers | Product Designer Position,Product Designer,false

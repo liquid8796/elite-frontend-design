@@ -294,6 +294,43 @@ def validate() -> list[str]:
         if not any(r["url"].endswith("/404") and r["http_status"] == "404" and r["sitemap_declared"] == "false" for r in nouva_rows):
             errors.append("Nouva linked 404 should return 404 outside sitemap")
 
+    fizens_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "fizens.framer.ai.md"
+    if not fizens_profile.is_file():
+        errors.append("Missing Fizens entire-site finance template deep profile")
+    else:
+        fizens_text = fizens_profile.read_text(encoding="utf-8")
+        for phrase in (
+            "43/43 sitemap URLs",
+            "21 of 43 sitemap URLs",
+            "four",
+            "Product Designer",
+            "390x19177",
+            "Template Vendor and End User Surface Firewall",
+        ):
+            if phrase not in fizens_text:
+                errors.append(f"Fizens full-site profile missing phrase: {phrase}")
+
+    fizens_data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
+    inventory = fizens_data / "fizens-route-inventory-2026-10-08.csv"
+    rendered = fizens_data / "fizens-rendered-states-2026-10-08.csv"
+    careers = fizens_data / "fizens-career-title-audit-2026-10-08.csv"
+    if not inventory.is_file() or not rendered.is_file() or not careers.is_file():
+        errors.append("Missing complete Fizens sitemap/rendered/career audit inventory")
+    else:
+        with inventory.open(encoding="utf-8", newline="") as f:
+            fizens_routes = list(csv.DictReader(f))
+        with rendered.open(encoding="utf-8", newline="") as f:
+            fizens_states = list(csv.DictReader(f))
+        with careers.open(encoding="utf-8", newline="") as f:
+            fizens_jobs = list(csv.DictReader(f))
+        declared = [r for r in fizens_routes if r["sitemap_declared"] == "true"]
+        if len(fizens_routes) != 47 or len(declared) != 43 or any(x["http_status"] != "200" for x in declared):
+            errors.append("Fizens must have 43 sitemap 200 and 4 sampled 404 rows")
+        if len(fizens_states) != 32 or any(int(x["outer_overflow"]) > 0 for x in fizens_states):
+            errors.append("Fizens requires 32 overflow-free rendered route states")
+        if len(fizens_jobs) != 4 or sum(x["mismatch"] == "true" for x in fizens_jobs) != 3:
+            errors.append("Fizens career identity QA expected 3 mismatches among 4 job routes")
+
     rockstar_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "rockstargames.com-vi.md"
     if not rockstar_profile.is_file():
         errors.append("Missing Rockstar Games VI design-intelligence profile")
@@ -748,19 +785,19 @@ def validate() -> list[str]:
 
     toolkit_data = toolkit_root / "data"
     toolkit_counts = {
-        "sites.csv": 17,
-        "patterns.csv": 132,
-        "route-recipes.csv": 62,
+        "sites.csv": 18,
+        "patterns.csv": 139,
+        "route-recipes.csv": 70,
         "motion-recipes.csv": 25,
-        "responsive-recipes.csv": 43,
-        "anti-patterns.csv": 56,
-        "live-audit-2026-10-07.csv": 17,
-        "design-profiles.csv": 17,
-        "color-systems.csv": 17,
-        "typography-systems.csv": 17,
-        "component-recipes.csv": 64,
-        "ux-guidelines.csv": 48,
-        "design-primitives-live-2026-10-07.csv": 17,
+        "responsive-recipes.csv": 45,
+        "anti-patterns.csv": 61,
+        "live-audit-2026-10-07.csv": 18,
+        "design-profiles.csv": 18,
+        "color-systems.csv": 18,
+        "typography-systems.csv": 18,
+        "component-recipes.csv": 69,
+        "ux-guidelines.csv": 53,
+        "design-primitives-live-2026-10-07.csv": 18,
     }
     for filename, minimum in toolkit_counts.items():
         path = toolkit_data / filename
@@ -796,8 +833,8 @@ def validate() -> list[str]:
             errors.append(f"Distilled toolkit search missing capability: {phrase}")
 
     toolkit_specs = toolkit_root / "specs"
-    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 17:
-        errors.append("Distilled web toolkit must contain exactly 17 standardized site specs")
+    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 18:
+        errors.append("Distilled web toolkit must contain exactly 18 standardized site specs")
 
     version = str(manifest.get("version", ""))
     assembly = str(manifest.get("assemblyVersion", ""))
