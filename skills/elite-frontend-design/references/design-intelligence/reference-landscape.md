@@ -22,6 +22,7 @@ Audited profiles currently include:
 - **Rockstar Games VI** -> `sites/rockstargames.com-vi.md`
 - **Tokenmeter** -> `sites/tokenmeter.info.md`
 - **NovaOS (Framer template)** -> `sites/novaos.framer.website.md`
+- **Nouva (Framer AI content/auth template)** -> `sites/nouva-template.framer.website.md`
 - **Powder (Framer template)** -> `sites/powder.framer.website.md`
 - **Nudge Folio (Framer template)** -> `sites/nudge-folio.framer.website.md`
 - **OrbAI (Framer template)** -> `sites/orbai-template.framer.website.md`

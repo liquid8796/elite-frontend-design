@@ -331,6 +331,23 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         spec = (SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "specs" / "battlez.md").read_text(encoding="utf-8")
         self.assertIn("battlez-discovery-marketplace", spec)
 
+    def test_nouva_entire_public_site_contract(self) -> None:
+        import csv
+        toolkit = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit"
+        with (toolkit / "data" / "nouva-route-inventory-2026-10-08.csv").open(encoding="utf-8", newline="") as f:
+            rows = list(csv.DictReader(f))
+        self.assertEqual(len(rows), 9)
+        self.assertEqual(sum(r["sitemap_declared"] == "true" and r["http_status"] == "200" for r in rows), 8)
+        self.assertIn(("https://nouva-template.framer.website/404", "404"),
+                      {(r["url"], r["http_status"]) for r in rows})
+        self.assertIn("https://nouva-template.framer.website/otp", [r["url"] for r in rows])
+        self.assertIn("https://nouva-template.framer.website/account", [r["url"] for r in rows])
+        profile = (SKILL_ROOT / "references" / "design-intelligence" / "sites" / "nouva-template.framer.website.md").read_text(encoding="utf-8")
+        for phrase in ("8/8 sitemap URLs", "FrameAuth", "390x15559", "Scroll-triggered metric reveal"):
+            self.assertIn(phrase, profile)
+        spec = (toolkit / "specs" / "nouva.md").read_text(encoding="utf-8")
+        self.assertIn("nouva-contact-first-conversion", spec)
+
     def test_design_intelligence_landscape_contract(self) -> None:
         module = (
             SKILL_ROOT
@@ -1554,22 +1571,22 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         with (data_root / "design-primitives-live-2026-10-07.csv").open(encoding="utf-8-sig", newline="") as f:
             design_live = list(csv.DictReader(f))
 
-        self.assertEqual(len(sites), 16)
-        self.assertEqual(len(live), 16)
+        self.assertEqual(len(sites), 17)
+        self.assertEqual(len(live), 17)
         self.assertGreaterEqual(len(patterns), 70)
         self.assertGreaterEqual(len(routes), 20)
         self.assertGreaterEqual(len(motions), 15)
         self.assertGreaterEqual(len(responsive), 20)
         self.assertGreaterEqual(len(anti), 20)
-        self.assertEqual(len(design_profiles), 16)
-        self.assertEqual(len(color_systems), 16)
-        self.assertEqual(len(typography_systems), 16)
-        self.assertEqual(len(components), 60)
-        self.assertEqual(len(ux_guidelines), 42)
-        self.assertEqual(len(design_live), 16)
+        self.assertEqual(len(design_profiles), 17)
+        self.assertEqual(len(color_systems), 17)
+        self.assertEqual(len(typography_systems), 17)
+        self.assertEqual(len(components), 64)
+        self.assertEqual(len(ux_guidelines), 46)
+        self.assertEqual(len(design_live), 17)
 
         specs = sorted((module_root / "specs").glob("*.md"))
-        self.assertEqual(len(specs), 16)
+        self.assertEqual(len(specs), 17)
 
         expected_ids = {
             "refokus",
@@ -1588,6 +1605,7 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
             "indiex",
             "echoes-of-mars",
             "battlez",
+            "nouva",
         }
         self.assertEqual({row["site_id"] for row in sites}, expected_ids)
         self.assertEqual({row["site_id"] for row in live}, expected_ids)
@@ -1649,6 +1667,18 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         )
         self.assertIn('"source_site": "battlez"', result.stdout)
         self.assertIn("#060914", result.stdout)
+
+        result = subprocess.run(
+            [sys.executable, str(search_script), "contact first lead conversion", "--site", "nouva", "--json"],
+            cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True,
+        )
+        self.assertIn("Contact-First SaaS Conversion Routing", result.stdout)
+        result = subprocess.run(
+            [sys.executable, str(search_script), "dark AI content productivity", "--site", "nouva", "--design-system", "--json"],
+            cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True,
+        )
+        self.assertIn('"source_site": "nouva"', result.stdout)
+        self.assertIn("#080C12", result.stdout)
 
         result = subprocess.run(
             [sys.executable, str(search_script), "developer api code", "--domain", "typography", "--json"],

@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.32.0 - 2026-10-08
+
+- Audited Nouva across eight sitemap routes (all HTTP 200) and footer-linked /404 (HTTP 404), including nine Chrome desktop/mobile rendered states and all homepage anchors.
+- Documented the dark Onest/raised-bento system, static workflow screenshots, viewport-triggered counters, plan/FAQ stages, contact lead form, FrameAuth email signup/signin/OTP/account quartet, and long-form policies.
+- Added 7 search patterns, 6 route recipes, 1 motion recipe, 2 responsive recipes, 3 anti-patterns, 4 components and 4 UX guidelines. Totals: 17 sources, 132 patterns, 62 route recipes, 25 motion, 42 responsive, 54 anti-patterns, 64 components, 46 UX guidelines.
+- Registered a nine-row CSV inventory and highlighted free-trial-to-contact mismatch, billing-toggle QA, scroll counter fallback and unverified authentication and business metrics.
+- Version 3.32.0 / assembly 3.32.0.0; retains 13 baseline skins and 17 modules.
+
 ## 3.31.1 - 2026-10-08
 
 - Removed the old Cosmos comparative case-study reference and all active README, source-map, module and profile pointers.

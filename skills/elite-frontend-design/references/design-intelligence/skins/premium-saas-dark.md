@@ -241,3 +241,7 @@ Pass only if:
 - template/vendor residue is quarantined;
 - mono is a role, not a costume;
 - the final design has a product-specific differentiator beyond "premium dark SaaS."
+
+## Nouva complete public-route evidence
+
+See ../sites/nouva-template.framer.website.md for a distinct dark AI content team SaaS approach: Onest typography, grayscale bento cards, white action hierarchy, long problem/workflow/proof/pricing/FAQ landing, contact-first lead qualification, branded sign-up/sign-in/OTP/account routes, and legal/recovery consistency. Do not copy its static counter claims, placeholder pricing switch, vendor identity or unverified authentication backend.

@@ -266,6 +266,34 @@ def validate() -> list[str]:
         if len({r["title"] for r in battlez_rows}) != 1:
             errors.append("Battlez audit drift: expected captured site-wide duplicate title")
 
+    nouva_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "nouva-template.framer.website.md"
+    if not nouva_profile.is_file():
+        errors.append("Missing complete Nouva design-intelligence profile")
+    else:
+        nouva_text = nouva_profile.read_text(encoding="utf-8")
+        for phrase in (
+            "8/8 sitemap URLs",
+            "FrameAuth",
+            "Scroll-triggered metric reveal",
+            "Contact-First SaaS Conversion",
+            "390x15559",
+        ):
+            if phrase not in nouva_text:
+                errors.append(f"Nouva profile missing whole-site evidence: {phrase}")
+
+    nouva_inventory = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data" / "nouva-route-inventory-2026-10-08.csv"
+    if not nouva_inventory.is_file():
+        errors.append("Missing Nouva complete route inventory")
+    else:
+        with nouva_inventory.open(encoding="utf-8", newline="") as f:
+            nouva_rows = list(csv.DictReader(f))
+        if len(nouva_rows) != 9:
+            errors.append(f"Nouva inventory expected 8 sitemap + 1 linked 404, found {len(nouva_rows)}")
+        if sum(r["http_status"] == "200" and r["sitemap_declared"] == "true" for r in nouva_rows) != 8:
+            errors.append("Nouva declared sitemap should contain 8 HTTP 200 pages")
+        if not any(r["url"].endswith("/404") and r["http_status"] == "404" and r["sitemap_declared"] == "false" for r in nouva_rows):
+            errors.append("Nouva linked 404 should return 404 outside sitemap")
+
     rockstar_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "rockstargames.com-vi.md"
     if not rockstar_profile.is_file():
         errors.append("Missing Rockstar Games VI design-intelligence profile")
@@ -682,19 +710,19 @@ def validate() -> list[str]:
 
     toolkit_data = toolkit_root / "data"
     toolkit_counts = {
-        "sites.csv": 16,
-        "patterns.csv": 125,
-        "route-recipes.csv": 56,
-        "motion-recipes.csv": 24,
-        "responsive-recipes.csv": 40,
-        "anti-patterns.csv": 51,
-        "live-audit-2026-10-07.csv": 16,
-        "design-profiles.csv": 16,
-        "color-systems.csv": 16,
-        "typography-systems.csv": 16,
-        "component-recipes.csv": 60,
-        "ux-guidelines.csv": 42,
-        "design-primitives-live-2026-10-07.csv": 16,
+        "sites.csv": 17,
+        "patterns.csv": 132,
+        "route-recipes.csv": 62,
+        "motion-recipes.csv": 25,
+        "responsive-recipes.csv": 42,
+        "anti-patterns.csv": 54,
+        "live-audit-2026-10-07.csv": 17,
+        "design-profiles.csv": 17,
+        "color-systems.csv": 17,
+        "typography-systems.csv": 17,
+        "component-recipes.csv": 64,
+        "ux-guidelines.csv": 46,
+        "design-primitives-live-2026-10-07.csv": 17,
     }
     for filename, minimum in toolkit_counts.items():
         path = toolkit_data / filename
@@ -730,8 +758,8 @@ def validate() -> list[str]:
             errors.append(f"Distilled toolkit search missing capability: {phrase}")
 
     toolkit_specs = toolkit_root / "specs"
-    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 16:
-        errors.append("Distilled web toolkit must contain exactly 16 standardized site specs")
+    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 17:
+        errors.append("Distilled web toolkit must contain exactly 17 standardized site specs")
 
     version = str(manifest.get("version", ""))
     assembly = str(manifest.get("assemblyVersion", ""))

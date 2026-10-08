@@ -1199,3 +1199,9 @@ For game-focused ecommerce templates, audit the complete CMS inventory, not only
 Never promote unrelated imported product fixtures as genre taxonomy. A clean campaign hero and six polished featured game cards can conceal dozens of toy/beauty/home/sports records. Check sitemap-to-title specificity, cart action semantics and reusable footer/header behavior.
 
 Select **cinematic-game** for the genre identity and **premium-ecommerce** conversion mechanisms without creating a redundant skin or copying vendor imagery.
+
+## AI SaaS Marketing to Authentication Route Continuity
+
+When a marketing site links to account-related routes, audit the full declared public system: homepage/anchors, lead/contact, sign-up, sign-in, OTP, account, terms, privacy and 404. Distinguish real checkout/trial from **contact-first lead conversion**. Sample pricing interaction and reduced-motion metric states; visible static pricing and social proof are not evidence of genuine billing or successful customer outcomes.
+
+FrameAuth- or vendor-powered screens are useful evidence of **branded auth shell continuity** but do not establish secure session guards, rate limits, code delivery or token handling. Keep interaction/security claims clearly labeled observed vs not tested.
