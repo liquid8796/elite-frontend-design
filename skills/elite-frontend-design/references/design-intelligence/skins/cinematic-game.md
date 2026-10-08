@@ -275,3 +275,6 @@ Pass only if:
 - proof claims are real;
 - the result does not collapse into a generic neon gaming template.
 
+## Battlez (full-site 75-route audit)
+
+See ../sites/battlez-template.framer.website.md for an audited hybrid game-commerce application of this skin. Use the deep-navy genre shell and bounded media as art-direction evidence, with **premium-ecommerce** patterns for product cards, category destinations, quantity/cart actions and pricing clarity. Avoid CMS fixtures outside game taxonomy, generic site-wide meta titles and template license overlays.

@@ -34,3 +34,7 @@ Avoid default marketplace card grids when the product deserves deeper inspection
 
 ## QA Rubric
 Verify product inspection, selection states, trust placement, conversion path, gallery accessibility, mobile purchase flow, and editorial/transaction separation.
+
+## Battlez hybrid storefront evidence
+
+See ../sites/battlez-template.framer.website.md: genre-aware editorial/storefront structure, game category routes, product detail with purchase + lore, and a separate membership pricing path. Do not copy game assets or permit non-game sample fixtures just because CMS components render them coherently.

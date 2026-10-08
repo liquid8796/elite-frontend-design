@@ -235,6 +235,37 @@ def validate() -> list[str]:
         if not any(r["url"] == "https://resend.com/shop" and r["http_status"] == "404" for r in resend_rows):
             errors.append("Resend inventory missing the observed /shop 404 regression")
 
+    battlez_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "battlez-template.framer.website.md"
+    if not battlez_profile.is_file():
+        errors.append("Missing full-site Battlez design-intelligence profile")
+    else:
+        battlez_text = battlez_profile.read_text(encoding="utf-8")
+        for phrase in (
+            "75/75",
+            "53",
+            "Game Discovery -> Marketplace Bridge",
+            "Cross-Vertical CMS Fixture Leak",
+            "Battlez - Gaming Framer Template",
+            "390x9441",
+        ):
+            if phrase not in battlez_text:
+                errors.append(f"Battlez design-intelligence profile missing phrase: {phrase}")
+
+    battlez_inventory = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data" / "battlez-route-inventory-2026-10-08.csv"
+    if not battlez_inventory.is_file():
+        errors.append("Missing Battlez full sitemap inventory")
+    else:
+        with battlez_inventory.open(encoding="utf-8", newline="") as f:
+            battlez_rows = list(csv.DictReader(f))
+        if len(battlez_rows) != 75:
+            errors.append(f"Battlez inventory expected 75 URLs, found {len(battlez_rows)}")
+        if sum(r["http_status"] == "200" for r in battlez_rows) != 74:
+            errors.append("Battlez inventory expected 74 HTTP 200 routes")
+        if not any(r["url"].endswith("/404") and r["http_status"] == "404" for r in battlez_rows):
+            errors.append("Battlez inventory missing deliberate /404 status")
+        if len({r["title"] for r in battlez_rows}) != 1:
+            errors.append("Battlez audit drift: expected captured site-wide duplicate title")
+
     rockstar_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "rockstargames.com-vi.md"
     if not rockstar_profile.is_file():
         errors.append("Missing Rockstar Games VI design-intelligence profile")
@@ -651,19 +682,19 @@ def validate() -> list[str]:
 
     toolkit_data = toolkit_root / "data"
     toolkit_counts = {
-        "sites.csv": 15,
-        "patterns.csv": 118,
-        "route-recipes.csv": 51,
+        "sites.csv": 16,
+        "patterns.csv": 125,
+        "route-recipes.csv": 56,
         "motion-recipes.csv": 24,
-        "responsive-recipes.csv": 38,
-        "anti-patterns.csv": 47,
-        "live-audit-2026-10-07.csv": 15,
-        "design-profiles.csv": 15,
-        "color-systems.csv": 15,
-        "typography-systems.csv": 15,
-        "component-recipes.csv": 56,
-        "ux-guidelines.csv": 38,
-        "design-primitives-live-2026-10-07.csv": 15,
+        "responsive-recipes.csv": 40,
+        "anti-patterns.csv": 51,
+        "live-audit-2026-10-07.csv": 16,
+        "design-profiles.csv": 16,
+        "color-systems.csv": 16,
+        "typography-systems.csv": 16,
+        "component-recipes.csv": 60,
+        "ux-guidelines.csv": 42,
+        "design-primitives-live-2026-10-07.csv": 16,
     }
     for filename, minimum in toolkit_counts.items():
         path = toolkit_data / filename
@@ -699,8 +730,8 @@ def validate() -> list[str]:
             errors.append(f"Distilled toolkit search missing capability: {phrase}")
 
     toolkit_specs = toolkit_root / "specs"
-    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 15:
-        errors.append("Distilled web toolkit must contain exactly 15 standardized site specs")
+    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 16:
+        errors.append("Distilled web toolkit must contain exactly 16 standardized site specs")
 
     version = str(manifest.get("version", ""))
     assembly = str(manifest.get("assemblyVersion", ""))

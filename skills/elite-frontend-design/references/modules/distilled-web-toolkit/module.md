@@ -1,6 +1,6 @@
 ---
 name: distilled-web-toolkit
-description: "Searchable audited design recommendation toolkit distilled from 15 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
+description: "Searchable audited design recommendation toolkit distilled from 16 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
 ---
 
 # Distilled Web Toolkit
@@ -100,19 +100,19 @@ When they differ:
 
 ## Dataset Map
 
-- `data/sites.csv` ? 15 reference identities and archetypes.
+- `data/sites.csv` ? 16 reference identities and archetypes.
 - `data/live-audit-2026-10-07.csv` ? standardized live desktop/mobile snapshot.
 - `data/patterns.csv` ? reusable audited patterns.
 - `data/route-recipes.csv` ? route and route-family structures.
 - `data/motion-recipes.csv` ? motion/media choreography patterns.
 - `data/responsive-recipes.csv` ? responsive substitutions and transformations.
 - `data/anti-patterns.csv` ? failure modes and residue to avoid.
-- `data/design-profiles.csv` ? 15 audited style/product profiles with dials, fit, performance and accessibility watches.
+- `data/design-profiles.csv` ? 16 audited style/product profiles with dials, fit, performance and accessibility watches.
 - `data/color-systems.csv` ? semantic color-role strategies with transfer constraints.
 - `data/typography-systems.csv` ? audited display/heading/body/utility type-role systems and responsive scales.
 - `data/component-recipes.csv` ? Component Recipes with job, anatomy, interaction, responsive and accessibility contracts.
 - `data/ux-guidelines.csv` ? site-derived UX rules expressed as do/don't guidance.
-- `data/design-primitives-live-2026-10-07.csv` ? live desktop/mobile primitive ledger for the 15-site corpus.
+- `data/design-primitives-live-2026-10-07.csv` ? live desktop/mobile primitive ledger for the 16-site corpus.
 - `specs/*.md` ? one standardized implementation-oriented spec per audited site.
 
 ## Retrieval Workflow
@@ -138,3 +138,11 @@ Do not promote contextual evidence into a universal default.
 For Resend, the audit from 2026-10-08 recurses 11 child sitemaps into 1,015 declared routes. The per-route metadata inventory is stored at data/resend-route-inventory-2026-10-08.csv (1,014 HTTP 200 and /shop HTTP 404 in that dated snapshot).
 
 Use route-job recipes alongside aesthetic patterns: products/features, integrations, migration, docs with internal scroll, changelog, blog, customer proof, handbook and people. The inventory is a full HTTP census, not a claim of detailed interaction tests on all 1,015 routes.
+
+## Battlez whole-site game commerce corpus
+
+The 2026-10-08 audit verified 75/75 declared sitemap URLs: 53 store detail records, 4 game-category destinations, 6 news details, 3 editorial archives and multiple core/utility routes. 74 returned 200 and the purpose-built /404 returned 404. Full inventory: data/battlez-route-inventory-2026-10-08.csv.
+
+Battlez contributes hybrid game-marketing to storefront conversion, linkable category shopping, product purchase + lore, membership vs one-off checkout separation and public genre editorial. The crucial failure mode is cross-vertical CMS fixture leakage: the template displays toys, cosmetics, home, drones and sports goods as game products.
+
+This full HTTP census is not evidence that every product interaction was completed. Zero outer mobile overflow was inspected across representative routes.

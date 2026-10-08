@@ -1191,3 +1191,11 @@ Do not infer the whole product design from one cinematic homepage. Use sitemap-i
 **Public Operating System as Trust Proof:** publish genuine engineering/design practices and people contributions when safe. Do not replace product proof with superficial culture photography.
 
 **Sitemap Status Parity:** a route declared in an XML sitemap still needs live status and semantic validation. Do not confuse a sitemap index count with the count of underlying URLs.
+
+## Game Commerce Route Integrity
+
+For game-focused ecommerce templates, audit the complete CMS inventory, not only featured cards: split campaign, store, product detail, category, editorial, subscription, company/help and error route jobs. Adopt **Game Discovery -> Marketplace Bridge** only when real item names, prices, links and actions remain usable. Separate recurring member plans from one-off item checkout.
+
+Never promote unrelated imported product fixtures as genre taxonomy. A clean campaign hero and six polished featured game cards can conceal dozens of toy/beauty/home/sports records. Check sitemap-to-title specificity, cart action semantics and reusable footer/header behavior.
+
+Select **cinematic-game** for the genre identity and **premium-ecommerce** conversion mechanisms without creating a redundant skin or copying vendor imagery.

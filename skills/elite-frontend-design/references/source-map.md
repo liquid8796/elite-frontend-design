@@ -677,3 +677,5 @@ Toolkit outputs:
 Design principle: provenance before prescription. The toolkit is a retrieval/composition layer over audited evidence, not a clone library.
 
 - Resend 2026-10-08 whole-site re-audit: 11 nested sitemaps -> 1,015 public URL entries. Machine-readable evidence: modules/distilled-web-toolkit/data/resend-route-inventory-2026-10-08.csv; 1,014 returned HTTP 200 and /shop returned HTTP 404. The 2026-10-05 profile was homepage-only; the 2026-10-07 11-URL statement counted sitemaps, not pages.
+
+- 2026-10-08 Battlez whole-site: https://battlez-template.framer.website/ ; 75 sitemap URLs, 74 HTTP 200 and purpose-built /404 HTTP 404. Full census in modules/distilled-web-toolkit/data/battlez-route-inventory-2026-10-08.csv; all visible core families and representative store/news/category routes audited in Chrome desktop/mobile. Deliberate template-content and title collisions are non-transferable.

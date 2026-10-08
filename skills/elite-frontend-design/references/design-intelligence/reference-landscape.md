@@ -30,6 +30,7 @@ Audited profiles currently include:
 - **VoxAI (Framer template)** -> `sites/voxai.framer.ai.md`
 - **Tobi Mallory (Framer portfolio)** -> `sites/tobi-mallory.framer.website.md`
 - **Indiex (Framer template)** -> `sites/indiex.framer.ai.md`
+- **Battlez (Framer game commerce)** -> `sites/battlez-template.framer.website.md`
 - **Echoes of Mars (Framer campaign)** -> `sites/ready-material-053719.framer.app.md`
 
 Everything else below is a landscape reference until audited.

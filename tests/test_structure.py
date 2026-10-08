@@ -326,6 +326,25 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         for pattern in ("resend-three-rail-docs", "resend-migration-converter", "resend-public-operating-system"):
             self.assertIn(pattern, spec)
 
+    def test_battlez_whole_site_census_contract(self) -> None:
+        import csv
+        data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
+        with (data / "battlez-route-inventory-2026-10-08.csv").open(encoding="utf-8", newline="") as f:
+            rows = list(csv.DictReader(f))
+        self.assertEqual(len(rows), 75)
+        self.assertEqual(sum(x["http_status"] == "200" for x in rows), 74)
+        self.assertEqual(sum(x["http_status"] == "404" for x in rows), 1)
+        self.assertEqual(sum(x["family"] == "store-detail" for x in rows), 53)
+        self.assertEqual(sum(x["family"] == "news-detail" for x in rows), 6)
+        self.assertEqual(len({x["title"] for x in rows}), 1)
+        self.assertTrue(all(x["canonical"] for x in rows))
+        self.assertTrue(any(x["url"].endswith("/404") and x["http_status"] == "404" for x in rows))
+        profile = (SKILL_ROOT / "references" / "design-intelligence" / "sites" / "battlez-template.framer.website.md").read_text(encoding="utf-8")
+        for phrase in ("75/75", "Cross-Vertical CMS Fixture Leak", "Product Purchase + Lore"):
+            self.assertIn(phrase, profile)
+        spec = (SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "specs" / "battlez.md").read_text(encoding="utf-8")
+        self.assertIn("battlez-discovery-marketplace", spec)
+
     def test_design_intelligence_landscape_contract(self) -> None:
         module = (
             SKILL_ROOT
@@ -1549,22 +1568,22 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         with (data_root / "design-primitives-live-2026-10-07.csv").open(encoding="utf-8-sig", newline="") as f:
             design_live = list(csv.DictReader(f))
 
-        self.assertEqual(len(sites), 15)
-        self.assertEqual(len(live), 15)
+        self.assertEqual(len(sites), 16)
+        self.assertEqual(len(live), 16)
         self.assertGreaterEqual(len(patterns), 70)
         self.assertGreaterEqual(len(routes), 20)
         self.assertGreaterEqual(len(motions), 15)
         self.assertGreaterEqual(len(responsive), 20)
         self.assertGreaterEqual(len(anti), 20)
-        self.assertEqual(len(design_profiles), 15)
-        self.assertEqual(len(color_systems), 15)
-        self.assertEqual(len(typography_systems), 15)
-        self.assertEqual(len(components), 56)
-        self.assertEqual(len(ux_guidelines), 38)
-        self.assertEqual(len(design_live), 15)
+        self.assertEqual(len(design_profiles), 16)
+        self.assertEqual(len(color_systems), 16)
+        self.assertEqual(len(typography_systems), 16)
+        self.assertEqual(len(components), 60)
+        self.assertEqual(len(ux_guidelines), 42)
+        self.assertEqual(len(design_live), 16)
 
         specs = sorted((module_root / "specs").glob("*.md"))
-        self.assertEqual(len(specs), 15)
+        self.assertEqual(len(specs), 16)
 
         expected_ids = {
             "refokus",
@@ -1582,6 +1601,7 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
             "tobi-mallory",
             "indiex",
             "echoes-of-mars",
+            "battlez",
         }
         self.assertEqual({row["site_id"] for row in sites}, expected_ids)
         self.assertEqual({row["site_id"] for row in live}, expected_ids)
@@ -1624,6 +1644,25 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         )
         self.assertIn("Three-Rail Documentation Reader", result.stdout)
         self.assertIn("Migration Converter Bridge", result.stdout)
+
+        result = subprocess.run(
+            [sys.executable, str(search_script), "gaming commerce category purchase lore", "--site", "battlez", "--json"],
+            cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True,
+        )
+        self.assertIn("Purchase + Lore Game Detail", result.stdout)
+
+        result = subprocess.run(
+            [sys.executable, str(search_script), "game discovery marketplace", "--site", "battlez", "--json"],
+            cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True,
+        )
+        self.assertIn("Game Discovery to Marketplace Bridge", result.stdout)
+
+        result = subprocess.run(
+            [sys.executable, str(search_script), "gaming commerce marketplace", "--site", "battlez", "--design-system", "--json"],
+            cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True,
+        )
+        self.assertIn('"source_site": "battlez"', result.stdout)
+        self.assertIn("#060914", result.stdout)
 
         result = subprocess.run(
             [sys.executable, str(search_script), "developer api code", "--domain", "typography", "--json"],

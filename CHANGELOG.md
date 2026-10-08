@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.31.0 - 2026-10-08
+
+- Full-site Battlez audit of 75 sitemap URLs (74 HTTP 200 plus authored /404 HTTP 404), including all eight route families, 53 product details, four game categories, six news articles and three news archives.
+- Added complete CSV route census and deep design intelligence with desktop/mobile geometry, visible type/color/media, purchase/price/category and long-form article route contracts.
+- Promoted 7 patterns, 5 route recipes, 2 responsive recipes, 4 anti-patterns, 4 component recipes and 4 UX guidelines; totals are now 16 sites, 125 patterns, 56 routes, 24 motion, 40 responsive, 51 anti-patterns, 60 components and 42 UX guidelines.
+- Added cross-vertical CMS fixture quarantine, 75/75 duplicate HTML title QA, purchase control semantics and template-chrome rejection. No unsupported WebGL/motion library promotion.
+- Version 3.31.0 / assembly 3.31.0.0; baseline 13 skins and router 17 modules unchanged.
+
 ## 3.30.0 - 2026-10-08
 
 - Re-audited Resend across 11 child sitemaps / 1,015 distinct URLs (1,014 HTTP 200, /shop HTTP 404); corrected prior mistaken 11-URL snapshot.
