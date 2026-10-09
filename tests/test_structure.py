@@ -1678,22 +1678,22 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         with (data_root / "design-primitives-live-2026-10-07.csv").open(encoding="utf-8-sig", newline="") as f:
             design_live = list(csv.DictReader(f))
 
-        self.assertEqual(len(sites), 19)
-        self.assertEqual(len(live), 19)
+        self.assertEqual(len(sites), 20)
+        self.assertEqual(len(live), 20)
         self.assertGreaterEqual(len(patterns), 70)
         self.assertGreaterEqual(len(routes), 20)
         self.assertGreaterEqual(len(motions), 15)
         self.assertGreaterEqual(len(responsive), 20)
         self.assertGreaterEqual(len(anti), 20)
-        self.assertEqual(len(design_profiles), 19)
-        self.assertEqual(len(color_systems), 19)
-        self.assertEqual(len(typography_systems), 19)
-        self.assertEqual(len(components), 76)
-        self.assertEqual(len(ux_guidelines), 60)
-        self.assertEqual(len(design_live), 19)
+        self.assertEqual(len(design_profiles), 20)
+        self.assertEqual(len(color_systems), 20)
+        self.assertEqual(len(typography_systems), 20)
+        self.assertEqual(len(components), 83)
+        self.assertEqual(len(ux_guidelines), 67)
+        self.assertEqual(len(design_live), 20)
 
         specs = sorted((module_root / "specs").glob("*.md"))
-        self.assertEqual(len(specs), 19)
+        self.assertEqual(len(specs), 20)
 
         expected_ids = {
             "refokus",
@@ -1715,6 +1715,7 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
             "nouva",
             "fizens",
             "bridgemind",
+            "arpeggio",
         }
         self.assertEqual({row["site_id"] for row in sites}, expected_ids)
         self.assertEqual({row["site_id"] for row in live}, expected_ids)
@@ -1924,6 +1925,39 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         )
         self.assertIn('"source_site": "bridgemind"', check.stdout)
 
+
+
+    def test_arpeggio_complete_site_portfolio_journal_contract(self) -> None:
+        import csv
+        import subprocess
+        import sys
+        data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
+        with (data / "arpeggio-route-inventory-2026-10-09.csv").open(encoding="utf-8-sig", newline="") as f:
+            inventory = list(csv.DictReader(f))
+        with (data / "arpeggio-rendered-states-2026-10-09.csv").open(encoding="utf-8-sig", newline="") as f:
+            states = list(csv.DictReader(f))
+        with (data / "arpeggio-interaction-probes-2026-10-09.csv").open(encoding="utf-8-sig", newline="") as f:
+            probes = list(csv.DictReader(f))
+        sitemap = [r for r in inventory if r["sitemap_declared"] == "true"]
+        extra = [r for r in inventory if r["sitemap_declared"] == "false"]
+        self.assertEqual(len(inventory), 30)
+        self.assertEqual(len(sitemap), 22)
+        self.assertTrue(all(r["status"] == "200" for r in sitemap))
+        self.assertEqual(len(extra), 8)
+        self.assertTrue(all(r["status"] == "404" for r in extra))
+        self.assertEqual(sum(r["family"] == "work-detail" for r in sitemap), 7)
+        self.assertEqual(sum(r["family"] == "journal-detail" for r in sitemap), 7)
+        self.assertEqual(sum(r["family"] == "legal" for r in sitemap), 3)
+        self.assertEqual(len(states), 46)
+        self.assertTrue(all(not r.get("error") and int(r["overflow"]) == 0 for r in states))
+        self.assertEqual(len(probes), 10)
+        profile = (SKILL_ROOT / "references" / "design-intelligence" / "sites" / "arpeggio.framer.website.md").read_text(encoding="utf-8-sig")
+        for phrase in ("22/22", "Inter Display", "Template Vendor Firewall", "Budget-First Qualified Contact", "seven"):
+            self.assertIn(phrase, profile)
+        script = SKILL_ROOT / "scripts" / "distilled_toolkit_search.py"
+        result = subprocess.run([sys.executable, str(script), "agency editorial subscription portfolio", "--site", "arpeggio", "--design-system", "--json"],
+                                cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True)
+        self.assertIn('"source_site": "arpeggio"', result.stdout)
 
 if __name__ == "__main__":
     unittest.main()

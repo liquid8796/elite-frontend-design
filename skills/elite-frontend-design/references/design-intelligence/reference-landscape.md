@@ -24,6 +24,7 @@ Audited profiles currently include:
 - **NovaOS (Framer template)** -> `sites/novaos.framer.website.md`
 - **Fizens (Framer light finance SaaS template)** -> `sites/fizens.framer.ai.md`
 - **BridgeMind (developer agent workspace and companion docs)** -> `sites/bridgemind.ai.md`
+- **Arpeggio (Framer editorial agency and portfolio membership template)** -> sites/arpeggio.framer.website.md
 - **Nouva (Framer AI content/auth template)** -> `sites/nouva-template.framer.website.md`
 - **Powder (Framer template)** -> `sites/powder.framer.website.md`
 - **Nudge Folio (Framer template)** -> `sites/nudge-folio.framer.website.md`

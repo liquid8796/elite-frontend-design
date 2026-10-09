@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.35.0 - 2026-10-09
+
+- Distilled all 22/22 Arpeggio sitemap pages with HTTP 200: agency home/about/contact, Work + seven CMS case studies, Journal + seven CMS articles, three legal. Eight undeclared paths 404 including linked /404 and /pricing.
+- Saved 30-row HTTP inventory, link graph, 46 Chromium desktop/mobile states for all pages plus /404 with no outer overflow, and ten UI interaction probes.
+- Added 9 patterns, 8 routes, 2 motion, 3 responsive, 6 anti-patterns, 7 components and 7 UX guidelines. Added source-derived design/color/type profile on existing creative-agency-editorial skin.
+- Template publisher firewall: $129 Framer listing, Monodrift cross-promo, fictional project/award claims and unverified Polar/Calendly/WhatsApp endpoints are not production client proof. Search and pricing plan controls not fully validated.
+- 3.35.0 / assembly 3.35.0.0: 20 sites, 157 patterns, 87 routes, 28 motion, 50 responsive, 74 anti-patterns, 83 components, 67 UX guidelines; 13 skins and 17 modules unchanged.
+
+
 ## 3.34.0 - 2026-10-09
 
 - Verified all 143 www.bridgemind.ai + 10 docs.bridgemind.ai sitemap routes (153/153 HTTP 200), 120 version details and eight blog details; separately probed 12 account/alias/404 paths.

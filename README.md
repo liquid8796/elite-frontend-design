@@ -2,7 +2,15 @@
 
 A portable ChatGPT + Codex plugin containing one profile-routed frontend design skill focused on one outcome: ship frontend work that is distinctive, useful, responsive, and visually verified after render.
 
-Current version: 3.34.0
+Current version: 3.35.0
+
+## Arpeggio entire-site agency/portfolio distillation (3.35.0)
+
+Validated **22/22** sitemap routes plus **8 expected HTTP 404 probes** including /404 and no /pricing route. Audited all 22 pages (seven project cases, seven Journal articles, three legal, home, About, Contact, two archives) and 404 at both 1440/390px: **46 browser states with no positive outer overflow**. Captured 30 HTTP rows, internal link graph and ten limited interaction probes.
+
+Integrated **9 patterns, 8 route recipes, 2 motion recipes, 3 responsive recipes, 6 anti-patterns, 7 components, 7 UX guidelines** and design/color/type profile. Corpus now **20 audited sites, 157 patterns, 87 route recipes, 28 motion, 50 responsive, 74 anti-patterns, 83 components and 67 UX guidelines**; **13 skin baselines and 17 modules** unchanged.
+
+Signature editorial typography meets seven deep cases, two-tier subscription on homepage #pricing and budget/service-qualified Contact. Search filtering, fictional results, creator sales links and external checkout/appointment targets are NOT independently verified business data.
 
 ## BridgeMind full-site + companion docs distillation (3.34.0)
 
@@ -75,7 +83,7 @@ Build the upload archive:
 python scripts/package_plugin.py
 ~~~
 
-Upload the resulting `dist/elite-frontend-design-3.34.0.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
+Upload the resulting `dist/elite-frontend-design-3.35.0.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
 
 For public distribution, the same package can be submitted to the universal plugin directory. Public submission still requires the publisher to complete verified developer identity and policy attestations in the OpenAI submission flow.
 

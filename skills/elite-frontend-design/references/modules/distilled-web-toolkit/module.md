@@ -1,6 +1,6 @@
 ---
 name: distilled-web-toolkit
-description: "Searchable audited design recommendation toolkit distilled from 19 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
+description: "Searchable audited design recommendation toolkit distilled from 20 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
 ---
 
 # Distilled Web Toolkit
@@ -100,19 +100,19 @@ When they differ:
 
 ## Dataset Map
 
-- `data/sites.csv` ? 19 reference identities and archetypes.
+- `data/sites.csv` ? 20 reference identities and archetypes.
 - `data/live-audit-2026-10-07.csv` ? standardized live desktop/mobile snapshot.
 - `data/patterns.csv` ? reusable audited patterns.
 - `data/route-recipes.csv` ? route and route-family structures.
 - `data/motion-recipes.csv` ? motion/media choreography patterns.
 - `data/responsive-recipes.csv` ? responsive substitutions and transformations.
 - `data/anti-patterns.csv` ? failure modes and residue to avoid.
-- `data/design-profiles.csv` ? 19 audited style/product profiles with dials, fit, performance and accessibility watches.
+- `data/design-profiles.csv` ? 20 audited style/product profiles with dials, fit, performance and accessibility watches.
 - `data/color-systems.csv` ? semantic color-role strategies with transfer constraints.
 - `data/typography-systems.csv` ? audited display/heading/body/utility type-role systems and responsive scales.
 - `data/component-recipes.csv` ? Component Recipes with job, anatomy, interaction, responsive and accessibility contracts.
 - `data/ux-guidelines.csv` ? site-derived UX rules expressed as do/don't guidance.
-- `data/design-primitives-live-2026-10-07.csv` ? live desktop/mobile primitive ledger for the 19-site corpus.
+- `data/design-primitives-live-2026-10-07.csv` ? live desktop/mobile primitive ledger for the 20-site corpus.
 - `specs/*.md` ? one standardized implementation-oriented spec per audited site.
 
 ## Retrieval Workflow
@@ -183,3 +183,9 @@ New conversion recipe: Quest-to-Contact Intent Continuity. Chrome clicked all th
 143 sitemap URLs on www.bridgemind.ai plus 10 companion docs.bridgemind.ai routes, **153/153 declared HTTP 200**. Additional 12 account/redirect/invalid probes yielded 7 HTTP 200 and 5 HTTP 404. The audit includes 120 individual changelog versions, eight blog details, product/pricing/voice/spatial marketing, community, developer, legal, branded non-sitemap account screens and ten distinct documentation paths. A 165-row route census, same-ecosystem link graph, 46 Playwright desktop/mobile rendered states, and 13 interaction probes are saved in data/bridgemind-*-2026-10-09.csv.
 
 Reusable lessons: **Operational Simulator with Authority Boundary**, three workflow modes requiring distinct proof, simulated voice/mic privacy truth, local/cloud speech model data-flow, long versioned release directories, credits versus BYO provider subscription expenses, and cross-host docs/platform availability consistency. Marketing and docs disagree at audit time over Windows/Linux support. The website's BridgeVerse 3D product stills and homepage canvas nodes do not by themselves establish live marketing WebGL. No real coding agent, mic, checkout, or account was tested. See specs/bridgemind.md and references/design-intelligence/sites/bridgemind.ai.md.
+
+## Arpeggio Whole-Site Editorial Agency + Membership — 2026-10-09
+
+Audited **22/22 sitemap pages HTTP 200**, seven Work case studies, seven Journal long reads, three legal routes, full home/about/contact/work/journal journey; eight extra missing/404 probes were HTTP 404, including linked /404 and /pricing (Membership is homepage #pricing). Evidence in data/arpeggio-route-inventory-2026-10-09.csv (30 routes), arpeggio-internal-links-2026-10-09.csv, arpeggio-rendered-states-2026-10-09.csv (46 Chromium 1440/390 states with zero document overflow), arpeggio-interaction-probes-2026-10-09.csv (10 bounded checks).
+
+Lessons: one expressive editorial typography stage followed by genuine case-story argument; Work archive search/filter results require functional checks; two-tier recurring service offer can live as homepage anchor; scope/budget-qualified Contact; credited results not template fixture metrics; strict vendor-template versus real agency boundary. Some source controls had inconclusive search/tier state, and source media node duplication cannot be equated with network cost. Existing creative-agency-editorial skin retained; deep profile at references/design-intelligence/sites/arpeggio.framer.website.md and spec at specs/arpeggio.md.

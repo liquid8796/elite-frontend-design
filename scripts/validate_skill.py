@@ -332,6 +332,42 @@ def validate() -> list[str]:
             errors.append("Fizens career identity QA expected 3 mismatches among 4 job routes")
 
 
+
+    arpeggio_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "arpeggio.framer.website.md"
+    arpeggio_data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
+    ar_files = (
+        arpeggio_data / "arpeggio-route-inventory-2026-10-09.csv",
+        arpeggio_data / "arpeggio-internal-links-2026-10-09.csv",
+        arpeggio_data / "arpeggio-rendered-states-2026-10-09.csv",
+        arpeggio_data / "arpeggio-interaction-probes-2026-10-09.csv",
+    )
+    if not arpeggio_profile.is_file() or not all(f.is_file() for f in ar_files):
+        errors.append("Arpeggio full-site profile or four route/link/render/interaction ledgers missing")
+    else:
+        text = arpeggio_profile.read_text(encoding="utf-8-sig")
+        for phrase in ("22/22", "Inter Display", "Template Vendor Firewall", "Budget-First Qualified Contact"):
+            if phrase not in text:
+                errors.append(f"Arpeggio profile missing audited principle: {phrase}")
+        with ar_files[0].open(encoding="utf-8-sig", newline="") as f:
+            ar_routes = list(csv.DictReader(f))
+        with ar_files[2].open(encoding="utf-8-sig", newline="") as f:
+            ar_states = list(csv.DictReader(f))
+        with ar_files[3].open(encoding="utf-8-sig", newline="") as f:
+            ar_probes = list(csv.DictReader(f))
+        published = [r for r in ar_routes if r["sitemap_declared"] == "true"]
+        supplemental = [r for r in ar_routes if r["sitemap_declared"] == "false"]
+        if len(ar_routes) != 30 or len(published) != 22 or any(r["status"] != "200" for r in published):
+            errors.append("Arpeggio census expected 22 declared 200 and 8 supplemental paths")
+        if len(supplemental) != 8 or any(r["status"] != "404" for r in supplemental):
+            errors.append("Arpeggio supplementary paths expected eight HTTP 404")
+        for fam,count in (("work-detail",7),("journal-detail",7),("legal",3)):
+            if sum(r["family"] == fam for r in published) != count:
+                errors.append(f"Arpeggio sitemap requires {count} {fam} routes")
+        if len(ar_states) != 46 or any(r.get("error") or int(r["overflow"]) > 0 for r in ar_states):
+            errors.append("Arpeggio required 46 overflow-free Chromium route states")
+        if len(ar_probes) != 10:
+            errors.append("Arpeggio required ten bounded interaction observations")
+
     bridgemind_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "bridgemind.ai.md"
     bridgemind_data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
     bm_inv = bridgemind_data / "bridgemind-route-inventory-2026-10-09.csv"
@@ -892,8 +928,8 @@ def validate() -> list[str]:
             errors.append(f"Distilled toolkit search missing capability: {phrase}")
 
     toolkit_specs = toolkit_root / "specs"
-    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 19:
-        errors.append("Distilled web toolkit must contain exactly 19 standardized site specs")
+    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 20:
+        errors.append("Distilled web toolkit must contain exactly 20 standardized site specs")
 
     version = str(manifest.get("version", ""))
     assembly = str(manifest.get("assemblyVersion", ""))
