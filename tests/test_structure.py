@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import json
 import unittest
@@ -1678,22 +1678,22 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         with (data_root / "design-primitives-live-2026-10-07.csv").open(encoding="utf-8-sig", newline="") as f:
             design_live = list(csv.DictReader(f))
 
-        self.assertEqual(len(sites), 18)
-        self.assertEqual(len(live), 18)
+        self.assertEqual(len(sites), 19)
+        self.assertEqual(len(live), 19)
         self.assertGreaterEqual(len(patterns), 70)
         self.assertGreaterEqual(len(routes), 20)
         self.assertGreaterEqual(len(motions), 15)
         self.assertGreaterEqual(len(responsive), 20)
         self.assertGreaterEqual(len(anti), 20)
-        self.assertEqual(len(design_profiles), 18)
-        self.assertEqual(len(color_systems), 18)
-        self.assertEqual(len(typography_systems), 18)
-        self.assertEqual(len(components), 70)
-        self.assertEqual(len(ux_guidelines), 54)
-        self.assertEqual(len(design_live), 18)
+        self.assertEqual(len(design_profiles), 19)
+        self.assertEqual(len(color_systems), 19)
+        self.assertEqual(len(typography_systems), 19)
+        self.assertEqual(len(components), 76)
+        self.assertEqual(len(ux_guidelines), 60)
+        self.assertEqual(len(design_live), 19)
 
         specs = sorted((module_root / "specs").glob("*.md"))
-        self.assertEqual(len(specs), 18)
+        self.assertEqual(len(specs), 19)
 
         expected_ids = {
             "refokus",
@@ -1714,6 +1714,7 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
             "battlez",
             "nouva",
             "fizens",
+            "bridgemind",
         }
         self.assertEqual({row["site_id"] for row in sites}, expected_ids)
         self.assertEqual({row["site_id"] for row in live}, expected_ids)
@@ -1891,6 +1892,38 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         self.assertIn("Oswald", result.stdout)
 
 
+
+    def test_bridgemind_entire_website_and_docs_census(self) -> None:
+        import csv
+        import subprocess
+        import sys
+        data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
+        with (data / "bridgemind-route-inventory-2026-10-09.csv").open(encoding="utf-8-sig", newline="") as f:
+            urls = list(csv.DictReader(f))
+        with (data / "bridgemind-rendered-states-2026-10-09.csv").open(encoding="utf-8-sig", newline="") as f:
+            rendered = list(csv.DictReader(f))
+        with (data / "bridgemind-interaction-probes-2026-10-09.csv").open(encoding="utf-8-sig", newline="") as f:
+            interactions = list(csv.DictReader(f))
+        declared = [r for r in urls if r["sitemap_source"] in ("www.bridgemind.ai", "docs.bridgemind.ai")]
+        self.assertEqual(len(urls), 165)
+        self.assertEqual(len(declared), 153)
+        self.assertTrue(all(r["status"] == "200" for r in declared))
+        self.assertEqual(sum(r["route_family"] == "changelog-detail" for r in declared), 120)
+        self.assertEqual(sum(r["route_family"] == "blog-detail" for r in declared), 8)
+        self.assertEqual(sum(r["route_family"] == "docs" for r in declared), 10)
+        self.assertEqual(len(rendered), 46)
+        self.assertTrue(all(not r.get("error") and int(r["overflow"]) == 0 for r in rendered))
+        self.assertEqual(len(interactions), 13)
+        profile = (SKILL_ROOT / "references" / "design-intelligence" / "sites" / "bridgemind.ai.md").read_text(encoding="utf-8-sig")
+        for claim in ("153/153", "BridgeVoice", "BridgeVerse", "Sora", "Cross-Host Capability Claim Invariant"):
+            self.assertIn(claim, profile)
+        script = SKILL_ROOT / "scripts" / "distilled_toolkit_search.py"
+        check = subprocess.run(
+            [sys.executable, str(script), "agent workbench coding", "--site", "bridgemind", "--design-system", "--json"],
+            cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True,
+        )
+        self.assertIn('"source_site": "bridgemind"', check.stdout)
+
+
 if __name__ == "__main__":
     unittest.main()
-

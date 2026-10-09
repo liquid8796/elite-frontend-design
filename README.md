@@ -2,7 +2,13 @@
 
 A portable ChatGPT + Codex plugin containing one profile-routed frontend design skill focused on one outcome: ship frontend work that is distinctive, useful, responsive, and visually verified after render.
 
-Current version: 3.33.1
+Current version: 3.34.0
+
+## BridgeMind full-site + companion docs distillation (3.34.0)
+
+Audited **143/143 primary sitemap URLs plus 10/10 companion documentation URLs** HTTP 200. The 153-route content ecosystem includes 120 version-detail changelog entries, eight blog details, separate developer/voice/spatial/pricing/community/legal pages and non-sitemap login/signup views. Saved a 165-row HTTP inventory, link graph, **46 rendered desktop/mobile route states** (zero outer overflow) and 13 bounded interaction probes. Auth, billing, agent execution and live mic transcription are not independently verified.
+
+Added **8 patterns, 9 route recipes, 1 motion recipe, 2 responsive recipes, 5 anti-patterns, 6 components and 6 UX guidelines**. Corpus now **19 sites, 148 patterns, 79 route recipes, 26 motion recipes, 47 responsive, 68 anti-patterns, 76 components and 60 UX guidelines**; retains **13 skins and 17 modules**.
 
 ## Resend whole-site audit (3.30.0)
 
@@ -69,7 +75,7 @@ Build the upload archive:
 python scripts/package_plugin.py
 ~~~
 
-Upload the resulting `dist/elite-frontend-design-3.33.1.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
+Upload the resulting `dist/elite-frontend-design-3.34.0.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
 
 For public distribution, the same package can be submitted to the universal plugin directory. Public submission still requires the publisher to complete verified developer identity and policy attestations in the OpenAI submission flow.
 

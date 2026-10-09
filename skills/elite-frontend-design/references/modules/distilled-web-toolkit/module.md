@@ -1,6 +1,6 @@
 ---
 name: distilled-web-toolkit
-description: "Searchable audited design recommendation toolkit distilled from 18 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
+description: "Searchable audited design recommendation toolkit distilled from 19 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
 ---
 
 # Distilled Web Toolkit
@@ -100,19 +100,19 @@ When they differ:
 
 ## Dataset Map
 
-- `data/sites.csv` ? 18 reference identities and archetypes.
+- `data/sites.csv` ? 19 reference identities and archetypes.
 - `data/live-audit-2026-10-07.csv` ? standardized live desktop/mobile snapshot.
 - `data/patterns.csv` ? reusable audited patterns.
 - `data/route-recipes.csv` ? route and route-family structures.
 - `data/motion-recipes.csv` ? motion/media choreography patterns.
 - `data/responsive-recipes.csv` ? responsive substitutions and transformations.
 - `data/anti-patterns.csv` ? failure modes and residue to avoid.
-- `data/design-profiles.csv` ? 18 audited style/product profiles with dials, fit, performance and accessibility watches.
+- `data/design-profiles.csv` ? 19 audited style/product profiles with dials, fit, performance and accessibility watches.
 - `data/color-systems.csv` ? semantic color-role strategies with transfer constraints.
 - `data/typography-systems.csv` ? audited display/heading/body/utility type-role systems and responsive scales.
 - `data/component-recipes.csv` ? Component Recipes with job, anatomy, interaction, responsive and accessibility contracts.
 - `data/ux-guidelines.csv` ? site-derived UX rules expressed as do/don't guidance.
-- `data/design-primitives-live-2026-10-07.csv` ? live desktop/mobile primitive ledger for the 18-site corpus.
+- `data/design-primitives-live-2026-10-07.csv` ? live desktop/mobile primitive ledger for the 19-site corpus.
 - `specs/*.md` ? one standardized implementation-oriented spec per audited site.
 
 ## Retrieval Workflow
@@ -177,3 +177,9 @@ The most severe source QA failure: all four job detail URLs display the same Pro
 The full original Tobi Mallory route taxonomy was reconfirmed: 30 declared sitemap paths, 29 HTTP 200 content and an authored /404 with actual HTTP 404 on both browsed and advertised canonical hosts. All 30 canonicals on tobi-mallory.framer.website point to eternal-fade-087901.framer.app, and the public sitemap incorrectly includes /404. Representative Chrome rendered 15 desktop and 15 mobile routes with no positive horizontal document overflow. Saved in data/tobi-dual-host-routes-2026-10-08.csv and data/tobi-rendered-states-2026-10-08.csv.
 
 New conversion recipe: Quest-to-Contact Intent Continuity. Chrome clicked all three detail CTA links: Identity -> Contact preselect Identity (correct), Website -> Contact preselect Identity (wrong), Motion -> Contact preselect Identity (wrong). Implement query/route context propagation and matching form select. See data/tobi-quest-contact-state-2026-10-08.csv. Six icon-only type links have aria-label and are a positive semantics example, not a broken control.
+
+## BridgeMind Whole-Site Native Agent-Workspace System — 2026-10-09
+
+143 sitemap URLs on www.bridgemind.ai plus 10 companion docs.bridgemind.ai routes, **153/153 declared HTTP 200**. Additional 12 account/redirect/invalid probes yielded 7 HTTP 200 and 5 HTTP 404. The audit includes 120 individual changelog versions, eight blog details, product/pricing/voice/spatial marketing, community, developer, legal, branded non-sitemap account screens and ten distinct documentation paths. A 165-row route census, same-ecosystem link graph, 46 Playwright desktop/mobile rendered states, and 13 interaction probes are saved in data/bridgemind-*-2026-10-09.csv.
+
+Reusable lessons: **Operational Simulator with Authority Boundary**, three workflow modes requiring distinct proof, simulated voice/mic privacy truth, local/cloud speech model data-flow, long versioned release directories, credits versus BYO provider subscription expenses, and cross-host docs/platform availability consistency. Marketing and docs disagree at audit time over Windows/Linux support. The website's BridgeVerse 3D product stills and homepage canvas nodes do not by themselves establish live marketing WebGL. No real coding agent, mic, checkout, or account was tested. See specs/bridgemind.md and references/design-intelligence/sites/bridgemind.ai.md.

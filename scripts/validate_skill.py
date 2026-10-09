@@ -331,6 +331,40 @@ def validate() -> list[str]:
         if len(fizens_jobs) != 4 or sum(x["mismatch"] == "true" for x in fizens_jobs) != 3:
             errors.append("Fizens career identity QA expected 3 mismatches among 4 job routes")
 
+
+    bridgemind_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "bridgemind.ai.md"
+    bridgemind_data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
+    bm_inv = bridgemind_data / "bridgemind-route-inventory-2026-10-09.csv"
+    bm_links = bridgemind_data / "bridgemind-internal-links-2026-10-09.csv"
+    bm_render = bridgemind_data / "bridgemind-rendered-states-2026-10-09.csv"
+    bm_actions = bridgemind_data / "bridgemind-interaction-probes-2026-10-09.csv"
+    if not bridgemind_profile.is_file() or not all(p.is_file() for p in (bm_inv, bm_links, bm_render, bm_actions)):
+        errors.append("Missing BridgeMind full 153-route website/docs inventory or rendered interaction evidence")
+    else:
+        bp = bridgemind_profile.read_text(encoding="utf-8-sig")
+        for marker in ("153/153", "BridgeVoice", "BridgeVerse", "Cross-Host Capability Claim Invariant"):
+            if marker not in bp:
+                errors.append(f"BridgeMind profile missing evidence: {marker}")
+        with bm_inv.open(encoding="utf-8-sig", newline="") as f:
+            bm_urls = list(csv.DictReader(f))
+        with bm_render.open(encoding="utf-8-sig", newline="") as f:
+            bm_states = list(csv.DictReader(f))
+        with bm_actions.open(encoding="utf-8-sig", newline="") as f:
+            bm_probes = list(csv.DictReader(f))
+        declared = [x for x in bm_urls if x["sitemap_source"] in ("www.bridgemind.ai", "docs.bridgemind.ai")]
+        if len(bm_urls) != 165 or len(declared) != 153 or any(x["status"] != "200" for x in declared):
+            errors.append("BridgeMind must preserve 153 verified sitemap routes plus 12 extra path probes")
+        if sum(x["sitemap_source"] == "www.bridgemind.ai" for x in declared) != 143:
+            errors.append("BridgeMind main-host sitemap expected 143 routes")
+        if sum(x["sitemap_source"] == "docs.bridgemind.ai" for x in declared) != 10:
+            errors.append("BridgeMind companion docs sitemap expected 10 routes")
+        if sum(x["route_family"] == "changelog-detail" for x in declared) != 120:
+            errors.append("BridgeMind release history expected 120 detail routes")
+        if len(bm_states) != 46 or any(x.get("error") or int(x["overflow"]) > 0 for x in bm_states):
+            errors.append("BridgeMind Chromium evidence expected 46 rendered overflow-free states")
+        if len(bm_probes) != 13:
+            errors.append("BridgeMind requires 13 limited interaction probes")
+
     tobi_data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
     tobi_routes_path = tobi_data / "tobi-dual-host-routes-2026-10-08.csv"
     tobi_rendered_path = tobi_data / "tobi-rendered-states-2026-10-08.csv"
@@ -858,8 +892,8 @@ def validate() -> list[str]:
             errors.append(f"Distilled toolkit search missing capability: {phrase}")
 
     toolkit_specs = toolkit_root / "specs"
-    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 18:
-        errors.append("Distilled web toolkit must contain exactly 18 standardized site specs")
+    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 19:
+        errors.append("Distilled web toolkit must contain exactly 19 standardized site specs")
 
     version = str(manifest.get("version", ""))
     assembly = str(manifest.get("assemblyVersion", ""))

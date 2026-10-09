@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.34.0 - 2026-10-09
+
+- Verified all 143 www.bridgemind.ai + 10 docs.bridgemind.ai sitemap routes (153/153 HTTP 200), 120 version details and eight blog details; separately probed 12 account/alias/404 paths.
+- Captured 165-row route inventory, internal link graph, 46 Chromium desktop/mobile representative render states with zero horizontal overflow, and 13 front-end interaction probes.
+- Distilled honest Agent/Code/Thread simulator, BridgeVoice no-mic model trust, BridgeVerse explanatory 3D product stills, versioned release archives, first/third-party pricing separation and dated marketing/docs platform drift.
+- Added 8 patterns, 9 route recipes, 1 motion, 2 responsive, 5 anti-patterns, 6 components, 6 UX guidelines, plus new developer-agent-workspace profile. Totals: 19 sites, 148 patterns, 79 routes, 26 motion, 47 responsive, 68 anti-patterns, 76 components, 60 UX guidelines. Remains 13 skins / 17 modules.
+- 3.34.0 / assembly 3.34.0.0. Public-HTML replay Chromium browser used because connected Chrome extension unavailable. No auth/payment, microphone, desktop-app or WebGL marketing execution claimed.
+
+
 ## 3.33.1 - 2026-10-08
 
 - Re-audited the full 30-path Tobi Mallory sitemap on both browsed and canonical Framer hosts. 29 content routes HTTP 200, sitemap-listed /404 HTTP 404 per host, plus extra invalid 404 route; all 30 browsed canonical tags target the other host.
