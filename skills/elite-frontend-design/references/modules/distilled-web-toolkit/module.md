@@ -1,6 +1,6 @@
 ---
 name: distilled-web-toolkit
-description: "Searchable audited design recommendation toolkit distilled from 20 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
+description: "Searchable audited design recommendation toolkit distilled from 21 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
 ---
 
 # Distilled Web Toolkit
@@ -100,19 +100,19 @@ When they differ:
 
 ## Dataset Map
 
-- `data/sites.csv` ? 20 reference identities and archetypes.
+- `data/sites.csv` ? 21 reference identities and archetypes.
 - `data/live-audit-2026-10-07.csv` ? standardized live desktop/mobile snapshot.
 - `data/patterns.csv` ? reusable audited patterns.
 - `data/route-recipes.csv` ? route and route-family structures.
 - `data/motion-recipes.csv` ? motion/media choreography patterns.
 - `data/responsive-recipes.csv` ? responsive substitutions and transformations.
 - `data/anti-patterns.csv` ? failure modes and residue to avoid.
-- `data/design-profiles.csv` ? 20 audited style/product profiles with dials, fit, performance and accessibility watches.
+- `data/design-profiles.csv` ? 21 audited style/product profiles with dials, fit, performance and accessibility watches.
 - `data/color-systems.csv` ? semantic color-role strategies with transfer constraints.
 - `data/typography-systems.csv` ? audited display/heading/body/utility type-role systems and responsive scales.
 - `data/component-recipes.csv` ? Component Recipes with job, anatomy, interaction, responsive and accessibility contracts.
 - `data/ux-guidelines.csv` ? site-derived UX rules expressed as do/don't guidance.
-- `data/design-primitives-live-2026-10-07.csv` ? live desktop/mobile primitive ledger for the 20-site corpus.
+- `data/design-primitives-live-2026-10-07.csv` ? live desktop/mobile primitive ledger for the 21-site corpus.
 - `specs/*.md` ? one standardized implementation-oriented spec per audited site.
 
 ## Retrieval Workflow
@@ -189,3 +189,9 @@ Reusable lessons: **Operational Simulator with Authority Boundary**, three workf
 Audited **22/22 sitemap pages HTTP 200**, seven Work case studies, seven Journal long reads, three legal routes, full home/about/contact/work/journal journey; eight extra missing/404 probes were HTTP 404, including linked /404 and /pricing (Membership is homepage #pricing). Evidence in data/arpeggio-route-inventory-2026-10-09.csv (30 routes), arpeggio-internal-links-2026-10-09.csv, arpeggio-rendered-states-2026-10-09.csv (46 Chromium 1440/390 states with zero document overflow), arpeggio-interaction-probes-2026-10-09.csv (10 bounded checks).
 
 Lessons: one expressive editorial typography stage followed by genuine case-story argument; Work archive search/filter results require functional checks; two-tier recurring service offer can live as homepage anchor; scope/budget-qualified Contact; credited results not template fixture metrics; strict vendor-template versus real agency boundary. Some source controls had inconclusive search/tier state, and source media node duplication cannot be equated with network cost. Existing creative-agency-editorial skin retained; deep profile at references/design-intelligence/sites/arpeggio.framer.website.md and spec at specs/arpeggio.md.
+
+## Spector Entire-Site Creative Agency, Canvas and Lab — 2026-10-09
+
+Audited **19/19 official sitemap routes HTTP 200** covering agency home/positional About/scope-qualified Contact, six long-form project details, five Lab articles, two archives and three legal routes. Ten additional HTTP 404 probes include demo /404 and a malformed /instagram.com route referenced across all 19 official pages. The indexed /projects archive links **only 4/6 cases**, and /lab links **only 4/5 articles**; auditing sitemap independently prevents omissions. All 19+404 routes rendered at 1440x900 and 390x844 = **40 Chromium states, zero positive outer overflow**; **11 bounded UI probes**, 29-route inventory and link graph in data/spector-*-2026-10-09.csv.
+
+The transferable signature is near-black oversized Plus Jakarta Sans on white, editorial project stills, a six-item 3D client carousel, six service roles, a showreel and bounded canvas motion (8 sampled home desktop canvases, 10 mobile; WebGL unconfirmed), scoped homepage #pricing and mandatory Budget/Name/Email/Message Contact. Special QA: source Lab article H1 incorrectly marks MORE LABS and case headline is H3, Contact has no H1, social links point to platform roots/vendor alias, fake recognition/client copy cannot become production proof. Reuse creative-agency-editorial skin; source detail at references/design-intelligence/sites/spector.framer.website.md and specs/spector.md.

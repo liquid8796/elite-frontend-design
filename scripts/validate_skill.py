@@ -333,6 +333,47 @@ def validate() -> list[str]:
 
 
 
+
+    spector_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "spector.framer.website.md"
+    spector_data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
+    sp_files = (
+        spector_data / "spector-route-inventory-2026-10-09.csv",
+        spector_data / "spector-internal-links-2026-10-09.csv",
+        spector_data / "spector-rendered-states-2026-10-09.csv",
+        spector_data / "spector-interaction-probes-2026-10-09.csv",
+    )
+    if not spector_profile.is_file() or not all(f.is_file() for f in sp_files):
+        errors.append("Spector full-site profile or four route/link/render/interaction files missing")
+    else:
+        text = spector_profile.read_text(encoding="utf-8-sig")
+        for phrase in ("19/19", "Plus Jakarta Sans", "Case Archive vs Hidden Detail Parity", "All **19 official pages"):
+            if phrase not in text:
+                errors.append(f"Spector profile missing audited principle: {phrase}")
+        with sp_files[0].open(encoding="utf-8-sig", newline="") as f:
+            sp_routes = list(csv.DictReader(f))
+        with sp_files[1].open(encoding="utf-8-sig", newline="") as f:
+            sp_links = list(csv.DictReader(f))
+        with sp_files[2].open(encoding="utf-8-sig", newline="") as f:
+            sp_states = list(csv.DictReader(f))
+        with sp_files[3].open(encoding="utf-8-sig", newline="") as f:
+            sp_probes = list(csv.DictReader(f))
+        published = [r for r in sp_routes if r["sitemap_declared"] == "true"]
+        extras = [r for r in sp_routes if r["sitemap_declared"] == "false"]
+        if len(sp_routes) != 29 or len(published) != 19 or any(r["status"] != "200" for r in published):
+            errors.append("Spector expected 19 sitemap-declared HTTP 200 and ten extra path probes")
+        if len(extras) != 10 or any(r["status"] != "404" for r in extras):
+            errors.append("Spector expected ten HTTP 404 supplementary paths")
+        for fam,count in (("projects-detail",6),("lab-detail",5),("legal",3)):
+            if sum(r["family"] == fam for r in published) != count:
+                errors.append(f"Spector missing {fam} routes (expected {count})")
+        broken_sources = {r["source"] for r in sp_links if r["target"] == "https://spector.framer.website/instagram.com"}
+        if broken_sources != {r["url"] for r in published}:
+            errors.append("Spector malformed social href should appear across all 19 audited pages")
+        if len(sp_states) != 40 or any(r.get("error") or int(r["overflow"]) > 0 for r in sp_states):
+            errors.append("Spector expected 40 error-free dual-viewport Chromium states without outer overflow")
+        if len(sp_probes) != 11:
+            errors.append("Spector expected eleven bounded UI/semantics observations")
+
     arpeggio_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "arpeggio.framer.website.md"
     arpeggio_data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
     ar_files = (
@@ -928,8 +969,8 @@ def validate() -> list[str]:
             errors.append(f"Distilled toolkit search missing capability: {phrase}")
 
     toolkit_specs = toolkit_root / "specs"
-    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 20:
-        errors.append("Distilled web toolkit must contain exactly 20 standardized site specs")
+    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 21:
+        errors.append("Distilled web toolkit must contain exactly 21 standardized site specs")
 
     version = str(manifest.get("version", ""))
     assembly = str(manifest.get("assemblyVersion", ""))

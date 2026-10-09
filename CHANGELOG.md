@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.36.0 - 2026-10-09
+
+- Full-site Spector Framer distillation: all 19 sitemap URLs HTTP 200, ten supplementary invalid/404 path probes. Complete homepage/About/Contact, 2 archives, six project cases, five Lab articles and three legal routes.
+- Added 29-row route inventory, same-host link graph, 40 dual-viewport Chromium render states with no outer overflow, eleven bounded interaction/semantic probes. Main archives expose only 4/6 cases and 4/5 articles; all sitemap details retained.
+- Integrated 10 patterns, 9 routes, 3 motion, 3 responsive, 8 anti-patterns, 8 components, 8 UX rules and audited site/color/type reference. Reuse creative-agency-editorial skin.
+- Critical production QA: relative instagram.com becomes local /instagram.com HTTP 404 on all published pages, demo staff/client/award claims and creator social links, Lab article H1 is MORE LABS instead of article title, Contact missing H1, canvas performance/WebGL unverified.
+- v3.36.0 / assembly 3.36.0.0: 21 sites, 167 patterns, 96 route recipes, 31 motion, 53 responsive, 82 anti-patterns, 91 components, 75 UX guidelines; 13 skins / 17 modules unchanged.
+
+
 ## 3.35.0 - 2026-10-09
 
 - Distilled all 22/22 Arpeggio sitemap pages with HTTP 200: agency home/about/contact, Work + seven CMS case studies, Journal + seven CMS articles, three legal. Eight undeclared paths 404 including linked /404 and /pricing.

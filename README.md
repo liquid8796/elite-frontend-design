@@ -2,7 +2,15 @@
 
 A portable ChatGPT + Codex plugin containing one profile-routed frontend design skill focused on one outcome: ship frontend work that is distinctive, useful, responsive, and visually verified after render.
 
-Current version: 3.35.0
+Current version: 3.36.0
+
+## Spector entire-site experimental agency distillation (3.36.0)
+
+**19/19 official sitemap routes HTTP 200**, ten extra HTTP 404 probes including linked /404 and a malformed instagram.com relative link visible throughout all published routes. All 19 pages plus /404 rendered on 1440x900/390x844: **40 Chromium states, zero positive outer overflow**. Captured 29 HTTP route rows, entire internal link graph and 11 bounded interaction probes.
+
+Added **10 design patterns, 9 route recipes, 3 motion recipes, 3 responsive recipes, 8 anti-patterns, 8 components, 8 UX guidelines**, new style/color/typography profiles on existing creative-agency-editorial skin. Corpus: **21 audited sites, 167 patterns, 96 route recipes, 31 motion, 53 responsive, 82 anti-patterns, 91 components and 75 UX guidelines**; **13 skins / 17 modules** unchanged.
+
+Reference emphasis: giant Plus Jakarta Sans editorial type, multiple canvases and client carousel/showreel with reduced-motion boundary, six CMS project details, five Lab long reads, homepage scoped #pricing and Budget-qualified Contact. Main archive links 4/6 cases and 4/5 Lab stories: toolkit indexes full sitemap, never only archives. Reuse QA: article and Contact semantic H1, bad href /instagram.com, placeholder awards/staff/demo social targets. Canvas is observed; WebGL/FPS not verified.
 
 ## Arpeggio entire-site agency/portfolio distillation (3.35.0)
 
@@ -83,7 +91,7 @@ Build the upload archive:
 python scripts/package_plugin.py
 ~~~
 
-Upload the resulting `dist/elite-frontend-design-3.35.0.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
+Upload the resulting `dist/elite-frontend-design-3.36.0.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
 
 For public distribution, the same package can be submitted to the universal plugin directory. Public submission still requires the publisher to complete verified developer identity and policy attestations in the OpenAI submission flow.
 

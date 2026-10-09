@@ -1678,22 +1678,22 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         with (data_root / "design-primitives-live-2026-10-07.csv").open(encoding="utf-8-sig", newline="") as f:
             design_live = list(csv.DictReader(f))
 
-        self.assertEqual(len(sites), 20)
-        self.assertEqual(len(live), 20)
+        self.assertEqual(len(sites), 21)
+        self.assertEqual(len(live), 21)
         self.assertGreaterEqual(len(patterns), 70)
         self.assertGreaterEqual(len(routes), 20)
         self.assertGreaterEqual(len(motions), 15)
         self.assertGreaterEqual(len(responsive), 20)
         self.assertGreaterEqual(len(anti), 20)
-        self.assertEqual(len(design_profiles), 20)
-        self.assertEqual(len(color_systems), 20)
-        self.assertEqual(len(typography_systems), 20)
-        self.assertEqual(len(components), 83)
-        self.assertEqual(len(ux_guidelines), 67)
-        self.assertEqual(len(design_live), 20)
+        self.assertEqual(len(design_profiles), 21)
+        self.assertEqual(len(color_systems), 21)
+        self.assertEqual(len(typography_systems), 21)
+        self.assertEqual(len(components), 91)
+        self.assertEqual(len(ux_guidelines), 75)
+        self.assertEqual(len(design_live), 21)
 
         specs = sorted((module_root / "specs").glob("*.md"))
-        self.assertEqual(len(specs), 20)
+        self.assertEqual(len(specs), 21)
 
         expected_ids = {
             "refokus",
@@ -1716,6 +1716,7 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
             "fizens",
             "bridgemind",
             "arpeggio",
+            "spector",
         }
         self.assertEqual({row["site_id"] for row in sites}, expected_ids)
         self.assertEqual({row["site_id"] for row in live}, expected_ids)
@@ -1958,6 +1959,43 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         result = subprocess.run([sys.executable, str(script), "agency editorial subscription portfolio", "--site", "arpeggio", "--design-system", "--json"],
                                 cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True)
         self.assertIn('"source_site": "arpeggio"', result.stdout)
+
+
+    def test_spector_whole_site_19_route_and_lab_project_coverage(self) -> None:
+        import csv
+        import subprocess
+        import sys
+        data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
+        with (data / "spector-route-inventory-2026-10-09.csv").open(encoding="utf-8-sig", newline="") as f:
+            inventory = list(csv.DictReader(f))
+        with (data / "spector-internal-links-2026-10-09.csv").open(encoding="utf-8-sig", newline="") as f:
+            edges = list(csv.DictReader(f))
+        with (data / "spector-rendered-states-2026-10-09.csv").open(encoding="utf-8-sig", newline="") as f:
+            states = list(csv.DictReader(f))
+        with (data / "spector-interaction-probes-2026-10-09.csv").open(encoding="utf-8-sig", newline="") as f:
+            probes = list(csv.DictReader(f))
+        published = [r for r in inventory if r["sitemap_declared"] == "true"]
+        extra = [r for r in inventory if r["sitemap_declared"] == "false"]
+        self.assertEqual(len(inventory), 29)
+        self.assertEqual(len(published), 19)
+        self.assertTrue(all(r["status"] == "200" for r in published))
+        self.assertEqual(len(extra), 10)
+        self.assertTrue(all(r["status"] == "404" for r in extra))
+        self.assertEqual(sum(r["family"] == "projects-detail" for r in published), 6)
+        self.assertEqual(sum(r["family"] == "lab-detail" for r in published), 5)
+        self.assertEqual(sum(r["family"] == "legal" for r in published), 3)
+        self.assertEqual(len(states), 40)
+        self.assertTrue(all(not r.get("error") and int(r["overflow"]) == 0 for r in states))
+        self.assertEqual(len(probes), 11)
+        malformed = {r["source"] for r in edges if r["target"] == "https://spector.framer.website/instagram.com"}
+        self.assertEqual(malformed, {r["url"] for r in published})
+        profile = (SKILL_ROOT / "references" / "design-intelligence" / "sites" / "spector.framer.website.md").read_text(encoding="utf-8-sig")
+        for phrase in ("19/19", "Plus Jakarta Sans", "Case Archive vs Hidden Detail Parity", "All **19 official pages"):
+            self.assertIn(phrase, profile)
+        script = SKILL_ROOT / "scripts" / "distilled_toolkit_search.py"
+        result = subprocess.run([sys.executable, str(script), "experimental agency canvas carousel lab", "--site", "spector", "--design-system", "--json"],
+                                cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True)
+        self.assertIn('"source_site": "spector"', result.stdout)
 
 if __name__ == "__main__":
     unittest.main()
