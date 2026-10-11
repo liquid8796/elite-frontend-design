@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.37.0 - 2026-10-11
+
+- Full Fabrica Framer template website distillation: **20/20 sitemap URLs HTTP 200**, 10 extra HTTP 404 probes; homepage, Studio, Projects + six cases, Blog + seven articles, Contact, Privacy and Terms.
+- Preserved 30-route inventory, same-host link graph, **42 Chromium desktop/mobile route renders without outer overflow** and **11 bounded UI checks**. Projects text search Boltshift yielded one of six, native Web design category three of six.
+- Added 10 patterns, 9 route recipes, 2 motion, 3 responsive, 8 anti-patterns, 8 components, 8 UX rules and site/color/typography profile; reused creative-agency-editorial skin.
+- Production QA: color branding article carries SEO/speed headings, cases/blog/legal default title suffix My Framer Site, six cases but nav claims 27 projects, fictional team/metrics/creator store, Contact Name+Email only, pricing switch unverified.
+- v3.37.0 / assembly 3.37.0.0 corpus: 22 sites, 177 patterns, 105 routes, 33 motion, 56 responsive, 90 anti-patterns, 99 components, 83 UX guidelines; 13 skins / 17 modules remain.
+
+
 ## 3.36.0 - 2026-10-09
 
 - Full-site Spector Framer distillation: all 19 sitemap URLs HTTP 200, ten supplementary invalid/404 path probes. Complete homepage/About/Contact, 2 archives, six project cases, five Lab articles and three legal routes.

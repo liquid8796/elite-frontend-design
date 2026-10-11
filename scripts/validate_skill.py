@@ -334,6 +334,45 @@ def validate() -> list[str]:
 
 
 
+
+    fabrica_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "fabrica.framer.media.md"
+    fabrica_data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
+    fa_files = (
+        fabrica_data / "fabrica-route-inventory-2026-10-11.csv",
+        fabrica_data / "fabrica-internal-links-2026-10-11.csv",
+        fabrica_data / "fabrica-rendered-states-2026-10-11.csv",
+        fabrica_data / "fabrica-interaction-probes-2026-10-11.csv",
+    )
+    if not fabrica_profile.is_file() or not all(f.is_file() for f in fa_files):
+        errors.append("Fabrica full-site profile or route/link/render/interaction ledgers missing")
+    else:
+        desc = fabrica_profile.read_text(encoding="utf-8-sig")
+        for phrase in ("20/20", "#121212", "My Framer Site", "Queryable Portfolio Taxonomy"):
+            if phrase not in desc:
+                errors.append(f"Fabrica profile missing audited principle: {phrase}")
+        with fa_files[0].open(encoding="utf-8-sig", newline="") as f:
+            fa_routes = list(csv.DictReader(f))
+        with fa_files[2].open(encoding="utf-8-sig", newline="") as f:
+            fa_states = list(csv.DictReader(f))
+        with fa_files[3].open(encoding="utf-8-sig", newline="") as f:
+            fa_probes = list(csv.DictReader(f))
+        declared = [r for r in fa_routes if r["sitemap_declared"] == "true"]
+        supplements = [r for r in fa_routes if r["sitemap_declared"] == "false"]
+        if len(fa_routes) != 30 or len(declared) != 20 or any(r["status"] != "200" for r in declared):
+            errors.append("Fabrica expected twenty official 200 routes and ten supplementary paths")
+        if len(supplements) != 10 or any(r["status"] != "404" for r in supplements):
+            errors.append("Fabrica expected ten HTTP 404 invalid paths")
+        for fam,count in (("project-detail",6),("blog-detail",7),("legal",2)):
+            if sum(r["family"] == fam for r in declared) != count:
+                errors.append(f"Fabrica {fam} requires {count} routes")
+        if len(fa_states) != 42 or any(r.get("error") or int(r["overflow"]) > 0 for r in fa_states):
+            errors.append("Fabrica expected 42 error-free desktop/mobile route states")
+        if len(fa_probes) != 11:
+            errors.append("Fabrica expected eleven bounded interaction probes")
+        successful = {r["action"] for r in fa_probes if r["verified"] == "true"}
+        if not {"Search Projects Boltshift", "category filter Web design"}.issubset(successful):
+            errors.append("Fabrica sampled search/category interaction evidence missing")
+
     spector_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "spector.framer.website.md"
     spector_data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
     sp_files = (
@@ -969,8 +1008,8 @@ def validate() -> list[str]:
             errors.append(f"Distilled toolkit search missing capability: {phrase}")
 
     toolkit_specs = toolkit_root / "specs"
-    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 21:
-        errors.append("Distilled web toolkit must contain exactly 21 standardized site specs")
+    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 22:
+        errors.append("Distilled web toolkit must contain exactly 22 standardized site specs")
 
     version = str(manifest.get("version", ""))
     assembly = str(manifest.get("assemblyVersion", ""))

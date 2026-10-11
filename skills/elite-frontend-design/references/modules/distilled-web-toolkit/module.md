@@ -1,6 +1,6 @@
 ---
 name: distilled-web-toolkit
-description: "Searchable audited design recommendation toolkit distilled from 21 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
+description: "Searchable audited design recommendation toolkit distilled from 22 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
 ---
 
 # Distilled Web Toolkit
@@ -100,19 +100,19 @@ When they differ:
 
 ## Dataset Map
 
-- `data/sites.csv` ? 21 reference identities and archetypes.
+- `data/sites.csv` ? 22 reference identities and archetypes.
 - `data/live-audit-2026-10-07.csv` ? standardized live desktop/mobile snapshot.
 - `data/patterns.csv` ? reusable audited patterns.
 - `data/route-recipes.csv` ? route and route-family structures.
 - `data/motion-recipes.csv` ? motion/media choreography patterns.
 - `data/responsive-recipes.csv` ? responsive substitutions and transformations.
 - `data/anti-patterns.csv` ? failure modes and residue to avoid.
-- `data/design-profiles.csv` ? 21 audited style/product profiles with dials, fit, performance and accessibility watches.
+- `data/design-profiles.csv` ? 22 audited style/product profiles with dials, fit, performance and accessibility watches.
 - `data/color-systems.csv` ? semantic color-role strategies with transfer constraints.
 - `data/typography-systems.csv` ? audited display/heading/body/utility type-role systems and responsive scales.
 - `data/component-recipes.csv` ? Component Recipes with job, anatomy, interaction, responsive and accessibility contracts.
 - `data/ux-guidelines.csv` ? site-derived UX rules expressed as do/don't guidance.
-- `data/design-primitives-live-2026-10-07.csv` ? live desktop/mobile primitive ledger for the 21-site corpus.
+- `data/design-primitives-live-2026-10-07.csv` ? live desktop/mobile primitive ledger for the 22-site corpus.
 - `specs/*.md` ? one standardized implementation-oriented spec per audited site.
 
 ## Retrieval Workflow
@@ -195,3 +195,9 @@ Lessons: one expressive editorial typography stage followed by genuine case-stor
 Audited **19/19 official sitemap routes HTTP 200** covering agency home/positional About/scope-qualified Contact, six long-form project details, five Lab articles, two archives and three legal routes. Ten additional HTTP 404 probes include demo /404 and a malformed /instagram.com route referenced across all 19 official pages. The indexed /projects archive links **only 4/6 cases**, and /lab links **only 4/5 articles**; auditing sitemap independently prevents omissions. All 19+404 routes rendered at 1440x900 and 390x844 = **40 Chromium states, zero positive outer overflow**; **11 bounded UI probes**, 29-route inventory and link graph in data/spector-*-2026-10-09.csv.
 
 The transferable signature is near-black oversized Plus Jakarta Sans on white, editorial project stills, a six-item 3D client carousel, six service roles, a showreel and bounded canvas motion (8 sampled home desktop canvases, 10 mobile; WebGL unconfirmed), scoped homepage #pricing and mandatory Budget/Name/Email/Message Contact. Special QA: source Lab article H1 incorrectly marks MORE LABS and case headline is H3, Contact has no H1, social links point to platform roots/vendor alias, fake recognition/client copy cannot become production proof. Reuse creative-agency-editorial skin; source detail at references/design-intelligence/sites/spector.framer.website.md and specs/spector.md.
+
+## Fabrica — Complete Dark Digital Agency Site (2026-10-11)
+
+Full **20/20 sitemap page HTTP 200** census: agency homepage + Studio + Projects/6 detail cases + Blog/7 articles + Contact + two legal. Ten additional paths HTTP 404, including /404, /about, /pricing and /work. All 20 real routes plus /404 rendered at 1440x900 and 390x844 = **42 browser states without positive outer overflow**. Proof files: data/fabrica-route-inventory-2026-10-11.csv (30 paths), fabrica-internal-links-2026-10-11.csv, fabrica-rendered-states-2026-10-11.csv, fabrica-interaction-probes-2026-10-11.csv (11 bounded checks).
+
+Notable visual language: dark rgb(18,18,18), Inter inner-page 148px/64px H1, home giant secondary headline 144px/62px, six photo case stories, four media-led service rows, two video DOM nodes and zero canvas. Project filter **works in sampled states** (Search Boltshift 6->1, Web design category 6->3), seven article permalinks discoverable from Blog. On-home Per project/Monthly pricing is shown but tier click/price changes not confirmed. Contact has **Name and Email only**, validated natively but not submitted. Source QA: article about color psychology oddly includes Speed/SEO headings, projects archive lacks H1, all project/blog/legal title tags end with "My Framer Site", and source Framer creator store + sample metrics/clients must not be production proof. Existing creative-agency-editorial skin reused, dark variant captured via style/color/type profile. Full spec at specs/fabrica.md; profile at design-intelligence/sites/fabrica.framer.media.md.
