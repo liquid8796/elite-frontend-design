@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.38.0 - 2026-10-16
+
+- Distilled complete CreateStudio/Create Framer template website: all 21 sitemap URLs HTTP 200 in browser, ten supplementary invalid paths 404, 5 deep Work cases, 7 Whispers articles, 4 legal URLs including separately self-canonical Terms variants, Studio, Contact and homepage.
+- Preserved 31 HTTP route rows, complete internal links, **44 Chromium desktop/mobile renders with no outer overflow**, twelve bounded interaction probes. One network TLS EOF in requests scanner reconciled by Chromium HTTP 200 both viewports.
+- Added 10 design patterns, 9 route recipes, 3 motion, 3 responsive, 8 anti-patterns, 8 components, 8 UX guidelines and new source color/typography/design profile on existing creative-agency-editorial skin.
+- Production QA: project archive only 3/5 published case direct links in initial state, query results not conclusively changing, duplicate self-canonical Terms, misplaced/missing H1, stale 2025 availability, inconsistent studio address/email, template marketplace sales and unverified client KPIs.
+- 3.38.0 / assembly 3.38.0.0 totals 23 sites, 187 patterns, 114 routes, 36 motion, 59 responsive, 98 anti-patterns, 107 components, 91 UX guidelines; 13 skins, 17 modules.
+
+
 ## 3.37.0 - 2026-10-11
 
 - Full Fabrica Framer template website distillation: **20/20 sitemap URLs HTTP 200**, 10 extra HTTP 404 probes; homepage, Studio, Projects + six cases, Blog + seven articles, Contact, Privacy and Terms.

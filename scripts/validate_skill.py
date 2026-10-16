@@ -335,6 +335,45 @@ def validate() -> list[str]:
 
 
 
+
+    create_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "createstudio.framer.media.md"
+    create_data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
+    cr_files = (
+        create_data / "createstudio-route-inventory-2026-10-16.csv",
+        create_data / "createstudio-internal-links-2026-10-16.csv",
+        create_data / "createstudio-rendered-states-2026-10-16.csv",
+        create_data / "createstudio-interaction-probes-2026-10-16.csv",
+    )
+    if not create_profile.is_file() or not all(f.is_file() for f in cr_files):
+        errors.append("CreateStudio full-site profile or route/link/render/probe evidence missing")
+    else:
+        prof = create_profile.read_text(encoding="utf-8-sig")
+        for phrase in ("21/21", "#F2F2F2", "Figtree", "Swiss", "Work"):
+            if phrase not in prof:
+                errors.append(f"CreateStudio profile missing audited principle: {phrase}")
+        with cr_files[0].open(encoding="utf-8-sig", newline="") as f:
+            cr_routes = list(csv.DictReader(f))
+        with cr_files[2].open(encoding="utf-8-sig", newline="") as f:
+            cr_renders = list(csv.DictReader(f))
+        with cr_files[3].open(encoding="utf-8-sig", newline="") as f:
+            cr_probes = list(csv.DictReader(f))
+        original = [r for r in cr_routes if r["sitemap_declared"] == "true"]
+        other = [r for r in cr_routes if r["sitemap_declared"] == "false"]
+        if len(cr_routes) != 31 or len(original) != 21 or any(r["status"] != "200" for r in original):
+            errors.append("CreateStudio expected 21 declared HTTP 200 paths and ten extra paths")
+        if len(other) != 10 or any(r["status"] != "404" for r in other):
+            errors.append("CreateStudio expected ten HTTP 404 supplementary routes")
+        for fam,count in (("work-detail",5),("whispers-detail",7),("legal",4)):
+            if sum(r["family"] == fam for r in original) != count:
+                errors.append(f"CreateStudio required {count} {fam} routes")
+        terms = [r for r in original if "/legal/terms-of-service" in r["url"].lower() or "/legal/Terms%20of%20Service" in r["url"]]
+        if len(terms) != 2 or len({r["canonical"] for r in terms}) != 2:
+            errors.append("CreateStudio requires both separately self-canonical Terms URLs")
+        if len(cr_renders) != 44 or any(r.get("error") or int(r["overflow"]) > 0 for r in cr_renders):
+            errors.append("CreateStudio expected 44 error-free dual-viewport browser states")
+        if len(cr_probes) != 12:
+            errors.append("CreateStudio expected twelve bounded interaction probes")
+
     fabrica_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "fabrica.framer.media.md"
     fabrica_data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
     fa_files = (
@@ -1008,8 +1047,8 @@ def validate() -> list[str]:
             errors.append(f"Distilled toolkit search missing capability: {phrase}")
 
     toolkit_specs = toolkit_root / "specs"
-    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 22:
-        errors.append("Distilled web toolkit must contain exactly 22 standardized site specs")
+    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 23:
+        errors.append("Distilled web toolkit must contain exactly 23 standardized site specs")
 
     version = str(manifest.get("version", ""))
     assembly = str(manifest.get("assemblyVersion", ""))

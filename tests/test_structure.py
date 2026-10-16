@@ -1678,22 +1678,22 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         with (data_root / "design-primitives-live-2026-10-07.csv").open(encoding="utf-8-sig", newline="") as f:
             design_live = list(csv.DictReader(f))
 
-        self.assertEqual(len(sites), 22)
-        self.assertEqual(len(live), 22)
+        self.assertEqual(len(sites), 23)
+        self.assertEqual(len(live), 23)
         self.assertGreaterEqual(len(patterns), 70)
         self.assertGreaterEqual(len(routes), 20)
         self.assertGreaterEqual(len(motions), 15)
         self.assertGreaterEqual(len(responsive), 20)
         self.assertGreaterEqual(len(anti), 20)
-        self.assertEqual(len(design_profiles), 22)
-        self.assertEqual(len(color_systems), 22)
-        self.assertEqual(len(typography_systems), 22)
-        self.assertEqual(len(components), 99)
-        self.assertEqual(len(ux_guidelines), 83)
-        self.assertEqual(len(design_live), 22)
+        self.assertEqual(len(design_profiles), 23)
+        self.assertEqual(len(color_systems), 23)
+        self.assertEqual(len(typography_systems), 23)
+        self.assertEqual(len(components), 107)
+        self.assertEqual(len(ux_guidelines), 91)
+        self.assertEqual(len(design_live), 23)
 
         specs = sorted((module_root / "specs").glob("*.md"))
-        self.assertEqual(len(specs), 22)
+        self.assertEqual(len(specs), 23)
 
         expected_ids = {
             "refokus",
@@ -1718,6 +1718,7 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
             "arpeggio",
             "spector",
             "fabrica",
+            "createstudio",
         }
         self.assertEqual({row["site_id"] for row in sites}, expected_ids)
         self.assertEqual({row["site_id"] for row in live}, expected_ids)
@@ -2035,6 +2036,44 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         result = subprocess.run([sys.executable, str(script), "dark agency Inter project search branding", "--site", "fabrica", "--design-system", "--json"],
                                 cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True)
         self.assertIn('"source_site": "fabrica"', result.stdout)
+
+
+    def test_createstudio_whole_site_routes_and_terms_alias(self) -> None:
+        import csv
+        import subprocess
+        import sys
+        data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
+        def read(name):
+            with (data / name).open(encoding="utf-8-sig", newline="") as f:
+                return list(csv.DictReader(f))
+        inventory = read("createstudio-route-inventory-2026-10-16.csv")
+        links = read("createstudio-internal-links-2026-10-16.csv")
+        renders = read("createstudio-rendered-states-2026-10-16.csv")
+        probes = read("createstudio-interaction-probes-2026-10-16.csv")
+        official = [x for x in inventory if x["sitemap_declared"] == "true"]
+        extra = [x for x in inventory if x["sitemap_declared"] == "false"]
+        self.assertEqual(len(inventory), 31)
+        self.assertEqual(len(official), 21)
+        self.assertTrue(all(x["status"] == "200" for x in official))
+        self.assertEqual(len(extra), 10)
+        self.assertTrue(all(x["status"] == "404" for x in extra))
+        for family,n in (("work-detail",5),("whispers-detail",7),("legal",4)):
+            self.assertEqual(sum(x["family"] == family for x in official), n)
+        terms = [x for x in official if "terms-of-service" in x["url"].lower() or "Terms%20of%20Service" in x["url"]]
+        self.assertEqual(len(terms), 2)
+        self.assertEqual(len({x["canonical"] for x in terms}), 2)
+        self.assertEqual(len(renders), 44)
+        self.assertTrue(all(not x.get("error") and int(x["overflow"]) == 0 for x in renders))
+        self.assertEqual(len(probes), 12)
+        self.assertTrue(any("search Aurelis" in x["action"] for x in probes))
+        self.assertGreater(len(links), 20)
+        profile = (SKILL_ROOT / "references" / "design-intelligence" / "sites" / "createstudio.framer.media.md").read_text(encoding="utf-8-sig")
+        for phrase in ("21/21", "#F2F2F2", "Figtree", "Terms", "Whispers"):
+            self.assertIn(phrase, profile)
+        script = SKILL_ROOT / "scripts" / "distilled_toolkit_search.py"
+        result = subprocess.run([sys.executable, str(script), "Swiss agency case media Figtree", "--site", "createstudio", "--design-system", "--json"],
+                                cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True)
+        self.assertIn('"source_site": "createstudio"', result.stdout)
 
 if __name__ == "__main__":
     unittest.main()
