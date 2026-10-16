@@ -2,7 +2,15 @@
 
 A portable ChatGPT + Codex plugin containing one profile-routed frontend design skill focused on one outcome: ship frontend work that is distinctive, useful, responsive, and visually verified after render.
 
-Current version: 3.38.0
+Current version: 3.39.0
+
+## Proactive image and motion video generation (3.39.0)
+
+**Media generation is now proactive rather than request-by-request.** When a UI genuinely benefits from a custom hero, illustration, case-story image, editorial visual or branded background, the model should discover and call **the user's Jarvis MCP ImageGen** through its authorized selected browser/session binding, resolve a real local artifact, place web-ready derivatives in the app and visually check responsive crop. The workflow does not overwrite verified customer/brand source assets or fabricate results.
+
+For a media-led section, discover real connected text/image-to-video tools first. The current Jarvis tool registry exposes image generation but no dedicated generative video endpoint; on the Windows host **FFmpeg 8.1.2 is available**, so new \`creative-media/scripts/render_motion_clip.py\` can render a real muted H.264 MP4 and JPEG poster from one or more generated stills with camera zoom and crossfades. This is transparently motion graphics from stills, **not** a trained text-to-video model. Includes reduced-motion/poster, alternative content, ownership and fallback requirements.
+
+Added optional \`creative-media\` module (18 modules total), updated router/design/motion/QA instructions, plugin metadata and a video compositor with CLI and regression tests. Activation does **not** require another user request for each image or video, but tool/session authorization and project constraints remain mandatory.
 
 ## CreateStudio / Create full-site Swiss studio distillation (3.38.0)
 
@@ -107,7 +115,7 @@ Build the upload archive:
 python scripts/package_plugin.py
 ~~~
 
-Upload the resulting `dist/elite-frontend-design-3.38.0.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
+Upload the resulting `dist/elite-frontend-design-3.39.0.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
 
 For public distribution, the same package can be submitted to the universal plugin directory. Public submission still requires the publisher to complete verified developer identity and policy attestations in the OpenAI submission flow.
 

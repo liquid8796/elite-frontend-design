@@ -2,7 +2,7 @@
 name: elite-frontend-design
 description: "Elite frontend design, implementation, and full-spectrum QA orchestration for landing pages, product UIs, dashboards, immersive interactive/WebGL experiences, redesigns, screenshot/image-to-code work, and release verification. Combines brief-specific art direction, practical product structure, high-ambition experience engineering, one-progress-domain synchronization, reference-first design, reference-derived design intelligence, functional browser journeys, cross-channel rendered evidence, responsive accessibility, performance/regression QA, and evidence-driven signoff while avoiding generic AI UI."
 metadata:
-  version: "3.38.0"
+  version: "3.39.0"
   architecture: "profile-router-plus-visual-loop"
 ---
 
@@ -45,7 +45,8 @@ Start with one profile:
 | High-ambition interactive / WebGL / mouse-reactive 3D experience | elite-core + experience-engineering | frontend-qa; frontend-design only for extra art-direction ideation |
 | Continuous pre-rendered scroll-scrub camera world / fly-through narrative | elite-core + scroll-world | frontend-qa; reference-first when recreating evidence |
 | Design tokens / component system | design-system + ui-ux-pro-max | ui-styling, frontend-qa |
-| Brand / banner / presentation asset | corresponding legacy module | only the module owning a separate concern |
+| Brand / banner / presentation asset | corresponding legacy module | creative-media when asset generation makes the result materially better |
+| UI with meaningful bespoke imagery or a media-led hero/section | selected frontend profile | creative-media when media generation materially helps; it is a focused execution recipe, not a new style preset |
 
 Read references/index.md for exact module locations.
 
@@ -115,6 +116,7 @@ Extract or infer:
 - content that must be visible;
 - conversion or workflow goal;
 - brand constraints;
+- image/video opportunities (hero, campaign/media panels, meaningful background, illustrations), ownership, existing assets and local generation tools;
 - technical constraints;
 - reference material;
 - accessibility and device expectations.
@@ -162,6 +164,7 @@ Before substantial implementation, establish:
 - Layout: container logic, grid, alignment, section rhythm, density.
 - Component language: radius/border/shadow/icon/media treatment.
 - Motion language: what moves, why, and what remains still.
+- Media intent: which visible surfaces deserve original image/video assets, source/brand ownership, crop/aspect, local output destination and reduced-motion/static fallback. **Default to proactively generating meaningful art**, not waiting for a separate image request.
 - Anti-goals: 3–6 defaults this design must avoid.
 - Responsive contract: what compresses, stacks, scrolls, hides, or changes priority on smaller screens.
 
@@ -233,7 +236,11 @@ Extract design evidence before coding:
 
 Never use a screenshot as the production page/background to fake fidelity.
 
-If an image-generation tool is available and the task benefits from concepting, a visual concept may be generated before implementation. User approval is mandatory only when the user asks for an approval gate or when the workflow explicitly requires one; otherwise continue with the strongest usable concept and state any meaningful assumption.
+**Proactive creative media is now a default execution opportunity, not merely optional concepting.** While designing or materially redesigning real UI, inspect high-impact image/video surfaces; where custom art improves product fit, use available authorized image generation **on your own initiative** and wire the resulting local files into the UI. Prefer the user's Jarvis MCP ImageGen tool when its session and selected browser binding are valid. Do not require a new user request for every hero, scene, campaign background or editorial illustration. Preserve existing correct brand/photo assets and accepted-reference lock instead of inventing new identities. Load `references/modules/creative-media/module.md` for the exact tool lifecycle, art briefs, integration and fallback logic.
+
+For a useful animation/film, discover any **real connected video-generation provider** and use it when available; otherwise, if generated stills and FFmpeg are available, produce a genuine short muted MP4 plus poster with the bundled `creative-media/scripts/render_motion_clip.py` tool. Such output is a motion clip made from stills, **not** a generative video model. Choose CSS/SVG/native video alternatives where an MP4 would add no value. Account binding, paid calls, content rights and tool permissions remain real constraints; no fabricated assets or impossible background generation.
+
+User approval is mandatory only when the user explicitly requires an approval gate or a provider/account connection demands it. Otherwise continue with the strongest permitted visual asset, verify actual files, and report limitations truthfully.
 
 ## Step 5 — Implement Through a Small System
 
@@ -243,6 +250,7 @@ If an image-generation tool is available and the task benefits from concepting, 
 - Use semantic HTML and accessible primitives.
 - Preserve loading, empty, error, success, focus, hover, active, disabled, selected, and validation states where relevant.
 - Do not introduce a dependency only to create a minor visual effect.
+- Generate and integrate the selected custom media assets **before final styling** when a visual section genuinely benefits, then refine image crop/contrast/overlay against the live layout. Never leave a broken stock placeholder when the authorized ImageGen path can produce the desired original art.
 - For animation, prefer transform/opacity and existing libraries. Load motion-direction for advanced DOM/GSAP choreography. Load experience-engineering when the brief depends on live WebGL/3D/pointer-reactive rendering. Load scroll-world instead when the defining experience is a continuous pre-rendered camera journey whose media time is driven by scroll.
 - Make typography and spacing fluid enough that the page survives laptop and mobile widths without emergency patches.
 
@@ -293,7 +301,7 @@ For each important surface:
 1. define the target flow: entry route → action/state → expected rendered result;
 2. render and confirm the intended page is not blank and has no framework error overlay;
 3. take a screenshot;
-4. inspect hierarchy, geometry, type wrapping, spacing, color, asset crop, and obvious state problems;
+4. inspect hierarchy, geometry, type wrapping, spacing, color, asset crop, **actual generated image/video loading**, and obvious state problems;
 5. test the main interaction and its resulting state;
 6. inspect browser console errors when supported;
 7. verify required viewport regions are actually visible; document-level scroll metrics do not prove that a fixed shell or internal pane is unclipped;
@@ -317,7 +325,8 @@ Verify:
 - color contrast is sufficient;
 - controls have meaningful names;
 - responsive controls retain accessible names after labels become icon-only/hidden or move between breakpoint variants;
-- reduced-motion preferences are respected;
+- reduced-motion preferences are respected, including a static poster for automatically moving video;
+- self-generated image and video assets load from real paths at the intended desktop/mobile crops;
 - long strings, empty states, and error messages do not break layout;
 - tables/dense controls have an intentional mobile strategy;
 - text does not clip or collide at intermediate widths.
@@ -368,6 +377,7 @@ Do not call substantial frontend work finished until:
 - reference-based work has been compared against its reference;
 - high-ambition experiential work has been inspected across its key-state storyboard, including the signature event and final payoff;
 - timeline/layout/navigation channels remain synchronized at representative chapter boundaries and the final payoff;
+- generated image/video artifacts were inspected and integrated as real local files when media opportunities were selected; reduced-motion/poster and loading behavior were verified or reported as partial;
 - performance/regression gates were exercised when they are materially in scope;
 - there are no known blocking console/runtime errors;
 - the final QA status is stated honestly as VERIFIED, PARTIAL or BLOCKED rather than implying unverified coverage.

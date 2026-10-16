@@ -75,3 +75,9 @@ Keep the tone conversational: plain verbs, sentence case, no filler, with tone m
 ## Integration note
 
 This module was imported from the local sibling skill at `D:\Project\lobby\skills\SKILL.md`. The source frontmatter referenced `LICENSE.txt`, but no such sibling file was present at import time, so that dangling license field is intentionally not reproduced here.
+
+## Proactively Create Visual Assets When the Brief Calls for Them
+
+Do not default to generic stock placeholders or wait for the user to specifically request every hero, thumbnail or illustration. If a visually important region would be more distinctive or informative with original imagery, **generate it proactively** using the selected user's authorized image-generation tool (Jarvis MCP ImageGen when its session/browser binding exists). Use a visual brief for scene, crop, focal point, palette, negative space and downstream UI placement; integrate an actual local file and inspect the live render. The procedure and copyright/identity boundaries are in `../creative-media/module.md`.
+
+When motion conveys the story, first discover whether a **real text/image-to-video model** is connected. If none is available, an FFmpeg composited pan/zoom/crossfade MP4 from generated stills can still be valuable for a subtle ambient reel; never represent it as native video synthesis. Keep static posters, reduced-motion and real page loading in scope. Don't auto-generate filler for complex dashboards, genuine client photographs or brand marks already fixed by the brief.

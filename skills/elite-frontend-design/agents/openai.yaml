@@ -1,7 +1,7 @@
 interface:
   display_name: "Elite Frontend Design"
   short_description: "Design and QA frontend UI"
-  default_prompt: "Use $elite-frontend-design to design, implement, redesign, or QA this frontend with browser-verified responsive quality."
+  default_prompt: "Use $elite-frontend-design to design, implement, redesign, or QA this frontend with browser-verified responsive quality; proactively generate and integrate original images or motion clips when useful and tools are authorized."
 policy:
   products:
     - CHAT

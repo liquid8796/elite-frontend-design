@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.39.0 - 2026-10-16
+
+- Added proactive creative-media generation to frontend routing: identify meaningful image/video surfaces in a design contract and autonomously create original images through the user's authorized Jarvis MCP ImageGen; integrate verified local asset files and browser-QA crops.
+- Added optional 18th module \`creative-media\` with exact session-bound ImageGen job lifecycle, provenance, original-image preservation, format/crop/alt and reduced-motion requirements. No permission bypass, duplicate jobs, invented video provider, or tool-generated images on every arbitrary section.
+- Implemented portable FFmpeg animated-stills video CLI (H.264 MP4 + JPEG poster), supports 1–12 still images, 2D camera zoom/pan and crossfades; clarified difference from true generative video. Verified FFmpeg 8.1.2 installed on the current user host.
+- Wired media acceptance gate into frontend-design, motion-direction and frontend-qa modules, plugin manifest/default prompt and regression tests.
+- Version 3.39.0 / assembly 3.39.0.0. No site-distillation counts changed.
+
+
 ## 3.38.0 - 2026-10-16
 
 - Distilled complete CreateStudio/Create Framer template website: all 21 sitemap URLs HTTP 200 in browser, ten supplementary invalid paths 404, 5 deep Work cases, 7 Whispers articles, 4 legal URLs including separately self-canonical Terms variants, Studio, Contact and homepage.

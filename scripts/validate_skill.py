@@ -22,6 +22,7 @@ REQUIRED_CORE_MODULES = {
     "visual-qa",
     "frontend-qa",
     "motion-direction",
+    "creative-media",
 }
 
 
@@ -125,6 +126,25 @@ def validate() -> list[str]:
 
     if len(modules) != len(expected):
         errors.append("skill.json contains duplicate module names")
+
+
+    creative_module = MODULE_ROOT / "creative-media" / "module.md"
+    creative_script = MODULE_ROOT / "creative-media" / "scripts" / "render_motion_clip.py"
+    if not creative_module.is_file() or not creative_script.is_file():
+        errors.append("Creative media module or FFmpeg motion clip script missing")
+    else:
+        media_text = creative_module.read_text(encoding="utf-8-sig")
+        root_text = (SKILL_ROOT / "SKILL.md").read_text(encoding="utf-8-sig")
+        for needle in ("mcp__Jarvis_MCP__image_gen__imagegen",
+                       "mcp__Jarvis_MCP__image_gen__read",
+                       "render_motion_clip.py",
+                       "prefers-reduced-motion"):
+            if needle not in media_text:
+                errors.append(f"Creative media module missing: {needle}")
+        if "Proactive creative media" not in root_text or "render_motion_clip.py" not in root_text:
+            errors.append("Root skill must proactively route image/video integration")
+        if len(modules) != 18:
+            errors.append("Expected 18 registered modules including creative-media")
 
     missing_core = REQUIRED_CORE_MODULES - expected
     if missing_core:

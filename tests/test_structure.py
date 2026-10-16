@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import json
 import unittest
@@ -62,6 +62,73 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         source_map = (SKILL_ROOT / "references" / "source-map.md").read_text(encoding="utf-8")
         self.assertIn("Benchmark-only OpenAI frontend-skill snapshot", source_map)
         self.assertIn("not", source_map[source_map.index("Benchmark-only OpenAI frontend-skill snapshot"):].lower())
+
+
+    def test_creative_media_proactive_routing_and_ffmpeg_contract(self) -> None:
+        import shutil
+        import subprocess
+        import sys
+        import tempfile
+
+        root = (SKILL_ROOT / "SKILL.md").read_text(encoding="utf-8")
+        module_root = SKILL_ROOT / "references" / "modules" / "creative-media"
+        module = (module_root / "module.md").read_text(encoding="utf-8")
+        script = module_root / "scripts" / "render_motion_clip.py"
+        registry = json.loads((SKILL_ROOT / "skill.json").read_text(encoding="utf-8"))
+        self.assertIn("creative-media", registry["modules"])
+        self.assertEqual(len(registry["modules"]), 18)
+        for phrase in ("Proactive creative media", "ImageGen", "render_motion_clip.py"):
+            self.assertIn(phrase, root)
+        for phrase in (
+            "do not wait for a separate media request",
+            "mcp__Jarvis_MCP__image_gen__get_state",
+            "mcp__Jarvis_MCP__image_gen__imagegen",
+            "mcp__Jarvis_MCP__image_gen__read",
+            "selected Chrome/Edge extension binding",
+            "motion-graphics/animated-still video",
+            "prefers-reduced-motion",
+            "original local file path",
+        ):
+            self.assertIn(phrase, module)
+        self.assertTrue(script.is_file())
+        help_run = subprocess.run([sys.executable, str(script), "--help"],
+                                  capture_output=True, text=True, check=True)
+        self.assertIn("--seconds-per-image", help_run.stdout)
+        self.assertIn("--ffmpeg", help_run.stdout)
+        with tempfile.TemporaryDirectory(prefix="elite-creative-media-test-") as td:
+            root_path = Path(td)
+            bad = subprocess.run([sys.executable, str(script),
+                                  "--images", str(root_path / "missing.png"),
+                                  "--output", str(root_path / "missing.mp4")],
+                                 capture_output=True, text=True)
+            self.assertNotEqual(bad.returncode, 0)
+            self.assertIn("Missing or empty image", bad.stderr)
+            if not shutil.which("ffmpeg"):
+                return  # Optional FFmpeg dependency; module contract still tested.
+            # PPM fixtures require no image-generation provider, account or Pillow.
+            frames = []
+            for idx, color in enumerate(((210, 40, 80), (40, 120, 220))):
+                path = root_path / f"frame{idx}.ppm"
+                path.write_bytes(b"P6\n128 128\n255\n" + bytes(color) * (128 * 128))
+                frames.append(path)
+            output = root_path / "motion.mp4"
+            rendered = subprocess.run([sys.executable, str(script),
+                                       "--images", *(str(x) for x in frames),
+                                       "--output", str(output),
+                                       "--width", "256", "--height", "256",
+                                       "--fps", "12", "--seconds-per-image", "1",
+                                       "--transition", "0.25"],
+                                      capture_output=True, text=True, timeout=75)
+            self.assertEqual(rendered.returncode, 0, rendered.stderr)
+            self.assertGreater(output.stat().st_size, 1000)
+            self.assertGreater((root_path / "motion-poster.jpg").stat().st_size, 500)
+            if shutil.which("ffprobe"):
+                duration = subprocess.run(["ffprobe", "-v", "error",
+                                           "-show_entries", "format=duration",
+                                           "-of", "default=noprint_wrappers=1:nokey=1",
+                                           str(output)], capture_output=True,
+                                          text=True, check=True, timeout=15)
+                self.assertAlmostEqual(float(duration.stdout.strip()), 1.75, delta=0.15)
 
     def test_scroll_world_module_is_registered_and_hardened(self) -> None:
         manifest = json.loads((SKILL_ROOT / "skill.json").read_text(encoding="utf-8"))

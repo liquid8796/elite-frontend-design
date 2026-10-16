@@ -13,6 +13,7 @@ The root SKILL.md is the only entrypoint. Modules are references loaded on deman
 | visual-qa | Specialist rendered visual evidence: screenshot review, responsive geometry, reference parity and refinement loops | modules/visual-qa/module.md |
 | frontend-qa | Full QA director: target/state proof, functional journeys, navigation/cross-channel parity, responsive accessibility, performance/regression gates, trace evidence and release signoff | modules/frontend-qa/module.md |
 | motion-direction | Motion levels, interaction motion, GSAP-style cinematic choreography with restraint | modules/motion-direction/module.md |
+| creative-media | Proactively generate bespoke UI imagery with the user's authorized Jarvis ImageGen tool; discover real video models or render local FFmpeg motion clips and posters, then integrate verified outputs | modules/creative-media/module.md |
 | experience-engineering | High-ambition authored WebGL/3D worlds: story physics, GPU-first rendering, Experience Director, one progress domain, timeline↔layout synchronization, temporal staging, adaptive performance and key-state QA | modules/experience-engineering/module.md |
 | scroll-world | Continuous scroll-scrubbed camera journeys, seamless pre-rendered media chains, native mobile variants and seam QA | modules/scroll-world/module.md |
 
@@ -71,8 +72,8 @@ Load only the modules that own distinct concerns. A normal frontend implementati
 
 Suggested profiles:
 
-- Marketing implementation: elite-core → frontend-design → frontend-qa; add motion-direction only when motion matters.
-- High-ambition live 3D/WebGL experience: elite-core → experience-engineering → frontend-qa; add frontend-design only for distinct art-direction ideation.
+- Marketing implementation: elite-core → frontend-design → frontend-qa; add creative-media when bespoke art/motion clips add meaningful value, without waiting for a separate media request; add motion-direction only when motion matters.
+- High-ambition live 3D/WebGL experience: elite-core → experience-engineering → frontend-qa; add creative-media for original world textures/posters when appropriate.
 - Scroll-cinematic pre-rendered world: elite-core → scroll-world → frontend-qa; add reference-first when recreating a known experience.
 - Product/dashboard: elite-core → ui-ux-pro-max → frontend-qa; add ui-styling when implementation guidance is needed.
 - Audited pattern composition / known reference library: elite-core ? distilled-web-toolkit ? frontend-design ? frontend-qa.

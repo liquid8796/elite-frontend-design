@@ -1070,3 +1070,7 @@ It uses:
 Do not load every specialist automatically.
 
 Use the smallest set required by the QA inventory.
+
+## Generated Media Acceptance Gate
+
+For media-containing frontend patches, verify the **actual paths and build outputs** of all generated imagery/video, correct crop on desktop and mobile, plausible file size, readable overlay contrast, accessible alternatives and licensed/owner-valid subject matter. A media-generation call or job ID alone is not success: validate the resulting file, actual browser request and rendered region. For video inspect decoding and poster, muted/autoplay/controls, loading priorities, reduced-motion behavior, and failure fallback. State separately whether the asset came from a true video-generation model or an FFmpeg animated-stills composition; do not inflate the degree of synthesis. See \`../creative-media/module.md\`.

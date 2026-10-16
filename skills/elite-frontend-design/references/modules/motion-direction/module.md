@@ -137,3 +137,7 @@ Motion-heavy work must be tested in the browser:
 - resize;
 - reduced-motion behavior when practical;
 - cleanup after navigation/unmount.
+
+## Proactive Media Generation Handoff
+
+When a motion-led frontend benefits from an original visual, do not wait for a separate image/video request. Coordinate with \`../creative-media/module.md\`: request genuine AI video **only if a real connected video-generation provider exists**, or create a deterministic muted MP4 + poster from original/authorized stills with bundled FFmpeg compositor for simple abstract/editorial motion. Choose motion level and performance tier first; avoid exporting a loop where native CSS/SVG is smaller and clearer. Test clip start/mid/end, loop seam, static poster, reduced motion, mobile loading and ownership. Never claim FFmpeg video-of-stills equals a generated moving scene.
