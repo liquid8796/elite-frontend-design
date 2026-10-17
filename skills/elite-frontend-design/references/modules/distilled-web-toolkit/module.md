@@ -1,6 +1,6 @@
 ---
 name: distilled-web-toolkit
-description: "Searchable audited design recommendation toolkit distilled from 24 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
+description: "Searchable audited design recommendation toolkit distilled from 25 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
 ---
 
 # Distilled Web Toolkit
@@ -100,19 +100,19 @@ When they differ:
 
 ## Dataset Map
 
-- `data/sites.csv` ? 24 reference identities and archetypes.
+- `data/sites.csv` ? 25 reference identities and archetypes.
 - `data/live-audit-2026-10-07.csv` ? standardized live desktop/mobile snapshot.
 - `data/patterns.csv` ? reusable audited patterns.
 - `data/route-recipes.csv` ? route and route-family structures.
 - `data/motion-recipes.csv` ? motion/media choreography patterns.
 - `data/responsive-recipes.csv` ? responsive substitutions and transformations.
 - `data/anti-patterns.csv` ? failure modes and residue to avoid.
-- `data/design-profiles.csv` ? 24 audited style/product profiles with dials, fit, performance and accessibility watches.
+- `data/design-profiles.csv` ? 25 audited style/product profiles with dials, fit, performance and accessibility watches.
 - `data/color-systems.csv` ? semantic color-role strategies with transfer constraints.
 - `data/typography-systems.csv` ? audited display/heading/body/utility type-role systems and responsive scales.
 - `data/component-recipes.csv` ? Component Recipes with job, anatomy, interaction, responsive and accessibility contracts.
 - `data/ux-guidelines.csv` ? site-derived UX rules expressed as do/don't guidance.
-- `data/design-primitives-live-2026-10-07.csv` ? live desktop/mobile primitive ledger for the 24-site corpus.
+- `data/design-primitives-live-2026-10-07.csv` ? live desktop/mobile primitive ledger for the 25-site corpus.
 - `specs/*.md` ? one standardized implementation-oriented spec per audited site.
 
 ## Retrieval Workflow
@@ -215,3 +215,11 @@ Signature: #F2F2F2 warm-neutral Swiss graphic magazine, enormous Figtree heading
 Full source-to-contract audit in design-intelligence/sites/bridgebench-opus55-sunset-ocean.md; focused spec in specs/bridgebench-opus55-sunset-ocean.md; preserved prompt in specs/bridgebench-opus55-sunset-ocean-source-prompt.txt. Evidence CSVs: bridgebench-opus55-sunset-ocean-prompt-trace-2026-10-17.csv (T1–T11), -source-components-2026-10-17.csv (20 subsystems with source anchors), -render-states-2026-10-17.csv (five independent states). Evidence screenshots: design-intelligence/sites/bridgebench-opus55-sunset-ocean-1280.webp and -390.webp. Source-provided smoke test passed at 1280×800, live controls 0.9/8, zero console/HTTP shader errors. Independent Chrome WebGL2 runtime confirmed 1280×800, shader content and controls; direct file:// initialization fails.
 
 Physics/render transfer: near-weighted polar mesh **384x330** (127,435 vertices, 253,440 triangles); 8 seeded Gerstner wave families with deep-water dispersion; derivative analytic normals, Jacobian foam, 16 fragment ripple slopes filtered by screen-space footprint; Fresnel Schlick F0=.02, Beckmann-like light spec, dynamic half-float sky cubemap, teal/turquoise scattering and horizon color fog; handmade sky gradient with FBM directional clouds, single sun state; ACEs/sRGB native antialias and gentle near-sea camera drift. **Critical gaps**: not two scrolling normal-map textures, not formally physical Rayleigh/Mie, no bloom/vignette/composer, no Low/High quality, cubemap refreshed six sky faces per frame, no true local wave camera bob, visible UI panel, direct file:// not working, mobile buffer resize inconclusive, and 1080p 60 FPS on a hardware laptop unverified. No unsupported acceptance claims.
+
+## PlatForm / Platform® — Complete Dark AI Infrastructure Website (2026-10-18)
+
+Official **19/19 sitemap paths HTTP200** (homepage, Services, eight Labs essay details + Labs archive, four FrameAuth-shaped Sign Up/Sign In/OTP/Account routes, four legal/data pages), 12 extra URL probes HTTP404 (including TWO broken internal links /404 and /labs/:LGnOksssn). Route inventory 31 rows, same-domain link graph **224 pairs**, **42 successful Chromium 1440x900 and 390x844 states without positive document overflow**, **18 interaction probes** including corrected Labs Load More **seven initial distinct article hrefs → eight**. Source is a commercial **Framer template**, not verified enterprise automation, customer/uptime/compliance data.
+
+Visual signature: dark **#161719**, **Inter Display** oversized H1 **100px desktop →54px mobile**, coral-orange type highlights/CTA, neural-glimmer hero, modular infrastructure case/product tiles, analytics, process, FAQ/team/testimonials, contact and Labs. Home document height ~21.4k desktop/~28.1k mobile, DOM 68 images +4 videos+2 canvases desktop and 60/2/2 mobile (DOM counts, not performance). Most homepage nav routes are fragment anchors; **/pricing and /contact HTTP404**, pricing and contact exist on home. Three initial sample tiers **Studio $49 / Scale $89 / Supreme $249**; one Plan Switch clicked but observed price copy did not change. No successful billing/auth/form submission established.
+
+Auth source explicitly says **Powered by FrameAuth**, Google/GitHub, email/OTP/account routes; front-end inputs not required and true OAuth/provider/session delivery unknown. QA warnings: Labs page no H1, four auth pages no H1, mobile services H1 absent, CMS articles use extra H1 for More Articles; home/newsletter has Emaiil typo and hidden trap fields; generic metadata on legal routes; broken CMS slug and 404 linked in menu; source Netherlands Platform B.V. address and $129 template seller widget must be quarantined from genuine client/business claims. Profile design-intelligence/sites/plat-form.framer.ai.md; spec specs/platform.md; data/platform-*-2026-10-18.csv; screenshots platform-*.webp. Reuse premium-saas-dark as baseline, no new skin.

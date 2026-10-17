@@ -357,6 +357,52 @@ def validate() -> list[str]:
 
 
 
+
+    platform_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "plat-form.framer.ai.md"
+    platform_base = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit"
+    platform_evidence = (
+        platform_base / "data" / "platform-route-inventory-2026-10-18.csv",
+        platform_base / "data" / "platform-internal-links-2026-10-18.csv",
+        platform_base / "data" / "platform-rendered-states-2026-10-18.csv",
+        platform_base / "data" / "platform-interaction-probes-2026-10-18.csv",
+    )
+    platform_images = tuple(
+        SKILL_ROOT / "references" / "design-intelligence" / "sites" / name
+        for name in ("platform-home-1440.webp","platform-home-390.webp",
+                     "platform-services-1440.webp","platform-labs-1440.webp",
+                     "platform-sign-up-1440.webp")
+    )
+    if (not platform_profile.is_file() or not all(p.is_file() for p in platform_evidence)
+            or not all(p.is_file() for p in platform_images)):
+        errors.append("PlatForm full-site profile, CSV or screenshots missing")
+    else:
+        with platform_evidence[0].open(encoding="utf-8-sig",newline="") as f:
+            plat_routes = list(csv.DictReader(f))
+        with platform_evidence[1].open(encoding="utf-8-sig",newline="") as f:
+            plat_links = list(csv.DictReader(f))
+        with platform_evidence[2].open(encoding="utf-8-sig",newline="") as f:
+            plat_states = list(csv.DictReader(f))
+        with platform_evidence[3].open(encoding="utf-8-sig",newline="") as f:
+            plat_probes = list(csv.DictReader(f))
+        plat_live = [r for r in plat_routes if r["sitemap_declared"] == "true"]
+        plat_neg = [r for r in plat_routes if r["sitemap_declared"] == "false"]
+        if len(plat_live) != 19 or len(plat_neg) != 12 or any(r["status"] != "200" for r in plat_live) or any(r["status"] != "404" for r in plat_neg):
+            errors.append("PlatForm expected nineteen HTTP200 and twelve HTTP404 route inventory rows")
+        for fam, expected_count in (("labs-detail",8),("auth",4),("legal",4)):
+            if sum(r["family"] == fam for r in plat_live) != expected_count:
+                errors.append(f"PlatForm missing {expected_count} {fam} paths")
+        if len(plat_links) != 224 or not any(r["target"].endswith("/labs/:LGnOksssn") for r in plat_links):
+            errors.append("PlatForm expected 224 internal links with broken Labs CMS href")
+        if len(plat_states) != 42 or any(r.get("error") or int(r["overflow"]) > 0 for r in plat_states):
+            errors.append("PlatForm expected 42 dual-viewport browser states without outer overflow")
+        if len(plat_probes) != 18 or not any(r["action"] == "CORRECTED Load More link-set 7 to 8" and r["verified"] == "true" for r in plat_probes):
+            errors.append("PlatForm 18 interaction probes or verified Labs Load More missing")
+        source_text=platform_profile.read_text(encoding="utf-8-sig")
+        for needle in ("19/19", "#161719", "Inter Display", "FrameAuth", "Emaiil"):
+            if needle not in source_text:
+                errors.append(f"PlatForm profile missing inspected principle: {needle}")
+
+
     ocean_id = "bridgebench-opus55-sunset-ocean"
     ocean_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / f"{ocean_id}.md"
     ocean_dir = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit"
@@ -1103,8 +1149,8 @@ def validate() -> list[str]:
             errors.append(f"Distilled toolkit search missing capability: {phrase}")
 
     toolkit_specs = toolkit_root / "specs"
-    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 24:
-        errors.append("Distilled web toolkit must contain exactly 24 standardized site specs")
+    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 25:
+        errors.append("Distilled web toolkit must contain exactly 25 standardized site specs")
 
     version = str(manifest.get("version", ""))
     assembly = str(manifest.get("assemblyVersion", ""))

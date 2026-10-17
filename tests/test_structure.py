@@ -1745,22 +1745,22 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         with (data_root / "design-primitives-live-2026-10-07.csv").open(encoding="utf-8-sig", newline="") as f:
             design_live = list(csv.DictReader(f))
 
-        self.assertEqual(len(sites), 24)
-        self.assertEqual(len(live), 24)
+        self.assertEqual(len(sites), 25)
+        self.assertEqual(len(live), 25)
         self.assertGreaterEqual(len(patterns), 70)
         self.assertGreaterEqual(len(routes), 20)
         self.assertGreaterEqual(len(motions), 15)
         self.assertGreaterEqual(len(responsive), 20)
         self.assertGreaterEqual(len(anti), 20)
-        self.assertEqual(len(design_profiles), 24)
-        self.assertEqual(len(color_systems), 24)
-        self.assertEqual(len(typography_systems), 24)
-        self.assertEqual(len(components), 115)
-        self.assertEqual(len(ux_guidelines), 99)
-        self.assertEqual(len(design_live), 24)
+        self.assertEqual(len(design_profiles), 25)
+        self.assertEqual(len(color_systems), 25)
+        self.assertEqual(len(typography_systems), 25)
+        self.assertEqual(len(components), 123)
+        self.assertEqual(len(ux_guidelines), 107)
+        self.assertEqual(len(design_live), 25)
 
         specs = sorted((module_root / "specs").glob("*.md"))
-        self.assertEqual(len(specs), 24)
+        self.assertEqual(len(specs), 25)
 
         expected_ids = {
             "refokus",
@@ -1787,6 +1787,7 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
             "fabrica",
             "createstudio",
             "bridgebench-opus55-sunset-ocean",
+            "platform",
         }
         self.assertEqual({row["site_id"] for row in sites}, expected_ids)
         self.assertEqual({row["site_id"] for row in live}, expected_ids)
@@ -2187,6 +2188,60 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
                                 cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True)
         self.assertIn('"source_site": "bridgebench-opus55-sunset-ocean"', result.stdout)
 
+
+
+    def test_platform_full_site_and_labs_load_more_contract(self) -> None:
+        import csv
+        import subprocess
+        import sys
+        data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
+        def read(name):
+            with (data / name).open(encoding="utf-8-sig", newline="") as f:
+                return list(csv.DictReader(f))
+        routes = read("platform-route-inventory-2026-10-18.csv")
+        links = read("platform-internal-links-2026-10-18.csv")
+        states = read("platform-rendered-states-2026-10-18.csv")
+        probes = read("platform-interaction-probes-2026-10-18.csv")
+        official = [r for r in routes if r["sitemap_declared"] == "true"]
+        supplementary = [r for r in routes if r["sitemap_declared"] == "false"]
+        self.assertEqual(len(routes), 31)
+        self.assertEqual(len(official), 19)
+        self.assertTrue(all(r["status"] == "200" for r in official))
+        self.assertEqual(len(supplementary), 12)
+        self.assertTrue(all(r["status"] == "404" for r in supplementary))
+        for family, n in (("home", 1), ("services", 1), ("labs-index", 1),
+                          ("labs-detail", 8), ("auth", 4), ("legal", 4)):
+            self.assertEqual(sum(r["family"] == family for r in official), n)
+        broken = {r["url"] for r in supplementary}
+        self.assertTrue(any(u.endswith("/404") for u in broken))
+        self.assertTrue(any(u.endswith("/labs/:LGnOksssn") for u in broken))
+        self.assertEqual(len(links), 224)
+        self.assertTrue(any(r["target"].endswith("/404") for r in links))
+        self.assertTrue(any(r["target"].endswith("/labs/:LGnOksssn") for r in links))
+        self.assertEqual(len(states), 42)
+        self.assertTrue(all(not r.get("error") and int(r["overflow"]) == 0 for r in states))
+        self.assertEqual({r["viewport"] for r in states}, {"1440x900", "390x844"})
+        self.assertEqual(len(probes), 18)
+        more = next(r for r in probes if r["action"] == "CORRECTED Load More link-set 7 to 8")
+        self.assertEqual(more["verified"], "true")
+        self.assertIn('"article_links": 7', more["before"])
+        self.assertIn('"article_links": 8', more["after"])
+        switch = next(r for r in probes if r["action"] == "pricing first Plan Switch actual copy change")
+        self.assertEqual(switch["verified"], "false")
+        profile_dir = SKILL_ROOT / "references" / "design-intelligence" / "sites"
+        profile = (profile_dir / "plat-form.framer.ai.md").read_text(encoding="utf-8-sig")
+        for phrase in ("19/19", "#161719", "Inter Display", "FrameAuth", "224", "Load More", "Emaiil"):
+            self.assertIn(phrase, profile)
+        for name in ("platform-home-1440.webp", "platform-home-390.webp",
+                     "platform-services-1440.webp", "platform-labs-1440.webp",
+                     "platform-sign-up-1440.webp"):
+            self.assertGreater((profile_dir / name).stat().st_size, 2000)
+        spec = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "specs" / "platform.md"
+        self.assertIn("/labs", spec.read_text(encoding="utf-8-sig"))
+        tool = SKILL_ROOT / "scripts" / "distilled_toolkit_search.py"
+        result = subprocess.run([sys.executable, str(tool), "AI infra FrameAuth Labs", "--site", "platform", "--design-system", "--json"],
+                                cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True)
+        self.assertIn('"source_site": "platform"', result.stdout)
 
 if __name__ == "__main__":
     unittest.main()

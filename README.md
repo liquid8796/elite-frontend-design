@@ -2,7 +2,15 @@
 
 A portable ChatGPT + Codex plugin containing one profile-routed frontend design skill focused on one outcome: ship frontend work that is distinctive, useful, responsive, and visually verified after render.
 
-Current version: 3.40.0
+Current version: 3.41.0
+
+## PlatForm / Platform full 19-route Framer distillation (3.41.0)
+
+**19/19 official sitemap URLs HTTP200**, covering homepage, /services, /labs + **eight Labs articles**, four FrameAuth-shaped auth routes (/sign-up,/sign-in,/otp,/account), and four legal/data routes (/terms-of-service,/privacy-policy,/data-protection,/gdpr-compliance). **12 supplementary 404 paths**, including two actually linked dead routes (/404 and /labs/:LGnOksssn). **224 internal source-target link pairs**. **42 Chromium dual-viewport render states** (all 19+two broken paths at 1440x900 and 390x844, no outer overflow) and **18 interaction evidence probes**. Labs archive starts with **seven distinct article links** and Load More adds the eighth; billing Plan Switch clicked but price text not observed to change.
+
+Distinctive near-black **#161719**, large Inter Display 100px desktop/54px mobile, coral CTA, dark neural tech media, long-homepage sections Work/Process/Analytics/Pricing/FAQ/Team/Testimonials/Contact, standalone Services, eight Labs essays, three example tiers Studio $49/Scale $89/Supreme $249, FrameAuth branded auth forms and four legal pages. Important caveats: auth backend not proven, duplicated/missing H1s on CMS/auth/mobile Services, newsletter typo Emaiil, generic legal titles, linked 404/CMS placeholder, source company metrics/GDPR and template seller $129 promotion must not become client proof.
+
+Added **10 patterns, 10 route/flow recipes, 3 motion, 3 responsive, 8 anti-patterns, 8 components, 8 UX guidelines**, plus style/color/typography profiles, screenshot evidence and corpus references. New totals: **25 references, 207 patterns, 128 routes, 43 motion, 65 responsive, 114 anti-patterns, 123 components, 107 UX guidelines**; still **13 baseline skins and 18 modules**, reusing premium-saas-dark.
 
 ## BridgeBench Opus 5.5 Sunset Ocean: source+prompt distillation (3.40.0)
 
@@ -123,7 +131,7 @@ Build the upload archive:
 python scripts/package_plugin.py
 ~~~
 
-Upload the resulting `dist/elite-frontend-design-3.40.0.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
+Upload the resulting `dist/elite-frontend-design-3.41.0.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
 
 For public distribution, the same package can be submitted to the universal plugin directory. Public submission still requires the publisher to complete verified developer identity and policy attestations in the OpenAI submission flow.
 

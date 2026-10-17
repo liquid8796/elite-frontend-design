@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.41.0 - 2026-10-18
+
+- Distilled complete PlatForm / Platform dark AI infrastructure Framer template: 19 sitemap routes (homepage, Services, Labs archive and 8 essays, 4 FrameAuth-shaped auth routes, 4 legal/data pages) all HTTP200, 12 extra HTTP404 including linked dead /404 and /labs/:LGnOksssn.
+- Saved 31-row route inventory, 224 internal source→target pairs, 42 desktop/mobile Chromium states without outer overflow, 18 bounded interaction probes and 5 source screenshots. Labs Load More correctly adds eighth article after first seven; first pricing Plan Switch action did not show a change in captured text.
+- Added 10 source-backed patterns, 10 route/flow recipes, 3 motion, 3 responsive, 8 anti-patterns, 8 component recipes, 8 UX guidelines, deep site profile/spec and light/dark typography evidence. Reuses premium-saas-dark skin.
+- Production caveats: FrameAuth UI not real backend proof, auth and Labs H1 missing, service mobile H1 missing, article H1 duplication, Emaiil newsletter typo, generic legal titles, sample Platform B.V. company/AI performance claims and $129 template seller promotion.
+- v3.41.0/assembly 3.41.0.0: 25 sites, 207 patterns, 128 routes, 43 motion, 65 responsive, 114 anti-patterns, 123 components, 107 UX guidelines. Still 13 skins and 18 modules.
+
+
 ## 3.40.0 - 2026-10-17
 
 - Deep source-and-original-prompt audit of BridgeBench Opus 5.5 Sunset Ocean: one local Three.js/WebGL2 page, 20 shader/runtime system evidence rows, 11 T1–T11 prompt acceptance rows, five independent browser states and two small screenshots.
