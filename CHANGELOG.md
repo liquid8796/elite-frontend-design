@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.42.0 - 2026-10-18
+
+- Distilled **all 48** Superior Framer template sitemap routes (47 HTTP200 plus real HTTP404 /404), eleven supplementary 404 probes and 966 source-target internal href relationships. Entire three full-page hero variants, 15 integration details, ten blog essays, six job roles and marketing, pricing, lead forms, downloads, changelog, waitlist and legal were enumerated.
+- **Connected Jarvis MCP to the user's own Chrome desktop** and inspected live website desktop/mobile plus representative route families; 98 isolated Chromium dual-viewport route states (1440/390 with zero positive document overflow/JS errors) supplemented Chrome, not replaced it. Saved 20 interaction probes and nine screenshots.
+- Added **standing Chrome MCP requirement for full-site distillation** to the root skill and design-intelligence module. Keep source confidence boundaries: only seven of ten blog article links initially shown, 15/15 integrations and 6/6 careers linked, absent H1 in integration/waitlist, hero-v3 double H1, blank-valid waitlist email, no backend API/hiring/form/billing verification.
+- Added 10 patterns, 11 flow recipes, 3 motion, 4 responsive, 9 anti-patterns, 9 components, 9 UX guidelines, design/color/typography profile and site spec on existing clean-product-light skin.
+- v3.42.0/assembly3.42.0.0 corpus: 26 site references, 217 patterns, 139 routes, 46 motion, 69 responsive, 123 anti-patterns, 132 components, 116 UX guidelines; 13 skins/18 modules unchanged.
+
+
 ## 3.41.0 - 2026-10-18
 
 - Distilled complete PlatForm / Platform dark AI infrastructure Framer template: 19 sitemap routes (homepage, Services, Labs archive and 8 essays, 4 FrameAuth-shaped auth routes, 4 legal/data pages) all HTTP200, 12 extra HTTP404 including linked dead /404 and /labs/:LGnOksssn.

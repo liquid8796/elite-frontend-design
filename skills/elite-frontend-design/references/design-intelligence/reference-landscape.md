@@ -30,6 +30,7 @@ Audited profiles currently include:
 - **CreateStudio / Create (Framer Swiss Figtree agency, five creative cases, seven Whispers essays, 2 Terms URLs)** -> sites/createstudio.framer.media.md
 - **BridgeBench Opus 5.5 Sunset Ocean (local WebGL one-screen photoreal simulation and source+prompt verification)** -> sites/bridgebench-opus55-sunset-ocean.md
 - **PlatForm / Platform (Framer dark modular infrastructure AI SaaS, full 19-route audit with eight Labs articles, FrameAuth UI and GDPR/legal)** -> sites/plat-form.framer.ai.md
+- **Superior (complete 48-route white Inter SaaS template with three alternate full hero landing pages, 15 integrations, ten blog articles, six careers, pricing/lead flows, user-machine Chrome MCP evidence)** -> sites/superior-template.framer.website.md
 - **Nouva (Framer AI content/auth template)** -> `sites/nouva-template.framer.website.md`
 - **Powder (Framer template)** -> `sites/powder.framer.website.md`
 - **Nudge Folio (Framer template)** -> `sites/nudge-folio.framer.website.md`

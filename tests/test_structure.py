@@ -1745,22 +1745,22 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         with (data_root / "design-primitives-live-2026-10-07.csv").open(encoding="utf-8-sig", newline="") as f:
             design_live = list(csv.DictReader(f))
 
-        self.assertEqual(len(sites), 25)
-        self.assertEqual(len(live), 25)
+        self.assertEqual(len(sites), 26)
+        self.assertEqual(len(live), 26)
         self.assertGreaterEqual(len(patterns), 70)
         self.assertGreaterEqual(len(routes), 20)
         self.assertGreaterEqual(len(motions), 15)
         self.assertGreaterEqual(len(responsive), 20)
         self.assertGreaterEqual(len(anti), 20)
-        self.assertEqual(len(design_profiles), 25)
-        self.assertEqual(len(color_systems), 25)
-        self.assertEqual(len(typography_systems), 25)
-        self.assertEqual(len(components), 123)
-        self.assertEqual(len(ux_guidelines), 107)
-        self.assertEqual(len(design_live), 25)
+        self.assertEqual(len(design_profiles), 26)
+        self.assertEqual(len(color_systems), 26)
+        self.assertEqual(len(typography_systems), 26)
+        self.assertEqual(len(components), 132)
+        self.assertEqual(len(ux_guidelines), 116)
+        self.assertEqual(len(design_live), 26)
 
         specs = sorted((module_root / "specs").glob("*.md"))
-        self.assertEqual(len(specs), 25)
+        self.assertEqual(len(specs), 26)
 
         expected_ids = {
             "refokus",
@@ -1788,6 +1788,7 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
             "createstudio",
             "bridgebench-opus55-sunset-ocean",
             "platform",
+            "superior",
         }
         self.assertEqual({row["site_id"] for row in sites}, expected_ids)
         self.assertEqual({row["site_id"] for row in live}, expected_ids)
@@ -2242,6 +2243,68 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         result = subprocess.run([sys.executable, str(tool), "AI infra FrameAuth Labs", "--site", "platform", "--design-system", "--json"],
                                 cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True)
         self.assertIn('"source_site": "platform"', result.stdout)
+
+
+    def test_superior_complete_sitemap_chrome_and_route_families(self) -> None:
+        import csv
+        import subprocess
+        import sys
+        data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
+        def read(filename):
+            with (data / filename).open(encoding="utf-8-sig", newline="") as f:
+                return list(csv.DictReader(f))
+        routes = read("superior-route-inventory-2026-10-18.csv")
+        links = read("superior-internal-links-2026-10-18.csv")
+        states = read("superior-rendered-states-2026-10-18.csv")
+        probes = read("superior-interaction-probes-2026-10-18.csv")
+        official = [r for r in routes if r["sitemap_declared"] == "true"]
+        supplement = [r for r in routes if r["sitemap_declared"] == "false"]
+        self.assertEqual(len(routes), 59)
+        self.assertEqual(len(official), 48)
+        self.assertEqual(sum(r["status"] == "200" for r in official), 47)
+        self.assertEqual(sum(r["status"] == "404" for r in official), 1)
+        self.assertTrue(any(r["url"].endswith("/404") and r["status"] == "404" for r in official))
+        self.assertEqual(len(supplement), 11)
+        self.assertTrue(all(r["status"] == "404" for r in supplement))
+        for family, count in (("hero-variant",3),("integrations-detail",15),("blog-detail",10),
+                              ("careers-detail",6),("legal",2),("pricing",1),("contact",1),
+                              ("book-a-demo",1),("download",1),("changelog",1),("waitlist",1)):
+            self.assertEqual(sum(r["family"] == family and r["sitemap_declared"] == "true"
+                                 for r in routes),count)
+        self.assertEqual(len(links), 966)
+        self.assertEqual(len(states), 98)
+        self.assertEqual({r["viewport"] for r in states}, {"1440x900","390x844"})
+        self.assertTrue(all(not r.get("error") and int(r["overflow"]) == 0 and r["js_error_count"] == "0"
+                            for r in states))
+        self.assertEqual(sum(r["http_status"] == "200" for r in states), 94)
+        self.assertEqual(len(probes), 20)
+        integr = next(r for r in probes if r["action"] == "15 integrations catalog link coverage")
+        jobs = next(r for r in probes if r["action"] == "six job detail link reachability")
+        blog = next(r for r in probes if r["action"] == "10 CMS article index link coverage")
+        self.assertIn('"unique_links": 15', integr["after"])
+        self.assertIn('"count": 6', jobs["after"])
+        self.assertIn('"count": 7', blog["after"])
+        self.assertEqual(blog["verified"], "false") # Archive 7/10 evidence, not all linked
+        waitlist = next(r for r in probes if r["route"] == "/waitlist")
+        self.assertIn('"valid": true', waitlist["after"])
+        root = (SKILL_ROOT / "SKILL.md").read_text(encoding="utf-8")
+        self.assertIn("Connect Jarvis MCP directly to the user's own Chrome",root)
+        profile_root = SKILL_ROOT / "references" / "design-intelligence" / "sites"
+        profile = (profile_root / "superior-template.framer.website.md").read_text(encoding="utf-8-sig")
+        for fact in ("48", "47", "96", "98", "Chrome", "#FFFFFF", "Inter", "Waitlist"):
+            self.assertIn(fact,profile)
+        for name in ("superior-home-1440.webp","superior-home-390.webp","superior-hero-v2-1440.webp",
+                     "superior-pricing-1440.webp","superior-integrations-1440.webp",
+                     "superior-integration-orbit-1440.webp","superior-blog-1440.webp",
+                     "superior-careers-1440.webp","superior-book-demo-1440.webp"):
+            self.assertGreater((profile_root / name).stat().st_size, 2000)
+        spec = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "specs" / "superior.md"
+        self.assertIn("Jarvis MCP", spec.read_text(encoding="utf-8-sig"))
+        tool = SKILL_ROOT / "scripts" / "distilled_toolkit_search.py"
+        result = subprocess.run([sys.executable, str(tool), "white SaaS dashboard Inter integrations", "--site", "superior", "--design-system", "--json"],
+                                cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True)
+        self.assertIn('"source_site": "superior"', result.stdout)
+
 
 if __name__ == "__main__":
     unittest.main()

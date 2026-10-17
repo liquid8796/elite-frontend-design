@@ -1,6 +1,6 @@
 ---
 name: distilled-web-toolkit
-description: "Searchable audited design recommendation toolkit distilled from 25 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
+description: "Searchable audited design recommendation toolkit distilled from 26 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
 ---
 
 # Distilled Web Toolkit
@@ -100,19 +100,19 @@ When they differ:
 
 ## Dataset Map
 
-- `data/sites.csv` ? 25 reference identities and archetypes.
+- `data/sites.csv` ? 26 reference identities and archetypes.
 - `data/live-audit-2026-10-07.csv` ? standardized live desktop/mobile snapshot.
 - `data/patterns.csv` ? reusable audited patterns.
 - `data/route-recipes.csv` ? route and route-family structures.
 - `data/motion-recipes.csv` ? motion/media choreography patterns.
 - `data/responsive-recipes.csv` ? responsive substitutions and transformations.
 - `data/anti-patterns.csv` ? failure modes and residue to avoid.
-- `data/design-profiles.csv` ? 25 audited style/product profiles with dials, fit, performance and accessibility watches.
+- `data/design-profiles.csv` ? 26 audited style/product profiles with dials, fit, performance and accessibility watches.
 - `data/color-systems.csv` ? semantic color-role strategies with transfer constraints.
 - `data/typography-systems.csv` ? audited display/heading/body/utility type-role systems and responsive scales.
 - `data/component-recipes.csv` ? Component Recipes with job, anatomy, interaction, responsive and accessibility contracts.
 - `data/ux-guidelines.csv` ? site-derived UX rules expressed as do/don't guidance.
-- `data/design-primitives-live-2026-10-07.csv` ? live desktop/mobile primitive ledger for the 25-site corpus.
+- `data/design-primitives-live-2026-10-07.csv` ? live desktop/mobile primitive ledger for the 26-site corpus.
 - `specs/*.md` ? one standardized implementation-oriented spec per audited site.
 
 ## Retrieval Workflow
@@ -223,3 +223,15 @@ Official **19/19 sitemap paths HTTP200** (homepage, Services, eight Labs essay d
 Visual signature: dark **#161719**, **Inter Display** oversized H1 **100px desktop →54px mobile**, coral-orange type highlights/CTA, neural-glimmer hero, modular infrastructure case/product tiles, analytics, process, FAQ/team/testimonials, contact and Labs. Home document height ~21.4k desktop/~28.1k mobile, DOM 68 images +4 videos+2 canvases desktop and 60/2/2 mobile (DOM counts, not performance). Most homepage nav routes are fragment anchors; **/pricing and /contact HTTP404**, pricing and contact exist on home. Three initial sample tiers **Studio $49 / Scale $89 / Supreme $249**; one Plan Switch clicked but observed price copy did not change. No successful billing/auth/form submission established.
 
 Auth source explicitly says **Powered by FrameAuth**, Google/GitHub, email/OTP/account routes; front-end inputs not required and true OAuth/provider/session delivery unknown. QA warnings: Labs page no H1, four auth pages no H1, mobile services H1 absent, CMS articles use extra H1 for More Articles; home/newsletter has Emaiil typo and hidden trap fields; generic metadata on legal routes; broken CMS slug and 404 linked in menu; source Netherlands Platform B.V. address and $129 template seller widget must be quarantined from genuine client/business claims. Profile design-intelligence/sites/plat-form.framer.ai.md; spec specs/platform.md; data/platform-*-2026-10-18.csv; screenshots platform-*.webp. Reuse premium-saas-dark as baseline, no new skin.
+
+## Superior — Entire Bright Startup/SaaS Website (2026-10-18)
+
+**Browser rule:** Jarvis MCP was explicitly connected to the user's own **Chrome on Win32NT** (desktop and phone-width UI) and used for direct navigation/DOM/screenshot inspection of key route families, supplemented by independent Playwright Chromium over the full URL corpus. For all future website distillations, **connect the user's Chrome with Jarvis MCP first** wherever authorized/available; never represent headless Chromium as direct user Chrome. Record any blocked browser connection as such rather than claim it succeeded.
+
+Official **48 sitemap URLs**: **47 HTTP200 and /404 HTTP404**; 11 non-sitemap invalid HTTP404. 3 independently indexed *complete landing hero variants*, Integrations archive + 15 details, Blog archive + 10 essays, Careers archive + 6 positions, About/Pricing/Contact/Book a Demo/Download/Changelog/Waitlist/2 legal and home. All **15 integration** and **6 career detail URLs** accessible directly from their respective archive. Initial Blog archive **7/10** distinct CMS detail URLs exposed; remaining discoverability not proven.
+
+CSV evidence: `data/superior-route-inventory-2026-10-18.csv` **59 routes** (48+11), `-internal-links-` **966 unique href pairs**, `-rendered-states-` **98 desktop/mobile Chromium states** at 1440x900 and 390x844 (zero JS errors/outer overflow) and `-interaction-probes-` **20 bounded probes**. User Chrome in 1905x889 desktop and ~430x844 phone width directly validated initial home and grouped pages. Nine screenshot evidence files `design-intelligence/sites/superior-*.webp`.
+
+Distinctive: pure white **#FFFFFF** canvas, large **Inter** SaaS H1 **64px desktop →36px mobile**, green NEW API2.0 announcement, black pill CTAs, carefully framed application dashboard, teamwork/planner/analytics scenarios, integration partners, social proof, blogs and trial closing. Homepage 17063px desktop/20275px mobile; **45 img/0 video/1 canvas** desktop, **39 img/0 video/1 canvas** mobile (DOM counts, no evidence of 3D/video performance). Reuse **clean-product-light** existing skin.
+
+Production QA: integration detail and waitlist missing semantic H1, hero-v3 duplicated desktop H1, Blog initially links 7/10 essays, Search Icon clicks do not establish functional filtering, waitlist Email required=false and blank form checkValidity true, no backend for API connections/billing/downloads/jobs/submissions validated, sitemap includes /404 HTTP404, SEO generic template titles. Source is a Framer vendor template; do not convert testimonial/customer metrics or template sales into business proof. Profile `design-intelligence/sites/superior-template.framer.website.md` and spec `specs/superior.md`.

@@ -2,7 +2,7 @@
 name: elite-frontend-design
 description: "Elite frontend design, implementation, and full-spectrum QA orchestration for landing pages, product UIs, dashboards, immersive interactive/WebGL experiences, redesigns, screenshot/image-to-code work, and release verification. Combines brief-specific art direction, practical product structure, high-ambition experience engineering, one-progress-domain synchronization, reference-first design, reference-derived design intelligence, functional browser journeys, cross-channel rendered evidence, responsive accessibility, performance/regression QA, and evidence-driven signoff while avoiding generic AI UI."
 metadata:
-  version: "3.41.0"
+  version: "3.42.0"
   architecture: "profile-router-plus-visual-loop"
 ---
 
@@ -38,6 +38,8 @@ Start with one profile:
 | Product detail / commerce / configurable product | elite-core + frontend-design | frontend-qa; ui-ux-pro-max when product UX depth is needed |
 | Screenshot, mockup, reference image, existing website/video recreation | reference-first + elite-core | visual-qa; use frontend-qa when interactions/release confidence also matter |
 | Inspiration URL/source distillation - learn the quality or design language without cloning | reference-first + design-intelligence | frontend-design when applying the distilled patterns; frontend-qa when implementing |
+
+**Full-site URL distillation browser rule (user instruction): Connect Jarvis MCP directly to the user's own Chrome on their computer for inspection before relying on crawls, headless browsers or independent screenshots.** Use connected-browsers selection, an explicitly opened session, session-owned tab and real Chrome navigation, DOM inspection, screenshot and representative interaction at desktop/mobile widths. Then supplement with official sitemap inventory, all linked route families, extra 404 probes and exhaustive isolated Chromium/Playwright where useful. Never describe independent Chromium as the user's Chrome, never claim Chrome inspection if not connected, and report an unavailable browser honestly. Restore changed browser dimensions and clean up session-owned tabs. Preserve full-site evidence: route inventory, links, responsive states, interaction probes, detailed style/UX recipes and an honest confidence boundary.
 | Audited pattern lookup / compose from distilled website library | elite-core + distilled-web-toolkit | frontend-design, frontend-qa |
 | Scaffolded visual system / uncertain design primitives / prior visual drift | elite-core + design-intelligence | frontend-design; Adaptive Capability Routing chooses LOCKED/GUIDED/BESPOKE, then frontend-qa |
 | Existing UI redesign | elite-core + ui-ux-pro-max | frontend-design, frontend-qa |

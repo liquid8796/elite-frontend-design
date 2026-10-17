@@ -358,6 +358,53 @@ def validate() -> list[str]:
 
 
 
+
+    superior_dir = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit"
+    superior_id = "superior"
+    superior_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "superior-template.framer.website.md"
+    superior_spec = superior_dir / "specs" / "superior.md"
+    superior_evidence = (
+        superior_dir / "data" / "superior-route-inventory-2026-10-18.csv",
+        superior_dir / "data" / "superior-internal-links-2026-10-18.csv",
+        superior_dir / "data" / "superior-rendered-states-2026-10-18.csv",
+        superior_dir / "data" / "superior-interaction-probes-2026-10-18.csv",
+    )
+    superior_images = [
+        SKILL_ROOT / "references" / "design-intelligence" / "sites" / f"superior-{name}.webp"
+        for name in ("home-1440","home-390","hero-v2-1440","pricing-1440",
+                     "integrations-1440","integration-orbit-1440","blog-1440",
+                     "careers-1440","book-demo-1440")
+    ]
+    if not superior_profile.is_file() or not superior_spec.is_file() or not all(f.is_file() for f in (*superior_evidence,*superior_images)):
+        errors.append("Superior complete-site profile, spec, evidence or nine screenshots missing")
+    else:
+        with superior_evidence[0].open(encoding="utf-8-sig",newline="") as f:sup_routes=list(csv.DictReader(f))
+        with superior_evidence[1].open(encoding="utf-8-sig",newline="") as f:sup_links=list(csv.DictReader(f))
+        with superior_evidence[2].open(encoding="utf-8-sig",newline="") as f:sup_states=list(csv.DictReader(f))
+        with superior_evidence[3].open(encoding="utf-8-sig",newline="") as f:sup_probes=list(csv.DictReader(f))
+        sup_off=[r for r in sup_routes if r["sitemap_declared"]=="true"]
+        sup_neg=[r for r in sup_routes if r["sitemap_declared"]=="false"]
+        if len(sup_routes)!=59 or len(sup_off)!=48 or sum(r["status"]=="200" for r in sup_off)!=47 or not any(r["url"].endswith("/404") and r["status"]=="404" for r in sup_off):
+            errors.append("Superior sitemap requires forty-seven HTTP200 paths and a real HTTP404 /404")
+        if len(sup_neg)!=11 or any(r["status"]!="404" for r in sup_neg):
+            errors.append("Superior supplemental negatives require eleven HTTP404 paths")
+        for family,n in (("hero-variant",3),("integrations-detail",15),("blog-detail",10),("careers-detail",6)):
+            if sum(r["family"]==family for r in sup_off)!=n:
+                errors.append(f"Superior source route family missing {n} {family}")
+        if len(sup_links)!=966:
+            errors.append("Superior internal link graph expected 966 href pairs")
+        if len(sup_states)!=98 or any(r.get("error") or int(r["overflow"])>0 or r.get("js_error_count")!="0" for r in sup_states):
+            errors.append("Superior expected 98 clean desktop/mobile browser states")
+        if len(sup_probes)!=20:
+            errors.append("Superior expected 20 interaction probes")
+        prof=superior_profile.read_text(encoding="utf-8-sig")
+        for word in ("48", "Chrome", "Inter", "#FFFFFF", "966"):
+            if word not in prof:
+                errors.append(f"Superior profile missing source evidence: {word}")
+    root_skill = (SKILL_ROOT / "SKILL.md").read_text(encoding="utf-8")
+    if "Connect Jarvis MCP directly to the user's own Chrome" not in root_skill:
+        errors.append("Source distillation must instruct real user Chrome MCP inspection")
+
     platform_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "plat-form.framer.ai.md"
     platform_base = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit"
     platform_evidence = (
@@ -1149,8 +1196,8 @@ def validate() -> list[str]:
             errors.append(f"Distilled toolkit search missing capability: {phrase}")
 
     toolkit_specs = toolkit_root / "specs"
-    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 25:
-        errors.append("Distilled web toolkit must contain exactly 25 standardized site specs")
+    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 26:
+        errors.append("Distilled web toolkit must contain exactly 26 standardized site specs")
 
     version = str(manifest.get("version", ""))
     assembly = str(manifest.get("assemblyVersion", ""))

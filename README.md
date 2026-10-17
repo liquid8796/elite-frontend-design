@@ -2,7 +2,17 @@
 
 A portable ChatGPT + Codex plugin containing one profile-routed frontend design skill focused on one outcome: ship frontend work that is distinctive, useful, responsive, and visually verified after render.
 
-Current version: 3.41.0
+Current version: 3.42.0
+
+## Superior full 48-route SaaS Framer template and Chrome MCP inspection (3.42.0)
+
+**Official 48 URL sitemap, 47 HTTP200 and sitemap /404 HTTP404**. Supplementary 11 non-sitemap paths also HTTP404. Complete website corpus: Home, 3 **entire independent hero landing pages** (/heroes/hero-v2,v3,v4), Integrations archive + **15 deep provider pages**, Blog archive + **10 essays**, Careers archive + **six roles**, Pricing, About, Contact, Book a Demo, Download, Changelog, Waitlist, 2 legal and a 404. **59 URL census rows, 966 source-target internal links**, **98 Chromium 1440px/390px states with zero outer document overflow/JS errors**, **20 bounded interaction probes**, **9 evidence screenshots**.
+
+**New required method:** connect Jarvis MCP to the **user's own Chrome on Windows** before inspecting a source website. This audit connected the live Chrome instance, used extension DOM/screenshots and inspected homepage at desktop and mobile plus representative deep page families. Independent Playwright provided comprehensive 48-page two-breakpoint evidence; it is **not** relabeled as direct user Chrome.
+
+Design DNA: pure white #FFFFFF, Inter 64px desktop /36px mobile center headline, tiny green NEW API 2.0 tag, black primary CTA and a large believable software dashboard screenshot, modular teamwork/planner/analytics/feature/social proof journeys. Evidence notes: all 15 integrations + 6 job details linked from their archives, but **Blog only 7 of 10** essays initially linked. Source integration details and Waitlist lack proper H1; Hero v3 duplicates desktop H1; Waitlist email is **not required** (blank form native-valid), no payment/application/actual API integration proof. Source customer mock KPIs, salaries/jobs, release dates and Framer template seller links not verified business claims.
+
+Added **10 patterns, 11 route/flow recipes, 3 motion recipes, 4 responsive, 9 anti-patterns, 9 components and 9 UX guidelines**, plus full color/typography/design profiles and deep 48-route spec, reusing `clean-product-light`. New corpus totals **26 references, 217 patterns, 139 route recipes, 46 motion, 69 responsive, 123 anti-patterns, 132 components, 116 UX guidelines**. Skin count remains 13; module count 18.
 
 ## PlatForm / Platform full 19-route Framer distillation (3.41.0)
 
@@ -131,7 +141,7 @@ Build the upload archive:
 python scripts/package_plugin.py
 ~~~
 
-Upload the resulting `dist/elite-frontend-design-3.41.0.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
+Upload the resulting `dist/elite-frontend-design-3.42.0.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
 
 For public distribution, the same package can be submitted to the universal plugin directory. Public submission still requires the publisher to complete verified developer identity and policy attestations in the OpenAI submission flow.
 
