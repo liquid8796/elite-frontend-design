@@ -1,6 +1,6 @@
 ---
 name: distilled-web-toolkit
-description: "Searchable audited design recommendation toolkit distilled from 23 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
+description: "Searchable audited design recommendation toolkit distilled from 24 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
 ---
 
 # Distilled Web Toolkit
@@ -100,19 +100,19 @@ When they differ:
 
 ## Dataset Map
 
-- `data/sites.csv` ? 23 reference identities and archetypes.
+- `data/sites.csv` ? 24 reference identities and archetypes.
 - `data/live-audit-2026-10-07.csv` ? standardized live desktop/mobile snapshot.
 - `data/patterns.csv` ? reusable audited patterns.
 - `data/route-recipes.csv` ? route and route-family structures.
 - `data/motion-recipes.csv` ? motion/media choreography patterns.
 - `data/responsive-recipes.csv` ? responsive substitutions and transformations.
 - `data/anti-patterns.csv` ? failure modes and residue to avoid.
-- `data/design-profiles.csv` ? 23 audited style/product profiles with dials, fit, performance and accessibility watches.
+- `data/design-profiles.csv` ? 24 audited style/product profiles with dials, fit, performance and accessibility watches.
 - `data/color-systems.csv` ? semantic color-role strategies with transfer constraints.
 - `data/typography-systems.csv` ? audited display/heading/body/utility type-role systems and responsive scales.
 - `data/component-recipes.csv` ? Component Recipes with job, anatomy, interaction, responsive and accessibility contracts.
 - `data/ux-guidelines.csv` ? site-derived UX rules expressed as do/don't guidance.
-- `data/design-primitives-live-2026-10-07.csv` ? live desktop/mobile primitive ledger for the 23-site corpus.
+- `data/design-primitives-live-2026-10-07.csv` ? live desktop/mobile primitive ledger for the 24-site corpus.
 - `specs/*.md` ? one standardized implementation-oriented spec per audited site.
 
 ## Retrieval Workflow
@@ -207,3 +207,11 @@ Notable visual language: dark rgb(18,18,18), Inter inner-page 148px/64px H1, hom
 Official 21/21 sitemap paths return HTTP 200 in Chromium (one initial requests/TLS EOF on Numeriq recovered by two rendered browser 200s). Entire route family: home, Work index + five campaign cases, Studio, Contact, Whispers index + seven essay pages, plus FOUR legal URLs — Privacy, Disclaimer and **two separately indexed self-canonical Terms versions**. Ten supplementary URLs 404 including linked /404 and no /pricing route. Data/createstudio-route-inventory-2026-10-16.csv (31 rows), -internal-links-, -rendered-states- (44 Chromium 1440px and 390px pages with zero outer overflow) and -interaction-probes- (12 bounded observations) record scope and confidence.
 
 Signature: #F2F2F2 warm-neutral Swiss graphic magazine, enormous Figtree headings, degree/serial markers, image/video showreel, precise media-driven client work, six agency service chapters, Core/Studio/Scale project plan ladder on homepage, local Los Angeles time/availability and four-field inquiry form. Homepage desktop sample 99 image/6 video/0 canvas and mobile 252 image/7 video/0 canvas (duplicated responsive media possible, not downloaded byte counts). Work index only three initial distinct case links vs five sitemap details; work and Whispers search interactions did not prove result-set reduction; category changed membership but not number. Source Contact/Whispers/Legal H1 semantics weak, competing Terms canonicals and stale 2025 Next Availability, inconsistent studio addresses/emails, example awards/metrics and creator template promotions require remediation. Reuse creative-agency-editorial baseline; profile design-intelligence/sites/createstudio.framer.media.md; spec specs/createstudio.md.
+
+## BridgeBench Opus 5.5 Sunset Ocean — One-Screen Shader-Driven World (2026-10-17)
+
+**This is a SINGLE ROUTE WebGL ocean scene**, not a multi-page Framer template. Provenance: local source at D:\Project\test\bridgebench-opus55-sunset-ocean, source prompt and user-uploaded prompt matched SHA-256 95dfb8bc6d6fdc73bb0cbb577446f097ccead852787f7313b732ceff446c983c. Single HTML source adjusted to import locally vendored Three.js 0.182.0; local start.bat uses localhost:8765. No source redesign was performed.
+
+Full source-to-contract audit in design-intelligence/sites/bridgebench-opus55-sunset-ocean.md; focused spec in specs/bridgebench-opus55-sunset-ocean.md; preserved prompt in specs/bridgebench-opus55-sunset-ocean-source-prompt.txt. Evidence CSVs: bridgebench-opus55-sunset-ocean-prompt-trace-2026-10-17.csv (T1–T11), -source-components-2026-10-17.csv (20 subsystems with source anchors), -render-states-2026-10-17.csv (five independent states). Evidence screenshots: design-intelligence/sites/bridgebench-opus55-sunset-ocean-1280.webp and -390.webp. Source-provided smoke test passed at 1280×800, live controls 0.9/8, zero console/HTTP shader errors. Independent Chrome WebGL2 runtime confirmed 1280×800, shader content and controls; direct file:// initialization fails.
+
+Physics/render transfer: near-weighted polar mesh **384x330** (127,435 vertices, 253,440 triangles); 8 seeded Gerstner wave families with deep-water dispersion; derivative analytic normals, Jacobian foam, 16 fragment ripple slopes filtered by screen-space footprint; Fresnel Schlick F0=.02, Beckmann-like light spec, dynamic half-float sky cubemap, teal/turquoise scattering and horizon color fog; handmade sky gradient with FBM directional clouds, single sun state; ACEs/sRGB native antialias and gentle near-sea camera drift. **Critical gaps**: not two scrolling normal-map textures, not formally physical Rayleigh/Mie, no bloom/vignette/composer, no Low/High quality, cubemap refreshed six sky faces per frame, no true local wave camera bob, visible UI panel, direct file:// not working, mobile buffer resize inconclusive, and 1080p 60 FPS on a hardware laptop unverified. No unsupported acceptance claims.

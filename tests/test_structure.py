@@ -1745,22 +1745,22 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         with (data_root / "design-primitives-live-2026-10-07.csv").open(encoding="utf-8-sig", newline="") as f:
             design_live = list(csv.DictReader(f))
 
-        self.assertEqual(len(sites), 23)
-        self.assertEqual(len(live), 23)
+        self.assertEqual(len(sites), 24)
+        self.assertEqual(len(live), 24)
         self.assertGreaterEqual(len(patterns), 70)
         self.assertGreaterEqual(len(routes), 20)
         self.assertGreaterEqual(len(motions), 15)
         self.assertGreaterEqual(len(responsive), 20)
         self.assertGreaterEqual(len(anti), 20)
-        self.assertEqual(len(design_profiles), 23)
-        self.assertEqual(len(color_systems), 23)
-        self.assertEqual(len(typography_systems), 23)
-        self.assertEqual(len(components), 107)
-        self.assertEqual(len(ux_guidelines), 91)
-        self.assertEqual(len(design_live), 23)
+        self.assertEqual(len(design_profiles), 24)
+        self.assertEqual(len(color_systems), 24)
+        self.assertEqual(len(typography_systems), 24)
+        self.assertEqual(len(components), 115)
+        self.assertEqual(len(ux_guidelines), 99)
+        self.assertEqual(len(design_live), 24)
 
         specs = sorted((module_root / "specs").glob("*.md"))
-        self.assertEqual(len(specs), 23)
+        self.assertEqual(len(specs), 24)
 
         expected_ids = {
             "refokus",
@@ -1786,6 +1786,7 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
             "spector",
             "fabrica",
             "createstudio",
+            "bridgebench-opus55-sunset-ocean",
         }
         self.assertEqual({row["site_id"] for row in sites}, expected_ids)
         self.assertEqual({row["site_id"] for row in live}, expected_ids)
@@ -2141,6 +2142,51 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         result = subprocess.run([sys.executable, str(script), "Swiss agency case media Figtree", "--site", "createstudio", "--design-system", "--json"],
                                 cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True)
         self.assertIn('"source_site": "createstudio"', result.stdout)
+
+
+    def test_bridgebench_opus55_ocean_full_source_prompt_trace(self) -> None:
+        import csv
+        import hashlib
+        import subprocess
+        import sys
+        data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
+        specs = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "specs"
+        profile_dir = SKILL_ROOT / "references" / "design-intelligence" / "sites"
+        base = "bridgebench-opus55-sunset-ocean"
+        def read(name):
+            with (data / name).open(encoding="utf-8-sig", newline="") as f:
+                return list(csv.DictReader(f))
+        tests = read(f"{base}-prompt-trace-2026-10-17.csv")
+        systems = read(f"{base}-source-components-2026-10-17.csv")
+        runtime = read(f"{base}-render-states-2026-10-17.csv")
+        self.assertEqual(len(tests), 11)
+        self.assertEqual({r["test_id"] for r in tests}, {f"T{i}" for i in range(1,12)})
+        self.assertEqual(len(systems), 20)
+        self.assertEqual(len(runtime), 5)
+        initial = next(r for r in runtime if r["stage"] == "default")
+        self.assertEqual(initial["http_status"], "200")
+        self.assertEqual(initial["canvas_count"], "1")
+        self.assertEqual(initial["pixel_width"], "1280")
+        self.assertEqual(initial["pixel_height"], "800")
+        self.assertGreater(int(initial["contrast_delta"]), 50)
+        file_state = next(r for r in runtime if r["stage"] == "file_protocol")
+        self.assertEqual(file_state["canvas_count"], "0")
+        self.assertFalse(any(t["status"] == "verified" for t in tests))
+        spec = (specs / f"{base}.md").read_text(encoding="utf-8-sig")
+        profile = (profile_dir / f"{base}.md").read_text(encoding="utf-8-sig")
+        for fact in ("384", "330", "Gerstner", "cubemap", "60 FPS", "file://"):
+            self.assertIn(fact.lower(), (profile + spec).lower())
+        for name in (f"{base}-1280.webp", f"{base}-390.webp"):
+            self.assertGreater((profile_dir / name).stat().st_size, 1000)
+        prompt = (specs / f"{base}-source-prompt.txt").read_bytes()
+        self.assertEqual(hashlib.sha256(prompt).hexdigest(),
+                         "95dfb8bc6d6fdc73bb0cbb577446f097ccead852787f7313b732ceff446c983c")
+        self.assertIn(b"ACCEPTANCE TESTS", prompt)
+        tool = SKILL_ROOT / "scripts" / "distilled_toolkit_search.py"
+        result = subprocess.run([sys.executable, str(tool), "Gerstner Fresnel sunset shader realistic ocean", "--site", base, "--design-system", "--json"],
+                                cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True)
+        self.assertIn('"source_site": "bridgebench-opus55-sunset-ocean"', result.stdout)
+
 
 if __name__ == "__main__":
     unittest.main()

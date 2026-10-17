@@ -356,6 +356,42 @@ def validate() -> list[str]:
 
 
 
+
+    ocean_id = "bridgebench-opus55-sunset-ocean"
+    ocean_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / f"{ocean_id}.md"
+    ocean_dir = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit"
+    ocean_spec = ocean_dir / "specs" / f"{ocean_id}.md"
+    ocean_prompt = ocean_dir / "specs" / f"{ocean_id}-source-prompt.txt"
+    ocean_csv = (
+        ocean_dir / "data" / f"{ocean_id}-prompt-trace-2026-10-17.csv",
+        ocean_dir / "data" / f"{ocean_id}-source-components-2026-10-17.csv",
+        ocean_dir / "data" / f"{ocean_id}-render-states-2026-10-17.csv",
+    )
+    ocean_imgs = (
+        SKILL_ROOT / "references" / "design-intelligence" / "sites" / f"{ocean_id}-1280.webp",
+        SKILL_ROOT / "references" / "design-intelligence" / "sites" / f"{ocean_id}-390.webp",
+    )
+    if not all(p.is_file() for p in (ocean_profile,ocean_spec,ocean_prompt,*ocean_csv,*ocean_imgs)):
+        errors.append("Opus 5.5 Sunset Ocean profile/spec/prompt/CSV/screenshots missing")
+    else:
+        import hashlib
+        if hashlib.sha256(ocean_prompt.read_bytes()).hexdigest() != "95dfb8bc6d6fdc73bb0cbb577446f097ccead852787f7313b732ceff446c983c":
+            errors.append("Opus 5.5 Sunset Ocean original user prompt SHA-256 mismatch")
+        with ocean_csv[0].open(encoding="utf-8-sig",newline="") as f:traces=list(csv.DictReader(f))
+        with ocean_csv[1].open(encoding="utf-8-sig",newline="") as f:syss=list(csv.DictReader(f))
+        with ocean_csv[2].open(encoding="utf-8-sig",newline="") as f:states=list(csv.DictReader(f))
+        if len(traces)!=11 or {t["test_id"] for t in traces}!={f"T{i}" for i in range(1,12)}:
+            errors.append("Opus 5.5 Sunset Ocean prompt acceptance requires eleven distinct T1-T11")
+        if len(syss)!=20 or len(states)!=5:
+            errors.append("Opus 5.5 Sunset Ocean source systems or runtime states evidence incomplete")
+        if not any(t["stage"]=="file_protocol" and t["canvas_count"]=="0" for t in states):
+            errors.append("Opus 5.5 Sunset Ocean file:// failure must remain recorded")
+        prof=ocean_profile.read_text(encoding="utf-8-sig")
+        for phrase in ("Gerstner", "cubemap", "60 FPS", "not", "Rayleigh"):
+            if phrase not in prof:
+                errors.append(f"Opus 5.5 Ocean profile missing source-fidelity: {phrase}")
+
+
     create_profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "createstudio.framer.media.md"
     create_data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
     cr_files = (
@@ -1067,8 +1103,8 @@ def validate() -> list[str]:
             errors.append(f"Distilled toolkit search missing capability: {phrase}")
 
     toolkit_specs = toolkit_root / "specs"
-    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 23:
-        errors.append("Distilled web toolkit must contain exactly 23 standardized site specs")
+    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 24:
+        errors.append("Distilled web toolkit must contain exactly 24 standardized site specs")
 
     version = str(manifest.get("version", ""))
     assembly = str(manifest.get("assemblyVersion", ""))

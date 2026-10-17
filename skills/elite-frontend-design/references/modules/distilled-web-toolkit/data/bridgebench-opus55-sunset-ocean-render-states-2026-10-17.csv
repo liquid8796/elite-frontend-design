@@ -1,0 +1,6 @@
+viewport,stage,http_status,console_errors,canvas_count,pixel_width,pixel_height,state,upper_rgb,lower_rgb,contrast_delta,detail
+1280x800,default,200,,1,1280,800,"{""seaState"": 0.5, ""sunElevation"": 4}","(231, 218, 220)","(62, 99, 115)",393,local HTTP via start.bat equivalent
+1280x800,sea-0.9_sun-8,200,,1,1280,800,"{""seaState"": 0.9, ""sunElevation"": 8}","(231, 223, 224)","(48, 119, 123)",388,UI and BridgeBench state API
+1280x800,raf_software_gpu,200,,1,1280,800,"{""seaState"": 0.9, ""sunElevation"": 8}","(231, 226, 227)","(213, 207, 201)",63,"{""samples"": 19, ""timeout"": true}"
+390x844,mobile_resize,200,,1,1280,800,"{""seaState"": 0.9, ""sunElevation"": 8}","(232, 226, 228)","(35, 100, 115)",436,same WebGL scene resized without reloading
+800x500,file_protocol,,"Access to script at 'file:///D:/Project/test/bridgebench-opus55-sunset-ocean/vendor/three@0.182.0/three.module.min.js' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-experimental-site-token-provider, chrome-extension, chrome-untrusted, data, http, https, isolated-app",0,,,{},,,,direct file:// launch vs original prompt T1

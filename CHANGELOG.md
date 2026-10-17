@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.40.0 - 2026-10-17
+
+- Deep source-and-original-prompt audit of BridgeBench Opus 5.5 Sunset Ocean: one local Three.js/WebGL2 page, 20 shader/runtime system evidence rows, 11 T1–T11 prompt acceptance rows, five independent browser states and two small screenshots.
+- Verified original source prompt equals user-uploaded prompt via SHA-256; Chrome smoke at 1280x800 with actual Sea State and Sun Elevation updates passed, while file:// failed. Captured software renderer FPS caveat and mobile backbuffer resize issue without claiming real 1080p 60 FPS.
+- Added 10 physics/rendering patterns, four single-scene route/flow recipes, four motion, three responsive, eight anti-patterns, eight component and eight UX guidelines, plus new color/typography/audit profiles and dedicated Experience Engineering source-backed section.
+- Preserved original requirements vs source distinction: source has eight Gerstner waves and sixteen filtered ripple slopes, F0=0.02 Schlick, Beckmann-like specular, FBM sky and half-float sky cube reflection; two procedural normal maps, true Rayleigh/Mie sky, post bloom, Low/High and laptop GPU 60 FPS remain unverified/missing.
+- v3.40.0 / assembly 3.40.0.0: 24 sites, 197 patterns, 118 route recipes, 40 motion, 62 responsive, 106 anti-patterns, 115 components, 99 UX guidelines; 13 skins and 18 modules unchanged.
+
+
 ## 3.39.0 - 2026-10-16
 
 - Added proactive creative-media generation to frontend routing: identify meaningful image/video surfaces in a design contract and autonomously create original images through the user's authorized Jarvis MCP ImageGen; integrate verified local asset files and browser-QA crops.

@@ -1259,3 +1259,7 @@ Use `scroll-world` **instead** when the defining experience is a pre-rendered co
 Use `reference-first` when reproducing a known interactive experience from screenshots/video/source evidence.
 
 Avoid loading all of them simultaneously unless the task genuinely contains those distinct systems.
+
+## Source-Verified Reference: Opus 5.5 Sunset Ocean
+
+When building photoreal GPU water, use the source-audited `../../design-intelligence/sites/bridgebench-opus55-sunset-ocean.md` and `../distilled-web-toolkit/specs/bridgebench-opus55-sunset-ocean.md`. It documents a **single fullscreen scene**, 8 Gerstner components, a ~127k-vertex polar water mesh, fragment analytic normal/Jacobian foam, 16 filtered micro ripples, shared sun-driven procedural FBM sky, Schlick Fresnel, Beckmann-like glare, per-frame sky CubeCamera reflection and factual runtime evidence. **Do not treat a benchmark prompt as code verification:** the source does NOT implement dual scrolling normal-map textures, a formal Rayleigh/Mie sky, bloom post chain, Low/High toggle or measured 1080p 60 FPS. A software Chrome file:// probe failed; the local running version needs start.bat HTTP. A cube camera refreshed every frame introduces six sky passes, so add GPU profiling and sky refresh scheduling before claiming a three-draw-call world. Use the preserved T1–T11 trace and screenshots as a transfer QA example, not a license to clone its exact original visual assets.

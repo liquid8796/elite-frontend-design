@@ -1,0 +1,12 @@
+test_id,requirement,status,source_or_browser_evidence,remaining_acceptance_work
+T1,Single HTML opens directly; scene in 3 seconds without errors,partial,Local HTTP smoke passed; file:// browser had zero canvas/no task API and two errors,"Need server startup or truly portable module loading, plus 3s timing"
+T2,1080p screenshot mistaken for a photograph,unverified,"Observed visible sunset sky, sea and glitter; subjective photo indistinguishability not established",1080p human perceptual review under real GPU
+T3,Seam-free horizon and no mesh edge or shimmer,partial,"Radial far field + horizon color blending; screenshot has visible horizon band, no 60s shimmer assessment",Inspect horizon under motion and at small DPR
+T4,Sharp-crest Gerstner and realistic different wave speeds,partial,Eight Gerstner with lateral displacement and sqrt(gk); sixteen shorter fragment ripple slopes,Qualitative speed/crest inspection across time and varying sea states
+T5,Long fragmented sunlight glitter path,partial,Beckmann-like sun BRDF + multi-frequency normals + image screenshot shows broken light path,Glitter profile over varying sun/sea and GPU aliasing
+T6,Fresnel mirror horizon darker near view,source-supported,"Schlick F0=0.02, cube sky reflection, deep teal base",Pixel/angle comparison across camera views
+T7,Sunlit turquoise colour on wave crest,source-supported,"hN light-direction scattering term plus turq=(0.06,0.30,0.28)",Film frame capture confirm crest hue
+T8,Subtle rare Jacobian-activated whitecap foam,source-supported,"Foam smoothstep on tangent Jacobian and procedural noise, sea >0.45",Steep crest screenshots over state sweep
+T9,Warm cloud undersides; sky reacts to sun elevation,partial,"Procedural FBM clouds and litB/shade from sun, controls API 4->8 responds",Visual pixel diff during sun sweep plus cloud silhouette review
+T10,No visible loop/pop/tiling in sixty seconds,unverified,Shader is driven by elapsed absolute RAF time and seeded phases; only bounded browser intervals checked,Full uninterrupted 60s captured video and compare
+T11,60 FPS 1080p integrated GPU High; resize correct,unverified,No quality High/Low mode; SwiftShader watchdog 19 RAF callbacks in 15s and mobile buffer stale in sampled test,Real 1080p GPU/resize profiling mandatory; do not infer from software

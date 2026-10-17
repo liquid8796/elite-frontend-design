@@ -2,15 +2,23 @@
 
 A portable ChatGPT + Codex plugin containing one profile-routed frontend design skill focused on one outcome: ship frontend work that is distinctive, useful, responsive, and visually verified after render.
 
-Current version: 3.39.0
+Current version: 3.40.0
+
+## BridgeBench Opus 5.5 Sunset Ocean: source+prompt distillation (3.40.0)
+
+Audited the user's **local original interactive Three.js scene** `D:\Project\test\bridgebench-opus55-sunset-ocean` against their 168-line Sunset Ocean brief, not just a preview screenshot or a benchmark page. Confirmed source-local prompt SHA-256 matches uploaded prompt **95dfb8bc6d6fdc73bb0cbb577446f097ccead852787f7313b732ceff446c983c**. One scene, one route (`/`); `start.bat` uses localhost:8765 and vendor Three.js 0.182.0. An independent Chrome WebGL2 smoke passed at 1280x800 with Sea State and Sun Elevation changes and no console errors.
+
+Preserved **20 source subsystem entries**, **11 T1–T11 acceptance checks**, **five Chromium runtime states** and **desktop/mobile screenshots**. Distilled radial 384x330 grid, eight Gerstner swells with deep-water dispersion, 16 ripple slopes, analytic normal/crest foam, same-sky 256px cube reflection, Schlick/Beckmann optics, procedurally lit FBM clouds and ACES/sRGB. **Not** fully accepted against the original prompt: direct file:// fails, no two normal maps, no physical Rayleigh/Mie atmosphere, no bloom/vignette, no quality Low/High, no camera local-wave-height bob, six cube faces per RAF and no certified 1080p 60 FPS real GPU; sampled phone WebGL buffer update inconclusive.
+
+Adds **10 patterns, 4 single-scene flow/route recipes, 4 motion, 3 responsive, 8 anti-patterns, 8 components and 8 UX guidelines** with new site/color/typography data and source proof. Totals: **24 audited references, 197 patterns, 118 route recipes, 40 motion, 62 responsive, 106 anti-patterns, 115 components, 99 UX guidelines**. Reuses cinematic-game skin as optional story baseline only; no mandatory marketing shell. **18 modules and 13 baseline skins** unchanged. Full profile `references/design-intelligence/sites/bridgebench-opus55-sunset-ocean.md`, toolkit spec and source prompt in `references/modules/distilled-web-toolkit/specs/`.
 
 ## Proactive image and motion video generation (3.39.0)
 
 **Media generation is now proactive rather than request-by-request.** When a UI genuinely benefits from a custom hero, illustration, case-story image, editorial visual or branded background, the model should discover and call **the user's Jarvis MCP ImageGen** through its authorized selected browser/session binding, resolve a real local artifact, place web-ready derivatives in the app and visually check responsive crop. The workflow does not overwrite verified customer/brand source assets or fabricate results.
 
-For a media-led section, discover real connected text/image-to-video tools first. The current Jarvis tool registry exposes image generation but no dedicated generative video endpoint; on the Windows host **FFmpeg 8.1.2 is available**, so new \`creative-media/scripts/render_motion_clip.py\` can render a real muted H.264 MP4 and JPEG poster from one or more generated stills with camera zoom and crossfades. This is transparently motion graphics from stills, **not** a trained text-to-video model. Includes reduced-motion/poster, alternative content, ownership and fallback requirements.
+For a media-led section, discover real connected text/image-to-video tools first. The current Jarvis tool registry exposes image generation but no dedicated generative video endpoint; on the Windows host **FFmpeg 8.1.2 is available**, so new `creative-media/scripts/render_motion_clip.py` can render a real muted H.264 MP4 and JPEG poster from one or more generated stills with camera zoom and crossfades. This is transparently motion graphics from stills, **not** a trained text-to-video model. Includes reduced-motion/poster, alternative content, ownership and fallback requirements.
 
-Added optional \`creative-media\` module (18 modules total), updated router/design/motion/QA instructions, plugin metadata and a video compositor with CLI and regression tests. Activation does **not** require another user request for each image or video, but tool/session authorization and project constraints remain mandatory.
+Added optional `creative-media` module (18 modules total), updated router/design/motion/QA instructions, plugin metadata and a video compositor with CLI and regression tests. Activation does **not** require another user request for each image or video, but tool/session authorization and project constraints remain mandatory.
 
 ## CreateStudio / Create full-site Swiss studio distillation (3.38.0)
 
@@ -115,7 +123,7 @@ Build the upload archive:
 python scripts/package_plugin.py
 ~~~
 
-Upload the resulting `dist/elite-frontend-design-3.39.0.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
+Upload the resulting `dist/elite-frontend-design-3.40.0.zip` through the ChatGPT Plugins upload flow as **Skills only**. After the plugin is installed in the workspace/account, start a new ChatGPT Work conversation and invoke it explicitly with `@elite-frontend-design` when needed; implicit routing is also enabled by the skill policy.
 
 For public distribution, the same package can be submitted to the universal plugin directory. Public submission still requires the publisher to complete verified developer identity and policy attestations in the OpenAI submission flow.
 

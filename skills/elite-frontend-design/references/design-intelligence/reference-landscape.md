@@ -28,6 +28,7 @@ Audited profiles currently include:
 - **Spector (Framer experimental editorial agency, 3D client surface and case/Lab CMS)** -> sites/spector.framer.website.md
 - **Fabrica (Framer dark editorial digital agency, filterable work and seven-entry CMS blog)** -> sites/fabrica.framer.media.md
 - **CreateStudio / Create (Framer Swiss Figtree agency, five creative cases, seven Whispers essays, 2 Terms URLs)** -> sites/createstudio.framer.media.md
+- **BridgeBench Opus 5.5 Sunset Ocean (local WebGL one-screen photoreal simulation and source+prompt verification)** -> sites/bridgebench-opus55-sunset-ocean.md
 - **Nouva (Framer AI content/auth template)** -> `sites/nouva-template.framer.website.md`
 - **Powder (Framer template)** -> `sites/powder.framer.website.md`
 - **Nudge Folio (Framer template)** -> `sites/nudge-folio.framer.website.md`

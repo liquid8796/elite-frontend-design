@@ -1,0 +1,21 @@
+system_id,system,source_locator,source_line,status,implemented_evidence,prompt_or_release_gap
+startup,Local HTTP start.bat / 8765,start.bat:1-20,start.bat,observed,Python HTTP server and local Three.js vendor module plus core; original file from CDN-adjacent benchmark vendor path,No direct file:// compatibility
+single-scene,Single HTML module,"<script type=""module"">",42,observed,"One fullscreen canvas, no app framework or routes",Visible #ui panel instead of hidden overlay
+benchmark,BridgeBenchTaskManifest,window.BridgeBenchTaskManifest,21,observed,"Task s1-sunset-ocean seeded deterministic, preferredViewport 1280x800",Benchmark compliance not performance proof
+renderer,ACES tone mapping and sRGB,new THREE.WebGLRenderer,51,observed,"WebGLRenderer antialias true, DPR cap1.5, ACES + sRGB, exposure1.2",No composer/bloom/tone target pass
+camera,Near-sea camera,new THREE.PerspectiveCamera,60,partial,"FOV52, y about >=2.3m, gentle pitch/roll, no XZ travel",No local sampled-wave bobbing and no camera-centred moving ocean
+sky,Procedural dome / clouds,const skyMat = new THREE.ShaderMaterial,141,partial,"Sphere 40km, shared skyColor directional gradient, FBM procedural clouds, sun disc",Not full analytic Rayleigh/Mie or dedicated cloud draw pass
+waves,Eight GPU Gerstner components,const NW = 8,161,observed,"Wavelength set 62->3m, horizontal and vertical displacement, phase omega=sqrt(gk)",Only 8 vertex swells; higher frequency ripples handled fragment
+ripple,Sixteen procedural ripple slopes,"const NW = 8, NR = 16",161,partial,"uR[16] filtered by dFdx/dFdy, blended into normal with procedural slope",Two independent scrolling normal-map textures absent
+normal,Analytic tangent/bitangent normal,float J=T.x*B.z-T.z*B.x,214,observed,"Reconstruct N=cross(B,T) and crest Jacobian",Fragment high-frequency derivative cost
+brdf,Fresnel Schlick & water shading,float F=0.02+0.98*pow,229,observed,"F0=0.02, Beckmann-like lobe, env cube reflection, deep teal and crest turquoise",No explicit separate broad sun GGX lobe
+foam,Jacobian/FBM foam,float fm=smoothstep,247,observed,Sea-state-dependent foam limited to steepness and noise,Unverified natural whitecap visual at 60s
+horizon,Reflection-colour distance fog,float fg=1.-exp(-dist*0.0001),251,observed,Far water mixes toward cubemap horizon colour,No human seam/shimmer objective proof
+mesh,Radial ring mesh,function buildOceanGeometry,260,observed,"384*330 grid, 127435 vertices, 253440 indexed triangles; near-dense far-sparse",Far edge ~28km and no mobile vertex budget adaptation
+cubemap,Real-time sky environment capture,"cubeCam.update(renderer, scene)",359,observed,Half-float 256px 6-face cubemap regenerated each RAF while water invisible,Expensive 6 scene passes/frame; not one cheap 3-drawcall scene
+params,Smoothed sea/sun controls,function applyParams(t),310,observed,"Sea controls wave amp, foam, ripple; sun controls sky, reflection, light, exposure",Only two sliders; no low/high quality mode
+raf,Absolute elapsed-time animation,function frame(ts),345,partial,"requestAnimationFrame, seeded frequencies, dt easing and cleanup API",Hardware 60FPS and 60sec no-pop unverified
+resize,Canvas resize listener,function onResize(),375,partial,"Set camera aspect, DPR, renderer size on resize",Software browser sample saw stale 1280x800 buffer at mobile width
+bridge-api,Deterministic reset/destroy,window.BridgeBenchTaskApi =,392,observed,"Task reset(seed) and getState(), shader/geo/RT dispose",No error/fallback for missing WebGL supported devices
+post,AA and post-processing absent,renderer.toneMapping = THREE.ACESFilmicToneMapping,54,partial,Native antialias and tiny post-shader grain,"No UnrealBloomPass, vignette, SMAA/FXAA or quality switch"
+file-open,file:// launch,"<script type=""importmap"">",31,failed,Local HTTP smoke works and source README directs start.bat,Chrome file:// creates zero canvas and no BridgeBench API
