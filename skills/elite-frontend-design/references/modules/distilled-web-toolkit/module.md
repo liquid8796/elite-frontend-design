@@ -1,6 +1,6 @@
 ---
 name: distilled-web-toolkit
-description: "Searchable audited design recommendation toolkit distilled from 26 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
+description: "Searchable audited design recommendation toolkit distilled from 27 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
 ---
 
 # Distilled Web Toolkit
@@ -100,7 +100,7 @@ When they differ:
 
 ## Dataset Map
 
-- `data/sites.csv` ? 26 reference identities and archetypes.
+- `data/sites.csv` ? 27 reference identities and archetypes.
 - `data/live-audit-2026-10-07.csv` ? standardized live desktop/mobile snapshot.
 - `data/patterns.csv` ? reusable audited patterns.
 - `data/route-recipes.csv` ? route and route-family structures.
@@ -132,6 +132,10 @@ When they differ:
 `contextual` ? useful only within a narrow archetype or campaign.
 
 Do not promote contextual evidence into a universal default.
+
+## Binance Multi-Shell Trading/Education Ecosystem (2026-10-20)
+
+Use **binance** as a site-scoped teacher for *market discovery → asset details → terminal*, *Earn and collateralized loans*, *finance-appropriate risk/confirmation*, *distinct Academy/Blog/Square/Support editorial contracts*, and *mobile task-first data surfaces*. Corpus evidence: `data/binance-sitemap-index-2026-10-20.csv`, `data/binance-english-sitemap-shards-2026-10-20.csv`, `data/binance-english-route-families-2026-10-20.csv`, 50,624-row `data/binance-english-sitemap-inventory-2026-10-20.csv.gz`. Root sitemap HTTP403; 15 child indexes reachable; not all declared links are reachable or safe. The browser was authenticated and no account details were saved. Connected browser display name Chrome; user describes Cốc Cốc extension. Deep profile: `design-intelligence/sites/binance.com.md`; spec: `specs/binance.md`. Proprietary financial content, brand palette/font and live prices must not be copied as template fixtures.
 
 ## Whole-Site Route Census Evidence
 

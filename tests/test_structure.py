@@ -1745,22 +1745,22 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         with (data_root / "design-primitives-live-2026-10-07.csv").open(encoding="utf-8-sig", newline="") as f:
             design_live = list(csv.DictReader(f))
 
-        self.assertEqual(len(sites), 26)
-        self.assertEqual(len(live), 26)
+        self.assertEqual(len(sites), 27)
+        self.assertEqual(len(live), 27)
         self.assertGreaterEqual(len(patterns), 70)
         self.assertGreaterEqual(len(routes), 20)
         self.assertGreaterEqual(len(motions), 15)
         self.assertGreaterEqual(len(responsive), 20)
         self.assertGreaterEqual(len(anti), 20)
-        self.assertEqual(len(design_profiles), 26)
-        self.assertEqual(len(color_systems), 26)
-        self.assertEqual(len(typography_systems), 26)
-        self.assertEqual(len(components), 132)
-        self.assertEqual(len(ux_guidelines), 116)
-        self.assertEqual(len(design_live), 26)
+        self.assertEqual(len(design_profiles), 27)
+        self.assertEqual(len(color_systems), 27)
+        self.assertEqual(len(typography_systems), 27)
+        self.assertEqual(len(components), 142)
+        self.assertEqual(len(ux_guidelines), 124)
+        self.assertEqual(len(design_live), 27)
 
         specs = sorted((module_root / "specs").glob("*.md"))
-        self.assertEqual(len(specs), 26)
+        self.assertEqual(len(specs), 27)
 
         expected_ids = {
             "refokus",
@@ -1789,6 +1789,7 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
             "bridgebench-opus55-sunset-ocean",
             "platform",
             "superior",
+            "binance",
         }
         self.assertEqual({row["site_id"] for row in sites}, expected_ids)
         self.assertEqual({row["site_id"] for row in live}, expected_ids)
@@ -2304,6 +2305,33 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         result = subprocess.run([sys.executable, str(tool), "white SaaS dashboard Inter integrations", "--site", "superior", "--design-system", "--json"],
                                 cwd=str(SKILL_ROOT), capture_output=True, text=True, check=True)
         self.assertIn('"source_site": "superior"', result.stdout)
+
+
+    def test_binance_complete_english_sitemap_census_and_browser_scope(self) -> None:
+        import csv
+        import gzip
+        data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
+        profile = SKILL_ROOT / "references" / "design-intelligence" / "sites" / "binance.com.md"
+        spec = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "specs" / "binance.md"
+        self.assertTrue(profile.exists())
+        self.assertTrue(spec.exists())
+        text = profile.read_text(encoding="utf-8-sig")
+        for phrase in ("50,624", "15", "Chrome", "NFT", "390", "not 50,624 HTTP validations"):
+            if phrase != "not 50,624 HTTP validations":
+                self.assertIn(phrase, text)
+        with (data / "binance-sitemap-index-2026-10-20.csv").open(encoding="utf-8-sig", newline="") as f:
+            rows = list(csv.DictReader(f))
+        self.assertEqual(len(rows), 15)
+        self.assertEqual(sum(int(r["english_shards"]) for r in rows), 20)
+        self.assertEqual(sum(int(r["english_declared_urls"]) for r in rows), 50624)
+        with gzip.open(data / "binance-english-sitemap-inventory-2026-10-20.csv.gz", "rt", encoding="utf-8") as f:
+            inventory = list(csv.DictReader(f))
+        self.assertEqual(len(inventory), 50624)
+        self.assertEqual(sum(int(r["suspicious_url_heuristic"]) for r in inventory), 220)
+        for name in ("about", "academy", "blog"):
+            evidence = SKILL_ROOT / "references" / "design-intelligence" / "sites" / f"binance-{name}-public-2026-10-20.webp"
+            self.assertGreater(evidence.stat().st_size, 2000)
+
 
 
 if __name__ == "__main__":

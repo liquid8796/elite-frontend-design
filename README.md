@@ -2,7 +2,17 @@
 
 A portable ChatGPT + Codex plugin containing one profile-routed frontend design skill focused on one outcome: ship frontend work that is distinctive, useful, responsive, and visually verified after render.
 
-Current version: 3.42.0
+Current version: 3.43.0
+
+## Binance Live Product-Platform Family Distillation (3.43.0)
+
+This audit is **NOT** a claim that every page on the global multinational exchange was visited. Jarvis MCP connected to the user's Windows browser extension (labelled Chrome; user identifies it as Cốc Cốc); real browser inspections sampled 20+ product/content surfaces and true 390px mobile states. Binance robots.txt lists **15 sitemap indexes, 852 locale-shard references**; **20 English sitemap shards enumerated 50,624 URL declarations** with 2,708 coarse route prefix groups. The full 50,624-row English declaration inventory is compressed as `data/binance-english-sitemap-inventory-2026-10-20.csv.gz`. No assumption that each declared URL returns 200; 220 suspicious-looking entries were heuristically flagged. Sitemap **root** /sitemap.xml is HTTP403.
+
+Verified architecture: global homepage; Markets data exploration; Spot terminal and Futures; crypto convert/buy/asset detail; Earn/Loans/Launchpool and Auto-Invest recurring Convert redirect; Academy long-form education; Blog, Square social/news, official Support/Announcements and legal/company content. Explicit **NFT closure redirect** and **Institutional error** sampled. Authenticated session was observed, so **no account contents, keys, balances, trades, orders, wallet details or KYC actions** were saved.
+
+Grounded style: dark `rgb(24,26,32)`, deeper Spot `rgb(11,14,17)`, main text `rgb(234,236,239)`, CTA `rgb(252,213,53)`, BinanceNova; desktop About H1 48px, mobile route-dependent H1 32/28/24px. Six representative phone routes had zero positive outer-document overflow at 390x844. Added **10 patterns, 12 route recipes, 3 motion, 4 responsive, 8 anti-patterns, 10 components, 8 UX guidance** plus site/color/typography profiles and a route-family implementation spec. 27 reference sites, **227 patterns, 151 routes, 49 motion, 73 responsive, 131 anti-patterns, 142 components, 124 UX guidelines**; 13 existing skins and 18 modules.
+
+Deep profile: `skills/elite-frontend-design/references/design-intelligence/sites/binance.com.md`, implementation-oriented `specs/binance.md`, and publicly cropped evidence screenshots. The sitemap scanner is `scripts/audit_binance_sitemaps.py`. Full site interactions or financial backend functionality remain unverified.
 
 ## Superior full 48-route SaaS Framer template and Chrome MCP inspection (3.42.0)
 

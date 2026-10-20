@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.43.0 - 2026-10-20
+
+- Distilled Binance's **multi-system** product/marketing/trading/education/community/support architecture using Jarvis MCP connected to the user's local Chromium-based browser instance exposed as Chrome (user identifies as Cốc Cốc). Inspected live desktop product-family URLs plus six true 390x844 mobile states; no protected/private trading actions or account values were copied.
+- **15 official robots.txt sitemap indexes**, 852 locale-shard declarations, **20 English XML shards with 50,624 declared URL rows** and 2,708 mechanically grouped prefixes. Saved full compressed English URL inventory, source shard/locale census and route groups, plus reproducible scanner; **220 heuristic suspicious URL rows** and root /sitemap.xml HTTP403. These are declarations, not 50,624 verified HTTP200 pages.
+- Captured 3 public-site cropped screenshots and detailed site + toolkit implementation profiles. Documented marketplace, spot, futures, fiat convert, earn/loans/launchpool, Academy, Blog, Square, Support, corporate/legal, AI and error/closure routes. NFT home redirects to closed; Auto-Invest to recurring Convert; Institutional returned error in sampled visit. No claims of authenticated financial actions, chart feed provenance or exhaustive cross-locale rendering.
+- Added 10 patterns, 12 route recipes, 3 motion, 4 responsive, 8 anti-patterns, 10 components, 8 UX rules and style/color/type profiles; reuse existing premium-saas-dark structural skin (not brand artwork or Binance font). Totals: **27 sites / 227 patterns / 151 routes / 49 motion / 73 responsive / 131 anti-patterns / 142 components / 124 UX guidelines**, still 13 skins / 18 modules.
+
 ## 3.42.0 - 2026-10-18
 
 - Distilled **all 48** Superior Framer template sitemap routes (47 HTTP200 plus real HTTP404 /404), eleven supplementary 404 probes and 966 source-target internal href relationships. Entire three full-page hero variants, 15 integration details, ten blog essays, six job roles and marketing, pricing, lead forms, downloads, changelog, waitlist and legal were enumerated.
