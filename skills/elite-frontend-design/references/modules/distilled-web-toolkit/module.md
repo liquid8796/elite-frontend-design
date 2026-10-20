@@ -1,6 +1,6 @@
 ---
 name: distilled-web-toolkit
-description: "Searchable audited design recommendation toolkit distilled from 27 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
+description: "Searchable audited design recommendation toolkit distilled from 28 live references. Use for provenance-backed style, color, typography, component, route-system, proof, motion, responsive, interaction, performance, UX, and QA retrieval plus audited design-system synthesis."
 ---
 
 # Distilled Web Toolkit
@@ -100,7 +100,7 @@ When they differ:
 
 ## Dataset Map
 
-- `data/sites.csv` ? 27 reference identities and archetypes.
+- `data/sites.csv` ? 28 reference identities and archetypes.
 - `data/live-audit-2026-10-07.csv` ? standardized live desktop/mobile snapshot.
 - `data/patterns.csv` ? reusable audited patterns.
 - `data/route-recipes.csv` ? route and route-family structures.
@@ -132,6 +132,10 @@ When they differ:
 `contextual` ? useful only within a narrow archetype or campaign.
 
 Do not promote contextual evidence into a universal default.
+
+## MEXC Whole-System Crypto Exchange (2026-10-20)
+
+For **mexc**, use a site-scoped market navigation and trading reference (spot/futures, derivatives copy-trade, DEX chain/contract boundary, converted fiat quotes, Earn/Launchpad/airdrop, Learn/Support/news/trust). Source profiles: `design-intelligence/sites/mexc.com.md` and `specs/mexc.md`. Robot sitemap: 34 index entries, 33 XML and one 404; 53 default URL sets show 77,737 declared URLs. 1,475 deeper child XML refs are listed separately, 12 representative nested shards inspected. Treat sitemap declarations as *not* HTTP/DOM tested; rates/forecasts/trader returns are not reliable predictions. Six mobile page families confirmed 390px no positive **outer-document** overflow. MEXCSans/brand logo/data are not copied into generated artifacts.
 
 ## Binance Multi-Shell Trading/Education Ecosystem (2026-10-20)
 

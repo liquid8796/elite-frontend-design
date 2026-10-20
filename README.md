@@ -2,7 +2,15 @@
 
 A portable ChatGPT + Codex plugin containing one profile-routed frontend design skill focused on one outcome: ship frontend work that is distinctive, useful, responsive, and visually verified after render.
 
-Current version: 3.43.0
+Current version: 3.44.0
+
+## MEXC Exchange Whole-System Distillation (3.44.0)
+
+**Jarvis MCP attached to the user's Cốc Cốc browser via the Jarvis Agent Browser extension** (advertised as Chrome). Inspected homepage, Spot and perpetual futures, market rankings, Buy/Convert, Copy Trading, Earn, DEX/onchain, MEXC AI, Launchpad, Airdrop/Rewards, MX, Pre-market, Stocks, price and forecast, market-insights/Crypto Pulse, Learn, Help, Announcements, API, Official Verify, fees and About. Six distinct sections were observed at an actual **390×844** browser window, each with zero positive *outer-document* overflow. No account/private fields or transactions were read or submitted.
+
+The `/sitemap.xml` root reports **34 index branches; 33 accessible XML, one 404**. **53 default-language sitemap URL sets list 77,737 URL declarations**; separate deeper indexes list 1,475 child files, of which **12 were sampled** (1,785 additional declarations, overlaps not deduplicated). These are declared links, **not** an assertion that 77,737 live HTML pages or all localizations were rendered. Complete 53-shard default-language inventory and nested manifests are provided in `data/mexc-*.csv[.gz]` plus reproducible `scripts/audit_mexc_sitemaps.py`. Most notably `/staking` redirects to `/earn`, `/dex` redirects to a selected Solana token, and `/how-to-buy/bitcoin` case-normalizes its URL.
+
+Added **12 patterns, 14 route recipes, 4 motion, 5 responsive, 9 anti-patterns, 12 components and 10 UX guidelines**, plus source-scoped theme/color/font profile, three cropped public screenshots, and spec `specs/mexc.md`. Corpus totals now **28 sites, 239 patterns, 165 route recipes, 53 motion, 78 responsive, 140 anti-patterns, 154 components and 134 UX guidelines**. Same 13 pre-existing skins / 18 modules. MEXC proprietary brand/font are **not** default assets. Full private product functionality, all localized pages and 1,463 un-fetched deeper converter shards remain outside verified scope.
 
 ## Binance Live Product-Platform Family Distillation (3.43.0)
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.44.0 - 2026-10-20
+
+- Distilled the multi-product MEXC exchange from **direct Jarvis MCP user-PC Cốc Cốc (Chrome-labelled) browsing**: primary marketing, spot/futures terminals, copy-trading, convert/buy, Earn, DEX, markets, AI marketing, launchpad/airdrop/campaigns, pre-market/stocks, price predictions, learning, support/announcements, API/official verification, fees/company. Six phone-size route views at **390×844** had no positive outer-document overflow. Account information and financial actions were excluded.
+- Audited `/sitemap.xml`: **34 primary index families, 33 readable XML indexes / 1 404**, 53 first-level language-neutral URL sets enumerating **77,737 sitemap-declared URLs / 10,547 mechanical prefixes**. Two embedded index references expose **1,475 additional child-shard URLs**; 12 inspected as a bounded sample with 1,785 declarations. Archived default sitemap inventory compressed, nested manifest/samples/errors and repeatable collector, without asserting each URL is render-verified or all localizations crawled.
+- Added 12 design patterns, 14 route recipes, 4 motion, 5 responsive, 9 anti-patterns, 12 components and 10 UX guidelines, MEXC site and toolkit specs, public cropped screenshots and source-scoped color/type; no unlicensed branding transferred. **28 audited site identities / 239 patterns / 165 routes / 53 motion / 78 responsive / 140 anti-patterns / 154 components / 134 UX guidelines**, still 13 skins and 18 modules.
+
 ## 3.43.0 - 2026-10-20
 
 - Distilled Binance's **multi-system** product/marketing/trading/education/community/support architecture using Jarvis MCP connected to the user's local Chromium-based browser instance exposed as Chrome (user identifies as Cốc Cốc). Inspected live desktop product-family URLs plus six true 390x844 mobile states; no protected/private trading actions or account values were copied.
@@ -37,7 +43,7 @@
 ## 3.39.0 - 2026-10-16
 
 - Added proactive creative-media generation to frontend routing: identify meaningful image/video surfaces in a design contract and autonomously create original images through the user's authorized Jarvis MCP ImageGen; integrate verified local asset files and browser-QA crops.
-- Added optional 18th module \`creative-media\` with exact session-bound ImageGen job lifecycle, provenance, original-image preservation, format/crop/alt and reduced-motion requirements. No permission bypass, duplicate jobs, invented video provider, or tool-generated images on every arbitrary section.
+- Added optional 18th module `creative-media` with exact session-bound ImageGen job lifecycle, provenance, original-image preservation, format/crop/alt and reduced-motion requirements. No permission bypass, duplicate jobs, invented video provider, or tool-generated images on every arbitrary section.
 - Implemented portable FFmpeg animated-stills video CLI (H.264 MP4 + JPEG poster), supports 1–12 still images, 2D camera zoom/pan and crossfades; clarified difference from true generative video. Verified FFmpeg 8.1.2 installed on the current user host.
 - Wired media acceptance gate into frontend-design, motion-direction and frontend-qa modules, plugin manifest/default prompt and regression tests.
 - Version 3.39.0 / assembly 3.39.0.0. No site-distillation counts changed.

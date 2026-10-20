@@ -1,0 +1,13 @@
+group,nested_shard,status,xml_type,count_or_error
+price-converter,https://www.mexc.com/price/AO/sitemap.xml,200,urlset,160
+price-converter,https://www.mexc.com/price/BNT/sitemap.xml,200,urlset,160
+price-converter,https://www.mexc.com/price/BTC/sitemap.xml,200,urlset,160
+price-converter,https://www.mexc.com/price/CARFI/sitemap.xml,200,urlset,160
+price-converter,https://www.mexc.com/price/HTR/sitemap.xml,200,urlset,160
+price-converter,https://www.mexc.com/price/METAL/sitemap.xml,200,urlset,160
+price-converter,https://www.mexc.com/price/NEX/sitemap.xml,200,urlset,160
+price-converter,https://www.mexc.com/price/NOS/sitemap.xml,200,urlset,160
+price-converter,https://www.mexc.com/price/NTX/sitemap.xml,200,urlset,160
+price-converter,https://www.mexc.com/price/PYTH/sitemap.xml,200,urlset,160
+price-converter,https://www.mexc.com/price/SBETON/sitemap.xml,200,urlset,160
+tools,https://www.mexc.com/tools/crypto-tax-calculator/sitemap.xml,200,urlset,25

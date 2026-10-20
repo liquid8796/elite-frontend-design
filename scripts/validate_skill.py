@@ -1196,8 +1196,8 @@ def validate() -> list[str]:
             errors.append(f"Distilled toolkit search missing capability: {phrase}")
 
     toolkit_specs = toolkit_root / "specs"
-    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 27:
-        errors.append("Distilled web toolkit must contain exactly 27 standardized site specs")
+    if not toolkit_specs.is_dir() or len(list(toolkit_specs.glob("*.md"))) != 28:
+        errors.append("Distilled web toolkit must contain exactly 28 standardized site specs")
 
     version = str(manifest.get("version", ""))
     assembly = str(manifest.get("assemblyVersion", ""))

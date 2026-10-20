@@ -1,0 +1,3 @@
+group,url,error
+price-converter,https://www.mexc.com/price-converter/sitemap.xml,nested sitemap index not traversed
+tools,https://www.mexc.com/tools/sitemap.xml,nested sitemap index not traversed

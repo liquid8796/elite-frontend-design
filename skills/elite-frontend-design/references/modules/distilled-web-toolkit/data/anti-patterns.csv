@@ -130,3 +130,12 @@ superior-template-proof,Template Marketing Data and Seller Funnel Leaks,superior
 "binance-simulated-data-passed-as-live","Demo Price Is Real Price","binance","Static chart and stale market snapshot presented as live","Show mock fixtures or timestamp and data-quality state","high"
 "binance-shell-one-size","Same Marketing Layout Everywhere","binance","Editorial hero composition forced on trading order book","Assign density and navigation by route family","medium"
 "binance-personal-data-audit","Account Content Stored as Reference","binance","Logged-in reference browser leaks account and order details into shared audit artifacts","Record only public route structure and anonymized visible UI","high"
+mexc-sitemaps-not-live,Sitemap URLs Advertised as Working Pages,mexc,"77,737 declarations include many symbol permutations; 1,475 deeper shards not all fetched",Record type and degree of validation separately,high
+mexc-risk-futures-hidden,Leverage Risks Hidden Behind Trade CTA,mexc,Mark price funding and leverage become tiny or obscured,Keep contract-risk panel and deliberate review,high
+mexc-apr-guarantee,Temporary Earn APR Treated as Guaranteed,mexc,Variable APY/APR or promo values reused as evergreen truth,Qualify rate and conditions with dates and source,high
+mexc-copy-profit,Copy Trader Ranking Sold as Guaranteed Result,mexc,Historical stats mixed with future-return implication,Date/window/drawdown uncertainty and explicit user opt-in,high
+mexc-cex-dex-cross,Onchain Token Address Confused with Spot Pair,mexc,Same token name implies same contract liquidity or custody,Pin chain contract and approval boundary,high
+mexc-prediction-fact,Price Forecast Presented as Objective Fact,mexc,Long-range model table used as accurate projection,Methodology and hypothetical warning; no action by default,high
+mexc-markets-ticker-no-age,Undated Market Data,mexc,Fast-changing tick shown without source or freshness,Timestamp stale-state and reconnection feedback,medium
+mexc-news-source-mix,News Opinion and Operations Merged,mexc,Community headline ranks higher than official operational safety notice,Partition Learn/insights/announcements/help trust levels,medium
+mexc-personal-screenshot,User Account Details Saved in Audit,mexc,Signed-in page header appears next to funds/orders data,Crop to public content; never record balances/API/token/KYC,high

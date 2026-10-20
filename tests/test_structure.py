@@ -1745,22 +1745,22 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
         with (data_root / "design-primitives-live-2026-10-07.csv").open(encoding="utf-8-sig", newline="") as f:
             design_live = list(csv.DictReader(f))
 
-        self.assertEqual(len(sites), 27)
-        self.assertEqual(len(live), 27)
+        self.assertEqual(len(sites), 28)
+        self.assertEqual(len(live), 28)
         self.assertGreaterEqual(len(patterns), 70)
         self.assertGreaterEqual(len(routes), 20)
         self.assertGreaterEqual(len(motions), 15)
         self.assertGreaterEqual(len(responsive), 20)
         self.assertGreaterEqual(len(anti), 20)
-        self.assertEqual(len(design_profiles), 27)
-        self.assertEqual(len(color_systems), 27)
-        self.assertEqual(len(typography_systems), 27)
-        self.assertEqual(len(components), 142)
-        self.assertEqual(len(ux_guidelines), 124)
-        self.assertEqual(len(design_live), 27)
+        self.assertEqual(len(design_profiles), 28)
+        self.assertEqual(len(color_systems), 28)
+        self.assertEqual(len(typography_systems), 28)
+        self.assertEqual(len(components), 154)
+        self.assertEqual(len(ux_guidelines), 134)
+        self.assertEqual(len(design_live), 28)
 
         specs = sorted((module_root / "specs").glob("*.md"))
-        self.assertEqual(len(specs), 27)
+        self.assertEqual(len(specs), 28)
 
         expected_ids = {
             "refokus",
@@ -1790,6 +1790,7 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
             "platform",
             "superior",
             "binance",
+            "mexc",
         }
         self.assertEqual({row["site_id"] for row in sites}, expected_ids)
         self.assertEqual({row["site_id"] for row in live}, expected_ids)
@@ -2332,6 +2333,44 @@ class EliteFrontendDesignStructureTests(unittest.TestCase):
             evidence = SKILL_ROOT / "references" / "design-intelligence" / "sites" / f"binance-{name}-public-2026-10-20.webp"
             self.assertGreater(evidence.stat().st_size, 2000)
 
+
+
+
+    def test_mexc_sitemap_default_and_nested_boundaries(self) -> None:
+        import csv
+        import gzip
+        import subprocess
+        import sys
+        data = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "data"
+        site = SKILL_ROOT / "references" / "design-intelligence" / "sites"
+        profile = (site / "mexc.com.md").read_text(encoding="utf-8-sig")
+        spec = SKILL_ROOT / "references" / "modules" / "distilled-web-toolkit" / "specs" / "mexc.md"
+        self.assertTrue(spec.is_file())
+        for word in ("34", "33", "77,737", "1,475", "Cốc Cốc", "390"):
+            self.assertIn(word, profile)
+        def rows(filename):
+            with (data / filename).open(encoding="utf-8-sig", newline="") as f:
+                return list(csv.DictReader(f))
+        index = rows("mexc-sitemap-index-2026-10-20.csv")
+        shards = rows("mexc-default-sitemap-shards-2026-10-20.csv")
+        nested = rows("mexc-nested-sitemap-manifest-2026-10-20.csv")
+        probes = rows("mexc-nested-sitemap-sample-2026-10-20.csv")
+        self.assertEqual(len(index), 34)
+        self.assertEqual(sum(r["index_http"] == "200" for r in index), 33)
+        self.assertEqual(sum(r["http"] == "200" for r in shards), 53)
+        self.assertEqual(sum(int(r["declared_urls"]) for r in shards), 77737)
+        self.assertEqual(len(nested), 1475)
+        self.assertEqual(len(probes), 12)
+        with gzip.open(data / "mexc-default-sitemap-declarations-2026-10-20.csv.gz","rt",encoding="utf-8") as f:
+            declared = sum(1 for _ in csv.DictReader(f))
+        self.assertEqual(declared, 77737)
+        for name in ("learn-desktop", "about-desktop", "learn-mobile"):
+            self.assertGreater((site / f"mexc-{name}-public-2026-10-20.webp").stat().st_size, 2000)
+        result = subprocess.run([
+            sys.executable, str(SKILL_ROOT / "scripts" / "distilled_toolkit_search.py"),
+            "market crypto DEX futures", "--site", "mexc", "--json"
+        ],cwd=str(SKILL_ROOT),capture_output=True,text=True,check=True)
+        self.assertIn('"sites": "mexc"',result.stdout)
 
 
 if __name__ == "__main__":

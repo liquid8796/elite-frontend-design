@@ -30,6 +30,7 @@ Audited profiles currently include:
 - **CreateStudio / Create (Framer Swiss Figtree agency, five creative cases, seven Whispers essays, 2 Terms URLs)** -> sites/createstudio.framer.media.md
 - **BridgeBench Opus 5.5 Sunset Ocean (local WebGL one-screen photoreal simulation and source+prompt verification)** -> sites/bridgebench-opus55-sunset-ocean.md
 - **PlatForm / Platform (Framer dark modular infrastructure AI SaaS, full 19-route audit with eight Labs articles, FrameAuth UI and GDPR/legal)** -> sites/plat-form.framer.ai.md
+- **MEXC (34 sitemap index families, 77,737 default-locale URL declarations, Cốc Cốc/Chrome MCP multi-system and six 390px mobile route inspections; nested converter shards partly sampled)** -> sites/mexc.com.md
 - **Binance (live multi-shell crypto exchange, markets/trade/earn, Academy, Blog, Square, Support, 50,624 English sitemap URL declarations, real 390px Cốc Cốc/Chrome-labelled browser survey)** -> sites/binance.com.md
 - **Superior (complete 48-route white Inter SaaS template with three alternate full hero landing pages, 15 integrations, ten blog articles, six careers, pricing/lead flows, user-machine Chrome MCP evidence)** -> sites/superior-template.framer.website.md
 - **Nouva (Framer AI content/auth template)** -> `sites/nouva-template.framer.website.md`
